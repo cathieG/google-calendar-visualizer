@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Google Calendar Visualizer",
+  "version": "0.1.0",
+  "description": "Adds personalized visual backgrounds to Google Calendar events.",
+  "content_scripts": [
+    {
+      "matches": ["https://calendar.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
