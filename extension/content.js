@@ -1,22 +1,28 @@
 console.log("Google Calendar Visualizer loaded");
 
-function highlightEvents() {
-  const events = document.querySelectorAll(
-    'div[role="button"][data-eventid]'
-  );
+function updatePopupIllustration() {
+  const popupImage = document.querySelector("img.AuSgpc");
 
-  events.forEach((event) => {
-    event.style.outline = "3px solid red";
-  });
+  if (popupImage) {
+    const customImageUrl = chrome.runtime.getURL(
+      "assets/test-background.png"
+    );
+
+    popupImage.src = customImageUrl;
+    popupImage.style.objectFit = "cover";
+    popupImage.style.objectPosition = "center";
+
+    console.log("Popup illustration replaced with local image");
+  }
 }
 
-highlightEvents();
-
 const observer = new MutationObserver(() => {
-  highlightEvents();
+  updatePopupIllustration();
 });
 
 observer.observe(document.body, {
   childList: true,
   subtree: true
 });
+
+updatePopupIllustration();
