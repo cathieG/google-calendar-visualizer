@@ -1,10 +1,25 @@
 console.log("Google Calendar Visualizer loaded");
 
-const backgroundRules = {
-  gym: "assets/test-background.png",
-  church: "assets/church.png",
-  lunch: "assets/lunch.png"
-};
+const concepts = [
+  {
+    name: "Gym",
+    type: "activity",
+    aliases: ["gym", "workout"],
+    image: "assets/test-background.png"
+  },
+  {
+    name: "Church",
+    type: "place",
+    aliases: ["church", "church service"],
+    image: "assets/church.png"
+  },
+  {
+    name: "Lunch",
+    type: "activity",
+    aliases: ["lunch", "brunch"],
+    image: "assets/lunch.png"
+  }
+];
 
 function getOpenDialog() {
   return document.querySelector('[role="dialog"][aria-labelledby]');
@@ -20,14 +35,18 @@ function getEventTitle(dialog) {
   return titleElement?.textContent?.trim() || null;
 }
 
-function findMatchingRule(title) {
+function findMatchingConcept(title) {
   if (!title) return null;
 
   const lowerTitle = title.toLowerCase();
 
-  return Object.entries(backgroundRules).find(
-    ([keyword]) => lowerTitle.includes(keyword)
-  ) || null;
+  return (
+    concepts.find((concept) =>
+      concept.aliases.some((alias) =>
+        lowerTitle.includes(alias.toLowerCase())
+      )
+    ) || null
+  );
 }
 
 function replaceExistingIllustration(header, imageUrl) {
@@ -63,10 +82,10 @@ function applyCustomIllustration() {
   const title = getEventTitle(dialog);
   if (!title) return;
 
-  const matchedRule = findMatchingRule(title);
-  if (!matchedRule) return;
+  const matchedConcept = findMatchingConcept(title);
+  if (!matchedConcept) return;
 
-  const [, imagePath] = matchedRule;
+  const imagePath = matchedConcept.image;
   const imageUrl = chrome.runtime.getURL(imagePath);
 
   const header = dialog.querySelector(".Tnsqdc");
