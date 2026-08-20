@@ -86,6 +86,15 @@ function applyCustomIllustration() {
   if (!matchedConcept) return;
 
   const imagePath = matchedConcept.image;
+  
+  if (
+    typeof chrome === "undefined" ||
+    !chrome.runtime ||
+    !chrome.runtime.id
+  ) {
+    return;
+  }
+
   const imageUrl = chrome.runtime.getURL(imagePath);
 
   const header = dialog.querySelector(".Tnsqdc");
@@ -101,6 +110,15 @@ function applyCustomIllustration() {
 }
 
 const observer = new MutationObserver(() => {
+  if (
+    typeof chrome === "undefined" ||
+    !chrome.runtime ||
+    !chrome.runtime.id
+  ) {
+    observer.disconnect();
+    return;
+  }
+
   applyCustomIllustration();
 });
 
