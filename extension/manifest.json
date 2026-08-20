@@ -11,7 +11,11 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["assets/test-background.png"],
+      "resources": [
+        "assets/test-background.png",
+        "assets/church.png",
+        "assets/lunch.png"
+      ],
       "matches": ["https://calendar.google.com/*"]
     }
   ]
