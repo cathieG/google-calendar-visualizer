@@ -6,70 +6,83 @@ const backgroundRules = {
   lunch: "assets/lunch.png"
 };
 
-function updatePopupIllustration() {
-  const dialog = document.querySelector(
-    '[role="dialog"][aria-labelledby]'
-  );
+function getOpenDialog() {
+  return document.querySelector('[role="dialog"][aria-labelledby]');
+}
 
-  if (!dialog) return;
+function getEventTitle(dialog) {
+  if (!dialog) return null;
 
-  // Get the current event title
   const titleId = dialog.getAttribute("aria-labelledby");
-  const titleElement = document.getElementById(titleId);
-  const title = titleElement?.textContent?.trim();
+  if (!titleId) return null;
 
-  if (!title) return;
+  const titleElement = document.getElementById(titleId);
+  return titleElement?.textContent?.trim() || null;
+}
+
+function findMatchingRule(title) {
+  if (!title) return null;
 
   const lowerTitle = title.toLowerCase();
 
-  // Find the first matching keyword
-  const matchedRule = Object.entries(backgroundRules).find(
+  return Object.entries(backgroundRules).find(
     ([keyword]) => lowerTitle.includes(keyword)
-  );
+  ) || null;
+}
 
-  if (!matchedRule) return;
+function replaceExistingIllustration(header, imageUrl) {
+  const popupImage = header.querySelector(".YrCd2b img");
 
-  const [, imagePath] = matchedRule;
-  const customImageUrl = chrome.runtime.getURL(imagePath);
+  if (!popupImage) return false;
 
-  const header = dialog.querySelector(".Tnsqdc");
-
-  if (!header) return;
-
-  // Case 1:
-  // Google already created an illustration area.
-  let artWrapper = header.querySelector(".YrCd2b");
-  let popupImage = artWrapper?.querySelector("img");
-
-  if (popupImage) {
-    if (popupImage.src !== customImageUrl) {
-      popupImage.src = customImageUrl;
-      console.log("Replaced existing illustration:", title);
-    }
-
-    return;
+  if (popupImage.src !== imageUrl) {
+    popupImage.src = imageUrl;
   }
 
-  // Case 2:
-  // Google did NOT create an illustration area.
-  // Recreate Google's illustrated-event structure.
+  return true;
+}
+
+function createIllustration(header, imageUrl) {
   header.classList.add("fEQAz");
 
-  artWrapper = document.createElement("div");
+  const artWrapper = document.createElement("div");
   artWrapper.className = "YrCd2b";
 
-  popupImage = document.createElement("img");
+  const popupImage = document.createElement("img");
   popupImage.className = "AuSgpc";
-  popupImage.src = customImageUrl;
+  popupImage.src = imageUrl;
 
   artWrapper.appendChild(popupImage);
   header.prepend(artWrapper);
+}
 
-  console.log("Created custom illustration:", title);
+function applyCustomIllustration() {
+  const dialog = getOpenDialog();
+  if (!dialog) return;
+
+  const title = getEventTitle(dialog);
+  if (!title) return;
+
+  const matchedRule = findMatchingRule(title);
+  if (!matchedRule) return;
+
+  const [, imagePath] = matchedRule;
+  const imageUrl = chrome.runtime.getURL(imagePath);
+
+  const header = dialog.querySelector(".Tnsqdc");
+  if (!header) return;
+
+  const replaced = replaceExistingIllustration(header, imageUrl);
+
+  if (!replaced) {
+    createIllustration(header, imageUrl);
+  }
+
+  console.log("Applied custom illustration:", title);
 }
 
 const observer = new MutationObserver(() => {
-  updatePopupIllustration();
+  applyCustomIllustration();
 });
 
 observer.observe(document.body, {
@@ -77,4 +90,4 @@ observer.observe(document.body, {
   subtree: true
 });
 
-updatePopupIllustration();
+applyCustomIllustration();
