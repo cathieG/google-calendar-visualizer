@@ -6,7 +6,10 @@
   "content_scripts": [
     {
       "matches": ["https://calendar.google.com/*"],
-      "js": ["content.js"]
+      "js": [
+        "calendarAdapter.js",
+        "content.js"
+      ]
     }
   ],
   "web_accessible_resources": [

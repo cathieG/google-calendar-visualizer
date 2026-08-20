@@ -18,50 +18,81 @@ const concepts = [
     type: "activity",
     aliases: ["lunch", "brunch"],
     image: "assets/lunch.png"
+  },
+  {
+    name: "Sarah",
+    type: "person",
+    aliases: ["sarah"],
+    image: null
+  },
+  {
+    name: "Green Cafe",
+    type: "place",
+    aliases: ["green cafe", "green café"],
+    image: null
+  },
+  {
+    name: "Jim",
+    type: "person",
+    aliases: ["jim"],
+    image: null
+  },
+  {
+    name: "Carol",
+    type: "person",
+    aliases: ["carol"],
+    image: null
   }
 ];
 
-function getOpenDialog() {
-  return document.querySelector('[role="dialog"][aria-labelledby]');
+function normalizeText(text) {
+  return (text || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
 }
 
-function getEventTitle(dialog) {
-  if (!dialog) return null;
-
-  const titleId = dialog.getAttribute("aria-labelledby");
-  if (!titleId) return null;
-
-  const titleElement = document.getElementById(titleId);
-  return titleElement?.textContent?.trim() || null;
-}
-
-function findMatchingConcept(title) {
-  if (!title) return null;
-
-  const lowerTitle = title.toLowerCase();
-
+function isExtensionContextValid() {
   return (
-    concepts.find((concept) =>
-      concept.aliases.some((alias) =>
-        lowerTitle.includes(alias.toLowerCase())
-      )
-    ) || null
+    typeof chrome !== "undefined" &&
+    chrome.runtime &&
+    chrome.runtime.id
   );
 }
 
-function replaceExistingIllustration(header, imageUrl) {
-  const popupImage = header.querySelector(".YrCd2b img");
+function findMatchingConcepts(title) {
+  if (!title) return [];
 
-  if (!popupImage) return false;
+  const normalizedTitle = normalizeText(title);
 
-  if (popupImage.src !== imageUrl) {
-    popupImage.src = imageUrl;
-  }
-
-  return true;
+  return concepts.filter((concept) =>
+    concept.aliases.some((alias) =>
+      normalizedTitle.includes(normalizeText(alias))
+    )
+  );
 }
 
-function createIllustration(header, imageUrl) {
+function getConceptWithImage(matchedConcepts) {
+  return matchedConcepts.find((concept) => concept.image) || null;
+}
+
+function ensureIllustration(header, imageUrl) {
+  if (!header) return "no-header";
+
+  const existingImage = header.querySelector(".YrCd2b img");
+
+  // Case 1: Google already created an illustration area (or we created one earlier)
+  if (existingImage) {
+    if (existingImage.src === imageUrl) {
+      return "unchanged";
+    }
+
+    existingImage.src = imageUrl;
+    return "replaced";
+  }
+
+  // Case 2: No illustration exists yet — create one using Google's layout classes
   header.classList.add("fEQAz");
 
   const artWrapper = document.createElement("div");
@@ -73,48 +104,47 @@ function createIllustration(header, imageUrl) {
 
   artWrapper.appendChild(popupImage);
   header.prepend(artWrapper);
+
+  return "created";
 }
 
 function applyCustomIllustration() {
-  const dialog = getOpenDialog();
+  if (!isExtensionContextValid()) return;
+
+  const dialog = CalendarAdapter.getOpenDialog();
   if (!dialog) return;
 
-  const title = getEventTitle(dialog);
+  const title = CalendarAdapter.getEventTitle(dialog);
   if (!title) return;
 
-  const matchedConcept = findMatchingConcept(title);
-  if (!matchedConcept) return;
+  const matchedConcepts = findMatchingConcepts(title);
+  if (matchedConcepts.length === 0) return;
 
-  const imagePath = matchedConcept.image;
-  
-  if (
-    typeof chrome === "undefined" ||
-    !chrome.runtime ||
-    !chrome.runtime.id
-  ) {
-    return;
+  const conceptWithImage = getConceptWithImage(matchedConcepts);
+  if (!conceptWithImage) return;
+
+  const imageUrl = chrome.runtime.getURL(conceptWithImage.image);
+  const result = CalendarAdapter.applyIllustration(dialog, imageUrl);
+
+  // Only log when we actually changed something
+  if (result === "created" || result === "replaced") {
+    console.log(
+      "Matched concepts:",
+      matchedConcepts.map((concept) => ({
+        name: concept.name,
+        type: concept.type
+      }))
+    );
+
+    console.log(
+      `Applied custom illustration (${result}):`,
+      title
+    );
   }
-
-  const imageUrl = chrome.runtime.getURL(imagePath);
-
-  const header = dialog.querySelector(".Tnsqdc");
-  if (!header) return;
-
-  const replaced = replaceExistingIllustration(header, imageUrl);
-
-  if (!replaced) {
-    createIllustration(header, imageUrl);
-  }
-
-  console.log("Applied custom illustration:", title);
 }
 
 const observer = new MutationObserver(() => {
-  if (
-    typeof chrome === "undefined" ||
-    !chrome.runtime ||
-    !chrome.runtime.id
-  ) {
+  if (!isExtensionContextValid()) {
     observer.disconnect();
     return;
   }
