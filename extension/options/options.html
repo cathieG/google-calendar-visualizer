@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Google Calendar Visualizer</title>
+
+  <link rel="stylesheet" href="options.css" />
+</head>
+
+<body>
+  <main>
+    <h1>Google Calendar Visualizer</h1>
+
+    <p>Manage your personal visual concepts here.</p>
+
+    <section id="add-concept">
+      <h2>Add Concept</h2>
+
+      <form id="concept-form">
+        <label for="concept-name">Name</label>
+        <input
+          id="concept-name"
+          type="text"
+          placeholder="e.g. Jim, Green Cafe, Pottery"
+          required
+        />
+
+        <label for="concept-type">Type</label>
+        <select id="concept-type" required>
+          <option value="person">Person</option>
+          <option value="place">Place</option>
+          <option value="activity">Activity</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="concept-aliases">Aliases</label>
+        <input
+          id="concept-aliases"
+          type="text"
+          placeholder="e.g. pottery, ceramics, pottery class"
+        />
+
+        <button type="submit">Save Concept</button>
+      </form>
+    </section>
+
+    <section id="concept-list">
+      <h2>Concept Library</h2>
+    </section>
+  </main>
+
+  <script src="../conceptStorage.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -3,11 +3,14 @@
   "name": "Google Calendar Visualizer",
   "version": "0.1.0",
   "description": "Adds personalized visual backgrounds to Google Calendar events.",
+  "permissions": ["storage"],
+  "options_page": "options/options.html",
   "content_scripts": [
     {
       "matches": ["https://calendar.google.com/*"],
       "js": [
         "calendarAdapter.js",
+        "conceptStorage.js",
         "content.js"
       ]
     }

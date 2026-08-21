@@ -1,6 +1,6 @@
 console.log("Google Calendar Visualizer loaded");
 
-const concepts = [
+const defaultConcepts = [
   {
     name: "Gym",
     type: "activity",
@@ -45,6 +45,9 @@ const concepts = [
   }
 ];
 
+let concepts = [];
+let lastLoggedMatchKey = null;
+
 function normalizeText(text) {
   return (text || "")
     .toLowerCase()
@@ -77,37 +80,6 @@ function getConceptWithImage(matchedConcepts) {
   return matchedConcepts.find((concept) => concept.image) || null;
 }
 
-function ensureIllustration(header, imageUrl) {
-  if (!header) return "no-header";
-
-  const existingImage = header.querySelector(".YrCd2b img");
-
-  // Case 1: Google already created an illustration area (or we created one earlier)
-  if (existingImage) {
-    if (existingImage.src === imageUrl) {
-      return "unchanged";
-    }
-
-    existingImage.src = imageUrl;
-    return "replaced";
-  }
-
-  // Case 2: No illustration exists yet — create one using Google's layout classes
-  header.classList.add("fEQAz");
-
-  const artWrapper = document.createElement("div");
-  artWrapper.className = "YrCd2b";
-
-  const popupImage = document.createElement("img");
-  popupImage.className = "AuSgpc";
-  popupImage.src = imageUrl;
-
-  artWrapper.appendChild(popupImage);
-  header.prepend(artWrapper);
-
-  return "created";
-}
-
 function applyCustomIllustration() {
   if (!isExtensionContextValid()) return;
 
@@ -120,14 +92,11 @@ function applyCustomIllustration() {
   const matchedConcepts = findMatchingConcepts(title);
   if (matchedConcepts.length === 0) return;
 
-  const conceptWithImage = getConceptWithImage(matchedConcepts);
-  if (!conceptWithImage) return;
+  const matchKey = `${title}|${matchedConcepts
+    .map((concept) => concept.name)
+    .join(",")}`;
 
-  const imageUrl = chrome.runtime.getURL(conceptWithImage.image);
-  const result = CalendarAdapter.applyIllustration(dialog, imageUrl);
-
-  // Only log when we actually changed something
-  if (result === "created" || result === "replaced") {
+  if (lastLoggedMatchKey !== matchKey) {
     console.log(
       "Matched concepts:",
       matchedConcepts.map((concept) => ({
@@ -136,6 +105,23 @@ function applyCustomIllustration() {
       }))
     );
 
+    lastLoggedMatchKey = matchKey;
+  }
+
+  const conceptWithImage = getConceptWithImage(matchedConcepts);
+
+  if (!conceptWithImage) {
+    return;
+  }
+
+  const imageUrl = chrome.runtime.getURL(conceptWithImage.image);
+
+  const result = CalendarAdapter.applyIllustration(
+    dialog,
+    imageUrl
+  );
+
+  if (result === "created" || result === "replaced") {
     console.log(
       `Applied custom illustration (${result}):`,
       title
@@ -157,4 +143,23 @@ observer.observe(document.body, {
   subtree: true
 });
 
-applyCustomIllustration();
+async function initialize() {
+  concepts = await ConceptStorage.initializeConcepts(defaultConcepts);
+
+  applyCustomIllustration();
+}
+
+chrome.storage.onChanged.addListener((changes, areaName) => {
+  if (areaName !== "local") return;
+
+  if (changes.concepts) {
+    concepts = changes.concepts.newValue || [];
+
+    console.log("Concepts updated from storage");
+
+    applyCustomIllustration();
+  }
+});
+
+
+initialize();
