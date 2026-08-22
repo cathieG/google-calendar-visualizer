@@ -1,3 +1,5 @@
+let editingConceptName = null;
+
 async function loadConcepts() {
   const concepts = await ConceptStorage.getConcepts();
 
@@ -20,12 +22,58 @@ async function loadConcepts() {
     const aliasesElement = document.createElement("p");
     aliasesElement.textContent = `Aliases: ${concept.aliases.join(", ")}`;
 
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.dataset.conceptName = concept.name;
+    editButton.addEventListener("click", () => {
+      editConcept(concept);
+    });
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.dataset.conceptName = concept.name;
+    deleteButton.addEventListener("click", () => {
+      deleteConceptByName(concept.name);
+    });
+
     conceptElement.appendChild(nameElement);
     conceptElement.appendChild(typeElement);
     conceptElement.appendChild(aliasesElement);
+    conceptElement.appendChild(editButton);
+    conceptElement.appendChild(deleteButton);
 
     conceptList.appendChild(conceptElement);
   });
+}
+
+async function deleteConceptByName(name) {
+  const concepts = await ConceptStorage.getConcepts();
+
+  const updatedConcepts = concepts.filter(
+    (concept) => concept.name !== name
+  );
+
+  await ConceptStorage.saveConcepts(updatedConcepts);
+
+  await loadConcepts();
+}
+
+function editConcept(concept) {
+  editingConceptName = concept.name;
+
+  const nameInput = document.getElementById("concept-name");
+  const typeInput = document.getElementById("concept-type");
+  const aliasesInput = document.getElementById("concept-aliases");
+  const saveButton = document.getElementById("save-concept-button");
+
+  nameInput.value = concept.name;
+  typeInput.value = concept.type;
+
+  aliasesInput.value = concept.aliases
+    .filter((alias) => alias.toLowerCase() !== concept.name.toLowerCase())
+    .join(", ");
+
+  saveButton.textContent = "Save Changes";  
 }
 
 async function handleFormSubmit(event) {
@@ -54,9 +102,28 @@ async function handleFormSubmit(event) {
 
   const concepts = await ConceptStorage.getConcepts();
 
-  concepts.push(newConcept);
+  if (editingConceptName) {
+    const conceptIndex = concepts.findIndex(
+      (concept) => concept.name === editingConceptName
+    );
+
+    if (conceptIndex !== -1) {
+      // Keep the existing image when editing.
+      newConcept.image = concepts[conceptIndex].image;
+
+      // Replace the old concept with the edited version.
+      concepts[conceptIndex] = newConcept;
+    }
+  } else {
+    // We are not editing, so create a brand-new concept.
+    concepts.push(newConcept);
+  }
 
   await ConceptStorage.saveConcepts(concepts);
+
+  editingConceptName = null;
+
+  document.getElementById("save-concept-button").textContent = "Save Concept";
 
   document.getElementById("concept-form").reset();
 
