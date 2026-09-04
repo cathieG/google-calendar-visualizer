@@ -41,7 +41,26 @@
           type="text"
           placeholder="e.g. pottery, ceramics, pottery class"
         />
+        <label for="concept-description">Description</label>
+        <textarea
+          id="concept-description"
+          placeholder="e.g. Warm pottery studio, person shaping clay at a wheel"
+          rows="4"
+        ></textarea>
 
+        <button id="generate-image-button" type="button">
+          Generate Image
+        </button>
+
+        <p id="generation-status"></p>
+
+        <img
+          id="concept-image-preview"
+          alt="Generated concept preview"
+          hidden
+          style="max-width: 300px; display: block; margin-top: 12px;"
+        />
+      
         <button id="save-concept-button" type="submit">Save Concept</button>
       </form>
     </section>

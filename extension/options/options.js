@@ -1,4 +1,5 @@
 let editingConceptName = null;
+let generatedImageUrl = null;
 
 async function loadConcepts() {
   const concepts = await ConceptStorage.getConcepts();
@@ -64,10 +65,12 @@ function editConcept(concept) {
   const nameInput = document.getElementById("concept-name");
   const typeInput = document.getElementById("concept-type");
   const aliasesInput = document.getElementById("concept-aliases");
+  const descriptionInput = document.getElementById("concept-description");
   const saveButton = document.getElementById("save-concept-button");
 
   nameInput.value = concept.name;
   typeInput.value = concept.type;
+  descriptionInput.value = concept.description || "";
 
   aliasesInput.value = concept.aliases
     .filter((alias) => alias.toLowerCase() !== concept.name.toLowerCase())
@@ -76,13 +79,79 @@ function editConcept(concept) {
   saveButton.textContent = "Save Changes";  
 }
 
+async function generateConceptImage() {
+  const nameInput = document.getElementById("concept-name");
+  const descriptionInput = document.getElementById("concept-description");
+  const statusElement = document.getElementById("generation-status");
+  const previewElement = document.getElementById("concept-image-preview");
+
+  const name = nameInput.value.trim();
+  const description = descriptionInput.value.trim();
+
+  if (!description) {
+    statusElement.textContent =
+      "Please enter a description before generating an image.";
+    return;
+  }
+
+  const prompt = `
+Create a warm flat 2D illustration for the concept "${name || "Untitled concept"}".
+
+Description:
+${description}
+
+Create this as a very wide horizontal banner for a Google Calendar event.
+Keep the important subjects fully visible within the frame.
+Keep iilustration similar to Google Calendar event style: 2d, geometric, no depths, simple, and minimal detail.
+No to only necessary texts only, such as showing the name of a place, important concept, or object. No other texts.
+
+  `.trim();
+
+  statusElement.textContent = "Generating image...";
+
+  try {
+    const response = await fetch(
+      "http://127.0.0.1:8000/concept/generate",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          prompt: prompt
+        })
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`Generation failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    generatedImageUrl = data.image_url;
+
+    previewElement.src = generatedImageUrl;
+    previewElement.hidden = false;
+
+    statusElement.textContent = "Image generated successfully.";
+  } catch (error) {
+    console.error("Image generation error:", error);
+
+    statusElement.textContent =
+      "Could not generate the image. Make sure the backend is running.";
+  }
+}
+
+
 async function handleFormSubmit(event) {
   event.preventDefault();
 
   const nameInput = document.getElementById("concept-name");
   const typeInput = document.getElementById("concept-type");
   const aliasesInput = document.getElementById("concept-aliases");
-
+  const descriptionInput = document.getElementById("concept-description");
+  const description = descriptionInput.value.trim();
   const name = nameInput.value.trim();
   const type = typeInput.value;
 
@@ -97,7 +166,8 @@ async function handleFormSubmit(event) {
     name: name,
     type: type,
     aliases: aliases,
-    image: null
+    description: description,
+    image: generatedImageUrl
   };
 
   const concepts = await ConceptStorage.getConcepts();
@@ -108,8 +178,14 @@ async function handleFormSubmit(event) {
     );
 
     if (conceptIndex !== -1) {
+
+      console.log("Old image:", concepts[conceptIndex].image);
+      console.log("New generated image:", generatedImageUrl);
+
       // Keep the existing image when editing.
-      newConcept.image = concepts[conceptIndex].image;
+      if (!generatedImageUrl) {
+        newConcept.image = concepts[conceptIndex].image;
+      }
 
       // Replace the old concept with the edited version.
       concepts[conceptIndex] = newConcept;
@@ -123,6 +199,16 @@ async function handleFormSubmit(event) {
 
   editingConceptName = null;
 
+  generatedImageUrl = null;
+
+  const previewElement =
+    document.getElementById("concept-image-preview");
+
+  previewElement.src = "";
+  previewElement.hidden = true;
+
+  document.getElementById("generation-status").textContent = "";
+
   document.getElementById("save-concept-button").textContent = "Save Concept";
 
   document.getElementById("concept-form").reset();
@@ -131,7 +217,14 @@ async function handleFormSubmit(event) {
 }
 
 const conceptForm = document.getElementById("concept-form");
+const generateImageButton =
+  document.getElementById("generate-image-button");
 
 conceptForm.addEventListener("submit", handleFormSubmit);
+
+generateImageButton.addEventListener(
+  "click",
+  generateConceptImage
+);
 
 loadConcepts();

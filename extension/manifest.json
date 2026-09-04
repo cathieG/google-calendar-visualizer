@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "Adds personalized visual backgrounds to Google Calendar events.",
   "permissions": ["storage"],
+  "host_permissions": ["http://127.0.0.1:8000/*"],
   "options_page": "options/options.html",
   "content_scripts": [
     {
@@ -18,9 +19,7 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "assets/test-background.png",
-        "assets/church.png",
-        "assets/lunch.png"
+        "assets/*.png"
       ],
       "matches": ["https://calendar.google.com/*"]
     }

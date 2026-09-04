@@ -50,8 +50,8 @@ def generate_concept(request: ConceptRequest):
     result = client.images.generate(
         model="gpt-image-2",
         prompt=request.prompt,
-        size="1024x1024",
-        quality="low",
+        size="1472x512",
+        quality="medium",
     )
 
     image_base64 = result.data[0].b64_json
