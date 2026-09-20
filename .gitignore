@@ -12,3 +12,6 @@
 
 # Locally generated backend images
 backend/generated/
+
+# Rendered copies of Google Calendar SVG references
+backend/references/rendered/

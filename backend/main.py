@@ -7,8 +7,8 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
-from pydantic import BaseModel
 
+from visual_planner import ConceptRequest, plan_concept_image
 
 load_dotenv()
 
@@ -36,20 +36,56 @@ app.mount(
 )
 
 
-class ConceptRequest(BaseModel):
-    prompt: str
-
-
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
 
+@app.post("/concept/plan")
+def plan_concept(request: ConceptRequest):
+    scene_plan = plan_concept_image(request)
+
+    return {
+        "scene_plan": scene_plan.model_dump()
+    }
 
 @app.post("/concept/generate")
 def generate_concept(request: ConceptRequest):
+
+    scene_plan = plan_concept_image(request)
+
+    print("Generated scene plan:")
+    print(scene_plan.model_dump_json(indent=2))
+
+    prompt = f"""
+    Create an illustration based on the following visual plan.
+
+    Subject:
+    {scene_plan.subject}
+
+    Representation:
+    {scene_plan.representation}
+
+    Setting:
+    {scene_plan.setting or "No specific setting"}
+
+    Action:
+    {scene_plan.action or "No specific action"}
+
+    Important objects:
+    {", ".join(scene_plan.important_objects)}
+
+    Create this as a very wide horizontal banner for a Google Calendar event.
+    Keep the important subjects fully visible within the frame.
+
+    Keep the illustration simple, geometric, flat, and minimal in detail.
+    Avoid depth and photorealism.
+
+    Avoid text unless it is genuinely necessary to represent the concept.
+    """.strip()
+
     result = client.images.generate(
         model="gpt-image-2",
-        prompt=request.prompt,
+        prompt=prompt,
         size="1472x512",
         quality="medium",
     )

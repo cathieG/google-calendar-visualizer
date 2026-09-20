@@ -81,31 +81,20 @@ function editConcept(concept) {
 
 async function generateConceptImage() {
   const nameInput = document.getElementById("concept-name");
+  const typeInput = document.getElementById("concept-type");
   const descriptionInput = document.getElementById("concept-description");
   const statusElement = document.getElementById("generation-status");
   const previewElement = document.getElementById("concept-image-preview");
 
   const name = nameInput.value.trim();
+  const type = typeInput.value;
   const description = descriptionInput.value.trim();
 
-  if (!description) {
+  if (!name) {
     statusElement.textContent =
-      "Please enter a description before generating an image.";
+      "Please enter a concept name before generating an image.";
     return;
   }
-
-  const prompt = `
-Create a warm flat 2D illustration for the concept "${name || "Untitled concept"}".
-
-Description:
-${description}
-
-Create this as a very wide horizontal banner for a Google Calendar event.
-Keep the important subjects fully visible within the frame.
-Keep iilustration similar to Google Calendar event style: 2d, geometric, no depths, simple, and minimal detail.
-No to only necessary texts only, such as showing the name of a place, important concept, or object. No other texts.
-
-  `.trim();
 
   statusElement.textContent = "Generating image...";
 
@@ -118,7 +107,9 @@ No to only necessary texts only, such as showing the name of a place, important 
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          prompt: prompt
+          name: name,
+          type: type,
+          description: description || null
         })
       }
     );
