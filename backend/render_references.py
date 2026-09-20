@@ -4,6 +4,7 @@ import re
 
 
 REFERENCE_DIR = Path("references").resolve()
+RAW_DIR = REFERENCE_DIR / "raw"
 OUTPUT_DIR = REFERENCE_DIR / "rendered"
 
 CHROME_PATH = Path(
@@ -31,7 +32,7 @@ def get_svg_dimensions(svg_path):
 
 
 def render_references():
-    svg_files = sorted(REFERENCE_DIR.glob("*.svg"))
+    svg_files = sorted(RAW_DIR.glob("*.svg"))
 
     if not svg_files:
         print("No SVG reference files found.")
@@ -39,6 +40,10 @@ def render_references():
 
     for svg_path in svg_files:
         output_path = OUTPUT_DIR / f"{svg_path.stem}.png"
+
+        if output_path.exists():
+            print(f"Skipping {svg_path.name} (already rendered)")
+            continue
 
         width, height = get_svg_dimensions(svg_path)
 
