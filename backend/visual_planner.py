@@ -52,7 +52,12 @@ class ReferenceSelection(BaseModel):
 # Google Calendar visual references
 # ---------------------------------------------------------
 
-REFERENCE_ROOT = Path(__file__).parent / "references"
+REFERENCE_ROOT = (
+    Path(__file__).parent
+    / "references"
+    / "google_calendar"
+)
+
 REFERENCE_DIR = REFERENCE_ROOT / "rendered"
 REFERENCE_CATALOG_PATH = REFERENCE_ROOT / "references.json"
 
@@ -509,10 +514,10 @@ Then choose only ONE.
 Do not return the alternatives.
 
 --------------------------------------------------
-RECOGNIZABILITY BEFORE CLEVERNESS
+RECOGNIZABILITY
 --------------------------------------------------
 
-Creativity is secondary to recognizability.
+Make sure a scene is recognizeable.
 
 A clever, symbolic, or metaphorical idea is only useful if a viewer
 can still understand the underlying concept without relying on the
