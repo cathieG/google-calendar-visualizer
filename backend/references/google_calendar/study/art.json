@@ -1,0 +1,291 @@
+{
+  "reference_id": "art",
+  "concept": "Art",
+  "files": {
+    "svg": "raw/img_art.svg",
+    "rendered": "rendered/img_art.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide, highly stylized art-making scene dominated by two oversized canvases/easels and art supplies. Most semantic activity is concentrated in the center and right side of the frame. A miniature human figure stands near the right canvas and interacts with an extremely large paintbrush. The surrounding space is not depicted as a literal studio; instead, enlarged art-related objects and abstract decorative forms construct the visual environment.",
+    "composition": {
+      "weight_distribution": "Strongly asymmetric. The left side contains substantial quiet/negative space, while the center-right contains most of the detailed and semantically active content.",
+      "busiest_region": "Right half, especially around the painted canvas, figure, oversized brush, and foreground palette-like structure.",
+      "quiet_region": "Far left and upper-left background.",
+      "balance_strategy": "Large quiet regions and pale structural forms counterbalance the denser colorful cluster on the right rather than using symmetrical content.",
+      "major_structural_forms": [
+        "large blank or nearly blank canvas/easel in the center-left",
+        "large painted canvas/easel in the center-right",
+        "long foreground pink horizontal form",
+        "abstract line/decorative forms entering from the left and lower edges"
+      ]
+    },
+    "background": {
+      "base": "Solid light beige / pale warm yellow field.",
+      "environmental_detail": "Almost none.",
+      "decorative_elements": "Sparse abstract line and shape elements appear primarily as compositional balancing devices rather than literal environmental objects.",
+      "literal_room_depiction": false
+    },
+    "left_canvas_area": {
+      "canvas": "Large, pale, mostly empty rectangular canvas/easel occupying substantial vertical and horizontal area.",
+      "foreground_objects": [
+        "two simplified paintbrushes",
+        "simple geometric cup/container forms"
+      ],
+      "detail_level": "Very low.",
+      "visual_role": "Provides large structural mass while remaining quiet because of its pale color and sparse internal detail."
+    },
+    "right_canvas_area": {
+      "canvas": "Large pale canvas containing only a few simple painted marks.",
+      "painted_elements": [
+        "yellow sun/starburst-like shape",
+        "two broad curved green strokes in different shades"
+      ],
+      "painting_complexity": "Extremely simplified and abstract.",
+      "visual_role": "Communicates that painting is occurring without introducing a detailed secondary artwork that would compete with the main concept."
+    },
+    "human_figure": {
+      "count": 1,
+      "identity_status": "anonymous / non-identifiable",
+      "skin_tone": "brown",
+      "hair": {
+        "color": "dark brown / black",
+        "style": "long hair gathered into a bun"
+      },
+      "facial_detail": "Very minimal.",
+      "clothing": "Distinct flat-color clothing composed of green, blue, and purple regions.",
+      "pose": "Side-view figure holding or interacting with a large paintbrush; one leg extends backward.",
+      "relative_size": "Very small relative to the canvases, brush, and several surrounding objects.",
+      "internal_proportions": "Stylized and non-anatomical: very small head, broad/blocky torso, and thick geometric limbs.",
+      "shape_construction": "Body appears assembled from simplified rectangular, rounded, and cylindrical geometric forms.",
+      "semantic_role": "Shows active human participation in painting and gives the scene action/personality, but is not the largest or most visually dominant element.",
+      "identity_specificity": "The figure has concrete ordinary visual characteristics such as skin tone, hairstyle, and clothing, despite not representing a known individual."
+    },
+    "scale_and_proportion": {
+      "realism": "Strongly non-realistic.",
+      "human_to_canvas": "Human appears miniature relative to the canvases.",
+      "human_to_brush": "Brush held by the figure is dramatically oversized relative to the person's body.",
+      "other_tools": "Brushes near the left canvas also appear large relative to the person.",
+      "general_effect": "Art materials function almost as architectural elements of the scene rather than ordinary props."
+    },
+    "foreground": {
+      "main_form": "Long pink horizontal palette/table-like structure spanning much of the right side and extending off the frame.",
+      "additional_shapes": "Several colorful rounded paint-like forms appear along or below it.",
+      "depth_role": "Creates a strong foreground layer through overlap rather than through realistic perspective."
+    },
+    "depth_and_space": {
+      "depth_type": "Shallow layered depth.",
+      "mechanisms": [
+        "overlap",
+        "foreground/background ordering",
+        "partial occlusion"
+      ],
+      "realistic_perspective": "Minimal.",
+      "floor_plane": "Not clearly depicted.",
+      "room_depth": "Not depicted.",
+      "overall_effect": "Feels like stacked illustrated planes rather than a literal three-dimensional studio."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "left decorative line extends beyond the frame",
+        "foreground pink structure extends to/right beyond the frame",
+        "colored forms at the lower/right edge are partially cropped"
+      ],
+      "effect": "Creates the sense that the composition continues beyond the visible banner."
+    },
+    "color": {
+      "background": "warm pale beige/yellow",
+      "major_colors": [
+        "orange",
+        "pink",
+        "green",
+        "blue",
+        "purple",
+        "brown",
+        "yellow"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Color separates overlapping forms and establishes visual hierarchy more than it describes realistic lighting or material."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric and rounded forms.",
+      "human_body": "Chunky geometric construction.",
+      "objects": "Reduced to recognizable silhouettes and a small number of flat shapes.",
+      "fine_detail": "Very limited."
+    },
+    "lighting_and_texture": {
+      "shadows": "Little to none.",
+      "gradients": "Little to none.",
+      "surface_texture": "Minimal.",
+      "material_realism": "Low."
+    },
+    "salience": {
+      "primary_attention_element": "Bright orange oversized paintbrush and the human figure interacting with it.",
+      "secondary_attention_elements": [
+        "painted marks on the right canvas",
+        "pink foreground structure"
+      ],
+      "large_but_quiet_elements": [
+        "two pale canvases"
+      ],
+      "high_attention_elements": [
+        "bright orange oversized brush",
+        "colored human figure",
+        "painted marks",
+        "pink foreground structure"
+      ],
+      "important_observation": "Physical area and visual salience are not the same. The canvases occupy enormous area but their pale color makes them quieter than smaller saturated elements."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Interaction between the human figure and the oversized paintbrush.",
+      "secondary_motion_cues": [
+        "one leg extending backward",
+        "diagonal orientation of the large brush"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The activity is communicated through pose and object interaction rather than explicit motion graphics."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "The image contains multiple canvases, paint tools, containers, foreground paint-like forms, decorative background elements, and one human figure. Despite containing more elements than the Athletic Jumping reference, the scene remains readable because many large elements are visually quiet and supporting details are simplified."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Art / painting activity.",
+    "primary_recognition_cues": [
+      "canvas/easel",
+      "paintbrush",
+      "painted marks"
+    ],
+    "secondary_recognition_cues": [
+      "paint containers",
+      "palette/paint forms",
+      "human painting action"
+    ],
+    "human_semantic_role": "The person confirms active painting and gives the scene action, but the art objects themselves carry much of the recognition burden.",
+    "dominant_semantic_objects": [
+      "canvas",
+      "paintbrush"
+    ],
+    "literal_environment_used": false,
+    "environment_strategy": "The art setting is suggested through enlarged concept-relevant objects rather than through a realistic studio interior.",
+    "literal_alternative": "A realistically proportioned person standing at an easel in a recognizable art studio, surrounded by normal-scale supplies and furniture.",
+    "google_choice": "Create a surreal but readable object-based world in which large canvases and oversized art tools dominate, while a miniature painter interacts with them.",
+    "notable_omissions": [
+      "realistic studio walls",
+      "floor",
+      "windows",
+      "shelves",
+      "furniture",
+      "realistic-scale art supplies",
+      "complex completed painting",
+      "detailed facial features"
+    ],
+    "possible_reasoning": [
+      "The oversized art objects make the concept immediately recognizable at small size.",
+      "Removing realistic studio detail keeps attention on the concept rather than the location.",
+      "The simplified painting communicates the act of painting without creating a competing visual subject.",
+      "The miniature human adds action and personality without overtaking the semantic objects."
+    ],
+    "symbolic_or_informational_cues": [
+      {
+        "element": "abstract painted marks on the right canvas",
+        "function": "Indicate the presence and process of painting without representing a detailed specific artwork.",
+        "type": "semantic shorthand rather than informational graphic"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_person_removed": "The image would probably still communicate art/painting because the canvases, brushes, and paint marks are strong diagnostic cues.",
+    "if_large_brush_removed": "The scene would remain interpretable but would lose one of its strongest and most playful visual anchors.",
+    "if_canvases_removed": "Recognition of painting/art would weaken substantially.",
+    "if_realistic_scale_used": "The scene would likely become more literal and less visually distinctive; the person would compete more strongly with the art objects.",
+    "if_detailed_studio_added": "The illustration would become more context-heavy and potentially less immediately legible at small scale."
+  },
+  "derived_observations": {
+    "recognition_anchor": "concept-diagnostic objects more than human figure",
+    "human_role": "supporting action cue",
+    "scale_exaggeration": "strong",
+    "internal_human_proportion_stylization": "strong",
+    "environment_abstraction": "strong",
+    "symbolic_information_integration": "low",
+    "semantic_shorthand": "present",
+    "motion_encoding": "human-object interaction and pose",
+    "depth": "shallow layered",
+    "cropping": "present",
+    "scene_density": "moderate and asymmetrically concentrated",
+    "facial_specificity": "very low",
+    "anonymous_character_visual_specificity": "moderate",
+    "rendering_realism": "low",
+    "composition_dynamic": "quiet negative space contrasted with dense center-right activity"
+  },
+  "candidate_principles": [
+    {
+      "claim": "Realistic physical scale may be subordinated to semantic importance.",
+      "evidence": "Canvases and paintbrushes are dramatically enlarged relative to the human figure.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Concept-diagnostic objects may carry recognition while people primarily provide action and personality.",
+      "evidence": "The small painter supports the idea, but the canvases, brush, and paint marks remain strongly recognizable without detailed human depiction.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "A literal physical environment may be replaced by an environment constructed from concept-relevant objects.",
+      "evidence": "There is no realistic art studio; enlarged canvases and supplies effectively become the environment.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Anonymous characters can have concrete ordinary appearance traits without representing a specific identity.",
+      "evidence": "The anonymous figure has brown skin, a distinct dark bun hairstyle, and visually differentiated clothing.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Supporting imagery may be intentionally simplified so that it communicates function without becoming a competing subject.",
+      "evidence": "The artwork on the canvas consists only of a simple yellow form and green strokes.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Large pale structures can provide compositional mass without becoming the strongest salience point.",
+      "evidence": "The canvases occupy substantial area but the saturated brush and figure attract stronger attention.",
+      "confidence": "tentative"
+    }
+  ],
+  "open_questions": [
+    "Is semantic scale exaggeration common across other Google Calendar illustrations or especially strong in art-related scenes?",
+    "Do anonymous figures consistently receive distinct skin tones and hairstyles?",
+    "How often are people visually secondary to objects?",
+    "How frequently does Google replace literal environments with enlarged semantic objects?",
+    "Is asymmetric visual weight with large negative-space regions a recurring banner strategy?",
+    "How often do large elements extend beyond the frame?",
+    "How often is motion communicated through pose or object interaction rather than motion effects?",
+    "Does scene complexity systematically vary according to how much semantic information is needed for recognition?",
+    "How often does Google use semantic shorthand rather than literal or informational cues?"
+  ],
+  "comparison_to_athleticsjumping": {
+    "shared_patterns": [
+      "solid pale background",
+      "minimal literal environmental detail",
+      "very shallow depth",
+      "flat-color rendering",
+      "little or no shading or texture",
+      "anonymous person with concrete visual appearance traits",
+      "small head relative to body",
+      "simplified geometric human construction",
+      "large environmental forms extending beyond the frame"
+    ],
+    "important_differences": [
+      "Art makes concept-diagnostic objects visually dominant while the human is miniature and secondary.",
+      "Athletic Jumping makes the human body the primary semantic and visual anchor.",
+      "Art uses strong human-to-object scale exaggeration; Athletic Jumping uses comparatively conventional human scale.",
+      "Art has a denser collection of supporting objects and decorative forms.",
+      "Art communicates activity through human-object interaction, whereas Athletic Jumping communicates motion mainly through body pose.",
+      "Art builds an implied environment from enlarged semantic objects, whereas Athletic Jumping builds its environment from abstract horizontal field layers."
+    ],
+    "implication": "The two references share a stable surface language while varying substantially in semantic hierarchy, scale distortion, scene density, and the role assigned to the human figure."
+  }
+}

@@ -1,7 +1,3 @@
-import base64
-import json
-from pathlib import Path
-
 from dotenv import load_dotenv
 from openai import OpenAI
 from pydantic import BaseModel
@@ -30,7 +26,14 @@ class ConceptContext(BaseModel):
     protected_unknowns: list[str]
 
 
-class ScenePlan(BaseModel):
+class ContentPlan(BaseModel):
+    """
+    Style-independent description of WHAT should be depicted.
+
+    This model intentionally does not contain composition, color,
+    camera, rendering-style, or other style-specific decisions.
+    """
+
     visual_idea: str
     representation: str
 
@@ -38,89 +41,10 @@ class ScenePlan(BaseModel):
     setting: str
     action: str
 
-    important_objects: list[str]
+    candidate_objects: list[str]
     accent_detail: str | None
 
-    avoid: list[str]
-
-
-class ReferenceSelection(BaseModel):
-    concepts: list[str]
-
-
-# ---------------------------------------------------------
-# Google Calendar visual references
-# ---------------------------------------------------------
-
-REFERENCE_ROOT = (
-    Path(__file__).parent
-    / "references"
-    / "google_calendar"
-)
-
-REFERENCE_DIR = REFERENCE_ROOT / "rendered"
-REFERENCE_CATALOG_PATH = REFERENCE_ROOT / "references.json"
-
-
-def load_visual_references() -> list[tuple[str, str]]:
-    """
-    Load and validate the Google Calendar visual reference catalog.
-
-    Each catalog entry has the form:
-
-        {
-            "concept": "Tennis",
-            "file": "img_tennis.png"
-        }
-
-    The rest of the planner uses (concept, filename) tuples.
-    """
-
-    with REFERENCE_CATALOG_PATH.open(
-        "r",
-        encoding="utf-8",
-    ) as file:
-        catalog = json.load(file)
-
-    references = []
-
-    for entry in catalog:
-        concept = entry["concept"]
-        filename = entry["file"]
-
-        image_path = REFERENCE_DIR / filename
-
-        if not image_path.exists():
-            raise FileNotFoundError(
-                f"Reference catalog contains '{concept}', "
-                f"but its rendered image does not exist: "
-                f"{image_path}"
-            )
-
-        references.append(
-            (concept, filename)
-        )
-
-    return references
-
-
-VISUAL_REFERENCES = load_visual_references()
-
-
-# ---------------------------------------------------------
-# Image helper
-# ---------------------------------------------------------
-
-def image_to_data_url(path: Path) -> str:
-    """
-    Convert a local PNG image into a base64 data URL
-    that can be sent to the OpenAI API.
-    """
-
-    image_bytes = path.read_bytes()
-    encoded = base64.b64encode(image_bytes).decode("utf-8")
-
-    return f"data:image/png;base64,{encoded}"
+    content_constraints: list[str]
 
 
 # ---------------------------------------------------------
@@ -284,174 +208,18 @@ generic version.
 
 
 # ---------------------------------------------------------
-# Reference selector
+# Generic content planner
 # ---------------------------------------------------------
 
-def select_visual_references(
-    request: ConceptRequest,
-    context: ConceptContext,
-) -> list[tuple[str, str]]:
+def plan_concept_image(request: ConceptRequest) -> ContentPlan:
     """
-    Choose a small subset of Google Calendar reference illustrations
-    that will be useful for planning the new concept.
-    """
+    Interpret the concept and create one selective,
+    style-independent content plan for the requested calendar concept.
 
-    available_concepts = [
-        concept_name
-        for concept_name, _ in VISUAL_REFERENCES
-    ]
+    This function decides WHAT should be depicted.
 
-    response = client.responses.parse(
-        model="gpt-5.6-luna",
-        input=[
-            {
-                "role": "system",
-                "content": """
-You select visual design references for a calendar illustration planner.
-
-You will receive:
-1. a new calendar concept,
-2. its interpreted real-world context,
-3. a list of available reference concepts.
-
-Choose exactly 3 references that would be most useful when deciding
-how the new concept should be visually represented.
-
-Do not simply choose the three concepts that are most semantically
-similar.
-
-Choose references that together help the visual planner compare
-different possible representation strategies.
-
-Prefer a useful combination of:
-- semantic relevance,
-- analogous activities or events,
-- contrasting ways a concept might be represented.
-
-Known details describe this particular event.
-
-General associations describe possibilities, not facts. Do not treat
-them as requirements.
-
-Open choices describe unspecified details the visual planner may
-safely choose among.
-
-Protected unknowns describe information that must not be assumed.
-
-Return only concepts from the supplied list.
-""".strip(),
-            },
-            {
-                "role": "user",
-                "content": f"""
-New concept: {request.name}
-Concept type: {request.type}
-Description: {request.description or "None provided"}
-
-Interpreted core concept:
-{context.core_concept}
-
-Known details:
-{chr(10).join(f"- {item}" for item in context.known_details)}
-
-General associations:
-{chr(10).join(f"- {item}" for item in context.general_associations)}
-
-Open choices:
-{chr(10).join(f"- {item}" for item in context.open_choices)}
-
-Protected unknowns:
-{chr(10).join(f"- {item}" for item in context.protected_unknowns)}
-
-Available reference concepts:
-{", ".join(available_concepts)}
-""".strip(),
-            },
-        ],
-        text_format=ReferenceSelection,
-    )
-
-    selected_names = response.output_parsed.concepts
-
-    selected_references = [
-        (concept_name, filename)
-        for concept_name, filename in VISUAL_REFERENCES
-        if concept_name in selected_names
-    ]
-
-    print(
-        f"Selected visual references for {request.name}: "
-        f"{[name for name, _ in selected_references]}"
-    )
-
-    return selected_references
-
-
-# ---------------------------------------------------------
-# Build multimodal reference message
-# ---------------------------------------------------------
-
-def build_visual_reference_content(
-    references: list[tuple[str, str]],
-):
-    """
-    Build a multimodal message containing the selected Google Calendar
-    reference illustrations.
-
-    Each image is labeled with its concept name, but we deliberately
-    do not describe what appears inside it. The planner should infer
-    Google's representation decisions from the image itself.
-    """
-
-    content = [
-        {
-            "type": "input_text",
-            "text": (
-                "Below are reference illustrations used by Google Calendar. "
-                "Each image is labeled with the concept it represents. "
-                "Study what Google chose to depict for each concept. "
-                "Focus on representation decisions: which subjects, objects, "
-                "people, actions, environments, or small incidental details "
-                "were selected, and especially what Google chose to omit. "
-                "Do not copy the rendering style."
-            ),
-        }
-    ]
-
-    for concept_name, filename in references:
-        image_path = REFERENCE_DIR / filename
-
-        if not image_path.exists():
-            raise FileNotFoundError(
-                f"Visual reference image not found: {image_path}"
-            )
-
-        content.append(
-            {
-                "type": "input_text",
-                "text": f"Reference concept: {concept_name}",
-            }
-        )
-
-        content.append(
-            {
-                "type": "input_image",
-                "image_url": image_to_data_url(image_path),
-            }
-        )
-
-    return content
-
-
-# ---------------------------------------------------------
-# Visual planner
-# ---------------------------------------------------------
-
-def plan_concept_image(request: ConceptRequest) -> ScenePlan:
-    """
-    Interpret the concept, select useful visual references,
-    and create one selective, creative scene plan for the
-    requested calendar concept.
+    It deliberately does not decide HOW a particular visual style
+    should compose, stage, color, or render the content.
     """
 
     # Stage 1:
@@ -459,54 +227,48 @@ def plan_concept_image(request: ConceptRequest) -> ScenePlan:
     concept_context = interpret_concept(request)
 
     # Stage 2:
-    # Select useful Google Calendar references using that context.
-    selected_references = select_visual_references(
-        request,
-        concept_context,
-    )
-
-    # Stage 3:
-    # Give the interpretation and selected reference images
-    # to the visual planner.
+    # Use the interpreted concept context to create a
+    # style-independent content plan.
     #
-    # The planner is the main creative decision-maker.
-    # It should consider multiple possibilities, select one,
-    # and deliberately leave most possible context out.
+    # The planner should decide WHAT should be depicted,
+    # but not HOW a particular visual style should stage it.
     response = client.responses.parse(
         model="gpt-5.6-luna",
         input=[
             {
                 "role": "system",
                 "content": """
-You are the creative visual planner for small calendar illustrations.
+You are the generic content planner for a calendar illustration system.
 
-You are the main visual decision-maker in the pipeline.
+Your job is to decide WHAT should be depicted.
 
-Your job is NOT to summarize everything that could occur in the
-real-world event.
+You are NOT the art director and NOT the renderer.
 
-Your job is to choose ONE strong visual interpretation from many
-possible interpretations and turn it into a compact design brief.
+A later style-specific art-direction layer will decide HOW the selected
+content should be composed, scaled, framed, cropped, colored, and
+rendered.
 
-Think like a thoughtful illustrator or creative director.
+Your output should therefore remain style-independent.
 
 --------------------------------------------------
 CORE PLANNING PRINCIPLE
 --------------------------------------------------
 
-The concept interpreter may provide many known details and many
-general associations.
+The concept interpreter provides many known details, general
+associations, open choices, and protected unknowns.
 
 Treat that information as a pool of possibilities.
 
-Do not attempt to include all of it.
+Do not attempt to include everything associated with the real-world
+event.
 
-A successful calendar illustration usually communicates one clear
-idea with very few elements.
+Choose ONE strong visual interpretation from several plausible
+possibilities.
 
-The image should feel selected and designed, not comprehensive.
+The plan should identify the smallest set of semantic elements needed
+to make the concept clear and meaningful.
 
-Before producing your answer, consider several plausible visual
+Before producing your answer, consider several plausible content
 approaches internally.
 
 Then choose only ONE.
@@ -517,19 +279,16 @@ Do not return the alternatives.
 RECOGNIZABILITY
 --------------------------------------------------
 
-Make sure a scene is recognizeable.
+The chosen content should make the underlying concept recognizable
+without relying on the event title or written text.
 
-A clever, symbolic, or metaphorical idea is only useful if a viewer
-can still understand the underlying concept without relying on the
-event title or written text.
+A clever, symbolic, or metaphorical idea is useful, but only when the
+underlying concept remains understandable.
 
-Ask whether the chosen image would still communicate the core event
-if it were viewed on its own.
+Prefer clear semantic cues over an inventive idea that becomes
+ambiguous without explanation.
 
-Prefer a familiar but elegant visual cue over an inventive idea that
-becomes ambiguous without explanation.
-
-A surprising detail may enrich a clear idea.
+A surprising secondary detail may enrich a clear idea.
 
 It must not replace the clear idea.
 
@@ -537,69 +296,93 @@ It must not replace the clear idea.
 REPRESENTATION STRATEGIES
 --------------------------------------------------
 
-Possible representation strategies include:
+Choose the strategy according to which kind of visual content does
+most of the work in making the concept recognizable.
 
-- activity_scene:
-  A person, partial person, or simple human action is central to
-  recognizing the concept.
+- human_action_scene:
+  A human action, pose, or partial human presence is the main cue.
 
-- environment_scene:
-  A recognizable place or environment carries the idea.
+  Use this when the concept would become substantially less recognizable
+  if the person or action were removed.
 
-- object_composition:
-  A small arrangement of distinctive objects communicates the concept
-  more simply than a complete scene.
+  The person does not need to be shown fully when hands, arms, posture, or
+  a simple human figure is enough.
 
-- character_activity:
-  A character performs a simple recognizable action where showing
-  the action adds useful meaning.
+- object_focus:
+  One distinctive object, or a small arrangement of objects, carries
+  most of the concept's recognizability.
 
-- atmosphere_scene:
-  A small set of environmental or symbolic elements communicates
-  a celebration, holiday, season, or mood.
+  Use this when the concept itself is object or focused and when 
+  people or a detailed environment add little useful
+  semantic information.
 
-These are strategies, not rigid categories.
+- environment_focus:
+  A recognizable place, setting, or environment carries most of the
+  concept.
 
-Choose whichever best serves the visual idea.
+  People and objects may appear, but they are semantically secondary.
+
+- social_interaction_scene:
+  An interaction between multiple people is central to recognizing the
+  event.
+
+  Use this only when the event itself supports that interaction.
+
+- atmosphere_symbolic_scene:
+  A small set of atmospheric, seasonal, celebratory, or symbolic
+  elements carries the concept without requiring a specific human
+  action or detailed physical environment.
+
+These strategies describe the PRIMARY carrier of recognition.
+
+A content plan may include secondary elements associated with other
+strategies.
+
+Choose the strategy based on what the viewer relies on most to
+recognize the concept.
 
 --------------------------------------------------
-VISUAL ECONOMY
+CONTENT ECONOMY
 --------------------------------------------------
 
 Do not reconstruct the whole real-world event.
 
-Prefer:
-- one primary visual idea,
-- one clear subject,
-- roughly 1-3 essential objects,
-- sparse setting information,
-- little or no secondary activity.
+Prefer a focused visual idea.
 
-A specific event can have many valid illustrations.
+Include only people, objects, actions, or setting information that
+materially help communicate the chosen concept.
+
+A specific event can have many valid representations.
 Your task is to select one of them.
 
-The important_objects field contains only objects explicitly approved
-to appear in the image.
+The candidate_objects field should contain a small pool of objects that are
+semantically useful to the chosen visual interpretation.
 
-Do not fill important_objects with everything commonly associated
-with the event.
+These are candidate resources for hte later art-direction layer, not a checklist
+of objects that must all appear.
+
+Do not make decisions here about how many objects should dominate the
+frame, how large they should appear, or where they should be placed.
+
+Those are art-direction decisions.
 
 --------------------------------------------------
 SPECIFICITY
 --------------------------------------------------
 
 Preserve details that distinguish the requested concept from a more
-generic version when those details can be communicated simply.
+generic version when those details can be communicated without
+overloading the plan.
 
 For example:
 - a 70th birthday should not become a generic birthday,
 - an anniversary dinner should not become an ordinary dinner,
 - the first day of kindergarten should not become generic school.
 
-But specificity does not mean comprehensiveness.
+Specificity does not require representing every detail.
 
-Choose the smallest amount of specificity needed to make the visual
-idea meaningful.
+Choose enough content to preserve what is meaningful about this
+particular concept.
 
 --------------------------------------------------
 KNOWN, ASSOCIATED, OPEN, AND PROTECTED INFORMATION
@@ -616,87 +399,95 @@ KNOWN DETAILS may be relied upon.
 GENERAL ASSOCIATIONS are possible sources of inspiration.
 They are not requirements.
 
-You may use one or two when they support the chosen visual idea.
+Use them only when they support the chosen visual idea.
 
 OPEN CHOICES are legitimate areas of creative freedom.
+
 You may choose one plausible option when it helps create a clearer
-or more effective visual idea. You do not need to exercise every
-open choice.
+content idea. You do not need to exercise every open choice.
 
 PROTECTED UNKNOWNS are boundaries.
-Do not invent them or visually imply them as facts.
 
-This is especially important for named people.
+Do not turn a protected unknown into a factual claim in the content
+plan.
 
-Do not infer or invent a named person's:
+This is especially important for identified or named people.
+
+These restrictions apply to claims about identifiable people.
+
+They do not prohibit anonymous, unspecified human figures from having
+ordinary and varied appearances.
+
+For example, if a concept naturally calls for a group of anonymous
+people, those figures may differ in:
+- skin tone,
+- hair color,
+- hair texture or hairstyle,
+- gender presentation,
+- ordinary clothing,
+- facial features,
+- body proportions.
+
+Such variation is allowed because those figures are not being presented
+as specific known individuals.
+
+Do not treat unspecified identity as a requirement for visually neutral,
+featureless, or identical people.
+
+However, if the ContentPlan refers to a specific named or otherwise
+identified person, do not infer or assert that person's:
 - gender,
 - age,
 - race or ethnicity,
-- facial features,
-- hair,
+- skin tone,
+- facial appearance,
+- hair color or hairstyle,
 - body type,
 - clothing style,
 - occupation,
-- relationship to another participant.
+- relationship to another participant,
 
-More generally, a participant who is known to be part of the event
-does not have to be visually represented.
+unless that information is actually provided.
 
-The ScenePlan should depict a participant only when showing that
-participant materially improves recognition of the chosen visual idea.
+The key distinction is:
 
-Do not treat the number of known participants as a requirement for
-the number of people shown in the image.
+- anonymous person: ordinary visual variation is allowed,
+- identified person: preserve known traits and do not invent unknown
+  identity-specific traits.
 
-For example, an event involving two people may still be best
-represented by:
-- one anonymous participant performing the activity,
-- partial human features such as hands,
-- objects associated with the activity,
-- or no people at all.
-
-Semantic participation and visual presence are different things.
-Choose visual presence based on what makes the illustration clearest,
-simplest, and most effective.
-
-If a person's appearance is a protected unknown, prefer a visual idea
-that does not require inventing a specific identity.
-
-If people are not necessary, omit them.
-
-If an activity can be communicated without showing all participants,
-you do not need to depict all participants mentioned by the event.
+A participant who is semantically part of the event does not
+automatically have to appear in the planned content.
 
 --------------------------------------------------
 RELATIONSHIP UNCERTAINTY
 --------------------------------------------------
 
-When the relationship between participants is a protected unknown,
-do not choose a visual idea that requires close interpersonal interaction.
+When the relationship between participants is a protected unknown, do
+not choose content that requires a specific unsupported relationship
+to make sense.
 
-Avoid visual ideas that rely on:
-- two people jointly manipulating the same object,
-- physical contact between participants,
-- coordinated intimate poses,
+Avoid content ideas that inherently depend on:
+- physical contact,
+- coordinated intimate behavior,
 - one person guiding another person's body or hands,
 - body language that implies romance, family, caretaking, mentorship,
   or another specific relationship,
 
 unless that interaction is directly supported by the event.
 
-Do not attempt to solve this problem only by hiding faces.
+Do not solve relationship uncertainty merely by hiding faces.
 
-Hands, body position, proximity, and shared actions can also imply
-relationships.
+The underlying action itself must avoid implying an unsupported
+relationship.
 
 If the activity can be recognized using:
 - one anonymous participant,
-- partial human features,
+- partial human presence,
 - objects,
 - tools,
 - or the environment,
 
-prefer that simpler representation.
+consider those alternatives.
 
 A participant may be semantically important to the event without
 needing to be visually represented.
@@ -705,120 +496,144 @@ needing to be visually represented.
 CREATIVE ACCENT DETAIL
 --------------------------------------------------
 
-You may optionally introduce ONE small incidental visual detail.
+You may optionally introduce ONE small incidental content detail.
 
-The purpose of this detail is to make the illustration feel observed,
-specific, charming, playful, or pleasantly surprising.
-
-The accent detail should feel like a small real-life observation:
-something plausible, secondary, and visually charming that is not
-required to identify the concept.
-
-Invent the detail from the specific situation rather than following
-a fixed library of examples.
+Its purpose is to make the visual idea feel observed, specific,
+charming, playful, or pleasantly surprising.
 
 The accent detail should:
 - be plausible in the real-world situation,
-- be visually simple,
 - remain secondary to the main concept,
 - require no unsupported personal information,
 - add personality without adding a new storyline.
 
-Do NOT force an accent detail into every illustration.
+Do NOT force an accent detail into every plan.
 
 If there is no genuinely useful detail, set accent_detail to null.
 
 Do not make the accent detail:
 - a joke that distracts from the concept,
-- a new character,
-- a major new event,
-- text or signage,
+- a new major character,
+- a separate event,
+- written text or signage,
 - an unsupported fact about a real person,
-- a substitute for a recognizable main visual idea.
+- a substitute for a recognizable main idea.
+
+The accent_detail field describes WHAT the incidental detail is.
+
+Do not specify where it appears, how large it is, what color it is,
+or how it should be rendered.
 
 --------------------------------------------------
-USING GOOGLE CALENDAR REFERENCES
---------------------------------------------------
-
-The reference images are examples of how Google Calendar has made
-visual representation choices.
-
-Study them for decisions such as:
-- what Google made central,
-- what Google omitted,
-- when objects were enough,
-- when human action was useful,
-- when a setting carried the idea,
-- how sparse or selective the scene was,
-- whether a small incidental detail added personality.
-
-Do not simply copy the subject matter of a reference.
-
-Do not assume the most semantically similar reference should dictate
-the representation.
-
-Use the references as design evidence, not templates.
-
---------------------------------------------------
-SCENE PLAN FIELDS
+CONTENT PLAN FIELDS
 --------------------------------------------------
 
 visual_idea:
-A concise description of the ONE visual concept you selected.
+A concise description of the ONE semantic visual concept you selected.
 
-It should explain the creative idea behind the illustration rather
-than merely repeat the event title.
+Explain what the illustration should communicate through depicted
+content rather than merely repeating the event title.
+
+Do not include composition, camera, color, or rendering instructions.
 
 representation:
-The broad representation strategy.
+The broad content representation strategy.
+
+Use one of:
+- human_action_scene
+- object_focus
+- environment_focus
+- social_interaction_scene
+- atmosphere_symbolic_scene
 
 subject:
-The primary thing the viewer should notice.
+The primary semantic subject of the idea.
+
+Describe WHAT the subject is, not where it should be positioned or how
+large it should appear.
 
 setting:
-Only the minimal setting information needed to support the idea.
-Use an empty string when a specific setting is unnecessary.
+Only the setting information that is semantically useful to the idea.
+
+Use an empty string when no particular setting is needed.
+
+Do not specify background layout, depth, camera angle, or composition.
 
 action:
-An action occurring within the scene.
+An action that is semantically important to the idea.
+
 Use an empty string when no action is needed.
 
-Do not put composition instructions or drawing instructions here.
+Do not include staging, pose, camera, or drawing instructions.
 
-important_objects:
-Usually 1-3 explicitly approved objects.
+candidate_objects:
+A small pool of physical objects that could help communicate the chosen idea.
 
-These are the essential physical objects that belong in the chosen
-visual interpretation.
+These should be objects that are the most expected when thinking of the idea
+in real life. 
+
+A later art-direction layer will use this pool as a reference and may select all,
+some, or none of these objects depending on how the chosen style expresses the visual idea,
+your job is to provide the objects as candidates.
+
+Do not specify their scale, placement, color, or rendering treatment.
 
 accent_detail:
-At most one optional, subtle incidental detail.
+At most one optional secondary content detail.
+
 Use null when none improves the idea.
 
-avoid:
-A short list of predictable mistakes that would weaken or distort
-this particular design.
+content_constraints:
+A short list of semantic boundaries that the downstream art director
+and renderer must preserve.
 
-Use this field to protect the concept from issues such as:
-- inventing an unknown person's appearance,
-- adding unnecessary people,
-- implying an unsupported relationship,
-- turning a sparse composition into a crowded scene,
-- using written words when visual communication would work better,
-- adding generic event clutter that dilutes the chosen idea.
+Use this field for content-level constraints such as:
+- do not turn a specific event into a more generic one,
+- do not introduce an unsupported participant role,
 
-The avoid list should be specific to this design rather than an
-exhaustive list of every possible rendering mistake.
+Do NOT use content_constraints for style or composition rules such as:
+- use a sparse composition,
+- make an object large or small,
+- crop a figure,
+- use a particular camera angle,
+- use flat colors,
+- avoid dramatic perspective,
+- use a particular illustration technique.
 
-Important:
-The avoid field cannot rescue a fundamentally poor visual idea.
+Those decisions belong to the style-specific art-direction layer.
 
-Do not select a scene whose basic composition already creates an
-unsupported implication and then merely write that implication into
-the avoid list.
+Choose content that already respects all known details and protected
+unknowns.
 
-The chosen visual idea itself must respect all known details and
-protected unknowns.
+--------------------------------------------------
+STYLE-INDEPENDENT BOUNDARY
+--------------------------------------------------
+
+Do NOT decide:
+- composition,
+- layout,
+- visual hierarchy,
+- object scale,
+- human-to-object scale,
+- framing,
+- cropping,
+- camera angle,
+- perspective,
+- negative space,
+- color palette,
+- lighting,
+- shading,
+- texture,
+- shape language,
+- illustration technique,
+- realism level,
+- final rendering style.
+
+Do not imitate or assume any particular product's existing illustration
+language.
+
+A later art-direction layer will make those decisions according to the
+selected style.
 
 --------------------------------------------------
 FINAL GOAL
@@ -830,39 +645,25 @@ The goal is NOT:
 
 The goal is:
 
-"What is one simple, recognizable, memorable, visually appealing
-way to represent THIS event?"
+"What is one clear, recognizable, meaningful set of content to depict
+for THIS event?"
 
 Choose deliberately.
 
 Be selective.
 
-Leave things out.
-
-Be creative only after the core concept is visually clear.
-
-A small clever detail is welcome when it genuinely improves the idea.
+Preserve the meaning of the specific event.
 
 Focus only on WHAT should be depicted.
 
-Do not make decisions about illustration style, colors, lighting,
-shading, artistic technique, or final rendering.
+Leave HOW it should be visually staged to the art-direction layer.
 """.strip(),
             },
-
-            # Selected actual Google Calendar illustrations
-            {
-                "role": "user",
-                "content": build_visual_reference_content(
-                    selected_references
-                ),
-            },
-
-            # New concept and its interpreted context
             {
                 "role": "user",
                 "content": f"""
-Now create ONE visual plan for a new calendar illustration.
+Create ONE style-independent content plan for a new calendar
+illustration.
 
 Concept name:
 {request.name}
@@ -892,48 +693,49 @@ Protected unknowns:
 
 Use the known details as reliable information.
 
-Treat the general associations as a menu of possibilities rather
-than a checklist.
+Treat the general associations as a menu of possibilities rather than
+a checklist.
 
 Use the open choices as legitimate creative freedom. You may choose
-one plausible option when it improves the visual idea, but you do not
+one plausible option when it improves the content idea, but you do not
 need to use every open choice.
 
-Respect the protected unknowns as hard boundaries.
+Respect the protected unknowns as hard semantic boundaries.
 
-Consider multiple plausible visual interpretations internally,
-then choose ONE.
+Consider multiple plausible content interpretations internally, then
+choose ONE.
 
 Do not attempt to represent the whole event.
 
-Prefer the smallest, strongest visual idea that still communicates
-what makes this particular concept meaningful.
+Prefer the smallest strong content idea that still communicates what
+makes this particular concept meaningful.
 
 Make sure the core concept remains recognizable without written text.
 
 When participant identities or relationships are protected unknowns,
-do not choose an interaction that visually invents those relationships.
+do not choose content that turns those unknowns into factual claims.
 
-You may include one subtle, original, charming incidental detail if
-it naturally improves the scene.
-
-Do not reuse an accent detail merely because it appeared in another
-example or reference.
+You may include one subtle, original incidental detail if it naturally
+improves the content idea.
 
 Otherwise set accent_detail to null.
+
+Do not make composition, scale, framing, color, perspective, or
+rendering-style decisions. Those belong to the later art-direction
+layer.
 """.strip(),
             },
         ],
-        text_format=ScenePlan,
+        text_format=ContentPlan,
     )
 
-    scene_plan = response.output_parsed
+    content_plan = response.output_parsed
 
     print(
-        f"Generated scene plan for {request.name}:"
+        f"Generated content plan for {request.name}:"
     )
     print(
-        scene_plan.model_dump_json(indent=2)
+        content_plan.model_dump_json(indent=2)
     )
 
-    return scene_plan
+    return content_plan

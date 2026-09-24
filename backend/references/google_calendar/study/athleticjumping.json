@@ -1,0 +1,339 @@
+{
+  "reference_id": "athleticsjumping",
+  "concept": "Athletic Jumping",
+
+  "files": {
+    "svg": "raw/img_athleticsjumping.svg",
+    "rendered": "rendered/img_athleticsjumping.png"
+  },
+
+  "discovery_status": "exploratory",
+
+  "detailed_observation": {
+    "overall_scene_description": "A wide, highly simplified athletics scene showing one anonymous athlete suspended in a jumping pose above a horizontally layered field or track structure. The athlete occupies the central-right portion of the banner and is the primary semantic element. The environment is reduced to a few flat horizontal bands, including a measurement-like strip that helps communicate distance and clarifies the action as athletic jumping.",
+
+    "composition": {
+      "weight_distribution": "More evenly distributed across the horizontal banner than the Art reference. The athlete is concentrated in the center-right, while the long horizontal field structures extend across much of the frame and visually stabilize the composition.",
+      "busiest_region": "Central-right area containing the athlete and the transition between the measurement strip and landing/field regions.",
+      "quiet_region": "Large pale-green background above and around the athlete.",
+      "balance_strategy": "The composition balances a dynamic diagonal human figure against long stable horizontal bands running across the lower portion of the frame.",
+      "major_structural_forms": [
+        "large pale-green background field",
+        "narrow green horizontal ground band",
+        "white measurement strip with repeated marks",
+        "large yellow lower field region",
+        "orange-red lower-right field region",
+        "single diagonal human figure"
+      ]
+    },
+
+    "background": {
+      "base": "Solid pale mint-green field.",
+      "environmental_detail": "Almost none.",
+      "decorative_elements": "No obvious purely decorative elements; most visible forms contribute either to the environment or to explaining the athletic action.",
+      "literal_environment_present": false,
+      "notes": "There is no stadium, audience, architecture, sky detail, signage, or realistic sports venue."
+    },
+
+    "ground_and_field_structure": {
+      "structure": "The lower portion of the image is constructed from several long horizontal color bands.",
+      "layers": [
+        "green ground band",
+        "white measurement strip",
+        "large yellow region",
+        "orange-red region on the right"
+      ],
+      "geometric_treatment": "Highly simplified rectangles and repeated short vertical marks.",
+      "visual_role": "Creates a stable spatial base and supplies enough sports-field context for the jumping action to read clearly without constructing a literal venue."
+    },
+
+    "measurement_cue": {
+      "description": "A ruler-like white strip with regularly spaced dark and light-blue vertical markings runs horizontally beneath the athlete.",
+      "literal_status": "Appears more like a graphical abstraction of measurement than a literal freestanding ruler.",
+      "semantic_role": "Communicates distance measurement and helps explain the athlete's unusual suspended pose as a measured athletic jump.",
+      "importance": "Likely a major disambiguating cue. Without this element, the pose could be interpreted more generally as falling, leaping, or floating.",
+      "integration": "The informational cue is integrated directly into the physical scene rather than presented as a separate label or diagram."
+    },
+
+    "human_figure": {
+      "count": 1,
+      "identity_status": "anonymous / non-identifiable",
+      "skin_tone": "light",
+      "hair": {
+        "color": "dark",
+        "style": "short, simplified hair shape"
+      },
+      "facial_detail": "Extremely minimal.",
+      "clothing": "White short-sleeved top, dark navy shorts, dark footwear, and light socks.",
+      "pose": "Body leans diagonally backward while both legs extend forward and the arms trail behind, creating a clear airborne jumping posture.",
+      "relative_size": "Large enough to be the primary visual and semantic subject, unlike the miniature human figure in the Art reference.",
+      "internal_proportions": "Stylized rather than anatomically realistic. The head is relatively small compared with the torso and overall body.",
+      "limb_treatment": "Exposed arms and legs follow recognizable human anatomical contours more closely than the block-like clothed limbs seen in the Art reference, while remaining simplified and geometric.",
+      "torso_treatment": "Clothed torso is represented through large simple polygonal or block-like forms.",
+      "hand_detail": "The rear hand includes simplified separated fingers, introducing slightly more anatomical detail where it helps the pose read.",
+      "semantic_role": "Primary recognition anchor. The human body and its jumping posture carry most of the activity meaning.",
+      "identity_specificity": "The figure has concrete ordinary appearance traits such as skin tone, hair, and clothing without appearing to represent a specific known individual."
+    },
+
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Body pose and diagonal orientation.",
+      "secondary_motion_cues": [
+        "legs projected forward",
+        "arms trailing backward",
+        "body suspended above the ground"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "Movement is communicated almost entirely through the geometry of the body rather than through added graphical motion effects."
+    },
+
+    "scale_and_proportion": {
+      "realism": "Moderately stylized.",
+      "human_to_environment": "The athlete is not miniature relative to the environment and remains visually dominant.",
+      "object_exaggeration": "No obvious extreme enlargement of diagnostic sports objects comparable to the oversized art tools in the Art reference.",
+      "internal_human_scale": "The head remains relatively small compared with the torso and limbs.",
+      "general_effect": "Stylization is concentrated more in human proportions and scene abstraction than in extreme human-to-object scale distortion."
+    },
+
+    "depth_and_space": {
+      "depth_type": "Very shallow.",
+      "mechanisms": [
+        "vertical stacking of horizontal bands",
+        "placement of athlete above the ground structure",
+        "limited overlap"
+      ],
+      "realistic_perspective": "Essentially absent.",
+      "floor_plane": "Abstracted into horizontal bands rather than rendered as a perspective surface.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "The scene reads almost like a layered graphic diagram while still functioning as an illustration."
+    },
+
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "horizontal environmental bands extend through the left and right edges",
+        "yellow and orange-red field regions continue beyond the visible banner"
+      ],
+      "human_cropping": "The athlete remains fully visible within the frame.",
+      "effect": "The environment feels continuous beyond the banner while the primary human action remains completely legible."
+    },
+
+    "color": {
+      "background": "pale mint green",
+      "major_colors": [
+        "green",
+        "cream-white",
+        "yellow",
+        "orange-red",
+        "light blue",
+        "dark navy",
+        "coral / skin tones",
+        "white"
+      ],
+      "treatment": "Flat color regions with essentially no gradients or material texture.",
+      "functional_role": "Color separates the athlete from the background, distinguishes environmental layers, and creates visual interest despite the low scene complexity.",
+      "contrast_strategy": "The dark navy clothing and footwear provide strong contrast against the pale background, while warmer coral skin tones and lower-field colors provide secondary contrast."
+    },
+
+    "shape_language": {
+      "overall": "Simple flat geometric forms combined with selectively simplified anatomical silhouettes.",
+      "human_body": "Clothed regions are relatively block-like; exposed limbs retain recognizable organic contours while being simplified.",
+      "environment": "Strongly geometric horizontal rectangles and repeated vertical measurement marks.",
+      "fine_detail": "Very limited.",
+      "adaptability": "The geometry appears to adapt to semantic needs rather than forcing every body part into the same primitive shape."
+    },
+
+    "lighting_and_texture": {
+      "shadows": "None or effectively none.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+
+    "scene_complexity": {
+      "overall": "Low.",
+      "notes": "This reference contains considerably fewer objects and decorative details than the Art reference, yet still feels visually complete because the composition, pose, measurement cue, and color blocks carry the concept efficiently."
+    },
+
+    "salience": {
+      "primary_attention_element": "The airborne athlete.",
+      "secondary_attention_elements": [
+        "measurement strip",
+        "contrasting lower field regions"
+      ],
+      "large_but_quiet_elements": [
+        "pale-green background",
+        "large yellow field region"
+      ],
+      "important_observation": "Here geometric size, semantic importance, and visual salience align more closely around the human figure than they did in the Art reference."
+    }
+  },
+
+  "semantic_analysis": {
+    "core_concept": "Measured athletic jumping.",
+
+    "primary_recognition_cues": [
+      "airborne athletic body pose",
+      "distance-measurement markings",
+      "sports-field or landing-area structure"
+    ],
+
+    "secondary_recognition_cues": [
+      "athletic clothing",
+      "horizontal landing/track regions"
+    ],
+
+    "human_semantic_role": "The human figure is the central semantic carrier. The body posture communicates the action, while the environmental measurement cue disambiguates what kind of action is occurring.",
+
+    "dominant_semantic_element": "airborne athlete",
+
+    "literal_environment_used": false,
+
+    "environment_strategy": "A highly abstracted sports environment is constructed from a few flat horizontal field regions and an integrated measurement cue rather than from a realistic stadium or athletic facility.",
+
+    "symbolic_or_informational_cues": [
+      {
+        "element": "ruler-like measurement strip",
+        "function": "Represents distance measurement and helps identify the movement as an athletic jump.",
+        "integration": "Embedded into the scene itself rather than displayed separately."
+      }
+    ],
+
+    "literal_alternative": "A realistically proportioned athlete performing a long jump in a detailed track-and-field venue with a runway, sand pit, stadium, officials, or spectators.",
+
+    "google_choice": "Reduce the environment to large horizontal color fields and a measurement abstraction, while making one dynamically posed athlete the primary visual focus.",
+
+    "notable_omissions": [
+      "stadium",
+      "spectators",
+      "officials",
+      "detailed track lanes",
+      "sports signage",
+      "realistic runway",
+      "realistic sand texture",
+      "motion lines",
+      "motion blur",
+      "complex sporting equipment"
+    ],
+
+    "possible_reasoning": [
+      "The human pose carries the movement more efficiently than additional sports objects would.",
+      "The measurement strip clarifies distance-based jumping without requiring a detailed literal venue.",
+      "Removing stadium and event detail prevents the activity from becoming visually cluttered.",
+      "The stable horizontal ground structure makes the diagonal airborne body especially readable.",
+      "A simple color palette allows a very sparse scene to remain visually engaging."
+    ]
+  },
+
+  "counterfactual_analysis": {
+    "if_person_removed": "The image would lose most of its athletic-action meaning and would primarily resemble an abstract measurement or field graphic.",
+    "if_measurement_cue_removed": "The airborne pose would remain dynamic but could become substantially more ambiguous, potentially reading as a generic jump, fall, or suspended movement.",
+    "if_field_structure_removed": "The body would still communicate jumping, but the athletic context and sense of measured distance would weaken.",
+    "if_motion_lines_added": "They would probably be unnecessary because the pose itself already communicates motion clearly.",
+    "if_realistic_stadium_added": "The image would gain literal context but likely lose some of its visual economy and immediate focus on the jumping action.",
+    "if_human_scale_reduced_like_art_reference": "Recognition might weaken because the human body's pose is the principal semantic cue in this concept."
+  },
+
+  "derived_observations": {
+    "recognition_anchor": "human action",
+    "human_role": "primary semantic carrier",
+    "scale_exaggeration": "low to moderate",
+    "internal_human_proportion_stylization": "moderate",
+    "environment_abstraction": "strong",
+    "symbolic_information_integration": "strong",
+    "motion_encoding": "body pose",
+    "depth": "very shallow layered",
+    "cropping": "environment cropped; human fully contained",
+    "scene_density": "low",
+    "facial_specificity": "very low",
+    "anonymous_character_visual_specificity": "moderate",
+    "rendering_realism": "low",
+    "composition_dynamic": "horizontal stability contrasted with diagonal movement"
+  },
+
+  "candidate_principles": [
+    {
+      "claim": "The visually dominant element may change according to whichever element most efficiently communicates the concept.",
+      "evidence": "Unlike the Art reference, where diagnostic objects dominate a small person, Athletic Jumping makes the human figure itself the primary recognition anchor.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Literal environment can be aggressively reduced when a small number of cues are sufficient to establish context.",
+      "evidence": "The sports venue is reduced to horizontal colored bands and measurement markings with no stadium, crowd, or realistic field detail.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Symbolic or informational graphics may be integrated into a literal scene when they improve semantic clarity.",
+      "evidence": "The ruler-like measurement strip functions simultaneously as part of the field and as an abstraction of jump distance.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Motion may be communicated through pose and directional geometry rather than explicit motion effects.",
+      "evidence": "The athlete's diagonal posture, extended legs, and trailing arms make the movement legible without speed lines or blur.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Human stylization adapts to the semantic demands of the action rather than using identical geometric primitives for every body part.",
+      "evidence": "The torso remains block-like, while exposed arms and legs use more anatomically recognizable contours necessary to make the jumping posture readable.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Anonymous characters can have concrete ordinary appearance traits without becoming specific identifiable characters.",
+      "evidence": "The athlete has light skin, short dark hair, and distinct clothing while remaining visually anonymous.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A relatively small head compared with the body may be part of the human-character proportion language.",
+      "evidence": "Both the Art figure and the Athletic Jumping figure use a noticeably small head relative to the torso and limbs.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Scene complexity may vary substantially according to how much information is needed for concept recognition.",
+      "evidence": "Athletic Jumping is considerably simpler than Art but remains coherent and visually complete.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Flat color regions may serve primarily to separate forms and organize visual hierarchy rather than simulate realistic material or lighting.",
+      "evidence": "The athlete and field consist of strongly differentiated flat color areas with essentially no shading, gradients, or texture.",
+      "confidence": "recurring"
+    }
+  ],
+
+  "comparison_to_art": {
+    "shared_patterns": [
+      "solid pale background",
+      "minimal realistic environmental detail",
+      "very shallow depth",
+      "flat-color rendering",
+      "little or no shading or texture",
+      "anonymous person with concrete visual appearance traits",
+      "small head relative to body",
+      "simplified geometric character construction",
+      "large forms extending beyond the frame"
+    ],
+
+    "important_differences": [
+      "The human figure is the primary semantic and visual anchor in Athletic Jumping but is secondary to enlarged objects in Art.",
+      "Athletic Jumping uses little extreme object-to-human scale distortion, while Art strongly exaggerates object scale.",
+      "Athletic Jumping is substantially less dense and contains fewer incidental objects.",
+      "Athletic Jumping communicates movement through pose, while Art communicates activity largely through interaction with diagnostic objects.",
+      "Athletic Jumping introduces an integrated informational abstraction through the measurement strip.",
+      "The environment in Athletic Jumping is organized primarily through long horizontal bands, whereas Art builds its scene around oversized vertical objects and overlapping foreground forms."
+    ],
+
+    "implication": "The comparison suggests that several surface-language features may remain stable while composition, scale hierarchy, scene density, and the role of human figures change substantially according to the semantic needs of the concept."
+  },
+
+  "open_questions": [
+    "Do other sports references also make the human body the primary recognition anchor?",
+    "How frequently does Google integrate symbolic or informational graphics into otherwise literal scenes?",
+    "Is the small-head-to-body ratio consistent across most human figures?",
+    "Does anatomical stylization systematically become more organic when exposed limbs are necessary to communicate motion?",
+    "How often is motion communicated entirely through pose rather than motion effects?",
+    "Does scene complexity reliably increase only when additional elements contribute semantic information?",
+    "Are long horizontal environmental bands a recurring strategy for sports and outdoor activities?",
+    "When does Google choose realistic scale versus strongly exaggerated semantic scale?"
+  ]
+}

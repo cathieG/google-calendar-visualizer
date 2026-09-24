@@ -1,0 +1,343 @@
+{
+  "reference_id": "wedding",
+  "concept": "Wedding",
+  "files": {
+    "svg": "raw/img_wedding.svg",
+    "rendered": "rendered/img_wedding.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide symbolic still-life composition representing a wedding without depicting any people. The main visual content is concentrated across the lower half of the frame, with a floral cluster on the left and a large envelope/card arrangement on the right. The card contains two stylized celebratory glasses and floral decoration. The background is a solid lavender-purple field with sparse circles and tilted rectangles that appear primarily decorative.",
+    "composition": {
+      "weight_distribution": "Visual weight is concentrated in the lower half, especially across two major clusters: the bouquet on the left-center and the envelope/card composition on the right-center.",
+      "busiest_region": "Lower center and lower-right, especially around the envelope, card, and overlapping floral forms.",
+      "quiet_region": "Upper-left and much of the upper background.",
+      "balance_strategy": "Two separate object clusters balance one another across the lower half while decorative background shapes distribute color into otherwise empty regions.",
+      "major_structural_forms": [
+        "large bouquet / floral cluster on the lower-left",
+        "large envelope occupying the lower-right foreground",
+        "decorated card emerging from the envelope",
+        "rounded bottle-like or celebratory object behind the card",
+        "small floating circles and tilted rectangles across the background"
+      ]
+    },
+    "background": {
+      "base": "Solid light lavender / purple field.",
+      "environmental_detail": "None.",
+      "decorative_elements": [
+        "small circles",
+        "tilted rectangles",
+        "confetti-like floating shapes"
+      ],
+      "literal_environment_present": false,
+      "notes": "The background does not depict a venue or physical location. The floating geometric shapes appear to function mainly as decorative fillers and compositional balancing devices."
+    },
+    "object_cluster_left": {
+      "main_elements": [
+        "large pale-pink flowers with yellow centers",
+        "smaller yellow-orange flowers",
+        "olive-green leaves",
+        "purple wrapping or supporting geometric form"
+      ],
+      "literal_status": "Stylized floral arrangement / bouquet-like cluster.",
+      "visual_role": "Adds celebratory and romantic association and balances the invitation/card cluster on the right.",
+      "wedding_specificity": "The flowers are compatible with a wedding context but are not uniquely diagnostic of weddings on their own."
+    },
+    "object_cluster_right": {
+      "main_elements": [
+        "large cream-colored envelope",
+        "pink invitation/card",
+        "two stylized celebratory glasses",
+        "floral / vine motifs",
+        "rounded bottle-like or celebratory form behind the card"
+      ],
+      "visual_role": "Carries most of the symbolic event meaning and strongly suggests an invitation or paired celebration.",
+      "notes": "The two glasses provide a paired-celebration cue while the envelope/card suggests an invitation or announcement."
+    },
+    "human_figure": {
+      "count": 0,
+      "identity_status": null,
+      "skin_tone": null,
+      "hair": null,
+      "facial_detail": null,
+      "clothing": null,
+      "pose": null,
+      "relative_size": null,
+      "internal_proportions": null,
+      "shape_construction": null,
+      "semantic_role": "No human figure is used.",
+      "identity_specificity": null
+    },
+    "motion": {
+      "motion_present": false,
+      "primary_motion_cue": null,
+      "secondary_motion_cues": [],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The image is essentially static; meaning is carried by symbolic objects rather than action."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized.",
+      "human_to_environment": null,
+      "object_exaggeration": "The envelope, card, flowers, and decorative elements are enlarged to become the entire visual world rather than being shown at realistic scale within a room.",
+      "internal_human_scale": null,
+      "general_effect": "The scene functions as a symbolic still life rather than a literal physical environment."
+    },
+    "depth_and_space": {
+      "depth_type": "Shallow layered depth.",
+      "mechanisms": [
+        "overlap",
+        "foreground/background ordering",
+        "partial occlusion"
+      ],
+      "realistic_perspective": "Minimal.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "Depth is created by layered objects such as the envelope, card, flowers, and bottle-like form rather than by realistic perspective."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "envelope extends beyond the bottom edge",
+        "bouquet / wrapping extends beyond the lower edge",
+        "some decorative elements approach or cross side boundaries"
+      ],
+      "human_cropping": null,
+      "effect": "Large objects feel larger than the visible banner and create a cropped still-life composition."
+    },
+    "color": {
+      "background": "light lavender / purple",
+      "major_colors": [
+        "pink",
+        "cream",
+        "yellow",
+        "olive green",
+        "purple",
+        "dark navy",
+        "light blue"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Color separates overlapping shapes, distributes visual weight, and contributes strongly to a celebratory / romantic mood.",
+      "contrast_strategy": "Pale pinks and creams dominate the main objects while darker navy and purple details provide focal contrast."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric and rounded forms.",
+      "human_body": null,
+      "objects": "Flowers, envelope, card, glasses, leaves, and decorative marks are reduced to highly simplified recognizable shapes.",
+      "fine_detail": "Very limited.",
+      "adaptability": "Objects are simplified enough to preserve quick recognition while avoiding realistic material detail."
+    },
+    "lighting_and_texture": {
+      "shadows": "Little to none.",
+      "gradients": "Little to none.",
+      "surface_texture": "Minimal.",
+      "material_realism": "Low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "The image contains multiple decorative and symbolic objects, but the scene remains visually simple because the forms are large, flat, and highly simplified."
+    },
+    "salience": {
+      "primary_attention_element": "The envelope and decorated invitation/card cluster.",
+      "secondary_attention_elements": [
+        "large flower cluster",
+        "paired glasses on the card",
+        "small bright decorative flowers"
+      ],
+      "large_but_quiet_elements": [
+        "lavender background",
+        "cream envelope"
+      ],
+      "high_attention_elements": [
+        "pink invitation/card",
+        "dark paired glasses",
+        "yellow flower centers",
+        "small background decorative shapes"
+      ],
+      "important_observation": "Meaning is distributed across multiple symbolic objects rather than concentrated in a single literal event subject."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "floating circles",
+        "tilted rectangles",
+        "confetti-like geometric marks"
+      ],
+      "semantic_role": "Minimal or none.",
+      "compositional_role": "Fill negative space, distribute color, connect the main object clusters visually, and keep the background from feeling empty.",
+      "notes": "These elements appear to be decorative abstractions rather than literal objects or informational graphics."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Wedding / wedding celebration.",
+    "primary_recognition_cues": [
+      "invitation or announcement card in an envelope",
+      "paired celebratory glasses",
+      "flowers"
+    ],
+    "secondary_recognition_cues": [
+      "floral decoration on the card",
+      "celebratory color palette",
+      "decorative confetti-like background forms"
+    ],
+    "human_semantic_role": "No human figures are used.",
+    "dominant_semantic_element": "A symbolic cluster of invitation, paired glasses, and flowers rather than a literal wedding scene.",
+    "literal_environment_used": false,
+    "environment_strategy": "No venue is depicted. The wedding is represented through a symbolic still life of celebratory and invitation-related objects.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "two celebratory glasses",
+        "function": "Suggest a paired celebration or toast.",
+        "type": "symbolic cue"
+      },
+      {
+        "element": "envelope and decorated card",
+        "function": "Suggest a wedding invitation or announcement.",
+        "type": "symbolic cue"
+      },
+      {
+        "element": "flowers",
+        "function": "Support celebratory / romantic association.",
+        "type": "symbolic cue"
+      },
+      {
+        "element": "background circles and rectangles",
+        "function": "Primarily decorative; they may loosely suggest confetti or celebration.",
+        "type": "decorative abstraction"
+      }
+    ],
+    "recognition_structure": "distributed",
+    "recognition_notes": "No single object uniquely identifies 'wedding.' The concept emerges from the combination of several weaker conventional cues.",
+    "literal_alternative": "A bride and groom, or another couple, standing together during a wedding ceremony or celebration.",
+    "google_choice": "Avoid depicting the literal participants and instead represent the event through a symbolic still life built from an invitation, paired glasses, flowers, and celebratory decorative forms.",
+    "notable_omissions": [
+      "bride",
+      "groom or spouse / partner figures",
+      "altar",
+      "ceremony",
+      "guests",
+      "wedding venue",
+      "wedding clothing",
+      "human interaction"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "A symbolic object composition may communicate the occasion while avoiding unsupported assumptions about the appearance, gender, skin tone, age, or relationship configuration of the people getting married.",
+        "confidence": "tentative",
+        "status": "hypothesis only; not directly observable from the image"
+      },
+      {
+        "hypothesis": "Wedding invitations, flowers, and paired glasses are conventional enough that an object-only composition may be visually efficient and aesthetically compatible with the Google Calendar illustration language.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The image may accept some semantic ambiguity in exchange for a more broadly inclusive and visually elegant symbolic representation.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_people_added": "The image could become more literal and immediately wedding-specific, but it would also require choosing visible characteristics and relationship presentation for the participants.",
+    "if_envelope_and_card_removed": "The remaining flowers and celebratory objects would likely become more ambiguous and could represent many kinds of celebrations.",
+    "if_paired_glasses_removed": "The paired-celebration cue would weaken, making the composition feel more like a generic invitation or floral celebration.",
+    "if_flowers_removed": "The image would retain invitation and paired-celebration cues but lose some of its romantic / ceremonial association.",
+    "if_background_decorations_removed": "The main concept would remain, but the composition would likely feel more empty and less visually distributed across the banner.",
+    "if_literal_wedding_scene_used": "Recognition might become more immediate, but the representation would become more specific about the people, venue, attire, and relationship configuration."
+  },
+  "derived_observations": {
+    "recognition_anchor": "distributed symbolic object cluster",
+    "human_role": "absent",
+    "scale_exaggeration": "moderate object-world abstraction",
+    "internal_human_proportion_stylization": null,
+    "environment_abstraction": "very strong",
+    "symbolic_information_integration": "strong symbolic cues, little informational graphics",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "none",
+    "depth": "shallow layered",
+    "cropping": "present",
+    "scene_density": "moderate and concentrated in lower half",
+    "facial_specificity": null,
+    "anonymous_character_visual_specificity": null,
+    "rendering_realism": "low",
+    "composition_dynamic": "two lower object clusters balanced across a large field of upper negative space",
+    "recognition_specificity": "moderate to weak without title",
+    "decorative_abstraction": "present"
+  },
+  "candidate_principles": [
+    {
+      "claim": "Concepts centered on people do not necessarily require human figures when strong symbolic alternatives exist.",
+      "evidence": "The Wedding illustration contains no people and relies on invitation, flowers, and paired glasses.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Several weaker symbolic cues may combine to communicate a concept when no single object is strongly diagnostic.",
+      "evidence": "The invitation, paired glasses, flowers, and celebratory styling work together to suggest a wedding.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Decorative abstract shapes may be used to distribute visual weight and color without carrying much semantic meaning.",
+      "evidence": "Small circles and tilted rectangles appear across the lavender background and help fill otherwise empty space.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A literal physical environment may be omitted entirely in favor of a symbolic still-life composition.",
+      "evidence": "No wedding venue or physical setting is depicted.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Relationship-sensitive concepts may sometimes be represented symbolically to avoid unnecessary assumptions about the people involved.",
+      "evidence": "Wedding is represented without depicting the people getting married.",
+      "confidence": "tentative",
+      "status": "hypothesis; possible reasoning rather than observed fact"
+    },
+    {
+      "claim": "Color and object association may contribute substantially to event mood when literal action is absent.",
+      "evidence": "The pink, purple, cream, floral, and celebratory object palette creates a romantic / celebratory impression without people or action.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Large portions of negative space can coexist with multiple small decorative fillers and clustered semantic content.",
+      "evidence": "Most major objects occupy the lower half while small circles and rectangles lightly populate the upper lavender field.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Overlap-based shallow depth appears across very different representation strategies.",
+      "evidence": "Envelope, card, floral forms, and bottle-like object create depth through layering without realistic perspective.",
+      "confidence": "recurring"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "solid pale / pastel background",
+      "flat-color rendering",
+      "little or no texture or realistic shading",
+      "very shallow overlap-based depth",
+      "highly simplified geometric forms",
+      "strong abstraction of literal environment",
+      "large objects extending beyond the frame",
+      "substantial negative space"
+    ],
+    "important_differences": [
+      "Unlike Art and Athletic Jumping, Wedding contains no people.",
+      "Unlike Athletic Jumping, Wedding contains no action or motion.",
+      "Unlike Art, Wedding does not rely on one or two highly diagnostic literal objects; recognition is distributed across several conventional symbolic cues.",
+      "Wedding uses decorative abstract background fillers more prominently than the first two references.",
+      "Wedding is less semantically specific without its title than Art or Athletic Jumping.",
+      "Wedding replaces a socially literal event with a symbolic still life."
+    ],
+    "implication": "The first three references suggest that Google Calendar's surface language may remain relatively stable while representation strategy can vary widely: diagnostic-object scene, human-action scene, or symbolic still life."
+  },
+  "open_questions": [
+    "Do other relationship-centered concepts such as Valentine's Day also avoid depicting couples or specific relationships?",
+    "Does Google disproportionately use symbolic still lifes for weddings, anniversaries, romance, or other relationship-sensitive events?",
+    "How often does Google accept weaker concept-title alignment in exchange for a visually elegant symbolic composition?",
+    "Are decorative circles and tilted rectangles a recurring background-filler device across the broader reference set?",
+    "When does Google use distributed recognition across multiple weak cues instead of one dominant recognition anchor?",
+    "How often are people omitted from concepts that would conventionally be depicted through social interaction?",
+    "Are object-only celebration scenes more common when participant identities or relationship configurations are underspecified?",
+    "How often does color carry event mood rather than simply separate forms?"
+  ]
+}
