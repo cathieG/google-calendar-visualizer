@@ -1,0 +1,455 @@
+{
+  "reference_id": "cinema",
+  "concept": "Cinema",
+  "files": {
+    "svg": "raw/img_cinema.svg",
+    "rendered": "rendered/img_cinema.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide cinema-themed object collage with no people. The scene combines a large vintage-style movie camera in the center-right, an oversized film strip entering diagonally from the upper-left, a red-and-white striped popcorn container at the lower-right, large pale yellow beam-like forms across the background, and a smaller ambiguous lighting / projection-like device near the left-center. The objects do not form a physically realistic scene, but they are semantically coherent as recognizable cinema-related cues.",
+    "composition": {
+      "weight_distribution": "Visual weight is broadly distributed but strongest in the center-right, where the movie camera occupies the largest contiguous mass.",
+      "busiest_region": "Center-right around the camera, reels, lens assembly, and popcorn cluster.",
+      "quiet_region": "Open pale-blue background regions between the major diagonal objects.",
+      "balance_strategy": "Balance is created through a diagonal object collage: the large film strip anchors the upper-left, the camera anchors the center-right, and the popcorn container closes the lower-right edge while light-beam shapes connect the composition.",
+      "major_structural_forms": [
+        "oversized diagonal film strip on upper-left",
+        "large vintage-style movie camera on center-right",
+        "large pale yellow light-beam shapes crossing the background",
+        "striped popcorn container on lower-right",
+        "small projection / lighting-like device near left-center"
+      ],
+      "rhythm_and_repetition": "Repetition is visible in the film-strip perforations, reel circles, popcorn kernels, and striped popcorn container.",
+      "diagonal_flow": "Strong diagonal movement is created by the film strip, camera body, light bands, and cropped frame-edge objects."
+    },
+    "background": {
+      "base": "Pale blue field.",
+      "environmental_detail": "No literal cinema interior or theater environment is depicted.",
+      "decorative_elements": [
+        "large pale yellow beam-like forms",
+        "small floating kernel-like shapes"
+      ],
+      "literal_environment_present": false,
+      "notes": "The yellow bands may evoke projector beams, spotlights, or cinematic light, but they remain abstract and should not be assigned one definite literal identity."
+    },
+    "environment_structure": {
+      "environment_type": "abstract conceptual collage",
+      "representation_strategy": "Omit literal environment and combine several cinema-associated objects in one shallow conceptual field.",
+      "foreground_elements": [
+        "movie camera",
+        "film strip",
+        "popcorn container",
+        "popcorn kernels"
+      ],
+      "background_elements": [
+        "pale blue field",
+        "large pale yellow light bands",
+        "small projection / lighting-like device"
+      ],
+      "depth_mechanism": "Depth is created through overlap, cropping, large scale differences, and diagonal layering rather than realistic perspective.",
+      "recognition_mechanism": "The concept is recognized through several iconic cinema cues drawn from different parts of the cinema experience."
+    },
+    "human_figure": {
+      "count": 0,
+      "identity_status": null,
+      "observable_skin_color": null,
+      "race_or_ethnicity": null,
+      "hair": null,
+      "facial_detail": null,
+      "clothing": null,
+      "pose": null,
+      "relative_size": null,
+      "internal_proportions": null,
+      "shape_construction": null,
+      "semantic_role": "No human figure is used.",
+      "identity_specificity": null
+    },
+    "motion": {
+      "motion_present": false,
+      "primary_motion_cue": null,
+      "secondary_motion_cues": [],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The composition feels energetic because of diagonal placement and cropping rather than depicted physical motion."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "film strip",
+        "movie camera",
+        "camera reels",
+        "popcorn container",
+        "popcorn kernels"
+      ],
+      "semantic_role": "These objects collectively establish the cinema concept.",
+      "notes": "The image mixes production-oriented cues such as film strip and camera with moviegoing-oriented cues such as popcorn."
+    },
+    "cinema_objects": {
+      "movie_camera": {
+        "role": "primary visual and semantic anchor",
+        "detail_level": "moderate to high relative to the rest of the image",
+        "notable_features": [
+          "two large reels",
+          "camera body",
+          "lens housing",
+          "support / stand structure",
+          "central circular control-like detail"
+        ],
+        "notes": "The camera receives more internal structure than most supporting objects, consistent with selective detail allocation."
+      },
+      "film_strip": {
+        "role": "secondary high-salience cinema cue and diagonal compositional anchor",
+        "detail_level": "moderate",
+        "notable_features": [
+          "repeated edge perforation-like squares",
+          "large empty frame openings",
+          "strong dark-purple silhouette"
+        ],
+        "notes": "Repeated structural detail is retained because the perforation pattern is characteristic of a film strip."
+      },
+      "popcorn": {
+        "role": "moviegoing / theater-experience cue",
+        "detail_level": "low to moderate",
+        "notable_features": [
+          "red-and-white striped container",
+          "irregular cream and yellow kernel shapes"
+        ],
+        "notes": "The popcorn is recognized primarily through container pattern plus clustered kernel shapes rather than realistic food rendering."
+      },
+      "small_projection_or_lighting_device": {
+        "role": "supporting cinema / stage / projection cue",
+        "detail_level": "low",
+        "identity_confidence": "uncertain",
+        "notes": "The exact object identity is ambiguous and should remain conservatively described as a small projection- or lighting-like device."
+      }
+    },
+    "scale_and_proportion": {
+      "realism": "Strongly stylized and non-literal.",
+      "human_to_environment": null,
+      "object_exaggeration": "Major objects are not scaled realistically relative to one another. The film strip, camera, and popcorn container operate more like semantic icons than co-located physical objects.",
+      "internal_human_scale": null,
+      "general_effect": "Scale is used compositionally and semantically rather than to preserve real-world physical relationships.",
+      "scale_source": "semantic / collage-based"
+    },
+    "depth_and_space": {
+      "depth_type": "shallow collage depth",
+      "mechanisms": [
+        "overlap",
+        "large scale differences",
+        "cropping",
+        "diagonal object placement",
+        "background light bands"
+      ],
+      "realistic_perspective": "Absent.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "The composition feels layered but not spatially realistic; objects float in a conceptual rather than literal environment."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "film strip continues beyond the top and left edges",
+        "popcorn container is cropped by the lower-right edge",
+        "camera support continues beyond the lower edge"
+      ],
+      "human_cropping": null,
+      "effect": "Cropping makes the conceptual world feel larger than the frame and increases visual dynamism."
+    },
+    "color": {
+      "background": "pale blue",
+      "major_colors": [
+        "dark purple / navy",
+        "lavender / muted purple",
+        "pale yellow / cream",
+        "white",
+        "orange-red",
+        "light blue"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Cool blue and dark purple create the main visual field, while pale yellow and red-orange provide strong cinematic accents.",
+      "contrast_strategy": "The dark camera and film strip stand out sharply against the pale background, while the popcorn container provides a warm high-saturation accent.",
+      "mood_role": "The palette feels playful, theatrical, and graphic rather than realistic."
+    },
+    "shape_language": {
+      "overall": "Geometric object collage with highly simplified iconic silhouettes.",
+      "human_body": null,
+      "objects": "The film strip uses large rectangles and repeated squares; the camera uses circles, rectangles, and polygons; the popcorn uses striped geometry and irregular polygonal kernels.",
+      "fine_detail": "Moderate on the camera and film strip, low on the popcorn and background.",
+      "adaptability": "Detail is selectively retained where it strongly contributes to object identity, such as film-strip perforations, reel circles, and popcorn-striping."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "The scene feels rich because of large overlapping forms and structural detail, but it relies on only a few semantic object categories."
+    },
+    "salience": {
+      "primary_attention_element": "Large vintage-style movie camera.",
+      "secondary_attention_elements": [
+        "oversized film strip",
+        "popcorn container",
+        "large camera reels"
+      ],
+      "large_but_quiet_elements": [
+        "pale blue background",
+        "pale yellow beam-like forms"
+      ],
+      "high_attention_elements": [
+        "dark purple camera",
+        "dark film strip",
+        "red-orange popcorn container"
+      ],
+      "important_observation": "The image creates a rich conceptual field by combining a few highly recognizable icons at different scales rather than by adding many small unrelated objects."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "large pale yellow beam-like forms",
+        "small floating kernel-like shapes"
+      ],
+      "semantic_role": "The yellow beams likely reinforce cinematic or theatrical atmosphere without needing a literal environment.",
+      "compositional_role": "They connect the otherwise separate object clusters and add directional energy.",
+      "notes": "The exact literal interpretation of the beam shapes remains uncertain."
+    },
+    "narrative_structure": {
+      "present": false,
+      "implied_sequence": null,
+      "narrative_role": "The image communicates a concept through iconic association rather than an unfolding event."
+    },
+    "structural_motif": {
+      "present": true,
+      "motif": "diagonal conceptual collage",
+      "components": [
+        "diagonal film strip",
+        "angled movie camera",
+        "diagonal light bands",
+        "cropped popcorn container"
+      ],
+      "role": "Provides compositional energy and visually unifies separate cinema-related objects."
+    },
+    "semantic_breadth": {
+      "present": true,
+      "notes": "The image combines cues from film production and moviegoing rather than depicting one literal cinema scenario."
+    },
+    "representation_optionality": {
+      "observed": true,
+      "selected_strategy": "distributed iconic-object collage",
+      "plausible_alternatives": [
+        "movie theater audience scene",
+        "large cinema screen and seats",
+        "ticket counter",
+        "projector-focused still life",
+        "director / filmmaking set",
+        "popcorn-and-ticket close-up"
+      ],
+      "notes": "The selected representation is one of several plausible visual strategies for the cinema concept."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Cinema / moviegoing / film.",
+    "primary_recognition_cues": [
+      "film strip",
+      "movie camera",
+      "popcorn container"
+    ],
+    "secondary_recognition_cues": [
+      "camera reels",
+      "light / projection-like beam shapes",
+      "small projection / lighting-like object",
+      "popcorn kernels"
+    ],
+    "human_semantic_role": "No human figures are used.",
+    "dominant_semantic_element": "Distributed cinema-icon cluster anchored by the movie camera.",
+    "literal_environment_used": false,
+    "environment_strategy": "Replace a literal theater or film set with an abstract collage of cinema-associated objects.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "film strip",
+        "function": "Signals film / cinema medium.",
+        "type": "iconic semantic cue"
+      },
+      {
+        "element": "movie camera",
+        "function": "Signals filmmaking and cinema production.",
+        "type": "iconic semantic cue"
+      },
+      {
+        "element": "popcorn",
+        "function": "Signals moviegoing / theater experience.",
+        "type": "experiential semantic cue"
+      },
+      {
+        "element": "yellow beam-like forms",
+        "function": "Suggest cinematic / theatrical lighting or projection atmosphere.",
+        "type": "abstract atmospheric cue"
+      }
+    ],
+    "recognition_structure": "distributed iconic-object recognition",
+    "recognition_notes": "The concept is recognized through several cinema-related icons from different aspects of the broader domain rather than through one literal scenario.",
+    "literal_alternative": "A movie theater interior with screen, seats, audience, or a realistic filmmaking set.",
+    "google_choice": "Use a non-literal collage of film strip, camera, popcorn, and abstract cinematic-light cues.",
+    "notable_omissions": [
+      "people",
+      "movie screen",
+      "theater seats",
+      "ticket booth",
+      "audience",
+      "director or crew",
+      "readable movie title",
+      "realistic projector room",
+      "literal theater architecture"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "Combining production and moviegoing cues may make the concept feel broader and more immediately recognizable than committing to one literal cinema scenario.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The large camera may act as a central visual anchor because it offers more structural richness than the simpler supporting icons.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The abstract yellow bands may provide cinematic atmosphere without the complexity of depicting a full theater environment.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Oversized and cropped objects may be used because semantic coherence is more important here than physical scene realism.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_movie_camera_removed": "The film strip and popcorn would still suggest movies, but the image would lose its strongest central anchor and production-oriented cue.",
+    "if_film_strip_removed": "The camera and popcorn could still suggest cinema, but the direct film-medium association would weaken.",
+    "if_popcorn_removed": "The scene would shift more strongly toward filmmaking / cinema production and lose part of the moviegoing experience.",
+    "if_yellow_beam_shapes_removed": "The concept would remain recognizable, but the image would feel less cinematic and less compositionally connected.",
+    "if_objects_were_realistically_scaled": "The collage would likely become less visually dramatic and more constrained by literal scene logic.",
+    "if_literal_theater_interior_added": "The concept might become more literal, but the current broad iconic representation would become more scenario-specific."
+  },
+  "derived_observations": {
+    "recognition_anchor": "movie camera supported by film strip and popcorn",
+    "human_role": "absent",
+    "scale_exaggeration": "strong and semantic rather than perspective-based",
+    "internal_human_proportion_stylization": null,
+    "environment_abstraction": "very strong",
+    "environment_strategy": "literal environment omitted; conceptual icon collage",
+    "symbolic_information_integration": "strong",
+    "semantic_shorthand": "very strong",
+    "motion_encoding": "none",
+    "depth": "shallow collage depth",
+    "cropping": "strong",
+    "scene_density": "moderate",
+    "facial_specificity": null,
+    "anonymous_character_visual_specificity": null,
+    "rendering_realism": "very low",
+    "composition_dynamic": "strong diagonal object collage",
+    "recognition_specificity": "high for cinema / film domain",
+    "decorative_abstraction": "moderate",
+    "narrative_structure": "none",
+    "structural_motif": "diagonal conceptual collage",
+    "viewpoint_importance": "moderate",
+    "action_moment_specificity": "none",
+    "detail_allocation": "higher on camera and film-strip structure",
+    "semantic_breadth": "strong",
+    "representation_strategy": "distributed iconic-object collage",
+    "representation_optionality": "high"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A broad concept may be represented by combining iconic cues from multiple aspects of that concept rather than depicting one literal scenario.",
+      "evidence": "The image combines filmmaking cues such as camera and film strip with moviegoing cues such as popcorn.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Semantic coherence can be more important than physical scene coherence.",
+      "evidence": "The oversized film strip, camera, popcorn, and abstract light bands do not occupy one realistic space but remain conceptually coherent.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Repeated structural detail may be retained when it is highly characteristic of an object.",
+      "evidence": "Film-strip perforations and camera-reel structure remain visible despite the otherwise simplified style.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A large central diagnostic object can anchor a collage of smaller supporting icons.",
+      "evidence": "The movie camera dominates while film strip, popcorn, and light cues broaden the concept.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Cropping and oversized iconic objects can create a larger-than-frame conceptual world.",
+      "evidence": "Film strip, popcorn container, and camera support continue beyond the frame.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Abstract light bands can provide atmosphere without requiring a literal environment.",
+      "evidence": "Large yellow diagonal forms contribute cinematic energy while remaining non-literal.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Physical scale relationships may be ignored when objects function as semantic icons rather than literal scene elements.",
+      "evidence": "Film strip, camera, and popcorn are scaled for composition and recognition rather than physical realism.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Rich conceptual scenes can be built from a small number of highly recognizable semantic categories.",
+      "evidence": "The image feels visually rich while relying mainly on film, camera, popcorn, and light.",
+      "confidence": "emerging"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or surface texture",
+      "strong semantic simplification",
+      "low material realism",
+      "cropping used compositionally",
+      "detail selectively retained on diagnostic structures",
+      "literal environment can be omitted when symbolic cues are strong"
+    ],
+    "important_differences": [
+      "Unlike Wedding, Cinema uses several iconic objects from different subdomains rather than a symbolic celebration still life.",
+      "Unlike Haircut, the object cluster is not a functional workstation; it is a conceptual collage of cinema icons.",
+      "Unlike Barbecue, Cinema is not a literal event setup and does not imply a physically coherent shared environment.",
+      "Unlike Chinese New Year, Cinema uses several different object categories rather than repeating one diagnostic family.",
+      "Unlike Vote, the concept is not compressed to a single interaction but distributed across several independent icons."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment",
+      "barbecue": "literal outdoor environment retained; event communicated through prepared equipment, food, and serving setup without visible participants",
+      "bowling": "literal sports environment reduced to a single directional wedge while viewpoint and impact moment carry most of the concept",
+      "concert": "simplified stage environment retained; coordinated performer clusters and abstract sound cues carry the concept",
+      "shopping": "partial retail environment retained only where needed; action cluster uses strong lead space for motion",
+      "doctor": "literal environment nearly omitted; cropped occupational figure carries recognition",
+      "cinema": "literal environment omitted; concept communicated through a diagonal collage of iconic cinema objects"
+    },
+    "implication": "Cinema strengthens the evidence that Google Calendar art direction can use non-literal semantic collages when a concept is broad and recognizable through several iconic cues."
+  },
+  "open_questions": [
+    "How often does Google combine cues from different aspects of one broad concept rather than choosing a single literal scenario?",
+    "Are diagonal conceptual collages common for entertainment-related concepts?",
+    "How often are repeated object-defining details retained even when they increase local complexity?",
+    "When does Google allow semantically coherent but physically impossible object scale relationships?",
+    "How often do abstract light or beam shapes contribute atmosphere in non-literal scenes?",
+    "Should distributed iconic recognition be treated separately from distributed symbolic recognition and distributed functional recognition?",
+    "How often does one structurally rich central object anchor a set of simpler semantic supporting objects?",
+    "Does the art director need an explicit option for conceptual collage as a representation strategy?"
+  ]
+}

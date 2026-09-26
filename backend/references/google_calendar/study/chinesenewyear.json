@@ -1,0 +1,374 @@
+{
+  "reference_id": "chinese_new_year",
+  "concept": "Chinese New Year",
+  "files": {
+    "svg": "raw/img_chinese_new_year.svg",
+    "rendered": "rendered/img_chinese_new_year.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide decorative holiday composition dominated by a dark red background and a sequence of hanging lantern-like forms. The image contains no people, no literal celebration scene, and almost no environmental depth. Instead, several lanterns or hanging ornaments of different shapes and sizes are suspended from the top edge and distributed across the banner. Small circles and starburst-like accents punctuate the remaining space. The palette is highly homogeneous, using multiple reds with smaller yellow, cream, white, and dark navy accents.",
+    "composition": {
+      "weight_distribution": "Visual weight is spread broadly across the frame. The largest lanterns occupy the left, center, and right regions, while smaller hanging ornaments and decorative accents fill the spaces between them.",
+      "busiest_region": "The center and right contain several overlapping or closely spaced hanging forms, though the composition remains broadly balanced across the width.",
+      "quiet_region": "Negative space exists between the lanterns, but it is lightly activated by small circular and starburst-like decorative elements.",
+      "balance_strategy": "Balance is achieved through repeated suspended objects distributed across the frame, with variation in lantern size, silhouette, and spacing.",
+      "major_structural_forms": [
+        "large rectangular lantern on the left",
+        "small hanging ornament left of center",
+        "large round lantern in the center",
+        "double-sphere hanging lantern right of center",
+        "large oval lantern on the right",
+        "thin suspension lines descending from the top",
+        "small circular and starburst-like decorative accents"
+      ],
+      "rhythm_and_repetition": "Repeated hanging lanterns create a steady horizontal rhythm, while variation in shape and scale prevents the repetition from feeling uniform."
+    },
+    "background": {
+      "base": "Solid dark red field.",
+      "environmental_detail": "None.",
+      "decorative_elements": [
+        "small circles",
+        "small starburst-like shapes",
+        "suspension lines"
+      ],
+      "literal_environment_present": false,
+      "notes": "The background functions as an abstract festive field rather than a physical location."
+    },
+    "environment_structure": {
+      "environment_type": "abstract festive space",
+      "representation_strategy": "literal environment omitted; culturally associated decorations suspended in abstract space",
+      "foreground_elements": [
+        "hanging lanterns",
+        "ornamental hanging forms"
+      ],
+      "background_elements": [
+        "dark red field",
+        "small circular accents",
+        "starburst-like decorative shapes"
+      ],
+      "depth_mechanism": "Very little depth is present; most elements are arranged frontally with only minimal overlap.",
+      "recognition_mechanism": "The holiday is suggested through the combined use of red-dominant color, repeated lantern forms, and festive decorative accents."
+    },
+    "human_figure": {
+      "count": 0,
+      "identity_status": null,
+      "observable_skin_color": null,
+      "race_or_ethnicity": null,
+      "hair": null,
+      "facial_detail": null,
+      "clothing": null,
+      "pose": null,
+      "relative_size": null,
+      "internal_proportions": null,
+      "shape_construction": null,
+      "semantic_role": "No human figure is used.",
+      "identity_specificity": null
+    },
+    "motion": {
+      "motion_present": false,
+      "primary_motion_cue": null,
+      "secondary_motion_cues": [],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The image is static. Hanging strings imply suspended objects but not active motion."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "lantern-like ornaments",
+        "hanging tassel / pendant details",
+        "festive starburst accents"
+      ],
+      "semantic_role": "These elements reinforce a festive Lunar New Year / Chinese New Year reading.",
+      "notes": "The lantern forms appear to be the strongest culturally diagnostic objects in the scene."
+    },
+    "scale_and_proportion": {
+      "realism": "Strongly stylized.",
+      "human_to_environment": null,
+      "object_exaggeration": "Lantern sizes vary substantially for compositional balance rather than realistic physical proportion.",
+      "internal_human_scale": null,
+      "general_effect": "Scale is used to create visual rhythm and hierarchy within a decorative display rather than to describe a physical environment."
+    },
+    "depth_and_space": {
+      "depth_type": "very shallow / nearly flat",
+      "mechanisms": [
+        "slight overlap",
+        "vertical suspension lines",
+        "variation in object size"
+      ],
+      "realistic_perspective": "Absent.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "The composition reads as a frontal decorative arrangement rather than a realistic spatial scene."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "multiple suspension lines enter from the top edge",
+        "some hanging forms extend close to or beyond the frame boundaries"
+      ],
+      "human_cropping": null,
+      "effect": "The image feels like a cropped slice of a larger hanging decorative display."
+    },
+    "color": {
+      "background": "dark red",
+      "major_colors": [
+        "dark red",
+        "bright red",
+        "orange-red",
+        "yellow",
+        "cream",
+        "white",
+        "dark navy"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Color is a major semantic and atmospheric cue. The red-dominant palette unifies the scene and strongly supports Chinese New Year / Lunar New Year association.",
+      "contrast_strategy": "Different red tones distinguish lantern components, while yellow, cream, white, and dark navy are used sparingly as accents.",
+      "mood_role": "The palette creates a festive, warm, celebratory atmosphere."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric and rounded ornamental forms.",
+      "human_body": null,
+      "objects": "Lanterns are reduced to circles, ovals, rectangles, stacked spheres, and simple striped or ribbed patterns.",
+      "fine_detail": "Very limited.",
+      "adaptability": "The same semantic object family is represented through multiple distinct silhouettes while retaining enough shared visual cues to read as lanterns or hanging festive ornaments."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "low to moderate",
+      "notes": "The scene contains several large decorative objects but very little environmental or narrative detail. Complexity comes mainly from silhouette variation and repeated ornamentation."
+    },
+    "salience": {
+      "primary_attention_element": "The large central round lantern, though attention is broadly distributed across the lantern sequence.",
+      "secondary_attention_elements": [
+        "large rectangular lantern on the left",
+        "large oval lantern on the right",
+        "double-sphere lantern",
+        "small festive starburst accents"
+      ],
+      "large_but_quiet_elements": [
+        "dark red background"
+      ],
+      "high_attention_elements": [
+        "bright red lantern forms",
+        "yellow and cream accents",
+        "white starburst shapes"
+      ],
+      "important_observation": "The composition maintains a strong overall red color field while still differentiating individual lanterns through shape and tonal variation."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "small circles",
+        "starburst-like shapes",
+        "simple hanging lines"
+      ],
+      "semantic_role": "These elements are primarily decorative but remain semantically compatible with festivity and celebration.",
+      "compositional_role": "They fill negative space, distribute accent colors, and visually connect the lanterns.",
+      "notes": "The starburst and dot forms may evoke sparkle, confetti, light, or festive ornamentation, but no single literal interpretation is necessary."
+    },
+    "narrative_structure": {
+      "present": false,
+      "implied_sequence": null,
+      "narrative_role": "The image communicates atmosphere and cultural symbolism rather than an unfolding event."
+    },
+    "structural_motif": {
+      "present": true,
+      "motif": "suspended decorative arrangement",
+      "components": [
+        "vertical hanging lines",
+        "repeated lantern forms",
+        "distributed spacing",
+        "variation in lantern shape and scale"
+      ],
+      "role": "Creates compositional unity, horizontal rhythm, and a coherent festive display."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Chinese New Year / Lunar New Year celebration.",
+    "primary_recognition_cues": [
+      "red-dominant palette",
+      "repeated hanging lanterns",
+      "festive decorative accents"
+    ],
+    "secondary_recognition_cues": [
+      "yellow / gold accents",
+      "ornamental suspension",
+      "starburst-like celebratory details"
+    ],
+    "human_semantic_role": "No human figures are used.",
+    "dominant_semantic_element": "Repeated lantern family combined with the red-dominant festive palette.",
+    "literal_environment_used": false,
+    "environment_strategy": "Omit a literal celebration setting and instead create an abstract festive field made from repeated culturally associated hanging decorations.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "hanging lanterns",
+        "function": "Strongly support Chinese / Lunar New Year festive association.",
+        "type": "cultural symbolic cue"
+      },
+      {
+        "element": "red-dominant palette",
+        "function": "Reinforces festive Chinese New Year association and unifies the composition.",
+        "type": "color-semantic cue"
+      },
+      {
+        "element": "starburst-like accents",
+        "function": "Support a celebratory atmosphere.",
+        "type": "decorative symbolic cue"
+      }
+    ],
+    "recognition_structure": "repeated diagnostic object family plus color-semantic cue",
+    "recognition_notes": "The image strongly suggests Chinese / Lunar New Year festive imagery through the combination of lantern repetition and an overwhelmingly red palette, though lanterns alone are not uniquely exclusive to this holiday.",
+    "literal_alternative": "A family gathering, dragon or lion dance, fireworks display, feast, temple or street celebration, or people wearing festive clothing.",
+    "google_choice": "Represent the holiday through a distributed decorative field of varied lanterns and festive accents rather than depicting a literal celebration or people.",
+    "notable_omissions": [
+      "people",
+      "family gathering",
+      "dragon dance",
+      "lion dance",
+      "fireworks scene",
+      "food",
+      "red envelopes",
+      "street or temple architecture",
+      "text or calligraphy",
+      "zodiac animal"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "Lanterns and a red-dominant palette may provide sufficiently strong recognition that more literal holiday scenes are unnecessary.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Using a repeated decoration family may allow the illustration to evoke the holiday atmosphere without committing to a specific regional celebration practice or human scene.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The strongly homogeneous palette may be intentionally used because color itself carries substantial cultural and festive meaning for this concept.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_lanterns_removed": "The red background and decorative accents would still feel festive, but Chinese New Year / Lunar New Year recognition would weaken substantially.",
+    "if_red_palette_removed": "The lanterns could still imply an East Asian festive context, but the holiday-specific atmosphere would become weaker.",
+    "if_people_added": "The scene could become more literal, but the current decorative clarity and broad festive symbolism would be reduced.",
+    "if_all_lanterns_used_same_shape": "The scene would retain semantic meaning but lose much of its visual rhythm and variety.",
+    "if_starburst_and_dot_accents_removed": "The main concept would remain recognizable, but the background would feel less festive and less visually distributed.",
+    "if_realistic_environment_added": "The image could become more specific to a place or celebration setting, but would likely lose some of its abstract decorative simplicity."
+  },
+  "derived_observations": {
+    "recognition_anchor": "repeated lantern family plus red-dominant palette",
+    "human_role": "absent",
+    "scale_exaggeration": "moderate compositional variation",
+    "internal_human_proportion_stylization": null,
+    "environment_abstraction": "very strong",
+    "environment_strategy": "literal environment omitted; symbolic festive decorations suspended in abstract space",
+    "symbolic_information_integration": "strong symbolic cues, no informational graphics",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "none",
+    "depth": "very shallow / nearly flat",
+    "cropping": "present through suspension lines and frame-edge continuation",
+    "scene_density": "low to moderate and evenly distributed",
+    "facial_specificity": null,
+    "anonymous_character_visual_specificity": null,
+    "rendering_realism": "very low",
+    "composition_dynamic": "distributed suspended rhythm with variation in lantern size and silhouette",
+    "recognition_specificity": "moderate to high for Chinese / Lunar New Year festive imagery",
+    "decorative_abstraction": "strong",
+    "narrative_structure": "none; atmosphere-focused",
+    "structural_motif": "suspended decorative arrangement",
+    "color_semantic_role": "very strong"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A holiday may be represented through culturally associated decorative symbols alone, without people or a literal setting.",
+      "evidence": "Chinese New Year is represented entirely through lanterns, color, and festive accents.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Repeating one diagnostic object family can be sufficient to communicate a concept when the objects are culturally distinctive.",
+      "evidence": "Multiple lantern forms carry most of the semantic burden.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Variation within repetition can preserve visual rhythm without making the composition monotonous.",
+      "evidence": "Lanterns differ substantially in shape, size, and internal pattern while remaining part of one visual family.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Color palette can function as a primary semantic cue rather than merely a compositional tool.",
+      "evidence": "The overwhelmingly red palette strongly contributes to Chinese New Year / Lunar New Year recognition.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A shared structural device such as suspension from above can unify multiple symbolic objects.",
+      "evidence": "The lanterns are tied together compositionally by vertical hanging lines descending from the top edge.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Decorative filler elements can remain semantically aligned with the event even when they are not literal objects.",
+      "evidence": "Small circles and starbursts primarily fill space but also reinforce a festive atmosphere.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Literal environment can be replaced by abstract festive space when symbolic objects and color provide sufficient recognition.",
+      "evidence": "No physical celebration setting is depicted.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A repeated symbolic family can distribute visual weight evenly across a wide banner.",
+      "evidence": "Lanterns are spaced across the width rather than concentrated into one focal cluster.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "very shallow depth",
+      "strong environmental abstraction",
+      "simplified geometric forms",
+      "low material realism",
+      "decorative use of negative space"
+    ],
+    "important_differences": [
+      "Like Wedding and Baby Shower, Chinese New Year contains no people and relies on symbolic objects.",
+      "Unlike Wedding, the composition is not organized as a clustered still life but as a distributed hanging display.",
+      "Unlike Baby Shower, the image repeats one symbolic object family rather than combining several distinct symbolic categories.",
+      "Unlike Vote, Chinese New Year communicates atmosphere and cultural association rather than a specific action.",
+      "Color plays a more dominant semantic role here than in any previously studied reference.",
+      "Recognition is relatively strong even without a literal environment because lanterns and red color reinforce the same holiday association."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space"
+    },
+    "implication": "The reference set now includes a distinct atmosphere-focused holiday strategy in which culturally associated objects, repetition, and color together replace people, narrative, and physical setting."
+  },
+  "open_questions": [
+    "Do other holiday illustrations also rely primarily on one repeated culturally diagnostic object family?",
+    "How often does color itself function as one of the strongest semantic recognition cues?",
+    "Is variation within repeated object categories a recurring strategy for festive scenes?",
+    "Do suspended or hanging compositions appear frequently in holiday or decoration-oriented concepts?",
+    "How often are decorative filler shapes chosen to remain semantically compatible with the event mood?",
+    "Would other Lunar New Year references use similarly strong red dominance, or is this unusually monochromatic?",
+    "How often can Google achieve high event recognition without people, action, or literal environment?",
+    "Are holiday scenes more likely than activity scenes to prioritize atmosphere over literal narrative?"
+  ]
+}

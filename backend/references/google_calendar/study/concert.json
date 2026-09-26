@@ -1,0 +1,443 @@
+{
+  "reference_id": "concert",
+  "concept": "Concert",
+  "files": {
+    "svg": "raw/img_concert.svg",
+    "rendered": "rendered/img_concert.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide, energetic rock-concert scene showing three anonymous performers: a bass player on the left, a drummer in the center, and an electric-guitar player on the right. The central drummer is framed by a large pale rectangular stage-like panel, while the outer background uses a slightly darker warm yellow. The scene includes amplifiers or sound equipment, abstract sound-wave marks, a drum kit, stage platform, and strongly expressive performer poses. Despite the density of elements, the composition remains readable because the scene is organized into clear performer clusters.",
+    "composition": {
+      "weight_distribution": "Visual weight is distributed across three performer zones, with the central drummer acting as the compositional and semantic anchor.",
+      "busiest_region": "The center is the busiest region because the drummer, drum kit, cymbals, stands, and pale rectangular backdrop overlap there.",
+      "quiet_region": "Some of the warm yellow background areas around the performers remain comparatively open.",
+      "balance_strategy": "The composition uses a three-part performer structure: bassist on the left, drummer in the center, guitarist on the right. The center is stabilized by the drum kit and rectangular backdrop, while the outer performers add movement and asymmetry.",
+      "major_structural_forms": [
+        "large bass player and bass guitar on left",
+        "central drummer with raised arms",
+        "full drum kit and cymbals",
+        "cropped electric-guitar player on right",
+        "large pale rectangular backdrop behind drummer",
+        "amplifier or mixer-like equipment at far left and right",
+        "abstract sound-wave lines around performers"
+      ],
+      "rhythm_and_repetition": "Repeated instrument shapes, performer limbs, drum stands, and sound-wave marks create a lively visual rhythm."
+    },
+    "background": {
+      "base": "Warm pale yellow field.",
+      "environmental_detail": "The scene includes a pale rectangular stage / backdrop panel behind the drummer and simplified sound equipment near the edges.",
+      "decorative_elements": [
+        "curving red-orange wave lines near the bassist",
+        "jagged red-orange lines near the guitarist"
+      ],
+      "literal_environment_present": true,
+      "notes": "The environment is not a literal detailed concert venue, but enough stage and equipment cues are included to establish a performance setting."
+    },
+    "environment_structure": {
+      "environment_type": "simplified live-performance stage environment",
+      "representation_strategy": "Retain only the performance-defining stage elements: performers, instruments, drum kit, background panel, and sound equipment.",
+      "foreground_elements": [
+        "bass player",
+        "drummer",
+        "drum kit",
+        "electric-guitar player"
+      ],
+      "background_elements": [
+        "pale rectangular backdrop",
+        "amplifier / mixer-like equipment",
+        "warm yellow field"
+      ],
+      "depth_mechanism": "Depth is suggested through overlap, performer placement, cropping, and equipment layering rather than realistic stage perspective.",
+      "recognition_mechanism": "The concert reading comes from coordinated performance, multiple instruments, expressive body poses, stage equipment, and abstract sound-energy cues."
+    },
+    "human_figure": {
+      "count": 3,
+      "body_part_only": false,
+      "identity_status": "anonymous but specific-looking",
+      "observable_skin_color": [
+        "dark brown",
+        "light peach / warm light skin tone",
+        "medium warm skin tone"
+      ],
+      "race_or_ethnicity": "not reliably inferable",
+      "hair": [
+        "large rounded / punk-like hairstyle with light accent",
+        "high bun",
+        "long flowing hair"
+      ],
+      "facial_detail": "Minimal overall. The drummer has a small simplified face; the bassist is mostly seen from behind / side; the guitarist's face is largely obscured.",
+      "clothing": "The bassist wears a dark purple top and dark pants; the drummer wears a pink cropped top with exposed midriff; the guitarist wears an orange top, dark outer garment, and bright blue jeans.",
+      "pose": "The bassist steps or leans while playing; the drummer raises both arms with drumsticks; the guitarist leans forward energetically while playing.",
+      "relative_size": "The bassist and guitarist are large and partially cropped, while the drummer sits centrally behind the drum kit.",
+      "internal_proportions": "Heads remain small relative to bodies, but limbs and torsos are adapted to expressive performance poses.",
+      "shape_construction": "Bodies combine block-like clothing shapes with more fluid limb and hair forms where action or attitude matters.",
+      "semantic_role": "All three figures are essential because the concept depends on coordinated ensemble performance rather than one isolated musician.",
+      "identity_specificity": "Each performer has distinct hair, clothing, body pose, and color treatment without representing a known individual.",
+      "notes": "This is a strong example of anonymous specificity and character differentiation through silhouette, styling, and pose."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Coordinated live-performance poses across all three musicians.",
+      "secondary_motion_cues": [
+        "drummer's raised drumsticks",
+        "bassist stepping / leaning while playing",
+        "guitarist leaning forward",
+        "long hair moving around the guitarist",
+        "abstract sound-wave lines",
+        "angled instruments"
+      ],
+      "motion_lines": true,
+      "blur": false,
+      "special_effects": true,
+      "notes": "Unlike many earlier action scenes, Concert supplements body pose with non-literal graphic lines that suggest sound and performance energy."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "bass guitar",
+        "electric guitar",
+        "drum kit",
+        "cymbals",
+        "drumsticks",
+        "amplifier / sound equipment"
+      ],
+      "semantic_role": "These instrument and stage cues establish a live band performance rather than generic music-making.",
+      "notes": "The bass guitar includes visible string and control details, while the drum kit includes several separate recognizable components."
+    },
+    "viewpoint_strategy": {
+      "present": true,
+      "viewpoint_type": "front-facing stage view",
+      "camera_position": "The viewer appears positioned in front of the performers, with the scene composed like a cropped stage snapshot.",
+      "effect": "This supports immediate recognition of ensemble roles and lets the outer performers frame the drummer.",
+      "notes": "The viewpoint is less extreme than Bowling, but still intentionally chosen to emphasize coordinated performance."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized but pose-responsive.",
+      "human_to_environment": "Performers dominate the composition, while background equipment is scaled down and simplified.",
+      "object_exaggeration": "No major surreal exaggeration; emphasis is achieved through cropping, performer size, and central object clustering.",
+      "internal_human_scale": "Small heads and simplified bodies remain consistent with the broader style, while limbs and silhouettes flex for movement clarity.",
+      "general_effect": "Scale and proportions support expressive performance rather than strict anatomical realism.",
+      "scale_source": "primarily framing and stylization"
+    },
+    "depth_and_space": {
+      "depth_type": "shallow stage-layered depth",
+      "mechanisms": [
+        "performer overlap",
+        "drum kit layering",
+        "background panel",
+        "cropped foreground performers",
+        "equipment at far edges"
+      ],
+      "realistic_perspective": "Minimal.",
+      "floor_plane": "A pink stage platform is visible along the bottom, but the space is not constructed through realistic perspective.",
+      "room_or_venue_depth": "A stage-like venue is suggested but not fully built.",
+      "overall_effect": "The scene feels like a live performance environment without needing detailed architecture."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "right-side guitarist is heavily cropped",
+        "left-side sound equipment is partially cropped",
+        "right-side equipment and graphic lines extend beyond the frame"
+      ],
+      "human_cropping": "Strong on the guitarist; lighter on the bassist; drummer is mostly contained.",
+      "effect": "Cropping increases immediacy and makes the performance feel larger and more energetic than the visible frame."
+    },
+    "color": {
+      "background": "warm pale yellow with a lighter cream stage panel",
+      "major_colors": [
+        "warm yellow",
+        "cream",
+        "purple",
+        "pink",
+        "orange",
+        "blue",
+        "black / dark charcoal",
+        "dark navy"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Each performer receives a distinct color identity, helping separate figures in a relatively dense scene.",
+      "contrast_strategy": "Purple, pink, orange, and blue clothing / instruments contrast against the warm pale background, while dark instrument and hair shapes create strong anchors.",
+      "mood_role": "The palette feels lively and expressive without becoming visually chaotic."
+    },
+    "shape_language": {
+      "overall": "Geometric but expressive, with stronger fluidity in hair, limbs, and instruments than in static scenes.",
+      "human_body": "Clothing remains geometric, while performance-critical limbs and silhouettes become more responsive and dynamic.",
+      "objects": "Drums, cymbals, guitars, and amplifiers are simplified to clean iconic forms with selective internal detail.",
+      "fine_detail": "Moderate by this study's standards, especially in the drum kit, bass strings, instrument controls, and hair.",
+      "adaptability": "The illustration allocates more structure to objects and body parts that are central to performance recognition."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "moderate to moderately high",
+      "notes": "The scene contains three performers, multiple instruments, a drum kit, stage equipment, graphic sound cues, and a backdrop, but remains readable because detail is clustered into clear performer zones."
+    },
+    "salience": {
+      "primary_attention_element": "The central drummer and drum kit.",
+      "secondary_attention_elements": [
+        "left bassist and orange bass guitar",
+        "right guitarist and blue jeans",
+        "sound-wave graphics"
+      ],
+      "large_but_quiet_elements": [
+        "warm yellow background",
+        "pale rectangular stage panel"
+      ],
+      "high_attention_elements": [
+        "raised drumsticks",
+        "orange bass guitar",
+        "pink drummer top",
+        "blue guitarist jeans",
+        "jagged sound-wave line"
+      ],
+      "important_observation": "The scene uses performer clustering and a central backdrop to keep a rich multi-person composition legible."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "wavy red-orange lines",
+        "jagged red-orange zigzag lines"
+      ],
+      "semantic_role": "These are not merely decorative: they suggest sound, volume, rhythm, or musical energy.",
+      "compositional_role": "They extend energy into negative space and visually connect the performers to the surrounding frame.",
+      "notes": "This is a strong example of abstract graphic marks communicating an invisible phenomenon."
+    },
+    "abstract_action_cues": {
+      "present": true,
+      "cue_type": "sound / performance energy",
+      "elements": [
+        "curving wave-like lines near bassist",
+        "sharp zigzag lines near guitarist"
+      ],
+      "function": "Represent or evoke different qualities of sound and live musical intensity.",
+      "notes": "The precise mapping between line shape and sound quality is interpretive, but the lines clearly reinforce performance energy."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": "Three musicians are simultaneously performing as a coordinated band during a live concert moment.",
+      "narrative_role": "The image captures collective performance in progress rather than simply displaying musical instruments."
+    },
+    "structural_motif": {
+      "present": true,
+      "motif": "three-performer stage arrangement",
+      "components": [
+        "left bassist cluster",
+        "central drummer cluster",
+        "right guitarist cluster",
+        "central rectangular backdrop",
+        "stage platform"
+      ],
+      "role": "Creates a balanced band structure and organizes a complex performance scene into readable zones."
+    },
+    "text_and_numerals": {
+      "present": false,
+      "elements": [],
+      "type": null,
+      "role": null,
+      "notes": null
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Live concert / rock-band performance.",
+    "primary_recognition_cues": [
+      "multiple musicians performing together",
+      "drum kit",
+      "bass guitar",
+      "electric guitar",
+      "active playing poses"
+    ],
+    "secondary_recognition_cues": [
+      "amplifier / sound equipment",
+      "stage backdrop",
+      "sound-wave graphics",
+      "energetic performer styling"
+    ],
+    "human_semantic_role": "Human figures are essential. The concept depends on coordinated ensemble performance rather than instruments alone.",
+    "dominant_semantic_element": "The collective performance, with the drummer and drum kit acting as the central anchor.",
+    "literal_environment_used": true,
+    "environment_strategy": "Retain a simplified stage environment and enough sound equipment to distinguish live concert performance from general music practice.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "wavy sound lines near bassist",
+        "function": "Suggest musical sound, rhythm, or performance energy.",
+        "type": "abstract action cue"
+      },
+      {
+        "element": "jagged sound lines near guitarist",
+        "function": "Suggest sharper or more forceful musical energy.",
+        "type": "abstract action cue"
+      },
+      {
+        "element": "central pale rectangular backdrop",
+        "function": "Organizes the performance space and visually frames the drummer.",
+        "type": "compositional structural cue"
+      }
+    ],
+    "recognition_structure": "multi-person coordinated performance scene",
+    "recognition_notes": "The scene reads specifically as a concert because multiple performers are actively playing distinct instruments within a stage-like environment.",
+    "literal_alternative": "A realistic concert stage with audience, lighting rigs, microphones, cables, speakers, and detailed stage architecture.",
+    "google_choice": "Depict a compact three-person band performance with expressive poses, a detailed-but-abstract drum kit, selected stage equipment, and graphic sound-energy marks.",
+    "notable_omissions": [
+      "audience",
+      "microphones",
+      "detailed stage lighting",
+      "realistic cables",
+      "venue architecture",
+      "logos",
+      "text",
+      "realistic instrument materials"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "A small band ensemble may communicate 'concert' more directly than a large crowd or generic stage scene.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The pale rectangular backdrop may be used to unify the busy center and keep the drummer readable.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Abstract line marks may be introduced because sound itself is invisible and needs a non-literal visual cue to increase energy.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Distinct performer silhouettes, clothing, and hairstyles may help separate roles while preserving anonymous identity.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_sound_wave_lines_removed": "The image would still clearly depict a concert, but it would feel less energetic and less sonically expressive.",
+    "if_drummmer_removed": "The scene would still depict musicians, but the central compositional anchor and sense of full-band performance would weaken.",
+    "if_background_panel_removed": "The performers would remain recognizable, but the center could feel less visually organized and the drummer less separated from the outer background.",
+    "if_outer_performers_removed": "The image would become more like a solo music-performance scene and lose the coordinated-band reading.",
+    "if_stage_equipment_removed": "The scene would still suggest music performance, but the live-concert context would be somewhat weaker.",
+    "if_cropping_removed": "The composition might become more orderly but less immediate and less like a live-performance snapshot."
+  },
+  "derived_observations": {
+    "recognition_anchor": "coordinated three-person band performance",
+    "human_role": "essential and collective",
+    "scale_exaggeration": "low; emphasis from framing and pose",
+    "internal_human_proportion_stylization": "small heads, geometric clothing, expressive responsive limbs",
+    "environment_abstraction": "moderate",
+    "environment_strategy": "simplified live-performance stage with selected equipment cues",
+    "symbolic_information_integration": "moderate through abstract sound-energy marks",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "body pose plus abstract sound cues",
+    "depth": "shallow stage-layered",
+    "cropping": "strong on outer performer and equipment",
+    "scene_density": "moderate to moderately high",
+    "facial_specificity": "low",
+    "anonymous_character_visual_specificity": "high",
+    "rendering_realism": "low",
+    "composition_dynamic": "three-performer structure with central drummer anchor",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "present and semantically active",
+    "narrative_structure": "coordinated live performance",
+    "structural_motif": "three-performer stage arrangement",
+    "viewpoint_importance": "moderate",
+    "action_moment_specificity": "high",
+    "abstract_action_cues": "strong",
+    "detail_allocation": "higher on drum kit, instruments, and action-critical silhouettes"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A concert can be represented through a small coordinated ensemble rather than a crowd or full venue.",
+      "evidence": "Three performers and their instruments are sufficient to establish a live-concert scene.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A central performer or object cluster can anchor a complex multi-person composition.",
+      "evidence": "The drummer and drum kit stabilize the middle of the image while bassist and guitarist provide outer energy.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Abstract graphic marks can communicate invisible phenomena such as sound or performance energy.",
+      "evidence": "Wavy and jagged lines around the musicians function as non-literal sound cues.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Anonymous characters can be highly expressive through hairstyle, clothing, silhouette, and pose without becoming identifiable.",
+      "evidence": "All three performers are visually distinct yet remain generic.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Rich scenes remain readable when organized into large semantic clusters.",
+      "evidence": "The scene separates clearly into bassist, drummer, guitarist, and background-equipment zones.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Cropping can intensify live-performance energy and imply a larger event beyond the frame.",
+      "evidence": "The guitarist and equipment are partially cut off by the frame.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A simple background panel can organize and unify a busy multi-figure scene.",
+      "evidence": "The pale rectangular panel behind the drummer separates the central performance cluster from the larger yellow background.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Pose and attitude can be as important as object choice for recognizing a performance concept.",
+      "evidence": "Raised drumsticks, stepping bassist, leaning guitarist, and moving hair all communicate live performance.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Detail can increase around structurally important instruments while still remaining abstract.",
+      "evidence": "The drum kit includes multiple components and the bass shows strings / controls without becoming photorealistic.",
+      "confidence": "recurring"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "simplified geometric forms",
+      "strong character stylization",
+      "cropping used compositionally",
+      "action carried by pose",
+      "low material realism"
+    ],
+    "important_differences": [
+      "Unlike Basketball, Concert depicts coordinated performance rather than competition.",
+      "Unlike Bowling, viewpoint is less extreme; energy comes more from pose, cropping, instruments, and abstract sound cues.",
+      "Unlike Barbecue, Concert requires visible people because coordinated performance is central to the concept.",
+      "Unlike Vote, the action is distributed across multiple full-body figures rather than concentrated in one close-up gesture.",
+      "Concert is one of the strongest examples of semantically meaningful abstract marks representing an invisible phenomenon."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment",
+      "barbecue": "literal outdoor environment retained; event communicated through prepared equipment, food, and serving setup without visible participants",
+      "bowling": "literal sports environment reduced to a single directional wedge while viewpoint and impact moment carry most of the concept",
+      "concert": "simplified stage environment retained; coordinated performer clusters and abstract sound cues carry the concept"
+    },
+    "implication": "The set now includes a strong coordinated-performance case showing that Google Calendar can use expressive anonymous characters, selective instrument detail, cropping, and non-literal graphic cues to communicate live energy."
+  },
+  "open_questions": [
+    "Do other music-related references use abstract sound cues or is Concert unusual in this respect?",
+    "How often does Google use different line languages to suggest different kinds of invisible energy or sound?",
+    "Do coordinated-performance scenes consistently use a central anchor performer?",
+    "How often are simple background panels used to organize busy multi-person compositions?",
+    "Are expressive hairstyles and clothing more common in entertainment / performance scenes?",
+    "Does the art director need a permanent category for abstract action cues such as sound, steam, smell, sparkle, or vibration?",
+    "How often does instrument detail increase when the instrument is central to concept recognition?",
+    "Should coordinated multi-person performance be treated as a distinct representation strategy from relational competition?"
+  ]
+}

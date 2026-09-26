@@ -1,0 +1,393 @@
+{
+  "reference_id": "barbecue",
+  "concept": "Barbecue",
+  "files": {
+    "svg": "raw/img_barbecue.svg",
+    "rendered": "rendered/img_barbecue.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide outdoor barbecue scene centered on an open grill, with a picnic table on the right and rolling hills, shrubs, and stylized trees in the background. No people are visible, but the environment strongly implies human activity through grilled food, hanging utensils, condiments, cups, and a stack of plates or napkins. The scene is richer than several earlier references but remains highly legible because elements are grouped into large semantic zones and rendered with flat, simplified geometry.",
+    "composition": {
+      "weight_distribution": "Visual weight is spread fairly evenly across the image. The grill anchors the center, the table forms a strong right-side cluster, and the layered landscape provides a broad counterweight on the left.",
+      "busiest_region": "Center-right, especially around the open grill, food, hanging tools, and nearby serving table.",
+      "quiet_region": "Upper-left sky and portions of the rolling landscape provide calmer visual areas.",
+      "balance_strategy": "The composition is organized into three major zones: landscape on the left, grill in the center, and serving / dining setup on the right.",
+      "major_structural_forms": [
+        "layered green hills and rounded shrubs on the left",
+        "large open grill in the center",
+        "grilled food and hanging tools beneath the grill",
+        "picnic table on the right",
+        "cups, condiment bottles, and plates / napkins on the table"
+      ],
+      "rhythm_and_repetition": "Repeated rounded landscape forms and repeated small serving objects create visual rhythm without making the scene feel busy."
+    },
+    "background": {
+      "base": "Pale blue sky with layered green outdoor landscape.",
+      "environmental_detail": "A simplified outdoor setting is clearly present through rolling hills, shrubs, and large rounded tree-like forms.",
+      "decorative_elements": "Most background forms function as environmental context rather than purely decorative fillers.",
+      "literal_environment_present": true,
+      "notes": "The outdoor setting is important because it distinguishes barbecue / cookout from generic indoor cooking."
+    },
+    "environment_structure": {
+      "environment_type": "simplified outdoor picnic / cookout landscape",
+      "representation_strategy": "literal outdoor environment retained and abstracted into layered landscape forms",
+      "foreground_elements": [
+        "open grill",
+        "hanging grill tools",
+        "picnic table",
+        "cups",
+        "condiment bottles",
+        "stacked plates / napkins"
+      ],
+      "background_elements": [
+        "rolling hills",
+        "large rounded tree / shrub forms",
+        "pale blue sky"
+      ],
+      "depth_mechanism": "Depth is suggested through overlapping hills, different scale relationships among vegetation forms, and the placement of grill and table in front of the landscape.",
+      "recognition_mechanism": "The outdoor setting combines with grilling equipment and serving objects to make the event read specifically as barbecue / cookout rather than generic cooking."
+    },
+    "human_figure": {
+      "count": 0,
+      "identity_status": null,
+      "observable_skin_color": null,
+      "race_or_ethnicity": null,
+      "hair": null,
+      "facial_detail": null,
+      "clothing": null,
+      "pose": null,
+      "relative_size": null,
+      "internal_proportions": null,
+      "shape_construction": null,
+      "semantic_role": "No human figure is shown; human presence is implied through active-use objects and prepared food.",
+      "identity_specificity": null
+    },
+    "motion": {
+      "motion_present": false,
+      "primary_motion_cue": null,
+      "secondary_motion_cues": [],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The scene is static, but the open grill and prepared serving setup imply ongoing or imminent activity."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "spatula",
+        "yellow grill brush or utensil",
+        "grill grate",
+        "condiment bottles",
+        "cups",
+        "stacked plates or napkins"
+      ],
+      "semantic_role": "These accessories reinforce the barbecue / cookout reading and distinguish the scene from generic outdoor dining.",
+      "notes": "The hanging utensils are visually small but highly diagnostic."
+    },
+    "food_and_serving_elements": {
+      "grilled_items": [
+        "two darker elongated grilled items with grill marks",
+        "one warmer orange / red grilled item"
+      ],
+      "serving_items": [
+        "cups",
+        "two condiment bottles",
+        "stacked white plates or napkins"
+      ],
+      "interpretation_notes": "The exact food types are uncertain. The darker items may resemble sausages or other grilled foods, while the warmer item may be another meat item. The important observation is that multiple food forms with grill marks signal active barbecue cooking."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized but spatially coherent.",
+      "human_to_environment": null,
+      "object_exaggeration": "The grill is large and central because it is the primary semantic anchor; serving objects are smaller but still clearly legible.",
+      "internal_human_scale": null,
+      "general_effect": "Scale hierarchy supports semantic importance more than strict physical realism."
+    },
+    "depth_and_space": {
+      "depth_type": "moderate layered outdoor depth",
+      "mechanisms": [
+        "overlapping hills",
+        "different vegetation scales",
+        "foreground grill",
+        "separate right-side table cluster",
+        "layered color bands"
+      ],
+      "realistic_perspective": "Limited.",
+      "floor_plane": "Outdoor ground is implied through broad green landscape regions rather than a strict perspective plane.",
+      "room_or_venue_depth": "Not applicable; scene is outdoors.",
+      "overall_effect": "The scene feels spatially coherent without relying on realistic perspective or detailed environmental construction."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "landscape continues through the left and right edges",
+        "picnic table extends through the right edge",
+        "large tree / shrub forms are partially cropped by the top and left frame"
+      ],
+      "human_cropping": null,
+      "effect": "The environment feels like a larger outdoor space continuing beyond the banner."
+    },
+    "color": {
+      "background": "pale blue sky with layered greens",
+      "major_colors": [
+        "light blue",
+        "multiple greens",
+        "dark green",
+        "pale blue-gray",
+        "dark navy",
+        "brown",
+        "yellow",
+        "orange",
+        "white",
+        "pink"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Cool greens and blues establish the outdoor setting, while warmer food, condiment, and table colors create localized accents.",
+      "contrast_strategy": "The grill uses pale blue-gray and dark navy for strong structural contrast, while brown wood and yellow / orange serving items provide warm counterpoints.",
+      "mood_role": "The palette feels fresh, casual, outdoorsy, and social."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric equipment combined with soft, oversized landscape forms.",
+      "human_body": null,
+      "objects": "The grill, table, bottles, cups, and tools are reduced to basic rectangles, arcs, circles, and simple silhouettes.",
+      "fine_detail": "Low overall, but the grill grate, hanging tools, food marks, and condiment shapes receive enough detail to support recognition.",
+      "adaptability": "Object detail increases slightly for elements that distinguish barbecue from generic outdoor eating."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "Minimal.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "moderate to moderately high",
+      "notes": "The image includes landscape, grill, food, utensils, table, drinks, condiments, and serving items, but remains readable because these elements are grouped into large semantic clusters."
+    },
+    "salience": {
+      "primary_attention_element": "The open grill in the center.",
+      "secondary_attention_elements": [
+        "food on the grill",
+        "hanging grill tools",
+        "condiment bottles",
+        "picnic table setup"
+      ],
+      "large_but_quiet_elements": [
+        "rolling green hills",
+        "large rounded tree / shrub forms",
+        "pale blue sky"
+      ],
+      "high_attention_elements": [
+        "dark grill opening",
+        "yellow and orange condiment bottles",
+        "brown picnic table",
+        "grill-marked food"
+      ],
+      "important_observation": "The scene achieves richness without clutter by organizing many small details around one central anchor and two larger environmental / serving zones."
+    },
+    "decorative_abstraction": {
+      "present": false,
+      "elements": [],
+      "semantic_role": null,
+      "compositional_role": "Most elements serve either environmental, cooking, or serving functions rather than purely decorative roles.",
+      "notes": "The landscape is stylized, but not merely decorative; it helps establish the outdoor cookout setting."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": "Food is being grilled while serving items are already prepared on a nearby picnic table, implying an ongoing or imminent social meal.",
+      "narrative_role": "The scene suggests a prepared event state rather than a specific moment of human action."
+    },
+    "structural_motif": {
+      "present": false,
+      "motif": null,
+      "components": [],
+      "role": null
+    },
+    "human_presence_without_people": {
+      "present": true,
+      "cues": [
+        "open grill",
+        "food actively cooking",
+        "multiple cups",
+        "condiments",
+        "plates / napkins",
+        "hanging utensils",
+        "picnic table"
+      ],
+      "role": "These objects make the scene feel socially inhabited and event-ready even though no people are shown."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Barbecue / outdoor cookout.",
+    "primary_recognition_cues": [
+      "open grill",
+      "food cooking on grill",
+      "grilling utensils",
+      "outdoor landscape",
+      "picnic table"
+    ],
+    "secondary_recognition_cues": [
+      "condiment bottles",
+      "cups",
+      "stack of plates or napkins",
+      "grill marks on food"
+    ],
+    "human_semantic_role": "No people are shown. Human participation is implied through the arrangement and active-use state of the objects.",
+    "dominant_semantic_element": "Open grill with food and grilling tools.",
+    "literal_environment_used": true,
+    "environment_strategy": "Retain a simplified outdoor landscape because the outdoor context helps distinguish barbecue / cookout from generic cooking.",
+    "symbolic_or_informational_cues": [],
+    "recognition_structure": "object-centered event environment",
+    "recognition_notes": "The concept is communicated by the combined relationship among grill, food, tools, serving setup, and outdoor environment. The scene remains highly specific even without human participants.",
+    "literal_alternative": "A realistic backyard or park barbecue with people actively cooking, eating, talking, and serving food.",
+    "google_choice": "Depict the prepared event environment itself: an open grill, visible food, tools, picnic table, condiments, cups, plates, and a simplified outdoor landscape.",
+    "notable_omissions": [
+      "people",
+      "faces",
+      "conversation",
+      "chairs",
+      "detailed backyard or park architecture",
+      "realistic smoke",
+      "realistic food texture",
+      "branding or labels"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "Because barbecue is strongly recognizable from its equipment, setting, and serving setup, visible participants may be unnecessary.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The outdoor landscape may be retained because it helps distinguish barbecue / cookout from indoor cooking.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The open grill may be shown specifically because revealing the food and cooking tools provides more semantic information than a closed grill would.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "A prepared-use environment may imply social activity while avoiding the need to depict multiple people or relationships.",
+        "confidence": "tentative",
+        "status": "hypothesis only; not directly observable from the image"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_grill_removed": "The scene would become much less specifically barbecue-related and might read as a generic outdoor picnic.",
+    "if_food_removed": "The grill would still indicate barbecue, but the sense of active cooking would weaken.",
+    "if_tools_removed": "The scene would remain recognizable, but grilling specificity would be slightly reduced.",
+    "if_table_setup_removed": "The image would still communicate grilling, but the social meal / cookout atmosphere would weaken.",
+    "if_outdoor_landscape_removed": "The image could still depict grilling, but would be less clearly associated with an outdoor barbecue or cookout.",
+    "if_people_added": "The scene might become more socially explicit, but people are not necessary for recognition because the prepared environment already implies participation.",
+    "if_grill_lid_closed": "The barbecue concept would remain, but the food and active-cooking state would be less visible and semantically informative."
+  },
+  "derived_observations": {
+    "recognition_anchor": "open grill and surrounding cookout setup",
+    "human_role": "absent; implied through prepared-use objects",
+    "scale_exaggeration": "moderate semantic emphasis",
+    "internal_human_proportion_stylization": null,
+    "environment_abstraction": "moderate",
+    "environment_strategy": "literal outdoor environment retained as simplified cookout setting",
+    "symbolic_information_integration": "low",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "none; activity implied through object state",
+    "depth": "moderate layered outdoor depth",
+    "cropping": "present in landscape and table",
+    "scene_density": "moderate to moderately high",
+    "facial_specificity": null,
+    "anonymous_character_visual_specificity": null,
+    "rendering_realism": "low",
+    "composition_dynamic": "three-zone composition: landscape, grill, serving setup",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "low",
+    "narrative_structure": "prepared-event state",
+    "structural_motif": null,
+    "human_presence_without_people": "strong",
+    "detail_allocation": "higher on concept-diagnostic tools and food"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A social event can be communicated through equipment, prepared objects, and setting without showing people.",
+      "evidence": "The grill, table, cups, condiments, plates, and food imply an active barbecue gathering despite the absence of participants.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Environment can help disambiguate an object cluster into a more specific event.",
+      "evidence": "The outdoor landscape helps distinguish barbecue / cookout from generic cooking.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Small accessory tools can significantly increase concept specificity.",
+      "evidence": "The spatula and grill brush / utensil reinforce the barbecue reading despite their small size.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Scene richness can remain readable when details are grouped into large semantic zones.",
+      "evidence": "Landscape, grill, and serving setup form three clear compositional regions.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Prepared-use objects can imply human presence without requiring visible participants.",
+      "evidence": "Multiple cups, condiments, plates, active grilling, and tools make the scene feel socially inhabited.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Objects may be shown in their most informative state rather than their most neutral state.",
+      "evidence": "The grill lid is open, exposing both food and grill activity.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Outdoor depth can be suggested through layered landscape shapes without realistic perspective.",
+      "evidence": "Rolling hills and vegetation overlap at different scales while remaining highly simplified.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Warm accent colors can be concentrated in food and serving details against a cooler natural environment.",
+      "evidence": "The large scene is dominated by greens and blues while condiments and grilled food provide localized yellow / orange accents.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or surface texture",
+      "strong simplification of objects",
+      "low material realism",
+      "cropped environment extending beyond the frame",
+      "small diagnostic accessories",
+      "depth created mainly through overlap and scale"
+    ],
+    "important_differences": [
+      "Unlike Basketball, Delivery, and Climbing, Barbecue contains no people despite depicting a social activity.",
+      "Unlike Wedding and Baby Shower, Barbecue is not primarily symbolic; it presents a literal event setup.",
+      "Unlike Vote, the scene is relatively rich and environment-dependent rather than compressed into one close-up interaction.",
+      "Unlike Chinese New Year, recognition depends more on functional equipment and prepared objects than on atmosphere or repeated decorative symbols.",
+      "Barbecue is one of the clearest examples of human presence being implied through object state rather than visible figures."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment",
+      "barbecue": "literal outdoor environment retained; event communicated through prepared equipment, food, and serving setup without visible participants"
+    },
+    "implication": "The growing set suggests that Google Calendar art direction can communicate social events either through people or through the traces and tools of human activity, depending on how diagnostic the object-environment setup already is."
+  },
+  "open_questions": [
+    "How often are social activities shown without people when the equipment and setup are sufficiently diagnostic?",
+    "Do other cooking or dining references also use prepared-use objects to imply human presence?",
+    "How often does Google show an object in its most informative state, such as an open container, open grill, or active tool?",
+    "Are outdoor food scenes consistently paired with layered natural landscapes?",
+    "How often are tiny functional tools used as specificity cues?",
+    "Does the planner need a distinct category for prepared-event environments without visible participants?",
+    "How frequently are multi-object scenes organized into three or more large semantic zones?",
+    "Do cool environmental palettes commonly receive warmer food / activity accents?"
+  ]
+}

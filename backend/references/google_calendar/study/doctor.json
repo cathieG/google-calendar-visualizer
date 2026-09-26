@@ -1,0 +1,423 @@
+{
+  "reference_id": "doctor",
+  "concept": "Doctor",
+  "files": {
+    "svg": "raw/img_doctor.svg",
+    "rendered": "rendered/img_doctor.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A highly simplified medical illustration showing only the upper torso, neck, and a partial head/hair region of an anonymous doctor. The figure is concentrated on the right side of the frame and wears a pale blue/white medical coat over a pink garment. A saturated blue stethoscope hangs around the neck, and a small medical-style badge with tiny icon-like markings is attached to the coat. The left side is mostly pale pink negative space with large, very light vertical rectangular panels. No patient, medical action, or detailed clinic interior is shown.",
+    "composition": {
+      "weight_distribution": "Strongly right-weighted. Nearly all semantically important content is concentrated in the cropped doctor figure on the right.",
+      "busiest_region": "Right-center, where coat, stethoscope, badge, neck, and hair overlap.",
+      "quiet_region": "Most of the left two-thirds of the frame, which contains only pale pink background and very light vertical panels.",
+      "balance_strategy": "A compact, high-information occupational cluster on the right is balanced by a large field of quiet negative space on the left.",
+      "major_structural_forms": [
+        "cropped doctor torso on the right",
+        "large pale medical coat",
+        "pink inner garment",
+        "blue stethoscope",
+        "small medical-style badge",
+        "large pale vertical background panels"
+      ],
+      "rhythm_and_repetition": "The repeated pale vertical background rectangles create gentle structure without competing with the subject."
+    },
+    "directional_composition": {
+      "present": false,
+      "movement_direction": null,
+      "lead_space": null,
+      "trailing_space": null,
+      "directional_cues": [],
+      "effect": "Negative space functions primarily as asymmetrical balance and visual breathing room rather than as movement support."
+    },
+    "background": {
+      "base": "Pale pink field.",
+      "environmental_detail": "Very low. Large pale vertical rectangular panels appear in the background, but they are too abstract to identify confidently as specific clinic architecture.",
+      "decorative_elements": [
+        "large pale vertical rectangular panels"
+      ],
+      "literal_environment_present": false,
+      "notes": "The background provides quiet structure rather than a clearly depicted hospital, clinic, or examination room."
+    },
+    "environment_structure": {
+      "environment_type": "abstract medical-context background",
+      "representation_strategy": "Nearly omit the environment and let the occupational figure and diagnostic attributes carry recognition.",
+      "foreground_elements": [
+        "doctor torso",
+        "stethoscope",
+        "medical coat",
+        "badge"
+      ],
+      "background_elements": [
+        "pale pink field",
+        "large light rectangular panels"
+      ],
+      "depth_mechanism": "Depth is extremely shallow and comes mainly from overlap among the stethoscope, badge, coat, and body.",
+      "recognition_mechanism": "The doctor concept is communicated through a compact cluster of occupational cues rather than through a medical action or setting."
+    },
+    "human_figure": {
+      "count": 1,
+      "body_part_only": true,
+      "visible_body_part": "upper torso, neck, partial head / hair region",
+      "identity_status": "anonymous / non-identifiable",
+      "observable_skin_color": "dark brown",
+      "race_or_ethnicity": null,
+      "hair": {
+        "color": "very dark",
+        "style": "only partially visible; exact hairstyle not confidently recoverable from the crop"
+      },
+      "facial_detail": "Face is essentially omitted by the crop.",
+      "clothing": "Pale blue/white medical coat over a pink garment.",
+      "pose": "Static frontal or near-frontal occupational presentation; no clear action is occurring.",
+      "relative_size": "Very large within the frame because the image is tightly cropped around the upper torso.",
+      "internal_proportions": "Full-body proportion is not visible; the torso and neck are simplified into broad geometric color regions.",
+      "shape_construction": "Clothing uses large geometric planes while the neck and hair use simpler organic contours.",
+      "semantic_role": "The person functions primarily as a carrier for occupational attributes such as the coat, stethoscope, and badge.",
+      "identity_specificity": "The figure has a concrete skin tone and clothing palette but very little personal identity information because the face and most of the body are excluded.",
+      "notes": "This is a strong example of a person being present semantically while individual identity is minimized through cropping."
+    },
+    "motion": {
+      "motion_present": false,
+      "primary_motion_cue": null,
+      "secondary_motion_cues": [],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The concept is represented as an occupational state rather than an action."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "stethoscope",
+        "medical coat",
+        "medical-style badge"
+      ],
+      "semantic_role": "These objects carry most of the occupational meaning.",
+      "notes": "The stethoscope appears to be the strongest single diagnostic cue."
+    },
+    "badge_detail": {
+      "present": true,
+      "observable_elements": [
+        "small orange/red apple-like icon",
+        "small pink medical cross",
+        "small yellow circular smiling-face-like icon"
+      ],
+      "semantic_role": "Provides secondary medical / care-oriented cues and adds occupational specificity.",
+      "interpretation_caution": "The exact intended meaning of the tiny badge graphics is uncertain; they should be recorded as icon-like markings rather than overinterpreted."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized and tightly cropped.",
+      "human_to_environment": "The doctor dominates the image because the environment is nearly absent.",
+      "object_exaggeration": "No surreal object enlargement is needed; semantic emphasis comes from close cropping and saturated diagnostic accessories.",
+      "internal_human_scale": "Not fully assessable because only the upper torso and neck are visible.",
+      "general_effect": "Scale is used to turn a partial person into an occupational symbol.",
+      "scale_source": "primarily close-up framing"
+    },
+    "depth_and_space": {
+      "depth_type": "extremely shallow overlap-based depth",
+      "mechanisms": [
+        "stethoscope overlapping coat",
+        "badge overlapping coat",
+        "hair / body overlapping background panels"
+      ],
+      "realistic_perspective": "Absent.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "The image behaves more like a graphic occupational portrait than a spatial scene."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "head / hair region cropped by the top edge",
+        "torso cropped by the right and bottom edges"
+      ],
+      "human_cropping": "Very strong; face, arms, hands, and lower body are omitted.",
+      "effect": "Cropping isolates the exact region where the strongest occupational cues are located."
+    },
+    "color": {
+      "background": "pale pink",
+      "major_colors": [
+        "pale pink",
+        "light blue",
+        "saturated blue",
+        "white / very pale blue",
+        "dark brown",
+        "very dark charcoal / black",
+        "small orange, yellow, and pink accents"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "The pale background and coat remain visually quiet, while the saturated blue stethoscope becomes a high-salience occupational cue.",
+      "contrast_strategy": "Dark skin and hair contrast strongly against pale clothing, while the stethoscope uses saturated blue to separate itself from the coat.",
+      "mood_role": "The palette feels calm, clean, and approachable rather than clinical or severe."
+    },
+    "shape_language": {
+      "overall": "Large geometric clothing planes with selectively detailed medical accessories.",
+      "human_body": "The visible torso is highly simplified and mostly serves as a support surface for clothing and equipment.",
+      "objects": "The stethoscope uses curved tubing, circular earpiece / chest-piece forms, and narrow connecting lines; the badge is a small rectangle containing tiny simplified icons.",
+      "fine_detail": "Very low overall, but the stethoscope and badge receive disproportionate internal detail because they are semantically important.",
+      "adaptability": "Structural detail is allocated to occupation-defining objects rather than to facial or environmental realism."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "low",
+      "notes": "The image contains one cropped person, three main occupational cues, and abstract background panels, yet remains highly recognizable."
+    },
+    "salience": {
+      "primary_attention_element": "The stethoscope and cropped doctor torso.",
+      "secondary_attention_elements": [
+        "medical badge",
+        "pink inner garment",
+        "dark neck / hair contrast"
+      ],
+      "large_but_quiet_elements": [
+        "pale pink background",
+        "large pale background panels",
+        "pale medical coat"
+      ],
+      "high_attention_elements": [
+        "saturated blue stethoscope",
+        "dark skin / neck",
+        "dark hair",
+        "small colorful badge icons"
+      ],
+      "important_observation": "Large areas of the image are visually quiet, while a small cluster of diagnostic occupational cues carries nearly all of the semantic meaning."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "large pale vertical rectangular panels"
+      ],
+      "semantic_role": "Unclear. They may loosely suggest windows, panels, curtains, or clinical architecture, but that interpretation is not directly supported.",
+      "compositional_role": "Provide subtle structure to the empty left side without competing with the doctor.",
+      "notes": "These should be treated conservatively as abstract contextual forms."
+    },
+    "narrative_structure": {
+      "present": false,
+      "implied_sequence": null,
+      "narrative_role": "The image does not depict an unfolding medical event; it presents an occupational state."
+    },
+    "structural_motif": {
+      "present": false,
+      "motif": null,
+      "components": [],
+      "role": null
+    },
+    "text_and_numerals": {
+      "present": false,
+      "elements": [],
+      "type": null,
+      "role": "The badge uses tiny icon-like graphics instead of readable text.",
+      "notes": "This supports the broader pattern that object-native symbols can appear even when language-based text is omitted."
+    },
+    "representation_optionality": {
+      "observed": true,
+      "selected_strategy": "cropped occupational figure carrying diagnostic attributes",
+      "plausible_alternatives": [
+        "full doctor portrait",
+        "doctor examining a patient",
+        "doctor holding clipboard or medical tool",
+        "medical equipment still life",
+        "clinic or hospital environment",
+        "exaggerated medical object with miniature figures"
+      ],
+      "notes": "There is no evidence that the selected representation was semantically necessary. The doctor concept supports multiple plausible visual strategies, and this image represents one art-direction choice among them."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Doctor / medical professional.",
+    "primary_recognition_cues": [
+      "stethoscope",
+      "medical coat",
+      "cropped medical-professional torso"
+    ],
+    "secondary_recognition_cues": [
+      "medical-style badge",
+      "small medical cross icon",
+      "clean clinical color treatment"
+    ],
+    "human_semantic_role": "The human figure is present primarily as an occupational carrier rather than as an action performer.",
+    "dominant_semantic_element": "Localized cluster of doctor-specific occupational attributes.",
+    "literal_environment_used": false,
+    "environment_strategy": "Nearly omit the environment and allow the person plus medical attributes to carry recognition.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "medical-style badge icons",
+        "function": "Provide small additional medical / care-oriented associations.",
+        "type": "object-native icon cue"
+      }
+    ],
+    "recognition_structure": "concentrated occupational recognition",
+    "recognition_notes": "The concept is recognized through a small, tightly clustered set of cues rather than through action, environment, or distributed symbolism.",
+    "literal_alternative": "A full doctor interacting with a patient inside a clinic or hospital.",
+    "google_choice": "Crop tightly around the doctor's upper torso and retain only the most diagnostic occupational markers: coat, stethoscope, and badge.",
+    "notable_omissions": [
+      "full face",
+      "hands",
+      "patient",
+      "medical action",
+      "examination room",
+      "medical bed",
+      "desk",
+      "computer",
+      "clinic signage",
+      "readable text"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "The stethoscope, coat, and badge may provide enough recognition that a patient or medical action would add unnecessary complexity.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Cropping around the torso may intentionally center the region containing the most diagnostic occupational cues.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The omission of the face may reduce unnecessary personal identity information, although this is not necessarily the primary design reason.",
+        "confidence": "tentative",
+        "status": "hypothesis only; not directly observable from the image"
+      },
+      {
+        "hypothesis": "The pale background panels may exist mainly to prevent the large negative-space region from feeling empty while keeping the occupational subject dominant.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_stethoscope_removed": "The coat and badge could still suggest a medical professional, but recognition would become substantially weaker and more ambiguous.",
+    "if_badge_removed": "The image would remain recognizable as medical because the stethoscope and coat are stronger cues.",
+    "if_person_removed": "The remaining stethoscope and badge could still suggest healthcare, but the representation would shift toward a symbolic still life.",
+    "if_full_face_added": "The image would become more portrait-like and more identity-rich without necessarily improving occupational recognition.",
+    "if_patient_added": "The image would shift from occupational recognition to a relational medical-action scene and become substantially more complex.",
+    "if_full_clinic_environment_added": "The setting would become more explicit, but the concise occupational-symbol quality would weaken.",
+    "if_background_panels_removed": "The concept would remain intact, but the left side might feel more visually empty."
+  },
+  "derived_observations": {
+    "recognition_anchor": "stethoscope + coat + badge cluster",
+    "human_role": "occupational carrier rather than action carrier",
+    "scale_exaggeration": "low; close-up framing dominates",
+    "internal_human_proportion_stylization": "not fully visible due to crop",
+    "environment_abstraction": "very strong",
+    "environment_strategy": "environment nearly omitted; occupational figure carries recognition",
+    "symbolic_information_integration": "low to moderate through badge icons",
+    "semantic_shorthand": "very strong",
+    "motion_encoding": "none",
+    "depth": "extremely shallow",
+    "cropping": "very strong",
+    "scene_density": "low",
+    "facial_specificity": "essentially absent",
+    "anonymous_character_visual_specificity": "moderate through skin tone, clothing, and hair only",
+    "rendering_realism": "very low",
+    "composition_dynamic": "strong right-side semantic cluster balanced by large quiet negative space",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "present but weak",
+    "narrative_structure": "none; occupational state",
+    "structural_motif": null,
+    "viewpoint_importance": "moderate",
+    "action_moment_specificity": "none",
+    "detail_allocation": "high on occupation-defining accessories, low on identity and environment",
+    "representation_strategy": "cropped occupational portrait",
+    "representation_optionality": "high"
+  },
+  "candidate_principles": [
+    {
+      "claim": "An occupational concept can be represented through a partial person carrying diagnostic attributes without showing an action.",
+      "evidence": "Doctor is communicated through the cropped torso, coat, stethoscope, and badge.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Cropping can remove most personal identity information while preserving occupational recognizability.",
+      "evidence": "The face, hands, and lower body are omitted, but the figure remains clearly medical.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A small localized cluster of highly diagnostic cues can support very low-complexity representation.",
+      "evidence": "Most meaning is carried by stethoscope, coat, and badge.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Detail may be concentrated on occupation-defining objects rather than on the person or environment.",
+      "evidence": "The stethoscope and badge contain more structure than the face or background.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Large background structures can remain highly abstract when the subject already provides sufficient semantic information.",
+      "evidence": "The pale vertical panels are visually present but semantically nonspecific.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Small object-native symbols may be retained even when readable text is omitted.",
+      "evidence": "The badge contains tiny icon-like graphics but no language-based text.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Representation strategies should be treated as discretionary options rather than fixed mappings from concept category to image type.",
+      "evidence": "Doctor is represented as a cropped occupational figure, while comparable service/professional concepts such as Haircut and Dentist can plausibly use entirely different strategies.",
+      "confidence": "strong emerging principle",
+      "status": "cross-image design conclusion rather than a single-image fact"
+    },
+    {
+      "claim": "A human figure can function semantically as an occupational symbol rather than as an action carrier.",
+      "evidence": "The doctor's body mainly exists to carry coat, stethoscope, and badge cues.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "strong semantic simplification",
+      "low material realism",
+      "cropping used compositionally",
+      "large quiet background regions",
+      "selective retention of diagnostic detail"
+    ],
+    "important_differences": [
+      "Unlike Haircut, Doctor includes a person and removes the workstation.",
+      "Unlike Vote, Doctor uses a cropped person to communicate occupation rather than a hand to communicate action.",
+      "Unlike Basketball, Concert, Delivery, and Shopping, the person is static and not performing the defining activity.",
+      "Unlike Wedding and Baby Shower, Doctor uses a literal occupational figure rather than symbolic objects.",
+      "Doctor is one of the clearest examples of semantic recognition through a tightly clustered occupational attribute set."
+    ],
+    "representation_strategy_comparison": {
+      "haircut": "service represented through unoccupied diagnostic workstation and tools",
+      "doctor": "service / occupation represented through cropped human figure and diagnostic attributes",
+      "dentist": "recalled by user as exaggerated diagnostic object with miniature human figures; to verify when studied directly"
+    },
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment",
+      "barbecue": "literal outdoor environment retained; event communicated through prepared equipment, food, and serving setup without visible participants",
+      "bowling": "literal sports environment reduced to a single directional wedge while viewpoint and impact moment carry most of the concept",
+      "concert": "simplified stage environment retained; coordinated performer clusters and abstract sound cues carry the concept",
+      "shopping": "partial retail environment retained only where needed; action cluster uses strong lead space for motion",
+      "doctor": "literal environment nearly omitted; cropped occupational figure carries recognition"
+    },
+    "implication": "The comparison strengthens the conclusion that Google Calendar illustration choices are not deterministic by concept type. The art director should likely generate multiple viable representation approaches and select among them based on recognizability, visual interest, compositional fit, and simplicity."
+  },
+  "open_questions": [
+    "How often are occupational concepts represented through cropped human figures rather than full-body action scenes?",
+    "When does Google choose a person as the primary occupational symbol instead of tools or workstation?",
+    "How often does aggressive cropping coincide with reduced identity information?",
+    "Are badge-like icon clusters common in other professional scenes?",
+    "How frequently are abstract background panels used merely to structure negative space?",
+    "Can representation optionality be modeled explicitly by generating multiple candidate scene strategies before art direction?",
+    "What criteria appear to drive selection among equally plausible representation strategies?",
+    "Does the art director need separate labels for person-as-action-carrier and person-as-occupational-carrier?"
+  ]
+}

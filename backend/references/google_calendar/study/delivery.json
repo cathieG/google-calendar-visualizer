@@ -1,0 +1,378 @@
+{
+  "reference_id": "delivery",
+  "concept": "Delivery / Parcel",
+  "files": {
+    "svg": "raw/img_delivery.svg",
+    "rendered": "rendered/img_delivery.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide delivery scene set in a simplified residential neighborhood. A delivery worker occupies the center-right and appears to be moving quickly while pulling or guiding parcels on a small wheeled cart. A delivery truck fills the far-right side of the image with its cargo area partially open, revealing simplified geometric cargo shapes. Houses, bushes, trees, a large sun, and clouds form a layered background. Compared with earlier references, the scene has a stronger sense of spatial depth and narrative sequencing while remaining highly geometric and flat in rendering.",
+    "composition": {
+      "weight_distribution": "Visual weight is spread across the frame, but taller and more vertically dominant forms are concentrated on the right, especially the worker and truck.",
+      "busiest_region": "Center-right, where the worker, parcels, cart, truck, and open cargo area overlap.",
+      "quiet_region": "Upper-left and far-left background, where the large sun, clouds, houses, and trees are more sparsely arranged.",
+      "balance_strategy": "The dense vertical truck-and-worker cluster on the right is balanced by the large sun, clouds, houses, and landscape shapes distributed across the left and center background.",
+      "major_structural_forms": [
+        "large delivery truck on the far right",
+        "running or moving delivery worker near center-right",
+        "small wheeled cart with parcels",
+        "row of simplified houses and vegetation across the lower background",
+        "large sun and clouds in the upper-left"
+      ]
+    },
+    "background": {
+      "base": "Pale mint-green sky-like background.",
+      "environmental_detail": "A simplified residential neighborhood is depicted using houses, bushes, trees, sun, and clouds.",
+      "decorative_elements": "Most large background elements have environmental meaning rather than functioning as purely decorative fillers.",
+      "literal_environment_present": true,
+      "notes": "The environment is more complete and spatially suggestive than in the earlier references, but still highly simplified."
+    },
+    "environment_structure": {
+      "environment_type": "simplified residential neighborhood",
+      "representation_strategy": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "foreground_elements": [
+        "delivery worker",
+        "delivery truck",
+        "cart and parcels"
+      ],
+      "background_elements": [
+        "houses",
+        "trees",
+        "bushes",
+        "sun",
+        "clouds"
+      ],
+      "depth_mechanism": "Background houses and vegetation are smaller and visually quieter than the worker and truck, creating a sense of distance without realistic perspective.",
+      "recognition_mechanism": "The residential setting provides a likely delivery destination, while the truck and parcels establish the delivery context."
+    },
+    "human_figure": {
+      "count": 1,
+      "identity_status": "anonymous / non-identifiable",
+      "observable_skin_color": "dark brown",
+      "race_or_ethnicity": null,
+      "hair": {
+        "color": "dark",
+        "style": "hair gathered into a high bun"
+      },
+      "facial_detail": "Minimal but somewhat more articulated than some earlier references; small facial features such as eyes and nose are visible.",
+      "clothing": "Dark brown delivery-style uniform with a small badge-like detail, dark footwear, and simplified geometric tailoring.",
+      "pose": "The figure appears to be moving quickly, with one leg lifted behind, the torso leaning, one arm engaged with the cart, and the other arm raised.",
+      "relative_size": "Large and visually important, though balanced by the similarly prominent delivery truck.",
+      "internal_proportions": "Stylized and simplified. The figure appears slimmer and more elongated than several earlier Google Calendar figures.",
+      "shape_construction": "Torso and clothing use simplified angular forms, while arms, legs, head, and hands use more organic contours.",
+      "semantic_role": "Primary action carrier and occupational actor within the delivery narrative.",
+      "identity_specificity": "The figure has concrete visible traits such as skin tone, hairstyle, clothing, and minimal facial detail without representing a known individual.",
+      "notes": "Observable appearance should not be used to infer race or ethnicity. The figure demonstrates that anonymous Google Calendar characters can vary in body width and silhouette."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Dynamic running or fast-stepping pose while interacting with the parcel cart.",
+      "secondary_motion_cues": [
+        "one leg lifted behind",
+        "torso leaning diagonally",
+        "raised arm",
+        "arm connected to the cart handle",
+        "cart positioned at an angle"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The exact gesture is somewhat ambiguous in isolation, but the surrounding delivery context makes the overall action understandable."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "delivery-style uniform",
+        "small badge",
+        "parcels",
+        "wheeled cart",
+        "delivery truck"
+      ],
+      "semantic_role": "These details establish the worker's occupational role and make the delivery context clear.",
+      "notes": "The badge is visually small but serves as an occupational cue. The cart and parcels connect the worker to the truck and to the delivery action."
+    },
+    "scale_and_proportion": {
+      "realism": "Moderately stylized.",
+      "human_to_environment": "The worker is larger than the houses and trees because the worker occupies a foreground layer while the residential environment is pushed into the background.",
+      "object_exaggeration": "The sun is very large and decorative relative to the landscape, while the truck is visually dominant because it occupies the foreground.",
+      "internal_human_scale": "The worker has a relatively small head and elongated, slimmer torso and limbs compared with several previously studied figures.",
+      "general_effect": "The image combines stylized human proportions with depth-oriented scale differences between foreground and background."
+    },
+    "depth_and_space": {
+      "depth_type": "layered scale-based depth",
+      "mechanisms": [
+        "foreground/background size differences",
+        "overlap",
+        "partial occlusion",
+        "smaller houses and vegetation behind the worker",
+        "large foreground truck",
+        "layered landscape shapes"
+      ],
+      "realistic_perspective": "Limited.",
+      "floor_plane": "Only loosely implied through horizontal landscape bands and object placement.",
+      "room_or_venue_depth": "Not applicable; the outdoor neighborhood depth is constructed through relative scale and layering.",
+      "overall_effect": "This image has a stronger sense of spatial depth than the earlier references while still avoiding realistic perspective construction."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "delivery truck extends beyond the right edge",
+        "truck wheels and lower body approach or cross the bottom boundary",
+        "background landscape forms continue through the left and right edges"
+      ],
+      "human_cropping": "The worker remains fully visible.",
+      "effect": "The truck feels like part of a larger scene continuing beyond the banner, while the worker remains readable as the central action figure."
+    },
+    "color": {
+      "background": "pale mint green",
+      "major_colors": [
+        "brown",
+        "bright blue",
+        "light green",
+        "muted olive green",
+        "yellow",
+        "cream",
+        "dark navy",
+        "light blue"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Color separates the worker, truck, parcels, and landscape layers while also creating a cohesive but varied palette.",
+      "contrast_strategy": "The worker's dark warm brown uniform is largely unique within the image, while the truck uses a large bright cool-blue mass. This helps distinguish the two primary semantic anchors."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric forms with selective use of softer organic contours.",
+      "human_body": "The worker is slimmer and more elongated than several earlier figures but still built from simplified geometric clothing and organic limb shapes.",
+      "objects": "Truck, houses, parcels, cart, trees, bushes, clouds, and cargo are simplified into large rectangles, polygons, circles, and rounded blocks.",
+      "fine_detail": "Very limited.",
+      "adaptability": "Object detail varies according to semantic importance; the truck and worker are more articulated than distant houses and vegetation."
+    },
+    "lighting_and_texture": {
+      "shadows": "Little to none.",
+      "gradients": "None apparent.",
+      "surface_texture": "Minimal.",
+      "material_realism": "Low."
+    },
+    "scene_complexity": {
+      "overall": "moderate to moderately high",
+      "notes": "The image contains a worker, truck, cart, parcels, cargo, houses, trees, bushes, sun, and clouds. Complexity remains controlled through simplified geometry, flat colors, and clear foreground/background hierarchy."
+    },
+    "salience": {
+      "primary_attention_element": "The delivery worker and delivery truck together.",
+      "secondary_attention_elements": [
+        "parcel cart",
+        "open cargo area",
+        "large sun"
+      ],
+      "large_but_quiet_elements": [
+        "houses",
+        "mint-green background",
+        "muted landscape forms"
+      ],
+      "high_attention_elements": [
+        "dark brown worker uniform",
+        "bright blue truck",
+        "yellow parcels",
+        "large yellow sun"
+      ],
+      "important_observation": "The scene uses distinct color identities and scale differences to keep a relatively complex narrative image visually organized."
+    },
+    "decorative_abstraction": {
+      "present": false,
+      "elements": [],
+      "semantic_role": null,
+      "compositional_role": null,
+      "notes": "Most visible elements appear to have either environmental or narrative meaning rather than functioning as purely abstract background fillers."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": [
+        "delivery vehicle contains parcels or cargo",
+        "worker has removed or is transporting parcels",
+        "worker moves away from the truck with parcels",
+        "residential houses imply the delivery destination"
+      ],
+      "narrative_role": "The image communicates not just the category 'delivery' but a short implied sequence of transporting parcels from a vehicle toward residences."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Parcel delivery in a residential neighborhood.",
+    "primary_recognition_cues": [
+      "delivery truck",
+      "delivery worker",
+      "parcels on a wheeled cart",
+      "residential houses"
+    ],
+    "secondary_recognition_cues": [
+      "open cargo area",
+      "simplified cargo shapes inside truck",
+      "uniform badge",
+      "worker moving away from the vehicle"
+    ],
+    "human_semantic_role": "The human figure is the primary action carrier and connects the parcels, cart, truck, and residential destination into a coherent delivery narrative.",
+    "dominant_semantic_element": "Shared between the worker, parcel cart, and delivery truck.",
+    "literal_environment_used": true,
+    "environment_strategy": "Retain a recognizable residential environment as a simplified narrative backdrop, using smaller background objects and layered placement to suggest depth.",
+    "symbolic_or_informational_cues": [],
+    "recognition_structure": "distributed narrative recognition",
+    "recognition_notes": "The concept is understood through a combination of worker, truck, parcels, cargo, and houses. No single pose or object carries the entire meaning.",
+    "literal_alternative": "A realistically rendered delivery driver unloading packages from a detailed delivery van on a residential street with realistic houses, road, landscaping, shadows, and perspective.",
+    "google_choice": "Create a simplified narrative scene in which a delivery worker, parcel cart, partially open truck, and reduced residential backdrop together imply the delivery process.",
+    "notable_omissions": [
+      "realistic street or road",
+      "detailed house architecture",
+      "doorsteps or recipients",
+      "company branding",
+      "realistic parcel labels",
+      "detailed truck interior",
+      "realistic vehicle mechanics",
+      "realistic shadows",
+      "detailed facial features"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "A fuller environmental scene may be useful here because the delivery concept depends partly on movement from a vehicle toward a destination.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Residential houses may be included because they clarify the destination and make the delivery narrative more specific than a generic parcel-transport scene.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The partially open truck may be shown to create a causal relationship between the vehicle, the cargo, and the parcels currently being transported.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The worker's pose does not need to be completely self-explanatory because surrounding objects and the environment disambiguate the action.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_worker_removed": "The image would still contain a delivery truck and parcels, but the active delivery process would become less explicit.",
+    "if_truck_removed": "The worker and parcels could still suggest transport, but the delivery context and implied origin of the parcels would weaken.",
+    "if_houses_removed": "The image would remain interpretable as parcel transport but would lose the clear residential-destination cue.",
+    "if_open_cargo_area_removed": "The truck would still signal delivery, but the causal link between the truck's contents and the parcels being moved would be weaker.",
+    "if_cart_and_parcels_removed": "The worker's movement would become more ambiguous and the image might read primarily as a person near a truck.",
+    "if_realistic_perspective_added": "Spatial depth might increase, but the scene would likely become visually more complex and less consistent with the flat geometric style.",
+    "if_background_were_reduced_to_solid_color": "The scene would become simpler, but the narrative of delivery to a residential area would be less explicit."
+  },
+  "derived_observations": {
+    "recognition_anchor": "distributed across worker, truck, parcels, and destination environment",
+    "human_role": "primary action carrier",
+    "scale_exaggeration": "moderate",
+    "internal_human_proportion_stylization": "moderate and relatively slender",
+    "environment_abstraction": "moderate to strong",
+    "environment_strategy": "literal environment retained as simplified narrative backdrop",
+    "symbolic_information_integration": "low",
+    "semantic_shorthand": "present in simplified cargo and background architecture",
+    "motion_encoding": "body pose plus interaction with cart",
+    "depth": "layered scale-based depth",
+    "cropping": "strong on truck and environment",
+    "scene_density": "moderate to moderately high",
+    "facial_specificity": "low but greater than several earlier figures",
+    "anonymous_character_visual_specificity": "moderate",
+    "rendering_realism": "low",
+    "composition_dynamic": "right-heavy vertical focal cluster balanced by broad left-side residential backdrop",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "low",
+    "narrative_structure": "strong",
+    "occupational_specificity": "moderate"
+  },
+  "candidate_principles": [
+    {
+      "claim": "Some concepts may be represented as short implied narratives rather than as a single isolated action or symbolic object.",
+      "evidence": "The truck, open cargo area, parcels, moving worker, and residential houses collectively imply a delivery sequence.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Spatial depth can be created through relative scale and layering without realistic perspective.",
+      "evidence": "The houses and vegetation are smaller and more distant-looking than the worker and truck despite minimal perspective construction.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Human pose does not always need to fully explain an action when surrounding context provides strong semantic disambiguation.",
+      "evidence": "The worker's exact gesture is somewhat ambiguous, but the truck, parcels, cart, and residential setting make the delivery action clear.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Literal backgrounds can contribute narrative information rather than serving only as scenery.",
+      "evidence": "The residential houses indicate the likely destination of the delivery.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Simplified object clusters can stand in for semantic categories without requiring individually recognizable components.",
+      "evidence": "Simple geometric shapes inside the truck collectively read as cargo.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Small occupational cues can increase role specificity without dominating the composition.",
+      "evidence": "The worker's badge and uniform support the delivery-worker interpretation while remaining visually secondary.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Anonymous human figures can vary substantially in body width and silhouette while remaining within a shared geometric illustration language.",
+      "evidence": "The delivery worker is noticeably slimmer and more elongated than several earlier studied figures.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Distinct color identities can separate major semantic actors within a relatively complex scene.",
+      "evidence": "The worker uses a unique dark brown uniform while the truck uses a large bright blue mass.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Environmental scale may remain stylized even when spatial depth is stronger.",
+      "evidence": "The oversized sun and simplified residential elements coexist with foreground/background scaling.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Edge cropping continues to be used to imply a larger world beyond the banner.",
+      "evidence": "The truck and landscape continue beyond the visible frame.",
+      "confidence": "recurring"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no realistic shading or texture",
+      "simplified geometric forms",
+      "anonymous human figure with concrete visual traits",
+      "motion conveyed primarily through pose rather than motion effects",
+      "large elements extending beyond the frame",
+      "low material realism",
+      "strong semantic simplification"
+    ],
+    "important_differences": [
+      "Delivery has the strongest sense of layered spatial depth among the references studied so far.",
+      "Unlike Wedding, Delivery relies on an active human figure and a literal environment rather than symbolic still-life representation.",
+      "Unlike Climbing, the environment functions mainly as a narrative backdrop rather than as an equally dominant semantic surface.",
+      "Unlike Athletic Jumping, the action is not fully legible from the human pose alone and depends more strongly on context.",
+      "Unlike Art, semantic meaning is distributed across a sequence of related objects and environmental cues rather than concentrated in oversized concept-diagnostic objects.",
+      "The human figure is slimmer and more elongated than several earlier figures, suggesting greater flexibility in character silhouette."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth"
+    },
+    "implication": "The reference set increasingly suggests that Google Calendar illustrations vary not only in how much environment is shown, but in what semantic role the environment plays: abstract context, symbolic replacement, diagnostic surface, or narrative destination."
+  },
+  "open_questions": [
+    "How often do Google Calendar illustrations imply a sequence of events rather than a single static action?",
+    "How frequently is depth created through relative scale instead of perspective?",
+    "When is an ambiguous human pose considered acceptable because surrounding context disambiguates the action?",
+    "How often do background elements contribute narrative information rather than merely visual context?",
+    "Do occupational scenes consistently include small role-specific accessories such as badges, tools, carts, or uniforms?",
+    "How much variation exists in human body width, height, and silhouette across the full reference set?",
+    "How often do distinct semantic actors receive largely unique color identities within one illustration?",
+    "Is the oversized sun a recurring decorative-environmental device in outdoor scenes?",
+    "How often are simplified internal object clusters used to imply categories such as cargo, food, equipment, or supplies?",
+    "Does scene complexity increase when a concept depends on relationships among multiple objects and locations?"
+  ]
+}

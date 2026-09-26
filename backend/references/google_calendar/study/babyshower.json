@@ -1,0 +1,428 @@
+{
+  "reference_id": "baby_shower",
+  "concept": "Baby Shower",
+  "files": {
+    "svg": "raw/img_baby_shower.svg",
+    "rendered": "rendered/img_baby_shower.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide symbolic, toy-like procession representing a baby-related celebration without depicting any people. Four major visual units are arranged evenly across the frame: a teddy bear riding on a cart, a stork-like bird carrying a blue polka-dot bundle on a second cart, a block-built castle-like structure on a third cart, and a toy locomotive on the far right. The carts and locomotive together form a toy-train structure. The background is a very pale peach-pink field with minimal ground lines and a few soft cloud- or steam-like shapes. The scene is highly ordered, playful, and nearly side-on.",
+    "composition": {
+      "weight_distribution": "Visual weight is unusually even across the width of the banner because the scene is divided into four similarly spaced major units.",
+      "busiest_region": "There is no single strongly dominant region; the four toy-train units create a repeated sequence across the frame.",
+      "quiet_region": "The upper background between the major objects remains relatively empty except for a few soft cloud- or steam-like forms.",
+      "balance_strategy": "Balance is created primarily through repetition, regular spacing, a shared baseline, and one large semantic object per train unit rather than through strong asymmetry.",
+      "major_structural_forms": [
+        "teddy bear on first train cart",
+        "stork-like bird with bundle on second train cart",
+        "block-built castle-like toy on third train cart",
+        "toy locomotive on far right",
+        "shared horizontal train / track baseline"
+      ],
+      "rhythm_and_repetition": "Repeated cart platforms, wheels, spacing, and similarly scaled object groups create a strong visual cadence across the banner."
+    },
+    "background": {
+      "base": "Very pale peach / pink field.",
+      "environmental_detail": "Extremely minimal.",
+      "decorative_elements": [
+        "soft rounded pink cloud- or steam-like forms",
+        "thin horizontal ground / track lines"
+      ],
+      "literal_environment_present": false,
+      "notes": "No nursery, home, party venue, table, guests, or realistic outdoor setting is shown. The toy procession effectively becomes the entire scene."
+    },
+    "environment_structure": {
+      "environment_type": "minimal symbolic toy-world setting",
+      "representation_strategy": "literal environment nearly omitted; symbolic objects organized along a shared train baseline",
+      "foreground_elements": [
+        "toy train carts",
+        "teddy bear",
+        "stork-like bird and bundle",
+        "block castle",
+        "locomotive"
+      ],
+      "background_elements": [
+        "soft cloud / steam shapes",
+        "minimal horizontal track / floor lines"
+      ],
+      "depth_mechanism": "Very little spatial depth is used; the scene is primarily side-on and diagrammatic, with only slight overlap and vertical layering.",
+      "recognition_mechanism": "The baby-related concept is communicated through a cluster of childhood and newborn-associated symbols rather than through a literal baby-shower setting."
+    },
+    "object_cluster_1_teddy_bear": {
+      "object": "large teddy bear",
+      "visual_role": "Strong childhood / toy cue.",
+      "semantic_specificity": "Suggests childhood or baby-related play, but is not specific to a baby shower on its own.",
+      "shape_treatment": "Simplified rounded body with large paws, minimal facial detail, and a bright pink neck ribbon.",
+      "scale": "Large relative to the cart, emphasizing recognizability over realistic toy-train scale."
+    },
+    "object_cluster_2_stork_and_bundle": {
+      "object": "stork-like bird carrying a blue polka-dot bundle",
+      "visual_role": "Likely the strongest newborn-specific cue in the scene because the stork-and-bundle motif is conventionally associated with a baby's arrival.",
+      "semantic_specificity": "More directly baby-related than the other toy objects, though still symbolic rather than literal.",
+      "shape_treatment": "Bird anatomy and bundle are reduced to a few flat, rounded, highly recognizable shapes.",
+      "scale": "Large relative to the cart, again prioritizing semantic visibility over realistic proportion."
+    },
+    "object_cluster_3_blocks": {
+      "object": "block-built castle-like toy structure",
+      "visual_role": "Adds another child / play cue while also contributing strong geometric structure and color variation.",
+      "semantic_specificity": "Suggests children's building blocks or toys rather than baby shower specifically.",
+      "shape_treatment": "Composed from simple rectangles, triangles, arches, and rounded geometric forms.",
+      "hybrid_shorthand": "The object works simultaneously as a set of toy blocks and as a castle-like construction, combining category and recognizable arrangement."
+    },
+    "object_cluster_4_locomotive": {
+      "object": "toy locomotive",
+      "visual_role": "Acts both as a semantic toy cue and as the structural device that unifies the three preceding carts into one coherent procession.",
+      "semantic_specificity": "Child-oriented and playful, but not specific to a baby shower.",
+      "shape_treatment": "Simplified locomotive built from rectangles, circles, arches, and a small smoke stack."
+    },
+    "human_figure": {
+      "count": 0,
+      "identity_status": null,
+      "observable_skin_color": null,
+      "race_or_ethnicity": null,
+      "hair": null,
+      "facial_detail": null,
+      "clothing": null,
+      "pose": null,
+      "relative_size": null,
+      "internal_proportions": null,
+      "shape_construction": null,
+      "semantic_role": "No human figure is used.",
+      "identity_specificity": null
+    },
+    "motion": {
+      "motion_present": "implied rather than directly depicted",
+      "primary_motion_cue": "Toy-train structure and steam / smoke emerging from the locomotive.",
+      "secondary_motion_cues": [
+        "shared train alignment",
+        "locomotive orientation",
+        "steam / smoke form",
+        "horizontal track-like lines"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "There is no human action. Movement is suggested structurally by the train motif rather than by animated body pose."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "stork bundle",
+        "teddy bear ribbon",
+        "toy train carts",
+        "steam / smoke"
+      ],
+      "semantic_role": "These details reinforce newborn, childhood, and toy associations, though none alone uniquely identifies a baby shower.",
+      "notes": "The stork-and-bundle motif appears to contribute the strongest newborn-specific symbolism."
+    },
+    "scale_and_proportion": {
+      "realism": "Strongly stylized.",
+      "human_to_environment": null,
+      "object_exaggeration": "The teddy bear, bird, and block structure are all oversized relative to their train carts, producing roughly equal visual importance across units.",
+      "internal_human_scale": null,
+      "general_effect": "Physical scale is subordinated to recognition, visual rhythm, and balanced object prominence."
+    },
+    "depth_and_space": {
+      "depth_type": "very shallow / nearly diagrammatic",
+      "mechanisms": [
+        "minor overlap",
+        "objects resting on carts",
+        "slight foreground/background ordering",
+        "shared horizontal baseline"
+      ],
+      "realistic_perspective": "Essentially absent.",
+      "floor_plane": "Suggested only through thin horizontal lines beneath the train.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "The scene reads almost like a side-view decorative procession rather than a realistic three-dimensional space."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": false,
+      "examples": [],
+      "human_cropping": null,
+      "effect": "Most major objects are fully contained within the frame, creating a more orderly and self-contained composition than several earlier references."
+    },
+    "color": {
+      "background": "very pale peach / pink",
+      "major_colors": [
+        "brown",
+        "pink",
+        "light blue",
+        "cyan",
+        "dark blue",
+        "yellow",
+        "orange",
+        "cream",
+        "purple"
+      ],
+      "treatment": "Flat pastel and saturated color regions with little or no gradient.",
+      "functional_role": "Color separates each toy unit, creates a playful child-oriented mood, and maintains visual interest despite the extremely simple environment.",
+      "contrast_strategy": "Soft background and cart colors allow saturated toy colors to remain readable without producing a harsh overall palette.",
+      "mood_role": "The palette contributes strongly to a playful, gentle, child-related atmosphere."
+    },
+    "shape_language": {
+      "overall": "Rounded, simplified, toy-like geometry.",
+      "human_body": null,
+      "objects": "Bear, bird, bundle, blocks, carts, and locomotive are reduced to simple circles, rectangles, triangles, arches, and rounded silhouettes.",
+      "fine_detail": "Very limited.",
+      "adaptability": "Different objects remain recognizable through silhouette and a few diagnostic details rather than realistic construction."
+    },
+    "lighting_and_texture": {
+      "shadows": "Little to none.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "There are several major objects, but the scene remains visually simple because each unit is isolated, evenly spaced, and composed from large flat forms."
+    },
+    "salience": {
+      "primary_attention_element": "No single dominant focal point; attention is distributed across the four train units.",
+      "secondary_attention_elements": [
+        "stork and bundle",
+        "teddy bear",
+        "block castle",
+        "locomotive"
+      ],
+      "large_but_quiet_elements": [
+        "pale peach background",
+        "soft pink cloud / steam shapes"
+      ],
+      "high_attention_elements": [
+        "brown teddy bear",
+        "blue polka-dot bundle",
+        "bright block castle",
+        "blue locomotive"
+      ],
+      "important_observation": "The composition distributes semantic and visual importance unusually evenly through repeated spacing and similar object scale."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "soft rounded pink cloud-like form above the left-center area",
+        "simplified steam / cloud forms",
+        "minimal track / floor lines"
+      ],
+      "semantic_role": "Mixed: locomotive steam has semantic function, while at least one soft pink cloud-like form may serve mainly as visual filler.",
+      "compositional_role": "These forms occupy upper negative space without competing strongly with the main toy procession.",
+      "notes": "The exact literal status of the left-center pink rounded form is uncertain and should not be overinterpreted."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": "The toy train creates a directional procession, though it does not depict a literal before-and-after event sequence.",
+      "narrative_role": "The locomotive and carts unify otherwise separate baby / childhood symbols into one playful moving system."
+    },
+    "structural_motif": {
+      "present": true,
+      "motif": "toy train",
+      "components": [
+        "repeated carts",
+        "wheels",
+        "shared baseline",
+        "locomotive",
+        "one major object per unit"
+      ],
+      "role": "Provides compositional rhythm, visual balance, and semantic coherence across multiple symbolic objects."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Baby shower / baby-related celebration.",
+    "primary_recognition_cues": [
+      "stork-like bird carrying a baby-associated bundle",
+      "teddy bear",
+      "toy train",
+      "children's building blocks / castle"
+    ],
+    "secondary_recognition_cues": [
+      "playful pastel palette",
+      "toy-like proportions",
+      "soft cloud / steam forms",
+      "ribbon on teddy bear"
+    ],
+    "human_semantic_role": "No human figures are used.",
+    "dominant_semantic_element": "Distributed symbolic object procession, with the stork-and-bundle motif providing the strongest newborn-specific cue.",
+    "literal_environment_used": false,
+    "environment_strategy": "Omit a literal party or family setting and instead organize baby- and childhood-associated symbolic objects into a toy-train procession on a minimal baseline.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "stork-like bird with bundle",
+        "function": "Suggests newborn arrival or baby-related meaning.",
+        "type": "symbolic cue"
+      },
+      {
+        "element": "teddy bear",
+        "function": "Suggests childhood, toys, and baby-related play.",
+        "type": "symbolic cue"
+      },
+      {
+        "element": "building blocks / castle",
+        "function": "Suggests children's toys and play.",
+        "type": "symbolic cue"
+      },
+      {
+        "element": "toy train",
+        "function": "Suggests childhood and also unifies the scene structurally.",
+        "type": "symbolic and structural cue"
+      }
+    ],
+    "recognition_structure": "distributed symbolic recognition",
+    "recognition_notes": "The image strongly suggests baby, newborn, or childhood themes, but without the title it would not necessarily be identified specifically as a baby shower.",
+    "literal_alternative": "A baby-shower party showing expectant parents, guests, gifts, decorations, food, or a visible baby-related gathering.",
+    "google_choice": "Replace the literal social event with a playful object procession made from toys and newborn-associated symbols, unified by a toy-train structure.",
+    "notable_omissions": [
+      "parents",
+      "baby",
+      "guests",
+      "party venue",
+      "gift table",
+      "balloons",
+      "food",
+      "literal shower decorations",
+      "human relationships"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "A symbolic object-based composition may communicate a baby-related theme while avoiding unsupported assumptions about parent gender, family structure, skin tone, age, or the baby's appearance.",
+        "confidence": "tentative",
+        "status": "hypothesis only; not directly observable from the image"
+      },
+      {
+        "hypothesis": "Toys and the stork-and-bundle motif may simply provide a more playful and visually efficient representation of the baby-shower concept than a literal party scene.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The toy-train motif may have been selected because it can organize several weak symbolic cues into a single coherent composition.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_stork_and_bundle_removed": "The scene would still communicate childhood or toys, but the newborn / baby-specific meaning would become substantially weaker.",
+    "if_teddy_bear_removed": "The image would retain baby and toy associations, but would lose one of its strongest familiar childhood cues.",
+    "if_train_structure_removed": "The remaining objects could still suggest baby / childhood themes, but the composition would lose much of its rhythm, coherence, and directional unity.",
+    "if_human_family_scene_used": "The concept might become more literal, but the image would need to choose visible participant characteristics and a specific family or relationship configuration.",
+    "if_realistic_nursery_or_party_background_added": "The concept might become more explicit, but the composition would become denser and less toy-like.",
+    "if_objects_were_realistically_scaled": "The evenly balanced visual rhythm would weaken because the bear, bird, blocks, and train components would no longer have comparable prominence.",
+    "if_title_removed": "The image would likely still read as baby-, newborn-, or child-related, but may not be identified specifically as a baby shower."
+  },
+  "derived_observations": {
+    "recognition_anchor": "distributed symbolic object cluster",
+    "human_role": "absent",
+    "scale_exaggeration": "moderate to strong for visual equivalence",
+    "internal_human_proportion_stylization": null,
+    "environment_abstraction": "very strong",
+    "environment_strategy": "literal environment nearly omitted; symbolic object procession on minimal baseline",
+    "symbolic_information_integration": "strong symbolic cues, little informational graphics",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "structural train motif and steam rather than body pose",
+    "depth": "very shallow / diagrammatic",
+    "cropping": "minimal",
+    "scene_density": "moderate and evenly distributed",
+    "facial_specificity": null,
+    "anonymous_character_visual_specificity": null,
+    "rendering_realism": "low",
+    "composition_dynamic": "regular horizontal rhythm with evenly spaced major units",
+    "recognition_specificity": "moderate for baby/newborn; weaker for baby shower specifically",
+    "decorative_abstraction": "present but restrained",
+    "narrative_structure": "processional rather than event-sequential",
+    "structural_motif": "toy train",
+    "relationship_sensitive_abstraction": "possible hypothesis only"
+  },
+  "candidate_principles": [
+    {
+      "claim": "Several symbolic objects may be combined to communicate a concept when no single object fully identifies the event.",
+      "evidence": "Teddy bear, stork and bundle, blocks, and toy train collectively suggest a baby-related occasion.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A repeated structural motif can unify otherwise separate symbolic objects into one coherent illustration.",
+      "evidence": "Repeated carts and a locomotive organize the teddy bear, stork, and block castle into a single train procession.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Visual balance may be created through repetition and cadence rather than asymmetry or large negative-space counterweight.",
+      "evidence": "Four similarly spaced train units distribute visual weight evenly across the banner.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Object scale may be adjusted to create roughly equal semantic prominence rather than preserve physical realism.",
+      "evidence": "The bear, stork, and castle-like blocks are all enlarged relative to their carts.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A literal social event may be replaced by a symbolic object scene while preserving the broader semantic domain.",
+      "evidence": "No baby shower party, parents, or guests are shown; the image instead uses toys and newborn-associated symbols.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Relationship- or family-sensitive events may sometimes be abstracted into symbolic objects rather than literal participants.",
+      "evidence": "Baby Shower, like Wedding, avoids depicting the people who would normally define the event.",
+      "confidence": "tentative",
+      "status": "hypothesis; possible reasoning rather than observed fact"
+    },
+    {
+      "claim": "Color palette may contribute strongly to semantic mood or audience category.",
+      "evidence": "The pale pink, soft blues, yellows, and playful saturated accents contribute to a gentle child-oriented atmosphere.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Motion can be implied by structural context rather than a moving human figure.",
+      "evidence": "The locomotive, train alignment, and steam suggest movement even though no person is present.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Highly simplified silhouettes can remain recognizable when a few diagnostic features are preserved.",
+      "evidence": "The teddy bear, bird, train, and building blocks are all readable despite being reduced to basic flat shapes.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A symbolic image may communicate a broader category more strongly than the exact event title.",
+      "evidence": "The scene clearly suggests baby / newborn / childhood themes, but 'baby shower' is not uniquely identifiable without the title.",
+      "confidence": "emerging"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or surface texture",
+      "highly simplified geometric forms",
+      "strong abstraction of literal environment",
+      "semantic meaning carried by a small set of recognizable cues",
+      "low material realism",
+      "pastel or restrained background treatment"
+    ],
+    "important_differences": [
+      "Like Wedding, Baby Shower contains no people and replaces a social event with symbolic objects.",
+      "Unlike Wedding, Baby Shower uses a repeated train structure that creates strong horizontal rhythm and implied movement.",
+      "Unlike Delivery and Climbing, Baby Shower has almost no literal environmental depth.",
+      "Unlike Art, there is no single highly dominant diagnostic object; semantic and visual importance are distributed across several similarly scaled units.",
+      "Unlike Athletic Jumping and Climbing, motion is not encoded through human pose.",
+      "Baby Shower is one of the most evenly balanced compositions studied so far.",
+      "Recognition is strong for the broader baby / childhood domain but weaker for the exact event label."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif"
+    },
+    "implication": "The growing set suggests that Google Calendar can represent social events through highly abstract symbolic systems rather than literal participants, and that compositional organization itself—such as repetition, processions, or shared structures—may be a major art-direction decision."
+  },
+  "open_questions": [
+    "Do other family- or relationship-centered events also avoid literal human participants?",
+    "How often does Google use repeated structural motifs to organize multiple symbolic cues?",
+    "Are processional or train-like compositions common for child-related concepts?",
+    "When does Google prefer evenly distributed visual rhythm over asymmetrical focal composition?",
+    "How often are objects rescaled specifically to equalize visual prominence?",
+    "How frequently does the exact event title remain more specific than what the illustration alone can communicate?",
+    "Are pastel palettes systematically associated with baby-, child-, or celebration-related concepts?",
+    "How often is motion implied through vehicles, steam, or structural context instead of body pose?",
+    "Do other symbolic social-event illustrations also use one stronger diagnostic cue surrounded by several broader-domain cues?",
+    "Does Google consistently distinguish family-sensitive concepts through symbolic abstraction, or are Wedding and Baby Shower exceptions?"
+  ]
+}

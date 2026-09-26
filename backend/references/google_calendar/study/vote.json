@@ -1,0 +1,368 @@
+{
+  "reference_id": "vote",
+  "concept": "Vote",
+  "files": {
+    "svg": "raw/img_vote.svg",
+    "rendered": "rendered/img_vote.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide, highly simplified close-up action vignette showing a hand inserting a folded paper or ballot into a slot on a ballot box. The meaningful action is concentrated on the right side of the frame, while the left side contains broad negative space punctuated by simple outlined and solid rectangular shapes. The palette is dominated by cool blues, cream, white, and dark navy, with the warm brown hand providing the strongest color contrast. No full human figure or polling-place environment is shown.",
+    "composition": {
+      "weight_distribution": "Strongly right-weighted. The ballot box, hand, arm, and paper form the primary visual cluster on the right, while the left half remains mostly open.",
+      "busiest_region": "Upper-right to lower-right, especially around the hand, ballot, slot, and top of the ballot box.",
+      "quiet_region": "Most of the left half, which is occupied only by a few sparse geometric squares and rectangles.",
+      "balance_strategy": "Large negative space on the left is lightly activated by simple background geometry, while the voting action remains clearly dominant on the right.",
+      "major_structural_forms": [
+        "large ballot box in lower-right",
+        "hand and forearm entering from upper-right",
+        "folded paper / ballot being inserted",
+        "dark horizontal slot",
+        "sparse outlined and solid geometric rectangles across the background"
+      ]
+    },
+    "background": {
+      "base": "Solid pale baby-blue field.",
+      "environmental_detail": "None.",
+      "decorative_elements": [
+        "outlined blue squares",
+        "solid blue rectangular forms",
+        "cropped geometric shapes at frame edges"
+      ],
+      "literal_environment_present": false,
+      "notes": "No polling place, voting booth, signage, other voters, or physical room is depicted. The background geometry primarily functions as compositional filler."
+    },
+    "environment_structure": {
+      "environment_type": "non-literal graphic background",
+      "representation_strategy": "literal environment omitted; action isolated against a simple geometric field",
+      "foreground_elements": [
+        "hand",
+        "ballot / folded paper",
+        "ballot box"
+      ],
+      "background_elements": [
+        "outlined squares",
+        "solid blue rectangles"
+      ],
+      "depth_mechanism": "Depth is minimal and created almost entirely through overlap among the hand, ballot, slot, and ballot box.",
+      "recognition_mechanism": "The concept is recognized through the interaction of a hand inserting paper into a slot rather than through a complete polling environment."
+    },
+    "human_figure": {
+      "count": 0,
+      "body_part_only": true,
+      "visible_body_part": "hand and forearm",
+      "identity_status": "anonymous / non-identifiable",
+      "observable_skin_color": "warm medium-to-dark brown",
+      "race_or_ethnicity": null,
+      "hair": null,
+      "facial_detail": null,
+      "clothing": "Only a small portion of a light or translucent sleeve/cuff is visible near the wrist.",
+      "pose": "The hand grips or guides a folded ballot downward into the slot.",
+      "relative_size": "Very large within the frame because the scene is tightly cropped around the manual interaction.",
+      "internal_proportions": "The hand is more anatomically articulated than many full-body figures studied so far.",
+      "shape_construction": "Fingers and palm use smoother organic contours, while the sleeve and ballot use angular geometric forms.",
+      "semantic_role": "The hand is the primary action carrier. The rest of the person is unnecessary for recognizing the event.",
+      "identity_specificity": "Only limited appearance information is shown; no face, hair, body type, age, or gender is visually established.",
+      "notes": "A visible nail outline and cuff detail increase local realism, but they should not be treated as reliable indicators of gender."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Hand inserting the folded ballot into the slot.",
+      "secondary_motion_cues": [
+        "downward angle of the ballot",
+        "fingers wrapping around the paper",
+        "paper partially overlapping the slot"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The action is communicated through direct object interaction rather than body pose, blur, or motion effects."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "ballot or folded paper",
+        "ballot box",
+        "dark insertion slot"
+      ],
+      "semantic_role": "These elements define the voting action. The ballot box becomes recognizable largely because of the paper entering its slot.",
+      "notes": "There are no textual labels, candidate names, election symbols, or country-specific voting details."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized but locally more anatomical around the hand.",
+      "human_to_environment": "Not applicable in the usual full-body sense because the scene is cropped tightly around the hand-object interaction.",
+      "object_exaggeration": "The hand and ballot are enlarged through close-up framing rather than through surreal scale distortion.",
+      "internal_human_scale": "The visible hand is proportionally detailed because it carries the action.",
+      "general_effect": "Scale is determined primarily by close-up framing and semantic importance."
+    },
+    "depth_and_space": {
+      "depth_type": "extremely shallow overlap-based depth",
+      "mechanisms": [
+        "hand overlapping ballot",
+        "ballot overlapping slot",
+        "arm overlapping background",
+        "box front/top layering"
+      ],
+      "realistic_perspective": "Minimal.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "Not depicted.",
+      "overall_effect": "The image reads more like a graphic close-up or instructional vignette than a spatial scene."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "forearm enters from and is cropped by the upper-right edge",
+        "large blue background rectangles are cropped by the top and side edges"
+      ],
+      "human_cropping": "Extremely strong; only the hand and forearm are shown.",
+      "effect": "The tight crop focuses attention on the minimum diagnostic interaction and makes the image feel like a zoomed-in moment extracted from a larger action."
+    },
+    "color": {
+      "background": "pale baby blue",
+      "major_colors": [
+        "light blue",
+        "medium blue",
+        "cream / off-white",
+        "dark navy",
+        "warm brown",
+        "white"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "The cool blue palette unifies the scene, while the warm brown hand creates the strongest focal contrast.",
+      "contrast_strategy": "Warm skin tone contrasts against the blue-dominant background and ballot box; dark navy marks the slot and lower ballot edge.",
+      "mood_role": "Color feels clean, civic, and neutral rather than celebratory or emotionally expressive."
+    },
+    "shape_language": {
+      "overall": "Minimal geometric composition with selectively articulated organic anatomy.",
+      "human_body": "Only the hand and forearm are shown; the hand uses smoother anatomical contours while the sleeve is reduced to simple lines and shapes.",
+      "objects": "Ballot box and paper are simple rectangles and polygons; background elements are outlined or filled squares and rectangles.",
+      "fine_detail": "Generally very low, but the hand receives slightly more detail, including finger separation and a visible nail outline.",
+      "adaptability": "Detail increases around the semantic focal point while supporting objects remain extremely simplified."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "low",
+      "notes": "The scene contains one primary action, one functional object, one paper element, and a sparse set of background shapes."
+    },
+    "salience": {
+      "primary_attention_element": "The hand inserting the ballot into the box.",
+      "secondary_attention_elements": [
+        "ballot / folded paper",
+        "dark slot",
+        "ballot box"
+      ],
+      "large_but_quiet_elements": [
+        "pale blue background",
+        "large blue decorative rectangles"
+      ],
+      "high_attention_elements": [
+        "warm brown hand",
+        "cream ballot",
+        "dark navy slot"
+      ],
+      "important_observation": "The image compresses semantic focus into one small interaction while using background geometry only to balance the composition."
+    },
+    "decorative_abstraction": {
+      "present": true,
+      "elements": [
+        "outlined blue squares",
+        "solid blue rectangles"
+      ],
+      "semantic_role": "Uncertain. The forms may be purely decorative, though the outlined squares plausibly echo checkbox or ballot geometry.",
+      "compositional_role": "Fill negative space, distribute blue color across the left side, and prevent the background from feeling empty.",
+      "notes": "Any interpretation of the outlined squares as checkboxes or ballots should remain explicitly hypothetical."
+    },
+    "narrative_structure": {
+      "present": false,
+      "implied_sequence": null,
+      "narrative_role": "The image depicts a single diagnostic action rather than a multi-step narrative."
+    },
+    "structural_motif": {
+      "present": false,
+      "motif": null,
+      "components": [],
+      "role": null
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Voting.",
+    "primary_recognition_cues": [
+      "hand inserting paper into a slot",
+      "ballot box",
+      "folded ballot or voting paper"
+    ],
+    "secondary_recognition_cues": [
+      "formal insertion gesture",
+      "simple paper geometry",
+      "possible checkbox-like background squares"
+    ],
+    "human_semantic_role": "Only the hand is necessary; it performs the voting action while the rest of the person is omitted.",
+    "dominant_semantic_element": "The hand-ballot-slot interaction.",
+    "literal_environment_used": false,
+    "environment_strategy": "Remove the polling-place environment entirely and isolate the minimum action-object interaction needed for recognition.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "outlined background squares",
+        "function": "May visually echo checkbox or ballot geometry, though this is uncertain.",
+        "type": "possible symbolic/decorative cue"
+      }
+    ],
+    "recognition_structure": "single diagnostic interaction",
+    "recognition_notes": "The meaning depends on the relationship among hand, paper, slot, and box. The ballot box alone would be less specific, but the insertion action makes voting immediately legible.",
+    "literal_alternative": "A full voter inside a polling place, standing at a voting booth or ballot station with signage, staff, other voters, or election-specific details.",
+    "google_choice": "Compress the concept to a close-up of the voting gesture and omit nearly all environmental and identity information.",
+    "notable_omissions": [
+      "full human figure",
+      "face",
+      "polling place",
+      "voting booth",
+      "other voters",
+      "election signage",
+      "candidate names",
+      "political party references",
+      "country-specific symbols",
+      "text on the ballot"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "The hand-ballot-slot interaction may be sufficiently diagnostic that showing a full person or polling place would add complexity without improving recognition.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Cropping the person to only the hand may reduce unnecessary identity-specific information while keeping the action clear.",
+        "confidence": "tentative",
+        "status": "hypothesis only; not directly observable from the image"
+      },
+      {
+        "hypothesis": "The simplified ballot avoids country-specific, candidate-specific, or election-specific details so the concept remains generic.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The outlined background squares may loosely reinforce voting through checkbox-like geometry while primarily functioning as compositional filler.",
+        "confidence": "tentative",
+        "status": "hypothesis only; symbolic interpretation is uncertain"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_hand_removed": "The box and paper would become much less action-specific, and the image might read as a generic container or document scene.",
+    "if_ballot_box_removed": "The hand holding paper would no longer communicate voting clearly.",
+    "if_full_person_added": "The image could remain recognizable but would likely lose the extreme semantic compression and close-up clarity of the current composition.",
+    "if_polling_place_added": "The concept would become more literal but also more complex, less universal, and potentially more specific to a particular voting context.",
+    "if_background_squares_removed": "The main concept would remain intact, but the left side would become visually emptier and more imbalanced.",
+    "if_text_or_candidate_information_added": "The scene would become more election-specific and less generic.",
+    "if_hand_were_less_detailed": "The action might still read, but the focal interaction would lose some clarity because the hand is the primary actor."
+  },
+  "derived_observations": {
+    "recognition_anchor": "single diagnostic hand-object interaction",
+    "human_role": "partial body only; hand is primary action carrier",
+    "scale_exaggeration": "close-up framing rather than surreal scale distortion",
+    "internal_human_proportion_stylization": "not applicable to full body; hand locally more articulated",
+    "environment_abstraction": "very strong",
+    "environment_strategy": "literal environment omitted; diagnostic interaction isolated",
+    "symbolic_information_integration": "low to moderate; possible checkbox-like background geometry",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "manual object interaction",
+    "depth": "extremely shallow overlap-based",
+    "cropping": "very strong on human figure",
+    "scene_density": "low",
+    "facial_specificity": null,
+    "anonymous_character_visual_specificity": "low to moderate through visible hand/skin/sleeve only",
+    "rendering_realism": "low",
+    "composition_dynamic": "strong right-side focal action balanced by sparse geometric fillers on left",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "present",
+    "narrative_structure": "none; single moment",
+    "structural_motif": null,
+    "body_part_focus": "hand",
+    "detail_allocation": "increased at semantic focal point"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A concept may be compressed to the minimum diagnostic interaction needed for recognition.",
+      "evidence": "Vote is represented only by a hand, ballot, slot, and ballot box rather than a full polling scene.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "A full human figure may be unnecessary when one body part carries the essential action.",
+      "evidence": "Only the hand and forearm are shown, yet the voting action remains clear.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Visual detail may increase locally around the semantic focal point.",
+      "evidence": "The hand receives more anatomical articulation, including fingers and a nail outline, than many full-body figures studied earlier.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "An object's meaning may depend on its interaction with another object rather than on standalone shape specificity.",
+      "evidence": "The ballot box becomes clearly recognizable as such because a ballot is being inserted into its slot.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Background geometry may primarily serve compositional balance while optionally echoing the concept semantically.",
+      "evidence": "Outlined and solid rectangles fill negative space; some outlined squares may resemble checkboxes, though this interpretation is uncertain.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Tight cropping can create a zoomed-in diagnostic vignette that omits unnecessary identity and environmental information.",
+      "evidence": "The arm enters from the frame edge and only the hand/forearm are visible.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Simple interactions can support highly specific recognition even in very low-complexity scenes.",
+      "evidence": "The image contains very few elements but communicates voting effectively.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Generic civic concepts may be kept visually neutral by omitting text, parties, candidates, national symbols, and election-specific details.",
+      "evidence": "The ballot and box contain no identifying political or geographic information.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "strong simplification of objects",
+      "very shallow depth",
+      "cropped frame-edge elements",
+      "low material realism",
+      "semantic meaning concentrated in a small number of cues"
+    ],
+    "important_differences": [
+      "Vote is the clearest close-up composition studied so far and does not show a full person.",
+      "Unlike Delivery, Vote has no narrative environment or sequence; it isolates one moment.",
+      "Unlike Baby Shower and Wedding, Vote relies on a literal action rather than symbolic object association.",
+      "Unlike Athletic Jumping and Climbing, the action is carried by a hand-object interaction rather than full-body pose.",
+      "Vote has one of the lowest scene-complexity levels in the set while maintaining high recognition specificity.",
+      "The hand receives relatively high local detail because it is the semantic focal point."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up"
+    },
+    "implication": "The reference set now includes a distinct close-up interaction strategy, suggesting that Google Calendar art direction may choose between full scenes, symbolic systems, environmental contexts, and tightly cropped gestures depending on the minimum visual information needed for recognition."
+  },
+  "open_questions": [
+    "Does Google use close-up body-part compositions especially when a hand-object interaction is more recognizable than a full-body scene?",
+    "Do concepts such as writing, signing, paying, crafting, opening, or cooking use similar close-up manual interactions?",
+    "How often does local anatomical detail increase when a hand or other body part becomes the primary semantic actor?",
+    "How often are abstract background shapes designed to loosely echo the concept while still functioning mainly as decoration?",
+    "Does Google systematically remove political, geographic, textual, or institutional specificity from civic-event illustrations?",
+    "How often can a very low-complexity scene achieve high recognition through one diagnostic interaction?",
+    "When does Google choose close-up cropping instead of showing a full anonymous person?",
+    "Are partial-body representations another strategy for minimizing unnecessary identity-specific information?"
+  ]
+}

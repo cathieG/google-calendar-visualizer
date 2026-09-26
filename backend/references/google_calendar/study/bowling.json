@@ -1,0 +1,383 @@
+{
+  "reference_id": "bowling",
+  "concept": "Bowling",
+  "files": {
+    "svg": "raw/img_bowling.svg",
+    "rendered": "rendered/img_bowling.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A highly dynamic bowling scene viewed from near the pin end of the lane. A purple bowling ball sits near the center foreground, surrounded by large white-and-blue bowling pins that appear to be flying, tilting, or scattering through the air. A small bowler stands in the distance at the narrow end of a blue triangular lane, captured in the follow-through of a bowling motion. The background is a flat light blue field, allowing the ball, pins, and action geometry to dominate.",
+    "composition": {
+      "weight_distribution": "Visual weight is spread across the frame by the large scattered pins, but the strongest cluster is centered around the purple bowling ball and nearby pins.",
+      "busiest_region": "The center and right-center area around the ball and the densest concentration of pins is the most active.",
+      "quiet_region": "The upper-left and some open blue background areas remain relatively quiet.",
+      "balance_strategy": "Balance is achieved through a ring-like distribution of oversized pins around the central ball, with the distant bowler and triangular lane stabilizing the composition.",
+      "major_structural_forms": [
+        "large scattered bowling pins",
+        "central purple bowling ball",
+        "blue triangular lane / directional wedge",
+        "small distant bowler",
+        "flat blue background"
+      ],
+      "rhythm_and_repetition": "Repetition of bowling-pin shapes across the frame creates strong visual rhythm, while variations in size, tilt, and crop maintain energy."
+    },
+    "background": {
+      "base": "Flat light blue background.",
+      "environmental_detail": "Almost none. The bowling alley is reduced to a single geometric lane cue rather than a fully depicted interior.",
+      "decorative_elements": [],
+      "literal_environment_present": true,
+      "notes": "The environment is present in extremely reduced form: the lane is represented as a blue triangular plane rather than a realistic bowling alley."
+    },
+    "environment_structure": {
+      "environment_type": "highly abstracted sports environment",
+      "representation_strategy": "Reduce the bowling alley to its most useful spatial cue: a tapered lane shape that explains direction and viewpoint.",
+      "foreground_elements": [
+        "purple bowling ball",
+        "large bowling pins",
+        "blue lane wedge"
+      ],
+      "background_elements": [
+        "distant bowler",
+        "flat blue field"
+      ],
+      "depth_mechanism": "Depth is created through perspective scale differences, the narrowing triangular lane, and the placement of the bowler at the far end.",
+      "recognition_mechanism": "Recognition comes from the combination of bowling pins, ball, lane direction, and bowler action."
+    },
+    "human_figure": {
+      "count": 1,
+      "body_part_only": false,
+      "identity_status": "anonymous but specific-looking",
+      "observable_skin_color": [
+        "warm pink / light warm skin tone"
+      ],
+      "race_or_ethnicity": "not reliably inferable",
+      "hair": [
+        "short dark hair"
+      ],
+      "facial_detail": "Minimal but more visible than in some small figures because the beard and face shape are readable.",
+      "clothing": "Light pink shirt, gray pants, dark shoes.",
+      "pose": "The bowler is in a follow-through position, with one leg lifted and arms extended, indicating that the ball has just been released.",
+      "relative_size": "The human figure is very small relative to the pins and ball because the viewpoint is near the pins rather than near the bowler.",
+      "internal_proportions": "Still stylized, but the body reads more like a simplified human athletic pose than a purely blocky icon.",
+      "shape_construction": "The figure is simplified and geometric, with tapered limbs and a small head, but still readable as an active full-body pose.",
+      "semantic_role": "The bowler supplies causal meaning: the scattered pins are not just objects, but the result of an action.",
+      "identity_specificity": "The bowler is visually concrete enough to feel like a person, but not individualized or identifiable."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Pins appear to be scattering from the impact of the bowling ball.",
+      "secondary_motion_cues": [
+        "tilted and airborne pin orientations",
+        "ball positioned among the pins",
+        "bowler's follow-through pose",
+        "tapered lane implying the direction of travel"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "Motion is communicated through object arrangement and pose rather than through explicit visual effects like speed lines."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "bowling pins",
+        "bowling ball",
+        "bowling lane"
+      ],
+      "semantic_role": "These are sufficient to identify the sport. No extra accessories are needed.",
+      "notes": "The lane is more abstract than the ball and pins, but still diagnostically important."
+    },
+    "viewpoint_strategy": {
+      "present": true,
+      "viewpoint_type": "lane-end / near-impact viewpoint",
+      "camera_position": "The viewer is positioned close to the pins and ball, looking back toward the distant bowler.",
+      "effect": "This makes the pins and ball appear enormous while the bowler appears small, creating a dramatic action-first perspective.",
+      "notes": "This is one of the clearest examples in the set where camera/viewpoint selection is a major part of the concept design."
+    },
+    "impact_structure": {
+      "present": true,
+      "impact_moment": "Pins have just been struck or are in the immediate aftermath of impact.",
+      "causal_chain": [
+        "bowler releases ball",
+        "ball travels down lane",
+        "ball reaches pin area",
+        "pins scatter"
+      ],
+      "visual_evidence": [
+        "pins tilted in different directions",
+        "pins distributed around the ball",
+        "bowler still in follow-through position"
+      ],
+      "notes": "The image emphasizes the most visually dramatic micro-moment of bowling rather than a neutral setup pose."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized, but perspective-justified.",
+      "human_to_environment": "The person is tiny relative to the pins and ball because of the selected camera angle, not necessarily because of symbolic scale exaggeration.",
+      "object_exaggeration": "The pins feel oversized, but this is best understood mainly as perspective-based scale distortion rather than purely symbolic enlargement.",
+      "internal_human_scale": "Human proportions are stylized but coherent with the rest of the system.",
+      "general_effect": "The scene feels dramatic because the most important action objects are placed close to the viewer.",
+      "scale_source": "primarily perspective-based"
+    },
+    "depth_and_space": {
+      "depth_type": "strong directional depth in a simplified space",
+      "mechanisms": [
+        "large near pins and small distant bowler",
+        "triangular lane wedge",
+        "overlap among pins and ball"
+      ],
+      "realistic_perspective": "Simplified but strong. The lane wedge explains the directional space with very few marks.",
+      "floor_plane": "Present as a tapered blue triangular lane rather than a full realistic floor.",
+      "room_or_venue_depth": "The broader bowling-alley environment is omitted.",
+      "overall_effect": "The image creates a vivid sense of forward action and viewpoint without constructing a detailed interior."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "multiple pins are cropped by the frame edges",
+        "the lane wedge extends out of the lower frame",
+        "large pin shapes continue beyond the top and side edges"
+      ],
+      "human_cropping": "The bowler is fully visible, but many pins are partially cropped.",
+      "effect": "Cropping intensifies the impact and makes the strike feel explosive and larger than the frame."
+    },
+    "color": {
+      "background": "light blue",
+      "major_colors": [
+        "light blue",
+        "medium blue",
+        "dark blue",
+        "white / cream",
+        "orange-red",
+        "purple",
+        "pink",
+        "gray"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Blue unifies the scene, while orange-red pin stripes and the purple ball provide focal contrast.",
+      "contrast_strategy": "The classic white-and-orange pin pattern stands out against the blue field, and the purple ball becomes a central visual anchor.",
+      "mood_role": "The palette feels playful, clean, and energetic."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric sports scene with repeated iconic object silhouettes.",
+      "human_body": "The bowler is reduced to clean simplified forms with an action-readable pose.",
+      "objects": "Pins are iconic and clearly recognizable; the ball is a simple sphere with three finger holes; the lane is reduced to a triangular plane.",
+      "fine_detail": "Very low overall, with small detail only where necessary such as the ball holes and the bowler's beard.",
+      "adaptability": "The image relies more on arrangement, silhouette, and viewpoint than on detailed object rendering."
+    },
+    "lighting_and_texture": {
+      "shadows": "Very minimal; some darker blue forms may suggest shadow-like depth or secondary object layers.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "The number of object types is small, but the scene feels rich because of the dramatic viewpoint, object repetition, and action structure."
+    },
+    "salience": {
+      "primary_attention_element": "The central purple bowling ball and nearby large pins.",
+      "secondary_attention_elements": [
+        "largest foreground pins",
+        "distant bowler",
+        "blue lane wedge"
+      ],
+      "large_but_quiet_elements": [
+        "flat blue background"
+      ],
+      "high_attention_elements": [
+        "purple ball",
+        "orange-striped white pins",
+        "pink shirt of the bowler"
+      ],
+      "important_observation": "The scene draws attention first to the collision zone, then to the distant human cause of that impact."
+    },
+    "decorative_abstraction": {
+      "present": false,
+      "elements": [],
+      "semantic_role": null,
+      "compositional_role": "Most forms are functional parts of the action scene rather than decorative fillers.",
+      "notes": "Even the extra blue pin-like shapes help support the impact-space feeling rather than acting as pure decoration."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": "A bowler has just released the ball; it reaches the pin set; the pins scatter through the air.",
+      "narrative_role": "The scene captures the most dramatic instant of the action rather than a neutral activity symbol."
+    },
+    "structural_motif": {
+      "present": true,
+      "motif": "impact-centered scatter",
+      "components": [
+        "central ball",
+        "surrounding tilted pins",
+        "directional lane wedge",
+        "distant bowler"
+      ],
+      "role": "This motif organizes the scene around cause, impact, and aftermath."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Bowling",
+    "primary_recognition_cues": [
+      "bowling pins",
+      "bowling ball",
+      "bowler in follow-through pose",
+      "lane direction"
+    ],
+    "secondary_recognition_cues": [
+      "pin scattering",
+      "ball finger holes",
+      "classic pin stripe colors"
+    ],
+    "human_semantic_role": "The human figure is not the main visual mass, but is crucial for establishing this as an action event rather than a bowling still life.",
+    "dominant_semantic_element": "The impact moment where the ball collides with the pins.",
+    "literal_environment_used": true,
+    "environment_strategy": "Retain only the bowling lane's directional logic while omitting almost all bowling-alley detail.",
+    "symbolic_or_informational_cues": [],
+    "recognition_structure": "impact-focused sports action scene",
+    "recognition_notes": "The scene is highly recognizable because it chooses the most diagnostic and dramatic micro-moment in the activity: the strike / near-strike impact.",
+    "literal_alternative": "A person standing in a bowling alley holding a ball, or a more complete alley scene with pins arranged at the end.",
+    "google_choice": "Place the viewer near the pins and ball, show the pins scattering, and keep the bowler small in the distance to maximize action and readability.",
+    "notable_omissions": [
+      "full bowling alley interior",
+      "lane markings and gutters in detail",
+      "scoreboard",
+      "other players",
+      "audience",
+      "text or numbers"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "The near-impact viewpoint may have been chosen because it is more dramatic and instantly readable than a neutral side or rear view of a bowler.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Perspective-based scale contrast may help the image feel energetic without requiring explicit motion effects.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Reducing the bowling alley to a single directional wedge may preserve the essential action structure while avoiding clutter.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_bowler_removed": "The scene would still read as bowling, but would lose the clear causal action and become closer to a symbolic or object-only sports image.",
+    "if_ball_removed": "The pins alone could suggest bowling, but the impact moment and action clarity would weaken substantially.",
+    "if_scattered_pin_arrangement_removed": "The scene would become much less dynamic and might read more like a static bowling setup.",
+    "if_lane_wedge_removed": "The scale distortion would feel more arbitrary, and the viewer would lose an important cue for depth and direction.",
+    "if_viewpoint_moved_back": "The image could still depict bowling, but would lose much of the dramatic impact and distinctive composition.",
+    "if_all_pins_shown_small_and_orderly": "The main concept would remain recognizable, but the chosen moment of action would disappear."
+  },
+  "derived_observations": {
+    "recognition_anchor": "ball-impact-with-pins moment",
+    "human_role": "small but causally important",
+    "scale_exaggeration": "present in appearance, but mainly perspective-based",
+    "internal_human_proportion_stylization": "stylized small-headed figure with readable action pose",
+    "environment_abstraction": "very strong",
+    "environment_strategy": "environment reduced to a single directional lane cue",
+    "symbolic_information_integration": "low",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "object scatter plus action pose",
+    "depth": "strong directional depth",
+    "cropping": "strong on pins",
+    "scene_density": "moderate",
+    "facial_specificity": "low to moderate for a distant figure",
+    "anonymous_character_visual_specificity": "moderate",
+    "rendering_realism": "low",
+    "composition_dynamic": "impact-centered with viewpoint-driven scale contrast",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "low",
+    "narrative_structure": "present; strike / impact moment",
+    "structural_motif": "impact-centered scatter",
+    "viewpoint_importance": "very high",
+    "scale_source": "perspective-based",
+    "action_moment_specificity": "high"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A concept can be strengthened by choosing the most diagnostic action moment rather than a neutral pose.",
+      "evidence": "Bowling is shown at the moment of pin impact rather than as a person simply standing with a ball.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Viewpoint selection can be a central part of the visual idea.",
+      "evidence": "The lane-end camera position makes the scene much more dramatic and readable.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Perspective-based scale distortion should be distinguished from symbolic object exaggeration.",
+      "evidence": "The pins appear huge mostly because they are near the viewer, while the bowler is small because he is far away.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A literal environment can be reduced to one geometric directional cue when that cue explains the action structure.",
+      "evidence": "The bowling alley is reduced to a triangular lane shape.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Motion can be communicated through object arrangement rather than motion effects.",
+      "evidence": "Scattered airborne pins indicate impact without speed lines or blur.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A small distant human figure can remain narratively important even when not visually dominant.",
+      "evidence": "The bowler is minor in scale but essential to the action reading.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Cropping can intensify impact and imply action extending beyond the frame.",
+      "evidence": "Multiple large pins are cut by the frame edges, making the strike feel explosive.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Repeated iconic objects can create both recognition and motion rhythm.",
+      "evidence": "The many bowling pins provide the main repetitive structure of the image.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "strong simplification",
+      "clear semantic selectivity",
+      "cropping used compositionally",
+      "action can be conveyed without explicit motion effects"
+    ],
+    "important_differences": [
+      "Unlike Basketball, the human figure is not a large compositional anchor; the objects near impact dominate instead.",
+      "Unlike Barbecue or Wedding, the scene is intensely action-based rather than event-setup or symbolic.",
+      "Unlike Athletic Jumping, the sense of motion is created as much by viewpoint and impact arrangement as by body pose.",
+      "Unlike Vote, this is not a close-up of one human action detail, but a full action scene with an extreme viewpoint.",
+      "Bowling is one of the strongest examples of perspective-driven scale contrast in the set."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment",
+      "barbecue": "literal outdoor environment retained; event communicated through prepared equipment, food, and serving setup without visible participants",
+      "bowling": "literal sports environment reduced to a single directional wedge while viewpoint and impact moment carry most of the concept"
+    },
+    "implication": "The growing set suggests that Google Calendar sometimes makes the visual idea depend not just on object choice, but on selecting a distinctive camera angle and a highly diagnostic micro-moment of action."
+  },
+  "open_questions": [
+    "How often does Google Calendar use perspective-driven scale contrast in sports scenes?",
+    "Are there other references where viewpoint is as central as object choice?",
+    "How often are sports concepts depicted at the moment of impact rather than before or after?",
+    "Should viewpoint strategy become a permanent top-level analytic category in our schema?",
+    "Does the planner need to explicitly reason about action moment selection, not just object selection?",
+    "How often can a full environment be reduced to one directional geometric cue?",
+    "Do other scenes with strong object repetition use repetition to imply motion as well as recognition?",
+    "Should we distinguish perspective-based scale contrast from symbolic enlargement throughout our study?"
+  ]
+}

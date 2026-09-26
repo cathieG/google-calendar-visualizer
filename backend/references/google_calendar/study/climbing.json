@@ -1,0 +1,334 @@
+{
+  "reference_id": "climbing",
+  "concept": "Climbing",
+  "files": {
+    "svg": "raw/img_climbing.svg",
+    "rendered": "rendered/img_climbing.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide indoor-climbing scene showing one anonymous climber stretched across the right half of a large geometrically abstracted climbing wall. The wall fills essentially the entire frame and is divided into large blue-gray polygonal facets. Irregular brightly colored climbing holds are scattered across the wall. The climber wears highly simplified clothing, has dark hair in a small bun, carries a chalk bag, and appears connected to a rope or harness system. The scene is moderately complex but remains readable because the wall uses restrained colors while the holds and human figure provide stronger contrast.",
+    "composition": {
+      "weight_distribution": "Visual weight is broadly distributed across the frame because the climbing wall fills the entire image, while the climber provides the strongest localized semantic and visual concentration on the right.",
+      "busiest_region": "Right-center, where the climber, rope, chalk bag, and several colorful holds overlap.",
+      "quiet_region": "There is relatively little true negative space; quieter regions are instead created by large low-saturation wall facets with fewer holds.",
+      "balance_strategy": "Large angular wall polygons distribute structural weight across the entire banner, while the climber's diagonal body and brightly colored holds create focal emphasis.",
+      "major_structural_forms": [
+        "full-frame faceted climbing wall",
+        "single climber occupying the right half",
+        "large diagonal and polygonal wall sections",
+        "scattered irregular climbing holds",
+        "vertical / curved rope entering from the top"
+      ]
+    },
+    "background": {
+      "base": "The climbing wall itself functions as the background.",
+      "environmental_detail": "The environment is present and recognizable but highly simplified into large blue-gray polygonal facets and scattered climbing holds.",
+      "decorative_elements": "Most visible shapes appear semantically tied to the climbing wall rather than purely decorative, though their color and spacing also contribute compositional interest.",
+      "literal_environment_present": true,
+      "notes": "Unlike the earlier references with mostly solid-color backgrounds, this image retains a recognizable physical environment across the full frame, but abstracts it geometrically."
+    },
+    "environment_structure": {
+      "environment_type": "indoor climbing wall / climbing-gym-like surface",
+      "representation_strategy": "literal environment retained but geometrically abstracted",
+      "wall_treatment": "Large irregular polygonal facets in multiple blue-gray tones create the climbing surface.",
+      "hold_treatment": "Climbing holds are represented as small irregular rounded or blob-like shapes in saturated colors.",
+      "recognition_mechanism": "The faceted wall combined with repeated colored holds is sufficient to communicate a climbing environment without realistic wall texture, gym architecture, or equipment detail."
+    },
+    "human_figure": {
+      "count": 1,
+      "identity_status": "anonymous / non-identifiable",
+      "observable_skin_color": "stylized orange / coral",
+      "race_or_ethnicity": null,
+      "hair": {
+        "color": "dark brown",
+        "style": "small bun"
+      },
+      "facial_detail": "Extremely minimal or absent.",
+      "clothing": "Large white top and purple lower-body garments rendered through simplified geometric forms.",
+      "pose": "The climber stretches across the wall with one arm extended strongly to the left and the other reaching upward-right, while the torso and legs form a dynamic diagonal configuration.",
+      "relative_size": "Large enough to be one of the dominant visual elements, but embedded within an equally important full-frame environment.",
+      "internal_proportions": "Stylized and simplified, with clothing represented through block-like geometry while exposed body parts use more organic contours.",
+      "shape_construction": "Body construction mixes angular clothing shapes with rounded head, hands, and simplified limb contours.",
+      "semantic_role": "The climber supplies the action and confirms how the climbing environment is being used.",
+      "identity_specificity": "The figure has concrete visual traits such as hair style, clothing colors, and stylized skin color without representing a specific known person.",
+      "notes": "The orange/coral skin color should be treated as an observable palette choice rather than evidence of race or ethnicity."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Extended climbing pose and strong directional reach.",
+      "secondary_motion_cues": [
+        "one arm reaching horizontally left",
+        "other arm reaching upward-right",
+        "torso stretched diagonally",
+        "legs positioned in different directions",
+        "visible interaction with wall holds"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "Movement is communicated through body geometry and contact with the wall rather than through explicit motion effects."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "chalk bag",
+        "rope or safety line",
+        "harness-like attachment"
+      ],
+      "semantic_role": "These small accessories increase specificity and reinforce the climbing context without becoming major visual anchors.",
+      "notes": "The title is broadly 'Climbing'; the visible rope / harness system suggests roped indoor climbing rather than bouldering specifically."
+    },
+    "scale_and_proportion": {
+      "realism": "Moderately stylized.",
+      "human_to_environment": "The climber is plausibly scaled relative to the wall; there is little extreme semantic scale exaggeration.",
+      "object_exaggeration": "No major object is dramatically oversized relative to the climber; abstraction is achieved more through geometric simplification than scale distortion.",
+      "internal_human_scale": "Stylized but more action-driven than exaggerated.",
+      "general_effect": "The image preserves enough plausible human-to-environment scale to support the physical climbing action while simplifying individual forms."
+    },
+    "depth_and_space": {
+      "depth_type": "Shallow faceted depth.",
+      "mechanisms": [
+        "large polygonal wall facets",
+        "overlap between climber and wall",
+        "rope crossing in front of wall",
+        "partial occlusion of holds and body"
+      ],
+      "realistic_perspective": "Minimal.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "Not depicted as a room; the wall surface itself supplies nearly all spatial context.",
+      "overall_effect": "The scene suggests a large physical surface without constructing a fully realistic three-dimensional gym."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "wall facets continue through every edge",
+        "rope enters from the top edge",
+        "several climbing holds are partially cropped by the frame",
+        "large wall polygons extend beyond the visible banner"
+      ],
+      "human_cropping": "The climber is mostly contained within the frame.",
+      "effect": "The banner reads as a cropped slice of a much larger climbing wall."
+    },
+    "color": {
+      "background": "multiple restrained blue-gray tones rather than a single flat color",
+      "major_colors": [
+        "light blue",
+        "blue-gray",
+        "dark navy",
+        "purple",
+        "green",
+        "orange",
+        "yellow",
+        "white",
+        "teal"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Muted wall colors reduce visual competition while saturated holds, clothing, and skin tones create focus and readability.",
+      "contrast_strategy": "Low-saturation environmental planes act as a quiet base, while brighter holds and the climber create semantic hierarchy."
+    },
+    "shape_language": {
+      "overall": "Strong contrast between angular environmental geometry and softer organic / rounded detail shapes.",
+      "human_body": "Clothing is highly geometric and block-like; exposed body parts are simplified but retain more organic contours.",
+      "objects": "Climbing holds are reduced to irregular rounded blobs; rope is represented as a simple line; wall planes are large angular polygons.",
+      "fine_detail": "Very limited.",
+      "adaptability": "Different semantic elements use different simplified shape families rather than one uniform primitive system."
+    },
+    "lighting_and_texture": {
+      "shadows": "Little to none.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "The frame contains many wall facets and climbing holds, but visual complexity is controlled through large simple shapes, repeated hold forms, and restrained environmental colors."
+    },
+    "salience": {
+      "primary_attention_element": "The climber on the right side.",
+      "secondary_attention_elements": [
+        "brightly colored climbing holds",
+        "rope / safety line",
+        "chalk bag"
+      ],
+      "large_but_quiet_elements": [
+        "blue-gray wall facets"
+      ],
+      "high_attention_elements": [
+        "white shirt",
+        "purple clothing",
+        "orange / coral skin",
+        "bright green, yellow, blue, and orange holds"
+      ],
+      "important_observation": "Visual simplicity is achieved without large empty regions: the environment can fill the frame as long as large structural forms remain muted and focal elements use stronger contrast."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Indoor climbing.",
+    "primary_recognition_cues": [
+      "human climbing pose",
+      "faceted climbing wall",
+      "repeated colored climbing holds"
+    ],
+    "secondary_recognition_cues": [
+      "chalk bag",
+      "rope or safety line",
+      "harness-like attachment"
+    ],
+    "human_semantic_role": "The human figure communicates the action, but the environment is also essential to understanding the action as climbing.",
+    "dominant_semantic_element": "shared between human action and climbing-wall environment",
+    "literal_environment_used": true,
+    "environment_strategy": "Retain the literal climbing environment but simplify it heavily into geometric wall facets and minimal hold shapes.",
+    "symbolic_or_informational_cues": [],
+    "recognition_structure": "shared human-environment recognition",
+    "recognition_notes": "The person alone would not clearly communicate climbing, and the wall alone would indicate a climbing environment without an active event. Together they create a strong and specific reading.",
+    "literal_alternative": "A realistic indoor climbing gym with detailed wall texture, structural beams, mats, equipment, lighting, and a naturally rendered climber.",
+    "google_choice": "Preserve the recognizable climbing wall and human action while reducing the entire scene to flat geometric facets, irregular colored holds, and a simplified dynamic figure.",
+    "notable_omissions": [
+      "detailed gym architecture",
+      "realistic wall texture",
+      "floor mats",
+      "other climbers",
+      "spectators",
+      "detailed safety hardware",
+      "lighting fixtures",
+      "realistic material shading",
+      "facial detail"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "Because the climbing wall itself is highly diagnostic of the activity, retaining the literal environment may provide more semantic value than replacing it with a symbolic or object-only composition.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Geometric wall facets may allow a visually dense full-frame environment to remain simple and stylistically coherent.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Small accessories such as the chalk bag and safety line may be included because they increase activity specificity without requiring additional scene complexity.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_person_removed": "The image would still likely read as a climbing wall or climbing gym, but the event/action component would disappear.",
+    "if_wall_and_holds_removed": "The stretched human pose would become difficult to interpret and could resemble generic reaching, floating, or falling.",
+    "if_rope_and_chalk_bag_removed": "The scene would still communicate climbing, but it would be less specific about climbing equipment and context.",
+    "if_wall_were_realistically_rendered": "The image would gain material realism but likely become visually busier and less consistent with the simplified illustration language.",
+    "if_large_negative_space_were_added": "The scene might become simpler, but the immersive sense of being on a climbing wall would weaken.",
+    "if_motion_lines_added": "They would probably be unnecessary because the body pose and wall contact already communicate action clearly."
+  },
+  "derived_observations": {
+    "recognition_anchor": "shared human action and environment",
+    "human_role": "primary action carrier",
+    "scale_exaggeration": "low",
+    "internal_human_proportion_stylization": "moderate",
+    "environment_abstraction": "strong but literal environment retained",
+    "symbolic_information_integration": "low",
+    "semantic_shorthand": "present in simplified wall holds and accessories",
+    "motion_encoding": "body pose and contact geometry",
+    "depth": "shallow faceted",
+    "cropping": "strong environmental cropping",
+    "scene_density": "moderate full-frame",
+    "facial_specificity": "very low",
+    "anonymous_character_visual_specificity": "moderate",
+    "rendering_realism": "low",
+    "composition_dynamic": "full-frame geometric environment contrasted with a strong diagonal human pose",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "low",
+    "environment_strategy": "literal environment retained but geometrically abstracted"
+  },
+  "candidate_principles": [
+    {
+      "claim": "Literal environments may be retained when the environment itself is highly diagnostic of the concept.",
+      "evidence": "The climbing wall fills the frame and remains recognizable despite heavy geometric abstraction.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "A recognizable environment can be simplified into large geometric planes without losing semantic clarity.",
+      "evidence": "The wall is represented through broad blue-gray polygons rather than realistic materials or architectural detail.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Very simple shapes can become recognizable through context.",
+      "evidence": "Irregular colored blobs read as climbing holds because of their repeated placement across the faceted climbing wall.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Human action and environmental context can jointly carry recognition rather than relying on one dominant semantic anchor.",
+      "evidence": "The climber communicates action while the wall and holds establish what the action is.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Motion is often encoded through body pose and contact geometry rather than explicit motion effects.",
+      "evidence": "The climber's extended limbs and directional reach communicate action without blur or motion lines.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Small diagnostic accessories can increase specificity without becoming primary visual elements.",
+      "evidence": "The chalk bag and rope / safety line reinforce the climbing context while remaining visually secondary.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Visual simplicity does not require large empty areas if environmental color and detail are sufficiently restrained.",
+      "evidence": "The wall fills the entire frame, yet the scene remains readable because its large facets use muted blue-gray colors.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Anonymous characters may use stylized skin colors that should not be interpreted as literal demographic information.",
+      "evidence": "The climber's skin is rendered in a clearly stylized orange / coral hue.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Different semantic elements may use different geometric vocabularies within the same illustration.",
+      "evidence": "The wall is angular, climbing holds are rounded and irregular, and the human figure combines block-like clothing with softer exposed-body contours.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Full-frame edge continuation may create the impression that the depicted environment extends beyond the banner.",
+      "evidence": "Wall facets, rope, and several holds continue through or beyond the image boundaries.",
+      "confidence": "recurring"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "very shallow depth",
+      "simplified geometric forms",
+      "anonymous human figure with concrete visual traits",
+      "dynamic action conveyed without motion lines",
+      "large forms continuing beyond frame boundaries",
+      "low material realism"
+    ],
+    "important_differences": [
+      "Unlike Art, Athletic Jumping, and Wedding, the environment fills essentially the entire frame instead of sitting against a mostly empty solid-color background.",
+      "Unlike Wedding, Climbing relies heavily on a human figure and literal physical environment rather than symbolic objects.",
+      "Unlike Art, Climbing uses little extreme semantic scale distortion.",
+      "Unlike Athletic Jumping, the environment is structurally rich and nearly as important to recognition as the human pose.",
+      "Climbing demonstrates that environmental density can remain moderate-to-high without producing visual clutter when large regions use restrained color.",
+      "The climber's skin is rendered in a highly stylized orange / coral tone, strengthening the distinction between observable color and demographic inference."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted"
+    },
+    "implication": "The growing reference set suggests that environment representation is a flexible art-direction decision. Google Calendar illustrations may omit, reconstruct, reduce, or retain an environment depending on which strategy best supports semantic recognition."
+  },
+  "open_questions": [
+    "How often does Google retain a literal environment when the environment itself is strongly diagnostic of the activity?",
+    "Are full-frame environments commonly simplified into large geometric facets or planes?",
+    "How often are highly simplified repeated shapes recognizable mainly because of context?",
+    "How frequently is semantic recognition shared between a person and the surrounding environment?",
+    "Do small diagnostic accessories regularly appear as secondary specificity cues?",
+    "How often can Google fill the frame with environmental structure while maintaining visual simplicity through restrained color?",
+    "Are stylized non-naturalistic skin colors common across other anonymous human figures?",
+    "Does the shape vocabulary systematically differ between environment, clothing, and small semantic objects?",
+    "How often are ropes, lines, or other thin structural elements allowed to introduce strong directional geometry into otherwise flat compositions?"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "reference_id": "thanksgiving",
+  "concept": "Thanksgiving",
+  "representation_and_recognition": {
+    "representation_strategy": {
+      "primary": "symbolic_object_scene",
+      "secondary": "seasonal_celebratory_scene"
+    },
+    "recognition_structure": "single_anchor_with_supporting_symbols",
+    "recognition_anchor": [
+      "large stylized turkey",
+      "autumn leaves",
+      "fall-oriented color palette"
+    ],
+    "recognition_specificity": "moderate_high",
+    "semantic_scope": "broader_domain",
+    "representation_optionality": "high"
+  },
+  "people_and_social_structure": {
+    "human_presence": "none",
+    "human_count": 0,
+    "human_role": "absent",
+    "body_visibility": null,
+    "figure_orientation": null,
+    "face_visibility": null,
+    "facial_specificity": null,
+    "people": [],
+    "skin_color_variation": "not_applicable",
+    "hair_color_variation": "not_applicable",
+    "hairstyle_variation": "not_applicable",
+    "clothing_strategy": "not_applicable",
+    "clothing_variation": "not_applicable",
+    "body_shape_variation": "not_applicable",
+    "pose_variation": "not_applicable",
+    "group_visual_diversity": "not_applicable",
+    "group_relationship_structure": "not_applicable",
+    "human_proportion_stylization": null,
+    "human_shape_language": null,
+    "anatomical_responsiveness": null,
+    "human_detail_allocation": [],
+    "anonymous_character_specificity": null
+  },
+  "event_and_semantic_logic": {
+    "action_structure": "none",
+    "temporal_focus": "static_symbolic_state",
+    "causal_structure": "none",
+    "diagnostic_object_state": [
+      "turkey shown prominently with tail feathers fanned",
+      "autumn leaves distributed around the frame"
+    ],
+    "motion_encoding": "none",
+    "implied_human_presence": false,
+    "narrative_structure": "none"
+  },
+  "environment_and_space": {
+    "environment_strategy": "omitted",
+    "environment_role": "none",
+    "spatial_coherence": "symbolic_decorative_field",
+    "view_angle": "frontal",
+    "framing_scale": "close_symbolic_field",
+    "perspective_strategy": "minimal_flat",
+    "scale_source": "composition_based",
+    "depth_strategy": "minimal_overlap",
+    "cropping_strength": "strong",
+    "edge_continuation": true
+  },
+  "composition_and_visual_hierarchy": {
+    "composition_structure": "dominant_right-side icon with distributed seasonal accents",
+    "visual_weight_distribution": "right_weighted",
+    "salience_structure": {
+      "primary": [
+        "large turkey"
+      ],
+      "secondary": [
+        "large autumn leaves",
+        "small floating leaf shapes"
+      ],
+      "structural_but_quiet": [
+        "muted green background"
+      ]
+    },
+    "negative_space_strategy": "open_background_with_sparse_accents",
+    "directional_flow": "weak",
+    "structural_motif": "large central-symbolic subject with floating seasonal accents",
+    "repetition_and_rhythm": "repeated leaf forms and repeated turkey tail feathers",
+    "scene_density": "low_to_moderate"
+  },
+  "visual_language": {
+    "color_functions": [
+      "semantic_association",
+      "atmosphere",
+      "salience_hierarchy",
+      "decorative_balance"
+    ],
+    "shape_language": "simplified_rounded_geometric",
+    "detail_allocation": "diagnostic_subject_features",
+    "characteristic_detail_retention": [
+      "turkey head and beak",
+      "wattle",
+      "fanned tail-feather structure",
+      "leaf silhouettes and central veins"
+    ],
+    "nonliteral_graphic_cues": "none",
+    "symbolic_information_integration": "strong",
+    "decorative_abstraction": "moderate",
+    "text_numeral_symbol_usage": {
+      "readable_text": "none",
+      "pseudo_text": "none",
+      "numerals": "none",
+      "symbols": "none"
+    }
+  },
+  "evidence_note": "The image represents Thanksgiving through a large stylized turkey supported by autumn leaves and a fall-oriented palette. No people, meal, table, or literal holiday gathering are depicted. The turkey serves as the dominant recognition anchor, while the leaves and colors broaden the scene toward a fall/harvest domain.",
+  "confidence": "high"
+}

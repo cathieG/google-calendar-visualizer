@@ -1,0 +1,408 @@
+{
+  "reference_id": "basketball",
+  "concept": "Basketball",
+  "files": {
+    "svg": "raw/img_basketball.svg",
+    "rendered": "rendered/img_basketball.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide, action-heavy basketball scene showing three players inside a simplified indoor gym. Two players occupy the left and right foreground and are cropped by the frame, while a third player stands farther back near the center, holding or dribbling the basketball. Two players wear yellow uniforms and appear to belong to the same team, while the third wears orange, suggesting a different team. The court, bleachers, and hoop are rendered with a high degree of abstraction but remain immediately recognizable. The image captures a specific in-game moment rather than a generic sports symbol.",
+    "composition": {
+      "weight_distribution": "Visual weight is distributed across the three players, but the strongest masses are in the left and right foreground where two cropped figures frame the scene.",
+      "busiest_region": "The central and lower-middle region is the most active because the players, ball, and court lines all converge there.",
+      "quiet_region": "The upper background remains relatively open, especially the pale yellow wall area between the bleachers and the hoop.",
+      "balance_strategy": "The scene is balanced by using two large cropped foreground figures on either side and a smaller central figure deeper in space.",
+      "major_structural_forms": [
+        "left foreground player with raised arm and yellow jersey",
+        "central player holding or dribbling the basketball",
+        "right foreground player in orange jersey",
+        "bleachers on the upper-left",
+        "basketball hoop and backboard on the upper-right",
+        "court floor and court lines"
+      ],
+      "rhythm_and_repetition": "Repetition appears in jersey shapes, court-line geometry, and the horizontal rectangular bleacher pattern."
+    },
+    "background": {
+      "base": "Pale yellow upper wall with lavender / purple court floor.",
+      "environmental_detail": "Moderate by Google Calendar standards: the gym includes bleachers, court lines, and a hoop, but all are highly simplified.",
+      "decorative_elements": [
+        "stacked rectangular bleacher pattern",
+        "simple blue / purple court lines"
+      ],
+      "literal_environment_present": true,
+      "notes": "This is one of the clearer literal indoor sports environments in the set, though it remains strongly abstracted."
+    },
+    "environment_structure": {
+      "environment_type": "simplified indoor sports environment",
+      "representation_strategy": "literal sports setting retained but reduced to only the most diagnostic environmental features",
+      "foreground_elements": [
+        "left cropped player",
+        "right cropped player",
+        "central ball-handler",
+        "basketball"
+      ],
+      "background_elements": [
+        "bleachers",
+        "gym wall",
+        "basketball hoop and backboard"
+      ],
+      "depth_mechanism": "Depth is created through overlapping figures, figure-size differences, foreground cropping, court-line perspective, and environmental layering.",
+      "recognition_mechanism": "Recognition comes from the combination of players, ball, team uniforms, hoop, court lines, and gym elements."
+    },
+    "human_figure": {
+      "count": 3,
+      "body_part_only": false,
+      "identity_status": "anonymous but specific-looking",
+      "observable_skin_color": [
+        "darker brown",
+        "orange-brown / medium warm brown",
+        "lighter peach / light warm skin tone"
+      ],
+      "race_or_ethnicity": "not reliably inferable; figures are visually diverse but generic",
+      "hair": [
+        "large bun",
+        "high ponytail",
+        "low ponytail / long hair gathered into a rounded shape"
+      ],
+      "facial_detail": "Minimal. Only the central and right players show simple facial features; the left player is mostly seen from the back / side.",
+      "clothing": "Basketball uniforms with sleeveless jerseys, shorts, socks, and athletic shoes. Two players wear yellow jerseys and one player wears orange.",
+      "pose": "Left player raises one hand to receive a pass or call for the ball; central player controls the basketball; right player faces toward the action, likely as another participant in the play.",
+      "relative_size": "Two foreground players are oversized by framing and cropping, while the central player is smaller and farther away.",
+      "internal_proportions": "Heads are still relatively small compared with bodies, but limbs and torsos are more responsive and tapered than in some more block-like scenes.",
+      "shape_construction": "Bodies combine geometric simplification with slightly more natural tapering in arms and legs, especially where athletic motion is important.",
+      "semantic_role": "The three players collectively define the scene as an active game moment rather than merely a sports category.",
+      "identity_specificity": "Players are visually specific in skin tone, hairstyle, and pose, but they are not individualized or identifiable.",
+      "notes": "This image supports the idea of anonymous specificity: people look concrete and diverse without being presented as named or unique individuals."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "In-game player interaction centered around the ball-handler and the raised-hand gesture.",
+      "secondary_motion_cues": [
+        "raised arm with spread hand",
+        "basketball held or dribbled in active stance",
+        "athletic leg stances",
+        "cropped framing suggesting ongoing movement",
+        "court lines guiding directional reading"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "The image communicates action through pose relationships and implied game logic rather than through motion effects."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "basketball",
+        "basketball hoop",
+        "backboard",
+        "court lines",
+        "uniforms with jersey numbers"
+      ],
+      "semantic_role": "These elements jointly make the basketball setting and game situation clear.",
+      "notes": "The jersey numbers are a notable example of numerals being used functionally rather than as free text."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized but action-responsive.",
+      "human_to_environment": "Foreground figures are large relative to the environment because of close framing, while the central figure is smaller to create depth.",
+      "object_exaggeration": "No surreal object exaggeration is present; emphasis comes more from framing and cropping than from oversized symbolic objects.",
+      "internal_human_scale": "Human proportions remain stylized, especially with small heads, but motion-critical body parts are more articulated.",
+      "general_effect": "The style stretches just enough toward anatomical plausibility to preserve sports readability."
+    },
+    "depth_and_space": {
+      "depth_type": "moderate relative depth within a highly stylized space",
+      "mechanisms": [
+        "overlap between figures",
+        "foreground cropping",
+        "smaller central background player",
+        "court-line perspective",
+        "background bleachers and hoop"
+      ],
+      "realistic_perspective": "Limited but functional. The court lines and spatial layering imply perspective without full realism.",
+      "floor_plane": "Clearly present through the large purple court surface and court markings.",
+      "room_or_venue_depth": "A gym-like venue is implied but not fully built out.",
+      "overall_effect": "The scene feels deeper and more spatial than many references, while still remaining simplified and graphic."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "left foreground player is heavily cropped by the frame",
+        "right foreground player is also cropped",
+        "bleachers continue off the top-left and left edges"
+      ],
+      "human_cropping": "Strong on the two foreground players; the central player is mostly contained.",
+      "effect": "Cropping creates energy, implies a larger ongoing game, and allows the scene to feel full without including many more players."
+    },
+    "color": {
+      "background": "pale yellow wall and purple court",
+      "major_colors": [
+        "yellow",
+        "orange",
+        "purple / lavender",
+        "brown",
+        "blue-violet linework",
+        "white",
+        "peach / skin tones"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "Color separates teams, distinguishes the environment, and keeps the scene lively while still controlled.",
+      "contrast_strategy": "Yellow and orange jerseys create team contrast; the orange basketball stands out clearly against the purple court and pale yellow wall.",
+      "mood_role": "The palette feels active, sporty, and energetic without becoming overly saturated or chaotic."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric sports scene with selectively increased anatomical responsiveness.",
+      "human_body": "Bodies are stylized but not rigidly blocky; arms, legs, and torsos taper more naturally when needed for athletic movement.",
+      "objects": "Bleachers, backboard, and court are simplified to rectangles, lines, and basic geometry; the ball is a simple orange sphere with clear line markings.",
+      "fine_detail": "Low overall, but hands, fingers, and the basketball receive added clarity.",
+      "adaptability": "The style loosens from pure geometric blockiness when action clarity depends on limb shape, spread fingers, or ball interaction."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "This is a relatively rich action scene with three players and a recognizable sports environment, but it remains sparse by realistic standards."
+    },
+    "salience": {
+      "primary_attention_element": "The central game interaction spanning the raised-hand player, the ball-handler, and the basketball.",
+      "secondary_attention_elements": [
+        "left raised hand",
+        "orange jersey on the right",
+        "basketball hoop",
+        "bleacher structure"
+      ],
+      "large_but_quiet_elements": [
+        "pale yellow wall",
+        "large court floor region"
+      ],
+      "high_attention_elements": [
+        "raised hand with visible fingers",
+        "orange basketball",
+        "yellow jerseys",
+        "white numerals"
+      ],
+      "important_observation": "Attention moves through the scene relationally rather than resting on a single isolated symbol."
+    },
+    "decorative_abstraction": {
+      "present": false,
+      "elements": [],
+      "semantic_role": null,
+      "compositional_role": "Most non-figure elements are functional environment cues rather than decorative fillers.",
+      "notes": "The bleachers and court markings are stylized, but they are not merely decorative; they are semantically important."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": "A likely in-game moment: one teammate calls for the ball while another teammate controls it, with a third player engaged in the same play.",
+      "narrative_role": "The image captures a small but readable competitive micro-situation rather than a generic basketball symbol."
+    },
+    "structural_motif": {
+      "present": false,
+      "motif": null,
+      "components": [],
+      "role": null
+    },
+    "text_and_numerals": {
+      "present": true,
+      "elements": [
+        "jersey number 88",
+        "jersey number 19"
+      ],
+      "type": "functional numerals",
+      "role": "The numerals support sports authenticity and object identity without introducing sentence-like or label-like text.",
+      "notes": "This suggests that Google Calendar generally avoids free text, but may permit small object-native numerals when appropriate."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Basketball game / basketball activity.",
+    "primary_recognition_cues": [
+      "basketball",
+      "players in uniforms",
+      "basketball hoop and backboard",
+      "court lines",
+      "team-color grouping"
+    ],
+    "secondary_recognition_cues": [
+      "bleachers",
+      "jersey numbers",
+      "raised-hand request gesture",
+      "ball-handling stance"
+    ],
+    "human_semantic_role": "Humans are essential here. The concept depends not only on the existence of a ball and hoop, but on the interaction among players.",
+    "dominant_semantic_element": "Multi-player competitive action centered on a pass / possession moment.",
+    "literal_environment_used": true,
+    "environment_strategy": "Retain a simplified gym and court environment, but reduce it to a few highly diagnostic elements.",
+    "symbolic_or_informational_cues": [
+      {
+        "element": "yellow vs. orange uniforms",
+        "function": "Differentiate team groupings or competitive roles.",
+        "type": "social / competitive color coding"
+      },
+      {
+        "element": "jersey numbers",
+        "function": "Increase sports authenticity and object-specific realism.",
+        "type": "functional numeral cue"
+      }
+    ],
+    "recognition_structure": "multi-person competitive action scene",
+    "recognition_notes": "The scene reads specifically as basketball because people, ball, hoop, and gym environment all reinforce the same reading. The image also communicates a more specific game moment rather than just the general sport.",
+    "literal_alternative": "A larger game scene with more players, audience, coaches, scoreboards, or more complete gym architecture.",
+    "google_choice": "Select a compact, readable in-game moment and frame it with two cropped foreground players, one central ball-handler, and only a few environmental anchors.",
+    "notable_omissions": [
+      "full team rosters",
+      "audience crowd",
+      "coach or referee",
+      "scoreboard",
+      "logos",
+      "court text",
+      "detailed gym architecture"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "A small game moment may communicate basketball more vividly than a static single-player pose.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Foreground cropping may be used to imply a larger ongoing scene without increasing the number of fully depicted players.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Slightly increased hand and limb detail may be intentionally introduced when the action depends on readable gesture and ball control.",
+        "confidence": "emerging",
+        "status": "supported by this image and consistent with Vote"
+      },
+      {
+        "hypothesis": "Jersey numerals may be permitted because they are native to sports uniforms and improve recognizability without becoming cluttering text.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_ball_removed": "The scene could still suggest a sport, but the basketball-specific reading would weaken considerably.",
+    "if_hoop_removed": "The scene would still suggest basketball through the ball and uniforms, but the environmental specificity would decrease.",
+    "if_team_color_difference_removed": "The social and competitive structure would become weaker and the scene would read less clearly as a game moment.",
+    "if_foreground_players_removed": "The central player alone could still communicate basketball, but the sense of live competitive interaction and spatial depth would diminish.",
+    "if_bleachers_removed": "The scene would remain readable, but the gym environment would feel less anchored.",
+    "if_numbers_removed": "The main concept would remain intact, but the sports authenticity cue would be slightly reduced.",
+    "if_hand_detail_reduced": "The action would still be readable, but gesture clarity—especially the raised-hand cue—would be weaker."
+  },
+  "derived_observations": {
+    "recognition_anchor": "compact competitive game moment",
+    "human_role": "essential and relational",
+    "scale_exaggeration": "low; emphasis comes mainly from framing",
+    "internal_human_proportion_stylization": "small heads, stylized bodies, slightly more natural tapering limbs",
+    "environment_abstraction": "moderate",
+    "environment_strategy": "diagnostic sports setting reduced to core features",
+    "symbolic_information_integration": "moderate through team colors and functional numerals",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "body pose, team interaction, and ball control",
+    "depth": "moderate for this reference set",
+    "cropping": "strong on foreground players",
+    "scene_density": "moderate",
+    "facial_specificity": "low",
+    "anonymous_character_visual_specificity": "moderate to high",
+    "rendering_realism": "low",
+    "composition_dynamic": "foreground framing with central in-play interaction",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "low",
+    "narrative_structure": "present; in-game micro-situation",
+    "structural_motif": null,
+    "body_part_focus": "hands gain extra detail where needed",
+    "detail_allocation": "increased at action-critical body parts and ball",
+    "anonymous_specificity": "strong supporting example",
+    "functional_numerals": "present"
+  },
+  "candidate_principles": [
+    {
+      "claim": "A sport may be represented through a small readable game moment rather than a full match scene.",
+      "evidence": "Basketball is shown through one compact moment of passing / possession rather than a full game.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Team structure can be communicated efficiently through color grouping.",
+      "evidence": "Two yellow uniforms imply teammates, while the orange uniform implies a different team or role.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Foreground cropping can create energy and imply a larger ongoing scene.",
+      "evidence": "Two large foreground players are cut by the frame, making the game feel in progress and spatially extended.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Literal environments may be reduced to only the most diagnostic features needed for recognition.",
+      "evidence": "Only bleachers, court lines, and hoop are included to define the gym.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Hand detail increases when gesture is semantically important.",
+      "evidence": "The raised hand shows spread fingers and the ball-control hand is more articulated than in many other scenes.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Small functional numerals may be allowed when they are native to the depicted object and improve recognizability.",
+      "evidence": "Jersey numbers 88 and 19 appear without disrupting the overall non-textual style.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Figures can remain anonymous while still displaying visible diversity in skin tone, hairstyle, and pose.",
+      "evidence": "The three players are visually distinct but not identifiable.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "The style becomes slightly more anatomically responsive when motion clarity depends on it.",
+      "evidence": "Limbs taper more naturally and poses are more responsive than in some static or symbolic scenes.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Relational action scenes may support stronger narrative readability than single-symbol sports scenes.",
+      "evidence": "This image suggests a specific in-play interaction rather than only the abstract category of basketball.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "simplified forms",
+      "strong semantic selectivity",
+      "low material realism",
+      "minimal but sufficient environment design",
+      "cropping used compositionally"
+    ],
+    "important_differences": [
+      "Unlike Athletic Jumping, Basketball is a multi-person relational action scene rather than a solitary athletic action.",
+      "Unlike Vote, Basketball communicates action through full-body interaction rather than a close-up hand-object vignette.",
+      "Unlike Baby Shower, Wedding, and Chinese New Year, Basketball depends on human figures rather than symbolic objects alone.",
+      "Compared with Climbing, Basketball includes stronger team structure and more social / competitive interaction.",
+      "Compared with many earlier images, Basketball uses a richer literal environment while still remaining highly abstract.",
+      "Basketball is one of the clearest examples of functional numerals being permitted."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment"
+    },
+    "implication": "The set now includes a strong example of a multi-person competitive action scene in which anonymous but diverse figures, limited environmental cues, and relational action together support high recognition."
+  },
+  "open_questions": [
+    "Do other team sports in the set use the same strategy of one compact readable game moment?",
+    "How often does Google use team-color grouping to communicate competitive structure?",
+    "Are functional numerals mostly limited to sports scenes, or do they appear elsewhere as well?",
+    "How often do foreground-cropped players frame the action in sports illustrations?",
+    "Does hand detail systematically increase in sports scenes where gesture matters?",
+    "Are multi-person competitive scenes generally more spatially layered than symbolic or solitary action scenes?",
+    "How often does Google show a specific micro-situation within a sport rather than a generic player pose?",
+    "Does the planner need a distinct category for relational multi-person action scenes?"
+  ]
+}

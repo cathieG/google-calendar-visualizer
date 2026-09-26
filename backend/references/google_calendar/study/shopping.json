@@ -1,0 +1,421 @@
+{
+  "reference_id": "shopping",
+  "concept": "Shopping",
+  "files": {
+    "svg": "raw/img_shopping.svg",
+    "rendered": "rendered/img_shopping.png"
+  },
+  "discovery_status": "exploratory",
+  "detailed_observation": {
+    "overall_scene_description": "A wide shopping scene showing one anonymous shopper moving quickly while pushing a loaded shopping cart. The main action is concentrated on the right half of the frame, while the left half is largely empty pale-blue space. The cart contains varied groceries including bananas, leafy green produce, a large orange-red produce item, and packaged goods. A partial grocery-store shelf appears on the far right with repeated bottles and containers. The scene is highly directional and uses the empty left side as lead space in front of the shopper's motion.",
+    "composition": {
+      "weight_distribution": "Strongly right-weighted. The shopper, cart, groceries, and store shelf occupy the right half, while the left half is mostly open.",
+      "busiest_region": "Right-center, where the shopper overlaps the cart and the cart overlaps the shelf context.",
+      "quiet_region": "Most of the left half is nearly empty pale-blue background.",
+      "balance_strategy": "The composition intentionally leaves large empty space ahead of the moving shopper. This lead space supports the direction of motion rather than merely balancing visual mass.",
+      "major_structural_forms": [
+        "large shopping cart near center-right",
+        "single shopper leaning into the cart",
+        "mixed groceries inside the cart",
+        "partial grocery shelf on the far right",
+        "large empty pale-blue field on the left"
+      ],
+      "rhythm_and_repetition": "Repeated bottle shapes on the shelf and the shopping-cart grid create structured visual repetition."
+    },
+    "directional_composition": {
+      "present": true,
+      "movement_direction": "right to left",
+      "lead_space": "large open area on the left side of the frame",
+      "trailing_space": "store shelf and shopper body occupy the right side behind the direction of travel",
+      "directional_cues": [
+        "shopper torso leaning left",
+        "arms extended toward cart handle",
+        "legs trailing behind",
+        "large ponytail flowing backward",
+        "cart oriented toward the left"
+      ],
+      "effect": "The composition makes the shopper feel as though she is moving into the open space rather than remaining static."
+    },
+    "background": {
+      "base": "Solid pale blue field.",
+      "environmental_detail": "Only a partial supermarket shelf is shown on the far right; most of the store environment is omitted.",
+      "decorative_elements": [],
+      "literal_environment_present": true,
+      "notes": "The store setting is represented through a small contextual fragment rather than a complete aisle or interior."
+    },
+    "environment_structure": {
+      "environment_type": "partial grocery-store environment",
+      "representation_strategy": "Show only the fragment of retail environment needed to contextualize the shopping action.",
+      "foreground_elements": [
+        "shopper",
+        "shopping cart",
+        "groceries"
+      ],
+      "background_elements": [
+        "partial store shelf",
+        "repeated bottles and containers",
+        "pale blue background"
+      ],
+      "depth_mechanism": "Depth is shallow and created mainly through overlap among the shopper, cart, groceries, and shelf.",
+      "recognition_mechanism": "The shopping cart and groceries establish the activity, while the store shelf confirms the retail setting."
+    },
+    "human_figure": {
+      "count": 1,
+      "body_part_only": false,
+      "identity_status": "anonymous but specific-looking",
+      "observable_skin_color": [
+        "light warm peach / pink"
+      ],
+      "race_or_ethnicity": "not reliably inferable",
+      "hair": [
+        "long brown ponytail"
+      ],
+      "facial_detail": "Minimal. The face is mostly turned away and partially obscured.",
+      "clothing": "Bright blue jacket or top with yellow accent and brown pants, rendered in large geometric forms.",
+      "pose": "The shopper leans strongly into the cart with arms extended, legs trailing behind, and body angled in the direction of travel.",
+      "relative_size": "Large and visually prominent, though the cart and groceries share much of the semantic emphasis.",
+      "internal_proportions": "Stylized with a relatively small head, broad geometric clothing shapes, and simplified limbs.",
+      "shape_construction": "Clothing is block-like and angular; hands, face, and hair use more organic contours.",
+      "semantic_role": "The shopper transforms the cart and groceries from a static still life into an active shopping event.",
+      "identity_specificity": "The figure has concrete visible traits such as ponytail, clothing colors, and skin tone without being identifiable.",
+      "notes": "The ponytail functions both as an appearance trait and as a motion cue."
+    },
+    "motion": {
+      "motion_present": true,
+      "primary_motion_cue": "Strong forward body lean while pushing the cart.",
+      "secondary_motion_cues": [
+        "legs trailing behind",
+        "ponytail extending backward",
+        "arms stretched toward cart handle",
+        "cart positioned ahead of the body"
+      ],
+      "motion_lines": false,
+      "blur": false,
+      "special_effects": false,
+      "notes": "Motion is communicated through a coordinated set of directional cues rather than through explicit effects."
+    },
+    "diagnostic_accessories": {
+      "present": true,
+      "elements": [
+        "shopping cart",
+        "mixed groceries",
+        "store shelf",
+        "repeated retail bottles and containers"
+      ],
+      "semantic_role": "These elements together make the activity clearly shopping rather than generic pushing or transport.",
+      "notes": "The shopping-cart wire grid is a structurally characteristic detail that is retained despite the otherwise simplified style."
+    },
+    "shopping_cart_structure": {
+      "present": true,
+      "wire_grid": true,
+      "wheels": true,
+      "handle": true,
+      "role": "Acts as the central functional object connecting shopper, groceries, motion, and store context.",
+      "notes": "This is a strong example where repetitive structural detail is preserved because it is important to object recognition."
+    },
+    "groceries_and_inventory": {
+      "cart_contents": [
+        "bananas",
+        "leafy green produce / broccoli-like form",
+        "large orange-red produce item",
+        "packaged rectangular goods",
+        "small multicolored product detail"
+      ],
+      "shelf_contents": [
+        "repeated pale containers on upper row",
+        "repeated green bottles with simplified labels on lower row"
+      ],
+      "semantic_role": "A heterogeneous set of items helps communicate general grocery shopping rather than one narrow product category.",
+      "notes": "Individual product labels are not readable; repeated simplified packaging is enough to imply retail inventory."
+    },
+    "scale_and_proportion": {
+      "realism": "Stylized but functionally coherent.",
+      "human_to_environment": "The shopper and cart are large because the scene is tightly focused on the activity; the shelf is a secondary contextual fragment.",
+      "object_exaggeration": "Groceries are enlarged enough to remain recognizable inside the cart, but there is no extreme surreal scale distortion.",
+      "internal_human_scale": "The head is relatively small, consistent with the broader character style.",
+      "general_effect": "Scale prioritizes readability of the shopper-cart-grocery relationship.",
+      "scale_source": "primarily framing and semantic emphasis"
+    },
+    "depth_and_space": {
+      "depth_type": "shallow side-view depth",
+      "mechanisms": [
+        "shopper overlapping shelf",
+        "groceries overlapping cart grid",
+        "cart overlapping body",
+        "partial shelf behind shopper"
+      ],
+      "realistic_perspective": "Minimal.",
+      "floor_plane": "Not depicted.",
+      "room_or_venue_depth": "The grocery store is implied rather than spatially constructed.",
+      "overall_effect": "The key spatial property is direction of movement rather than depth."
+    },
+    "cropping_and_frame_usage": {
+      "edge_crossing": true,
+      "examples": [
+        "store shelf continues beyond the right edge",
+        "shopper's trailing body and legs approach the lower-right edge"
+      ],
+      "human_cropping": "The shopper is mostly contained but tightly framed on the right.",
+      "effect": "The composition suggests a larger store environment beyond the visible frame while keeping the action focused."
+    },
+    "color": {
+      "background": "pale blue",
+      "major_colors": [
+        "bright blue",
+        "brown",
+        "yellow",
+        "green",
+        "orange-red",
+        "cream",
+        "dark navy",
+        "white"
+      ],
+      "treatment": "Flat color regions with little or no gradient.",
+      "functional_role": "The quiet pale-blue background makes the saturated shopper, groceries, and inventory stand out clearly.",
+      "contrast_strategy": "Bright blue clothing contrasts with brown pants; yellow and orange groceries provide warm focal accents; green produce and bottles add category variety.",
+      "mood_role": "The palette feels clean, bright, and energetic."
+    },
+    "shape_language": {
+      "overall": "Simplified geometric retail scene with selectively retained structural detail.",
+      "human_body": "The shopper uses broad angular clothing shapes and simplified organic head, hands, and hair.",
+      "objects": "Cart, shelf, bottles, packaged goods, and produce are reduced to simple rectangles, circles, arcs, and recognizable silhouettes.",
+      "fine_detail": "Low overall, but the cart grid and repeated bottle structures are retained because they help recognition.",
+      "adaptability": "Simplification is selective rather than uniform: repetitive detail survives when it is highly characteristic of an object."
+    },
+    "lighting_and_texture": {
+      "shadows": "None apparent.",
+      "gradients": "None apparent.",
+      "surface_texture": "None apparent.",
+      "material_realism": "Very low."
+    },
+    "scene_complexity": {
+      "overall": "moderate",
+      "notes": "The scene contains a person, cart, several groceries, and a partial shelf, but large negative space and strong grouping keep it visually simple."
+    },
+    "salience": {
+      "primary_attention_element": "The shopper-cart interaction.",
+      "secondary_attention_elements": [
+        "mixed groceries in the cart",
+        "store shelf",
+        "large ponytail"
+      ],
+      "large_but_quiet_elements": [
+        "pale blue background"
+      ],
+      "high_attention_elements": [
+        "bright blue jacket",
+        "yellow bananas",
+        "orange-red produce",
+        "green produce",
+        "dark cart grid"
+      ],
+      "important_observation": "The scene uses strong right-side clustering and directional empty space to make a relatively simple object interaction feel energetic."
+    },
+    "decorative_abstraction": {
+      "present": false,
+      "elements": [],
+      "semantic_role": null,
+      "compositional_role": null,
+      "notes": "Most visible elements serve direct action, product, or store-context functions."
+    },
+    "narrative_structure": {
+      "present": true,
+      "implied_sequence": "The shopper has selected multiple items and is moving through or away from a grocery shelf with a loaded cart.",
+      "narrative_role": "The image communicates shopping in progress rather than a static display of groceries."
+    },
+    "structural_motif": {
+      "present": false,
+      "motif": null,
+      "components": [],
+      "role": null
+    },
+    "semantic_bridge": {
+      "present": true,
+      "bridge_object": "shopping cart",
+      "connects": [
+        "human actor",
+        "selected groceries",
+        "movement",
+        "retail environment"
+      ],
+      "role": "The cart links the shopper to the products and to the store context, making the scene semantically coherent."
+    }
+  },
+  "semantic_analysis": {
+    "core_concept": "Shopping / grocery shopping.",
+    "primary_recognition_cues": [
+      "shopper pushing a cart",
+      "loaded groceries",
+      "retail shelf"
+    ],
+    "secondary_recognition_cues": [
+      "wire shopping-cart grid",
+      "repeated product bottles",
+      "mixed produce and packaged goods",
+      "fast-moving shopper pose"
+    ],
+    "human_semantic_role": "The human figure is central because it turns the cart and groceries into an active shopping event.",
+    "dominant_semantic_element": "The shopper-cart-grocery relationship.",
+    "literal_environment_used": true,
+    "environment_strategy": "Show only a partial store shelf and omit the rest of the supermarket environment because the cart and products already provide strong recognition.",
+    "symbolic_or_informational_cues": [],
+    "recognition_structure": "dynamic human-object interaction with partial contextual environment",
+    "recognition_notes": "The concept is highly recognizable from the shopper, cart, groceries, and fragment of store inventory. The environment does not need to be fully depicted.",
+    "literal_alternative": "A complete supermarket aisle with multiple shelves, signage, checkout stations, other shoppers, detailed product packaging, and realistic perspective.",
+    "google_choice": "Focus tightly on one shopper pushing a loaded cart, retain a small slice of store shelving, and leave large directional negative space ahead of the movement.",
+    "notable_omissions": [
+      "full supermarket aisle",
+      "other shoppers",
+      "cash register",
+      "signage",
+      "price tags",
+      "readable product labels",
+      "detailed floor or ceiling",
+      "checkout process"
+    ],
+    "possible_reasoning": [
+      {
+        "hypothesis": "Large lead space may be intentionally placed ahead of the shopper to reinforce speed and direction.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "Only a small shelf fragment may be necessary because the cart and groceries already establish shopping strongly.",
+        "confidence": "emerging",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "A varied mixture of groceries may be used to signal broad grocery shopping more effectively than one repeated product type.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      },
+      {
+        "hypothesis": "The cart grid may be retained because its repetitive wire structure is highly characteristic and materially improves object recognition.",
+        "confidence": "tentative",
+        "status": "possible explanation"
+      }
+    ]
+  },
+  "counterfactual_analysis": {
+    "if_shopper_removed": "The cart and groceries would still imply shopping, but the active-event reading would weaken and the scene could become a static grocery still life.",
+    "if_cart_removed": "The shopper and groceries would no longer form a coherent shopping action.",
+    "if_store_shelf_removed": "The scene would probably still read as grocery shopping, but the retail context would become less explicit.",
+    "if_groceries_removed": "The cart would remain recognizable, but the activity would become more generic and less clearly grocery-related.",
+    "if_left_negative_space_removed": "The composition would likely feel more cramped and the sense of forward motion would weaken.",
+    "if_cart_grid_simplified_to_solid_shape": "The object might remain readable, but the distinct shopping-cart identity would weaken.",
+    "if_product_variety_reduced": "The scene could begin to suggest shopping for one narrow category rather than general groceries."
+  },
+  "derived_observations": {
+    "recognition_anchor": "shopper-cart-grocery interaction",
+    "human_role": "primary action carrier",
+    "scale_exaggeration": "low to moderate",
+    "internal_human_proportion_stylization": "small head, geometric clothing, action-responsive limbs",
+    "environment_abstraction": "strong",
+    "environment_strategy": "partial retail context only",
+    "symbolic_information_integration": "low",
+    "semantic_shorthand": "strong",
+    "motion_encoding": "coherent directional body and object geometry",
+    "depth": "shallow",
+    "cropping": "light to moderate",
+    "scene_density": "moderate but highly right-concentrated",
+    "facial_specificity": "very low",
+    "anonymous_character_visual_specificity": "moderate",
+    "rendering_realism": "low",
+    "composition_dynamic": "strong directional lead space with action cluster on right",
+    "recognition_specificity": "high",
+    "decorative_abstraction": "low",
+    "narrative_structure": "shopping in progress",
+    "structural_motif": null,
+    "viewpoint_importance": "moderate",
+    "action_moment_specificity": "moderate",
+    "detail_allocation": "higher on cart structure and diagnostic product categories",
+    "directional_composition": "very strong",
+    "semantic_bridge": "shopping cart"
+  },
+  "candidate_principles": [
+    {
+      "claim": "Negative space may be placed ahead of a moving subject to reinforce direction and motion.",
+      "evidence": "The left half is largely empty while the shopper moves toward it from the right.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Multiple directional cues can work together to communicate motion without speed lines.",
+      "evidence": "Body lean, trailing legs, ponytail direction, arm extension, and cart orientation all point toward the same movement direction.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "Highly characteristic repetitive structural detail may be retained even in a simplified style.",
+      "evidence": "The shopping-cart wire grid is drawn explicitly rather than replaced by a solid basket shape.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "A small fragment of an environment can be sufficient when it contains a strongly diagnostic contextual cue.",
+      "evidence": "Only part of a grocery shelf is shown, yet the retail setting is clear.",
+      "confidence": "emerging"
+    },
+    {
+      "claim": "Repeated simplified objects can communicate a category without requiring individual detail.",
+      "evidence": "Repeated bottles on the shelf read collectively as store inventory despite minimal labels.",
+      "confidence": "recurring"
+    },
+    {
+      "claim": "A heterogeneous collection of recognizable items can communicate a broad activity more strongly than one repeated item.",
+      "evidence": "The cart contains produce and packaged goods from several categories, supporting a general grocery-shopping reading.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "A functional object can serve as a semantic bridge between actor, action, objects, and environment.",
+      "evidence": "The shopping cart connects the shopper to selected groceries and to the store context.",
+      "confidence": "tentative"
+    },
+    {
+      "claim": "Anonymous-character appearance details can also function as action cues.",
+      "evidence": "The long ponytail adds visual personality while also reinforcing the direction of motion.",
+      "confidence": "tentative"
+    }
+  ],
+  "comparison_to_prior_references": {
+    "shared_patterns": [
+      "flat-color rendering",
+      "little or no shading or texture",
+      "simplified geometric forms",
+      "anonymous but visually specific human figure",
+      "motion carried through pose rather than blur",
+      "strong semantic selectivity",
+      "low material realism"
+    ],
+    "important_differences": [
+      "Shopping uses stronger directional negative space than any prior reference studied so far.",
+      "Unlike Delivery, Shopping shows only a small fragment of the environment rather than a broader contextual backdrop.",
+      "Unlike Vote, the full human-object relationship is needed rather than a close-up body-part interaction.",
+      "Unlike Barbecue, Shopping requires a visible human actor because the action of pushing the cart is central.",
+      "Unlike Bowling, the scene's dynamism comes from lead space and coherent directional geometry rather than extreme viewpoint and impact."
+    ],
+    "environment_strategy_comparison": {
+      "art": "semantic objects become the environment",
+      "athletic_jumping": "environment reduced to abstract horizontal bands",
+      "wedding": "literal environment omitted in favor of symbolic still life",
+      "climbing": "literal environment retained but geometrically abstracted",
+      "delivery": "literal environment retained as a simplified narrative backdrop with scale-based depth",
+      "baby_shower": "literal environment nearly omitted; symbolic object procession organized by a toy-train motif",
+      "vote": "literal environment omitted; single diagnostic interaction isolated in close-up",
+      "chinese_new_year": "literal environment omitted; repeated festive decorations suspended in abstract space",
+      "basketball": "literal sports environment retained in simplified form and combined with a compact multi-player game moment",
+      "barbecue": "literal outdoor environment retained; event communicated through prepared equipment, food, and serving setup without visible participants",
+      "bowling": "literal sports environment reduced to a single directional wedge while viewpoint and impact moment carry most of the concept",
+      "concert": "simplified stage environment retained; coordinated performer clusters and abstract sound cues carry the concept",
+      "shopping": "partial retail environment retained only where needed; action cluster uses strong lead space for motion"
+    },
+    "implication": "The set now includes a strong example where composition itself—especially lead space and directional clustering—does substantial semantic work. This suggests the art director may need to reason explicitly about motion direction and where empty space should be placed."
+  },
+  "open_questions": [
+    "How often does Google place negative space ahead of a moving subject?",
+    "Should directional composition become a permanent cross-image category in the schema?",
+    "How often are repetitive structural details retained because they are essential to object identity?",
+    "Do other shopping or retail scenes use only fragments of store environment?",
+    "How often does a functional object serve as the semantic bridge between actor, selected items, and setting?",
+    "Does a heterogeneous object set systematically help communicate broad activities such as shopping, packing, or cooking?",
+    "How often do hairstyle or clothing details also function as motion cues?",
+    "Would scenes with movement in the opposite direction mirror the lead-space strategy?"
+  ]
+}
