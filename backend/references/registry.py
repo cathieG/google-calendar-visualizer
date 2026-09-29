@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 from config import (
+    REFERENCE_ANNOTATIONS_PATH,
     REFERENCE_CATALOG_PATH,
     REFERENCE_RAW_DIR,
     REFERENCE_RENDERED_DIR,
@@ -62,6 +63,50 @@ def _load_study_annotations() -> dict[str, tuple[Path, dict]]:
     return annotations
 
 
+def _load_runtime_annotations() -> dict[str, dict]:
+    """
+    Load compact canonical annotations used by runtime retrieval.
+
+    The file is intentionally allowed to be incomplete while the
+    reference library is being normalized incrementally.
+    """
+
+    annotations: dict[str, dict] = {}
+
+    if not REFERENCE_ANNOTATIONS_PATH.exists():
+        return annotations
+
+    with REFERENCE_ANNOTATIONS_PATH.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+        for line_number, line in enumerate(file, start=1):
+            line = line.strip()
+
+            if not line:
+                continue
+
+            data = json.loads(line)
+
+            reference_id = data.get("reference_id")
+
+            if not reference_id:
+                raise ValueError(
+                    "Runtime annotation is missing reference_id "
+                    f"on line {line_number}."
+                )
+
+            if reference_id in annotations:
+                raise ValueError(
+                    "Duplicate runtime annotation for "
+                    f"reference_id {reference_id!r}."
+                )
+
+            annotations[reference_id] = data
+
+    return annotations
+
+
 def load_reference_registry() -> list[ReferenceRecord]:
     """
     Load the Google Calendar reference library.
@@ -82,6 +127,7 @@ def load_reference_registry() -> list[ReferenceRecord]:
         )
 
     study_annotations = _load_study_annotations()
+    runtime_annotations = _load_runtime_annotations()
 
     records: list[ReferenceRecord] = []
     seen_ids: set[str] = set()
@@ -142,6 +188,7 @@ def load_reference_registry() -> list[ReferenceRecord]:
                 raw_path=raw_path,
                 annotation_path=annotation_path,
                 annotation=annotation,
+                runtime_annotation=runtime_annotations.get(reference_id),
             )
         )
 

@@ -18,6 +18,17 @@ REFERENCE_CATALOG_PATH = (
     / "references.json"
 )
 
+
+REFERENCE_ANNOTATIONS_PATH = (
+    REFERENCE_ROOT
+    / "annotations.jsonl"
+)
+
+RENDER_REFERENCE_ANNOTATIONS_PATH = (
+    REFERENCE_ROOT
+    / "render_annotations.jsonl"
+)
+
 REFERENCE_RENDERED_DIR = (
     REFERENCE_ROOT
     / "rendered"

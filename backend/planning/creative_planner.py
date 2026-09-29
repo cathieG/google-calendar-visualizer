@@ -533,14 +533,12 @@ For each candidate:
 4. imagine the actual picture;
 5. choose a viewpoint that makes its elements readable;
 6. simulate each important visible element;
-7. remove redundant or visually weak elements;
-8. identify the recognition anchor;
-9. describe a rough layout;
-10. state deliberate omissions;
-11. separate design risk from renderer risk;
-12. define must_preserve and may_adjust.
+7. identify the recognition anchor;
+8. describe a rough layout;
+9. state deliberate omissions;
+10. separate design risk from renderer risk;
+11. define must_preserve and may_adjust.
 
-Do not rank the candidates.
 
 Do not perform layer analysis yet.
 
