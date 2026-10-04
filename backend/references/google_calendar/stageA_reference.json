@@ -1,0 +1,545 @@
+[
+  {
+    "reference_id": "art",
+    "concept": "Art",
+    "concept_brief": {
+      "core_concept": "Art as a broad domain of creative human expression and artistic practice.",
+      "known_details": [
+        "The concept is stated only as \"art.\"",
+        "No specific medium, activity, artwork, venue, event, artist, or participant is identified."
+      ],
+      "general_associations": [
+        "Painting or drawing",
+        "Sculpture or three-dimensional making",
+        "Brushes, pencils, palettes, or other art tools",
+        "An artist’s studio or workspace",
+        "A gallery, exhibition, or museum context",
+        "A completed artwork or creative process"
+      ],
+      "open_choices": [
+        "The artistic medium or combination of media",
+        "Whether the concept is represented through making art, viewing art, art materials, an artwork, or an art-related environment",
+        "Whether people are present or the concept is conveyed through objects or surroundings",
+        "Whether the focus is on the creative process, a finished work, an exhibition, or art as a broader cultural domain",
+        "Whether the representation uses a single medium or combines multiple artistic practices"
+      ],
+      "promising_semantic_cues": [
+        "Painted or drawn artwork",
+        "Sculptural form",
+        "Art-making tools or materials",
+        "Creative work in progress",
+        "Artist workspace",
+        "Gallery or exhibition setting"
+      ]
+    }
+  },
+  {
+    "reference_id": "athleticsjumping",
+    "concept": "Athletic Jumping",
+    "concept_brief": {
+      "core_concept": "Athletic jumping: a sports or fitness-related activity involving an athlete performing a jump or leap.",
+      "known_details": [
+        "The concept involves jumping performed in an athletic or physical-activity context.",
+        "No specific sport, jumping technique, event, setting, or participant is identified."
+      ],
+      "general_associations": [
+        "takeoff or landing",
+        "airborne athletic movement",
+        "track, court, field, or training space",
+        "hurdles, high-jump equipment, or other sports equipment",
+        "physical exertion and body control"
+      ],
+      "open_choices": [
+        "The specific jumping activity could remain general or correspond to a sport such as high jump, long jump, hurdling, basketball, volleyball, or jump training.",
+        "The representation could focus on the action itself, associated equipment, or an athletic environment.",
+        "The moment could be takeoff, airborne motion, landing, or preparation.",
+        "The concept could involve one athlete, multiple athletes, or an activity-focused representation without a visible person."
+      ],
+      "promising_semantic_cues": [
+        "athletic jump",
+        "takeoff or landing",
+        "airborne body movement",
+        "sports surface or training area",
+        "jumping-related equipment"
+      ]
+    }
+  },
+  {
+    "reference_id": "babyshower",
+    "concept": "Baby Shower",
+    "concept_brief": {
+      "core_concept": "A baby shower: a celebration held in anticipation of a baby's birth or arrival, commonly involving social gathering, well-wishes, and gifts or preparations for the baby.",
+      "known_details": [
+        "The event is centered on an expected or soon-to-arrive baby.",
+        "It is a celebratory social occasion associated with preparing for or honoring the baby's arrival.",
+        "Baby-related gifts, supplies, or well-wishes may be part of the event."
+      ],
+      "general_associations": [
+        "baby gifts",
+        "cards or well-wishes",
+        "baby clothing and supplies",
+        "celebratory gathering",
+        "nursery or caregiving items",
+        "decorations associated with welcoming a baby"
+      ],
+      "open_choices": [
+        "Whether the representation emphasizes guests and celebration, gifts and supplies, or a quieter symbolic welcome.",
+        "Whether the event is shown through gift-giving, gift-opening, social interaction, preparation, or an arrangement of baby-related objects.",
+        "Whether an expectant parent or other attendees are visibly present.",
+        "The specific baby items, decorations, refreshments, or setting involved."
+      ],
+      "promising_semantic_cues": [
+        "baby gifts",
+        "baby clothing or supplies",
+        "well-wishes or greeting cards",
+        "celebratory gathering",
+        "nursery-related objects",
+        "welcoming-a-baby context"
+      ]
+    }
+  },
+  {
+    "reference_id": "basketball",
+    "concept": "Basketball",
+    "concept_brief": {
+      "core_concept": "Basketball as a sport or basketball-related activity, without a specified game, practice, participant, venue, or event context.",
+      "known_details": [
+        "The concept refers to basketball.",
+        "Basketball involves a ball, hoop, backboard, and court-based play governed by athletic rules.",
+        "No specific participants, teams, location, competition, or time are provided."
+      ],
+      "general_associations": [
+        "basketball",
+        "hoop and backboard",
+        "court markings",
+        "dribbling",
+        "shooting",
+        "passing",
+        "players in active play",
+        "basketball game or practice"
+      ],
+      "open_choices": [
+        "The representation could focus on gameplay, practice, equipment, a court, or another closely related basketball context.",
+        "It is unspecified whether the concept refers to an organized game, casual play, training, or basketball as a general sport.",
+        "The number and identity of participants, level of play, setting, and moment of action remain open.",
+        "The representation could emphasize a single recognizable basketball cue or a combination of equipment, activity, and context."
+      ],
+      "promising_semantic_cues": [
+        "basketball",
+        "hoop and backboard",
+        "court",
+        "dribbling",
+        "shooting",
+        "passing",
+        "basketball players",
+        "court markings"
+      ]
+    }
+  },
+  {
+    "reference_id": "bbq",
+    "concept": "BBQ",
+    "concept_brief": {
+      "core_concept": "A barbecue (BBQ) event or meal centered on grilling or cooking food outdoors, typically involving a grill and shared food.",
+      "known_details": [
+        "The concept is stated only as “bbq.”",
+        "It most directly indicates barbecue cooking, a barbecue meal, or a barbecue gathering.",
+        "No specific food, location, participants, host, occasion, or schedule is provided."
+      ],
+      "general_associations": [
+        "Grill or barbecue cooker",
+        "Grilling over heat or flame",
+        "Food such as meat, vegetables, burgers, hot dogs, or skewers",
+        "Cooking utensils, tongs, or grilling tools",
+        "Outdoor meal or social gathering",
+        "Prepared food served for sharing"
+      ],
+      "open_choices": [
+        "The representation may focus on the cooking process, the grill and ingredients, the served meal, or the broader gathering.",
+        "The food being prepared is unspecified and may vary.",
+        "The setting may be an outdoor patio, backyard, park, campsite, or another suitable barbecue context.",
+        "The event may be represented with people, food and equipment alone, or a combination.",
+        "The temporal emphasis may be preparation, active grilling, serving, or eating."
+      ],
+      "promising_semantic_cues": [
+        "barbecue grill",
+        "grilling heat or smoke",
+        "grilling tools",
+        "uncooked ingredients near a grill",
+        "shared barbecue food",
+        "outdoor meal setting"
+      ]
+    }
+  },
+  {
+    "reference_id": "bowling",
+    "concept": "Bowling",
+    "concept_brief": {
+      "core_concept": "Bowling as the sport or recreational activity involving rolling a bowling ball down a lane toward pins.",
+      "known_details": [
+        "The concept is bowling.",
+        "Bowling conventionally involves a bowling ball, a lane, pins, and attempts to knock down the pins."
+      ],
+      "general_associations": [
+        "Bowling ball",
+        "Bowling pins",
+        "Lane and foul line",
+        "Ball return",
+        "Bowling shoes",
+        "Scoring or frames",
+        "Bowling center"
+      ],
+      "open_choices": [
+        "Whether the representation focuses on the act of rolling the ball, the equipment, the lane environment, scoring, or the result of knocked-down pins.",
+        "Whether people are present or the activity is represented through equipment and setting alone.",
+        "Whether the moment shown is setup, approach, ball release, impact, or post-roll scoring."
+      ],
+      "promising_semantic_cues": [
+        "Bowling ball rolling toward pins",
+        "Ten-pin arrangement",
+        "Bowling lane",
+        "Ball return",
+        "Bowling shoes",
+        "Pins being knocked down"
+      ]
+    }
+  },
+  {
+    "reference_id": "chinesenewyear",
+    "concept": "Chinese New Year",
+    "concept_brief": {
+      "core_concept": "Chinese New Year, also known as Lunar New Year in many Chinese cultural contexts: a traditional annual festival marking the beginning of a new year in the Chinese lunisolar calendar.",
+      "known_details": [
+        "The event refers specifically to Chinese New Year rather than a generic New Year celebration.",
+        "It is associated with a culturally significant annual period of celebration, renewal, and family or community observance.",
+        "The festival commonly includes traditional customs, gatherings, greetings, decorations, food, and celebratory activities."
+      ],
+      "general_associations": [
+        "red and gold festive decorations",
+        "red envelopes, often containing money",
+        "lanterns and decorative paper cuttings",
+        "family reunion meals",
+        "lion or dragon dances",
+        "fireworks or firecrackers",
+        "auspicious greetings and symbols",
+        "zodiac animals",
+        "new-year foods and sweets"
+      ],
+      "open_choices": [
+        "Whether to emphasize a family gathering, public festival, ceremonial custom, food tradition, decoration, greeting, or performance.",
+        "Whether the representation focuses on preparation, the reunion celebration, a public procession, or another festival moment.",
+        "Whether to use a specific zodiac-year animal or remain with broader Chinese New Year symbolism.",
+        "Whether the cultural setting is primarily domestic, communal, ceremonial, or urban public.",
+        "Whether people are central to recognition or whether objects, food, decorations, and symbolic customs carry the meaning."
+      ],
+      "promising_semantic_cues": [
+        "red envelopes",
+        "lanterns",
+        "lion or dragon dance",
+        "family reunion meal",
+        "auspicious decorations",
+        "zodiac imagery",
+        "traditional new-year greeting",
+        "fireworks or firecrackers"
+      ]
+    }
+  },
+  {
+    "reference_id": "cinema",
+    "concept": "Cinema",
+    "concept_brief": {
+      "core_concept": "Cinema as the broad domain of film and moviegoing, potentially referring to films themselves, the filmmaking medium, or the experience and venue of watching movies.",
+      "known_details": [
+        "The stated concept is simply \"cinema.\"",
+        "No specific film, screening, theater, person, genre, occasion, or activity is identified."
+      ],
+      "general_associations": [
+        "movie theater",
+        "film screen",
+        "projector",
+        "audience watching a film",
+        "cinema seats",
+        "film reel or strip",
+        "popcorn and other moviegoing refreshments",
+        "filmmaking and film production"
+      ],
+      "open_choices": [
+        "Whether the concept is represented through moviegoing, a cinema venue, filmmaking, film technology, or cinema as an artistic medium.",
+        "Whether the emphasis is on attending a screening, watching a film, producing a film, or the broader cultural idea of cinema.",
+        "Whether people, cinema objects, a theater environment, or a more symbolic film-related treatment carry the meaning.",
+        "Whether the focus is on an active screening, the theater before or after a screening, or film production.",
+        "Whether recognition depends on one dominant cinema cue or a combination of venue, equipment, audience, and film-related elements."
+      ],
+      "promising_semantic_cues": [
+        "movie theater",
+        "projector and screen",
+        "film reel or film strip",
+        "audience seating",
+        "cinema ticket",
+        "popcorn",
+        "camera or filmmaking equipment"
+      ]
+    }
+  },
+  {
+    "reference_id": "climbing",
+    "concept": "Climbing",
+    "concept_brief": {
+      "core_concept": "Climbing, specifically bouldering or closely related climbing activity.",
+      "known_details": [
+        "The concept concerns climbing.",
+        "The additional description identifies bouldering as a relevant form or intended meaning of the climbing activity.",
+        "Bouldering generally involves climbing short rock walls or boulders without ropes, typically with protective crash mats."
+      ],
+      "general_associations": [
+        "Climbing holds",
+        "Rock wall or boulder surface",
+        "Hands and feet engaging with holds",
+        "Crash pad or landing mat",
+        "Climbing shoes and chalk",
+        "Short, physically demanding ascent"
+      ],
+      "open_choices": [
+        "Whether the activity is indoor bouldering, outdoor bouldering, or another form of climbing.",
+        "Whether to emphasize a climber in action, climbing equipment, the climbing surface, or the broader climbing setting.",
+        "Whether the depicted moment is route-reading, active ascent, reaching a hold, or landing/resting.",
+        "Whether other climbers, a gym environment, or a natural outdoor environment are relevant."
+      ],
+      "promising_semantic_cues": [
+        "Climbing holds",
+        "Bouldering wall or rock",
+        "Active climbing movement",
+        "Crash pad",
+        "Climbing shoes",
+        "Chalk or chalk bag"
+      ]
+    }
+  },
+  {
+    "reference_id": "concert",
+    "concept": "Concert",
+    "concept_brief": {
+      "core_concept": "A concert associated in some unspecified way with bouldering/climbing. The calendar label establishes a concert, while the additional description indicates bouldering/climbing as relevant context; it does not clarify whether this is music at a climbing venue, a concert followed by climbing, or another relationship.",
+      "known_details": [
+        "The primary calendar concept is a concert.",
+        "Bouldering or climbing is also explicitly mentioned.",
+        "The relationship between the concert and bouldering/climbing is unspecified."
+      ],
+      "general_associations": [
+        "Live musical performance",
+        "Performers, instruments, or sound equipment",
+        "An audience or concert setting",
+        "Climbing walls, holds, or routes",
+        "Bouldering mats and chalk",
+        "Ropes, harnesses, or belay equipment for some forms of climbing"
+      ],
+      "open_choices": [
+        "Whether the representation emphasizes the concert, the climbing activity, or their connection",
+        "Whether bouldering and roped climbing are intended, since the description names both",
+        "Whether the event occurs at a climbing gym, concert venue, outdoor climbing area, or another setting",
+        "Whether the key moment is musical performance, audience participation, climbing, or movement between activities",
+        "Whether people are central to recognition or whether music and climbing equipment provide the main cues"
+      ],
+      "promising_semantic_cues": [
+        "Live performance",
+        "Musical instruments or stage equipment",
+        "Audience",
+        "Climbing wall or rock face",
+        "Climbing holds and routes",
+        "Chalk or bouldering mat",
+        "Rope and harness, if roped climbing is intended"
+      ]
+    }
+  },
+  {
+    "reference_id": "delivery",
+    "concept": "Delivery",
+    "concept_brief": {
+      "core_concept": "A calendar event labeled “delivery” with the additional description “bouldering/climbing.” The available text suggests a delivery related to bouldering or climbing, but it does not establish whether the delivery itself is the main activity, what is being delivered, or whether climbing is the recipient’s activity or the delivery context.",
+      "known_details": [
+        "The event label is “delivery.”",
+        "The additional description mentions bouldering/climbing.",
+        "Bouldering and climbing are related but distinct climbing activities; the text does not specify which one is intended."
+      ],
+      "general_associations": [
+        "A package, parcel, or delivered item",
+        "A courier or handoff",
+        "Climbing equipment such as shoes, rope, harness, chalk, or protective gear",
+        "A bouldering gym, climbing wall, climbing holds, or climbing session"
+      ],
+      "open_choices": [
+        "Whether the primary meaning is a delivery event or a bouldering/climbing event with delivery as context",
+        "What is being delivered, if anything specific",
+        "Whether the climbing reference means bouldering, roped climbing, or climbing more generally",
+        "Whether a person, courier, climber, climbing facility, or only relevant objects should carry the meaning",
+        "Whether the delivery is incoming, outgoing, scheduled, or completed"
+      ],
+      "promising_semantic_cues": [
+        "delivery package or handoff",
+        "climbing gear",
+        "bouldering wall or climbing holds",
+        "chalk bag or climbing shoes",
+        "courier or recipient interaction"
+      ]
+    }
+  },
+  {
+    "reference_id": "doctor",
+    "concept": "Doctor",
+    "concept_brief": {
+      "core_concept": "An ambiguously specified calendar event labeled “doctor,” with the additional description “bouldering/climbing.” The relationship between the doctor label and the climbing description is not established.",
+      "known_details": [
+        "The calendar concept is the string “doctor.”",
+        "The additional description references bouldering and/or climbing.",
+        "Bouldering and climbing are distinct but related climbing activities."
+      ],
+      "general_associations": [
+        "medical professional or doctor’s appointment",
+        "clinic, examination, or medical care",
+        "climbing wall, rock face, climbing holds, chalk, or climbing equipment",
+        "physical activity and ascent"
+      ],
+      "open_choices": [
+        "Whether “doctor” refers to a medical appointment, a doctor as a person, or another doctor-related context.",
+        "Whether bouldering/climbing is the primary event, a related activity, or an informal note about the event.",
+        "Whether the intended activity is specifically bouldering, roped climbing, or climbing in a broader sense.",
+        "Whether the concept should be interpreted through medical cues, climbing cues, or an unresolved combination of both."
+      ],
+      "promising_semantic_cues": [
+        "doctor or medical-care context",
+        "bouldering wall or climbing wall",
+        "climbing holds",
+        "chalk or climbing equipment",
+        "interaction between medical and climbing associations, if that relationship is later confirmed"
+      ]
+    }
+  },
+  {
+    "reference_id": "shopping",
+    "concept": "Shopping",
+    "concept_brief": {
+      "core_concept": "Shopping related to bouldering or climbing, likely browsing for climbing-specific equipment, apparel, or supplies.",
+      "known_details": [
+        "The event is shopping.",
+        "The shopping is associated with bouldering or climbing.",
+        "The exact items, store setting, and whether the shopping is for the participant or someone else are unspecified."
+      ],
+      "general_associations": [
+        "Climbing shoes",
+        "Chalk bags or climbing chalk",
+        "Harnesses, ropes, or carabiners",
+        "Crash pads for bouldering",
+        "Browsing or comparing outdoor gear",
+        "A sporting-goods or climbing-specialty retail context"
+      ],
+      "open_choices": [
+        "Whether the shopping focuses on bouldering equipment, roped-climbing equipment, clothing, accessories, or general outdoor gear",
+        "Whether the activity occurs in a climbing shop, sporting-goods store, online-shopping context, or another retail setting",
+        "Whether the emphasis is browsing, selecting, trying on, purchasing, or carrying newly bought items",
+        "Whether climbing-related objects or the act of shopping provides the primary recognition cue"
+      ],
+      "promising_semantic_cues": [
+        "Climbing gear shopping",
+        "Climbing shoes",
+        "Chalk or chalk bag",
+        "Crash pad",
+        "Retail browsing among climbing equipment",
+        "Trying on or comparing outdoor gear"
+      ]
+    }
+  },
+  {
+    "reference_id": "thanksgiving",
+    "concept": "Thanksgiving",
+    "concept_brief": {
+      "core_concept": "A Thanksgiving-related bouldering or climbing event, combining the Thanksgiving holiday with a climbing activity. The exact relationship between the holiday and the activity is unspecified.",
+      "known_details": [
+        "The event is associated with Thanksgiving.",
+        "Bouldering or climbing is part of the event description.",
+        "The concept therefore involves both a holiday context and a climbing-related activity."
+      ],
+      "general_associations": [
+        "Climbing wall, rock face, or bouldering area",
+        "Climbing holds, chalk, climbing shoes, or other climbing equipment",
+        "Thanksgiving meal or shared food",
+        "Gratitude, gathering, or holiday celebration"
+      ],
+      "open_choices": [
+        "Whether the activity is indoor bouldering, outdoor bouldering, roped climbing, or another form of climbing",
+        "Whether Thanksgiving is represented mainly through food, gathering, gratitude, or a broader holiday context",
+        "Whether the climbing and Thanksgiving elements are shown as one integrated occasion or as complementary cues",
+        "Which moment is emphasized: climbing, social gathering, meal preparation, or post-activity celebration"
+      ],
+      "promising_semantic_cues": [
+        "Bouldering or climbing interaction",
+        "Climbing holds, rock surface, chalk, or climbing shoes",
+        "Thanksgiving food or shared meal",
+        "Holiday gathering or gratitude cue"
+      ]
+    }
+  },
+  {
+    "reference_id": "vote",
+    "concept": "Vote",
+    "concept_brief": {
+      "core_concept": "An event labeled “vote,” with an additional description referring to “bouldering/climbing.” The relationship between voting and bouldering/climbing is unclear; this may be a combined event, an informal note, or a possible correction of the event label.",
+      "known_details": [
+        "The calendar concept is the string “vote.”",
+        "The additional description explicitly mentions bouldering/climbing.",
+        "No specific person, location, date context, or type of voting is provided."
+      ],
+      "general_associations": [
+        "Voting may involve a ballot, polling place, ballot box, voter registration, or civic participation.",
+        "Bouldering may involve climbing holds, a climbing wall, chalk, and crash pads.",
+        "Climbing may involve routes, climbing equipment, and ascent."
+      ],
+      "open_choices": [
+        "Whether the intended subject is voting, bouldering/climbing, or a relationship between the two.",
+        "Whether “bouldering/climbing” describes the event itself or is an unrelated note or correction.",
+        "If voting is intended, the voting context could involve a polling place, ballot completion, or another form of participation.",
+        "If climbing is intended, the activity could be bouldering or roped climbing."
+      ],
+      "promising_semantic_cues": [
+        "ballot or voting act",
+        "polling place or ballot box",
+        "climbing wall and holds",
+        "chalk and crash pad",
+        "climbing route or ascent"
+      ]
+    }
+  },
+  {
+    "reference_id": "wedding",
+    "concept": "Wedding",
+    "concept_brief": {
+      "core_concept": "A wedding associated with bouldering/climbing, potentially a climbing-themed wedding or a wedding event that includes bouldering/climbing.",
+      "known_details": [
+        "The calendar concept is a wedding.",
+        "The additional description identifies bouldering/climbing as a meaningful associated activity or theme.",
+        "The spelling “boudlering” is most plausibly intended to mean “bouldering.”"
+      ],
+      "general_associations": [
+        "Wedding ceremony or celebration",
+        "Couple or partners making a formal commitment",
+        "Climbing wall, bouldering holds, ropes, harnesses, or climbing shoes",
+        "Indoor climbing gym or outdoor rock-climbing setting",
+        "Celebratory gathering, vows, rings, flowers, or reception elements"
+      ],
+      "open_choices": [
+        "Whether bouldering/climbing is the central setting, a wedding theme, an activity during the event, or simply an association",
+        "Whether the activity is bouldering, roped climbing, or a broader climbing experience",
+        "Whether the representation emphasizes the ceremony, the climbing activity, the reception, or the connection between the two",
+        "Whether other participants are present and what role they have",
+        "Whether the wedding is indoors, outdoors, at a climbing facility, or at another venue"
+      ],
+      "promising_semantic_cues": [
+        "wedding commitment or ceremony",
+        "rings or other wedding symbols",
+        "climbing wall or rock face",
+        "bouldering holds or climbing equipment",
+        "celebratory wedding gathering",
+        "interaction between wedding and climbing contexts"
+      ]
+    }
+  }
+]

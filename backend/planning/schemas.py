@@ -182,41 +182,26 @@ class SceneSimulation(BaseModel):
 
 
 class CandidateScene(BaseModel):
-    """
-    One coherent visual hypothesis.
-
-    The scene is invented first. Canonical annotation fields describe
-    that scene afterward; they should not mechanically generate it.
-    """
-
     id: str
-    visual_thesis: str
 
     representation_strategy: RepresentationStrategy
-    recognition_structure: RecognitionStructure
+    visual_thesis: str
+    scene_description: str
 
     subject: str
     setting: str
     action: str
-
     human_presence: str
+
+    recognition_structure: RecognitionStructure
     environment_strategy: EnvironmentStrategy
-    semantic_scope: SemanticScope
-
-    accent_detail: str | None = None
-    content_constraints: list[str] = Field(default_factory=list)
-
-    simulation: SceneSimulation
 
 
 class CandidateScenePool(BaseModel):
-    """
-    Divergent candidate scenes produced before curation.
-
-    Candidates are alternatives, not a best-to-worst ranking.
-    """
-
+    essence_visual_thesis: str
+    representation_optionality: RepresentationOptionality
     candidates: list[CandidateScene]
+    generation_priority: list[str]
 
 
 # =========================================================

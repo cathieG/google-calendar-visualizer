@@ -1,0 +1,308 @@
+[
+  {
+    "reference_id": "img_americanfootball",
+    "concept": "American Football",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A close, active moment of football play centers the ball carrier and nearby players so the sport is communicated through physical action rather than equipment alone."
+  },
+  {
+    "reference_id": "img_art",
+    "concept": "Art",
+    "representation_strategy": "human_object_interaction",
+    "visual_thesis": "An artist actively working at an easel makes the act of creating art the central expression of the concept."
+  },
+  {
+    "reference_id": "img_athleticsjumping",
+    "concept": "Athletic Jumping",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A single athlete is captured mid-jump, using the body in motion as the clearest and most economical expression of the event."
+  },
+  {
+    "reference_id": "img_babyshower",
+    "concept": "Baby Shower",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "A playful collection of baby-related gifts and nursery symbols communicates celebration through familiar objects rather than a literal party scene."
+  },
+  {
+    "reference_id": "img_badminton",
+    "concept": "Badminton",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "An active football play centered on a ball carrier represents the sport through the physical contest and movement around possession of the ball."
+  },
+  {
+    "reference_id": "img_baseball",
+    "concept": "Baseball",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A player at bat during active play represents baseball through the characteristic action of batting within the game."
+  },
+  {
+    "reference_id": "img_basketball",
+    "concept": "Basketball",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "Several players converge around the ball in a live moment of play, making basketball recognizable through the interaction among players rather than one isolated figure."
+  },
+  {
+    "reference_id": "img_bbq",
+    "concept": "Barbecue",
+    "representation_strategy": "prepared_environment",
+    "visual_thesis": "An outdoor grill and nearby serving setup form a ready-to-use barbecue setting, allowing the prepared environment to communicate the activity without visible people."
+  },
+  {
+    "reference_id": "img_bowling",
+    "concept": "Bowling",
+    "representation_strategy": "object_centered_scene",
+    "visual_thesis": "The movement of a bowling ball toward the pins represents the sport through its defining object interaction, with the bowler providing the source of the action."
+  },
+  {
+    "reference_id": "img_breakfast",
+    "concept": "Breakfast",
+    "representation_strategy": "human_object_interaction",
+    "visual_thesis": "A person preparing or gathering breakfast in a kitchen setting makes the morning meal readable through an ordinary food-preparation interaction."
+  },
+  {
+    "reference_id": "img_camping",
+    "concept": "Camping",
+    "representation_strategy": "environment_led_scene",
+    "visual_thesis": "An established campsite embedded in nature lets the occupied outdoor setting itself carry the meaning of camping."
+  },
+  {
+    "reference_id": "img_chinesenewyear",
+    "concept": "Chinese New Year",
+    "representation_strategy": "decorative_atmosphere_scene",
+    "visual_thesis": "A field of festive red lanterns and celebratory ornaments evokes Chinese New Year through recognizable decorative atmosphere rather than a literal event scene."
+  },
+  {
+    "reference_id": "img_cinema",
+    "concept": "Cinema",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "Film reels, a movie camera, filmstrip, and popcorn combine as a compact set of cinema icons that collectively communicate going to the movies."
+  },
+  {
+    "reference_id": "img_climbing",
+    "concept": "Climbing",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A climber actively ascending a wall makes the upward physical action and body posture the primary expression of climbing."
+  },
+  {
+    "reference_id": "img_coffee",
+    "concept": "Coffee",
+    "representation_strategy": "human_object_interaction",
+    "visual_thesis": "A hand pouring hot water through a coffee dripper focuses on a distinctive preparation interaction rather than a generic cup of coffee."
+  },
+  {
+    "reference_id": "img_concert",
+    "concept": "Concert",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "A small band performing together conveys a concert through the coordinated presence of multiple musicians and instruments."
+  },
+  {
+    "reference_id": "img_cooking",
+    "concept": "Cooking",
+    "representation_strategy": "object_centered_scene",
+    "visual_thesis": "Ingredients, a knife, and food-preparation elements form an active cooking workspace in which the tools and ingredients themselves communicate the activity."
+  },
+  {
+    "reference_id": "img_cycling",
+    "concept": "Cycling",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "Cyclists riding forward make bodily motion on the bicycles the main carrier of the cycling concept."
+  },
+  {
+    "reference_id": "img_cyclingbmx",
+    "concept": "BMX Cycling",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A BMX rider traversing shaped terrain turns the sport's distinctive riding action and obstacle context into the central visual idea."
+  },
+  {
+    "reference_id": "img_dancing",
+    "concept": "Dancing",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "Two people dancing together represent the activity through coordinated movement and interaction between partners."
+  },
+  {
+    "reference_id": "img_delivery",
+    "concept": "Delivery",
+    "representation_strategy": "occupational_figure",
+    "visual_thesis": "A delivery worker moving packages beside a delivery vehicle represents the concept through a recognizable occupational role in action."
+  },
+  {
+    "reference_id": "img_dentist",
+    "concept": "Dentist",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "A giant tooth, toothbrush, toothpaste, floss, and dental figures combine into an exaggerated collection of unmistakable dental cues."
+  },
+  {
+    "reference_id": "img_dinner",
+    "concept": "Dinner",
+    "representation_strategy": "object_centered_scene",
+    "visual_thesis": "A tabletop spread of several prepared dishes makes the meal itself, rather than the diners, the central representation of dinner."
+  },
+  {
+    "reference_id": "img_doctor",
+    "concept": "Doctor",
+    "representation_strategy": "occupational_figure",
+    "visual_thesis": "A medical professional serves as the central subject, with recognizable professional cues establishing the role of doctor."
+  },
+  {
+    "reference_id": "img_drinks",
+    "concept": "Drinks",
+    "representation_strategy": "object_centered_scene",
+    "visual_thesis": "A prominent grouping of beverage bottles and a glass lets recognizable drink containers carry the concept with only minimal social context."
+  },
+  {
+    "reference_id": "img_golf",
+    "concept": "Golf",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A golfer addressing the course with club and equipment makes the recognizable sporting action the core visual representation."
+  },
+  {
+    "reference_id": "img_graduation",
+    "concept": "Graduation",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "A group of graduates tossing caps together turns a shared celebratory gesture into the defining image of graduation."
+  },
+  {
+    "reference_id": "img_haircut",
+    "concept": "Haircut",
+    "representation_strategy": "object_centered_scene",
+    "visual_thesis": "Hair-cutting tools and grooming containers are arranged as the primary subject, letting familiar salon equipment stand in for the haircut activity."
+  },
+  {
+    "reference_id": "img_hiking",
+    "concept": "Hiking",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "Backpack-wearing hikers moving through natural terrain make travel on foot through the outdoors the central expression of hiking."
+  },
+  {
+    "reference_id": "img_hotel",
+    "concept": "Hotel",
+    "representation_strategy": "environment_led_scene",
+    "visual_thesis": "A hotel lobby with staff, luggage, and furnishings makes the recognizable hospitality environment itself communicate the concept."
+  },
+  {
+    "reference_id": "img_interview",
+    "concept": "Interview",
+    "representation_strategy": "symbolic_object_composition",
+    "visual_thesis": "A carefully arranged set of formal appointment objects such as documents, identification, writing tools, and a watch symbolically suggests an interview without depicting the conversation itself."
+  },
+  {
+    "reference_id": "img_karate",
+    "concept": "Karate",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "Multiple martial artists face one another in active practice, making interpersonal movement and stance the main recognition mechanism."
+  },
+  {
+    "reference_id": "img_kidspickupdropoff",
+    "concept": "Kids Pickup / Dropoff",
+    "representation_strategy": "environment_led_scene",
+    "visual_thesis": "Children gathered beside arriving vehicles and a school-like setting make the pickup or dropoff situation legible through the surrounding context."
+  },
+  {
+    "reference_id": "img_learninstrument",
+    "concept": "Learn Instrument",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "A varied collection of musical instruments communicates instrument learning through the breadth of recognizable instruments rather than one specific lesson."
+  },
+  {
+    "reference_id": "img_photography",
+    "concept": "Photography",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "Cameras and printed photographs form a compact visual collection that communicates photography through its most recognizable tools and outputs."
+  },
+  {
+    "reference_id": "img_pingpong",
+    "concept": "Ping Pong",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "Two players facing each other across a table make the back-and-forth interaction of play the defining representation of ping pong."
+  },
+  {
+    "reference_id": "img_pride",
+    "concept": "Pride",
+    "representation_strategy": "symbolic_object_composition",
+    "visual_thesis": "A group of people together with recognizable Pride symbolism represents the concept through collective identity, inclusion, and celebration."
+  },
+  {
+    "reference_id": "img_restaurant",
+    "concept": "Restaurant",
+    "representation_strategy": "multi_person_interaction",
+    "visual_thesis": "A server attending diners at a table communicates a restaurant through the social exchange between service and dining."
+  },
+  {
+    "reference_id": "img_saintpatricksday",
+    "concept": "Saint Patrick's Day",
+    "representation_strategy": "decorative_atmosphere_scene",
+    "visual_thesis": "Oversized shamrocks, green color, and playful figures create a festive visual atmosphere that evokes Saint Patrick's Day without a literal celebration scene."
+  },
+  {
+    "reference_id": "img_shopping",
+    "concept": "Shopping",
+    "representation_strategy": "human_object_interaction",
+    "visual_thesis": "A shopper actively pushing a loaded cart makes the interaction with the shopping cart the central expression of the activity."
+  },
+  {
+    "reference_id": "img_skiing",
+    "concept": "Skiing",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A skier descending a snowy slope uses the body's dynamic movement through snow as the clearest expression of skiing."
+  },
+  {
+    "reference_id": "img_sleep",
+    "concept": "Sleep",
+    "representation_strategy": "prepared_environment",
+    "visual_thesis": "A quiet bedroom prepared for rest lets the bed and nighttime setting communicate sleep without showing a sleeping person."
+  },
+  {
+    "reference_id": "img_soccer",
+    "concept": "Soccer",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "A close view of a foot controlling or striking a soccer ball makes one diagnostic sporting action sufficient to represent soccer."
+  },
+  {
+    "reference_id": "img_tennis",
+    "concept": "Tennis",
+    "representation_strategy": "object_centered_scene",
+    "visual_thesis": "A tennis racket and balls dominate the composition so the sport is communicated almost entirely through its most diagnostic equipment."
+  },
+  {
+    "reference_id": "img_thanksgiving",
+    "concept": "Thanksgiving",
+    "representation_strategy": "symbolic_object_composition",
+    "visual_thesis": "A prominent turkey surrounded by autumn leaves condenses Thanksgiving into a small set of culturally recognizable seasonal symbols."
+  },
+  {
+    "reference_id": "img_trip",
+    "concept": "Trip",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "Suitcases, travel tags, tickets, and transportation symbols combine into a compact visual vocabulary for taking a trip."
+  },
+  {
+    "reference_id": "img_valentinesday",
+    "concept": "Valentine's Day",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "Cards, envelopes, flowers, and heart motifs collectively evoke Valentine's Day through familiar tokens of affection."
+  },
+  {
+    "reference_id": "img_videogaming",
+    "concept": "Video Gaming",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "Game controllers and playful digital-game symbols form a lively object collage that communicates video gaming without depicting a player."
+  },
+  {
+    "reference_id": "img_vote",
+    "concept": "Vote",
+    "representation_strategy": "human_object_interaction",
+    "visual_thesis": "A hand placing a ballot into a box represents voting through one unmistakable civic action."
+  },
+  {
+    "reference_id": "img_walk",
+    "concept": "Walk",
+    "representation_strategy": "human_action_scene",
+    "visual_thesis": "People moving on foot through an open outdoor path make the ordinary act of walking itself the visual subject."
+  },
+  {
+    "reference_id": "img_wedding",
+    "concept": "Wedding",
+    "representation_strategy": "iconic_object_collage",
+    "visual_thesis": "A bouquet, celebratory stationery, and a wedding-couple motif combine as familiar symbols that communicate a wedding without depicting the ceremony."
+  }
+]

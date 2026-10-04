@@ -1,26 +1,289 @@
 from __future__ import annotations
+import json
 import re
+from pathlib import Path
 from typing import Any
+from pydantic import BaseModel
+from config import TEXT_MODEL
+from openai_client import get_openai_client
 from planning.schemas import (
+    ConceptBrief,
     ReferenceFocus,
     ReferenceMatch,
     ReferenceMode,
     ReferencePacket,
     ReferenceRecord,
 )
-
 from references.registry import load_reference_registry
 
+# =========================================================
+# Stage A: semantic reference selection
+# =========================================================
+
+REFERENCE_CONCEPT_BRIEFS_PATH = (
+    Path(__file__).parent
+    / "google_calendar"
+    / "stageA_reference.json"
+)
+
+class SemanticReferenceChoice(BaseModel):
+    reference_id: str
+    reason: str
+
+class SemanticReferenceSelection(BaseModel):
+    references: list[SemanticReferenceChoice]
+
+def _semantic_brief_view(
+    brief: ConceptBrief,
+) -> dict[str, Any]:
+    """Keep only ConceptBrief fields useful for semantic comparison."""
+    return {
+        "core_concept": brief.core_concept,
+        "known_details": brief.known_details,
+        "general_associations": brief.general_associations,
+        "open_choices": brief.open_choices,
+        "protected_unknowns": brief.protected_unknowns,
+        "promising_semantic_cues": brief.promising_semantic_cues,
+    }
+
+def _load_reference_concept_briefs(
+    path: Path = REFERENCE_CONCEPT_BRIEFS_PATH,
+) -> list[dict[str, Any]]:
+    """Load ConceptBriefs for the small deeply studied reference corpus."""
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Reference ConceptBrief catalog not found: {path}"
+        )
+    with path.open("r", encoding="utf-8") as handle:
+        data = json.load(handle)
+    if not isinstance(data, list):
+        raise ValueError(
+            "reference_concept_briefs.json must contain a JSON list."
+        )
+    results: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    for index, entry in enumerate(data, start=1):
+        if not isinstance(entry, dict):
+            raise ValueError(
+                f"Reference ConceptBrief entry {index} must be a JSON object."
+            )
+        reference_id = entry.get("reference_id")
+        concept = entry.get("concept")
+        brief_data = entry.get("concept_brief")
+        if not reference_id or not concept or not brief_data:
+            raise ValueError(
+                f"Reference ConceptBrief entry {index} must contain "
+                "reference_id, concept, and concept_brief."
+            )
+        if reference_id in seen_ids:
+            raise ValueError(
+                "Duplicate reference_id in ConceptBrief catalog: "
+                f"{reference_id!r}"
+            )
+        seen_ids.add(reference_id)
+        brief = ConceptBrief.model_validate(brief_data)
+        results.append(
+            {
+                "reference_id": reference_id,
+                "concept": concept,
+                "concept_brief": _semantic_brief_view(brief),
+            }
+        )
+    return results
+
+def curate_semantic_references(
+    concept_brief: ConceptBrief,
+    records: list[ReferenceRecord] | None = None,
+) -> ReferencePacket:
+    """
+    Stage A.
+    Select deeply studied references because their underlying concepts
+    are semantically related to the current concept. Selection is based
+    on ConceptBrief-to-ConceptBrief comparison, not visual annotations.
+    After selection, attach each reference's full rich annotation and
+    rendered image path for the Creative Planner to study.
+    """
+    if records is None:
+        records = load_reference_registry()
+    reference_briefs = _load_reference_concept_briefs()
+    studied_records = {
+        record.reference_id: record
+        for record in records
+        if record.annotation is not None
+    }
+    available_briefs = [
+        entry
+        for entry in reference_briefs
+        if entry["reference_id"] in studied_records
+    ]
+    if len(available_briefs) < 3:
+        raise ValueError(
+            "Stage A requires at least 3 deeply studied references "
+            "with ConceptBriefs."
+        )
+    current_brief_json = json.dumps(
+        _semantic_brief_view(concept_brief),
+        indent=2,
+        ensure_ascii=False,
+    )
+    reference_briefs_json = json.dumps(
+        available_briefs,
+        indent=2,
+        ensure_ascii=False,
+    )
+    client = get_openai_client()
+    response = client.responses.parse(
+        model=TEXT_MODEL,
+        input=[
+            {
+                "role": "system",
+                "content": """
+You select semantic reference examples for the Creative Planner of a
+calendar illustration system.
+
+The Creative Planner has not yet chosen a visual scene.
+
+Your ONLY job is to identify the existing deeply studied reference
+concepts that are most semantically relevant to the current concept.
+Compare ConceptBrief to ConceptBrief.
+
+Judge semantic relatedness primarily from:
+- core_concept,
+- known_details,
+- general_associations.
+
+You may use:
+- open_choices,
+- promising_semantic_cues
+as supporting semantic evidence， and no other fields.
+
+Semantic relatedness may arise from shared:
+- activity,
+- purpose,
+- real-world setting,
+- participants,
+- interactions,
+- objects,
+- experience,
+- occasion,
+- or situation.
+
+Do NOT choose references because of:
+- composition,
+- representation strategy,
+- human presence,
+- viewpoint,
+- cropping,
+- depth,
+- scale,
+- color,
+- rendering style,
+- annotation completeness,
+- or annotation diversity.
+
+Do NOT decide how the new concept should be illustrated.
+Simply select the strongest semantic precedents. Their detailed visual
+annotations and images will be studied only AFTER selection.
+Return exactly three references in descending order of
+semantic usefulness.
+""".strip(),
+            },
+            {
+                "role": "user",
+                "content": f"""
+CURRENT CONCEPT
+===============
+{current_brief_json}
+AVAILABLE DEEPLY STUDIED REFERENCES
+===================================
+{reference_briefs_json}
+TASK
+====
+Select exactly 3 references whose ConceptBriefs are
+most semantically useful for understanding the current concept.
+Give a brief reason for each selection.
+""".strip(),
+            },
+        ],
+        text_format=SemanticReferenceSelection,
+    )
+    selection = response.output_parsed
+    selected_ids = [
+        choice.reference_id
+        for choice in selection.references
+    ]
+    if len(selected_ids) != 3:
+        raise ValueError(
+            "Stage-A selector must return exactly 3 references."
+        )
+    if len(set(selected_ids)) != len(selected_ids):
+        raise ValueError(
+            "Stage-A selector returned duplicate reference IDs."
+        )
+    valid_ids = {
+        entry["reference_id"]
+        for entry in available_briefs
+    }
+    unknown_ids = set(selected_ids) - valid_ids
+    if unknown_ids:
+        raise ValueError(
+            "Stage-A selector returned unknown reference IDs: "
+            f"{sorted(unknown_ids)}"
+        )
+    focus = ReferenceFocus(
+        stage="creative_planning",
+        mode=ReferenceMode.exploratory,
+        focus_fields=[],
+        purpose=(
+            "Study semantically related Google Calendar concepts to "
+            "understand how related meanings have been translated into "
+            "visual illustrations."
+        ),
+        max_references=3,
+    )
+    matches: list[ReferenceMatch] = []
+    for choice in selection.references:
+        record = studied_records[choice.reference_id]
+        matches.append(
+            ReferenceMatch(
+                reference_id=record.reference_id,
+                concept=record.concept,
+                image_path=record.rendered_path,
+                # Schema name retained for compatibility. Stage A now
+                # carries the complete rich study annotation here.
+                matched_fields=record.annotation or {},
+                teaching_focus=choice.reason,
+            )
+        )
+    return ReferencePacket(
+        focus=focus,
+        references=matches,
+        teaching_notes=[
+            (
+                "These references were selected for semantic relevance "
+                "to the current concept."
+            ),
+            (
+                "Study their images and detailed annotations for useful "
+                "design evidence, but do not copy their scenes."
+            ),
+            (
+                "The references illustrate how related concepts were "
+                "solved; they do not prescribe the representation of "
+                "the current concept."
+            ),
+        ],
+    )
 
 # =========================================================
 # Legacy annotation compatibility
-
-
 # =========================================================
+
 # Rich study files were created across several schema generations.
 # These are the only trusted fallback paths used to read them.
 # Runtime annotations do not use this map; they already expose
 # canonical top-level fields.
+
 LEGACY_FIELD_PATHS: dict[str, list[str]] = {
     "representation_strategy": [
         "representation_and_recognition.representation_strategy",
@@ -64,7 +327,6 @@ LEGACY_FIELD_PATHS: dict[str, list[str]] = {
     ],
 }
 
-
 def _read_path(
     data: dict[str, Any],
     dotted_path: str,
@@ -79,7 +341,6 @@ def _read_path(
         current = current[part]
     return current
 
-
 def get_runtime_value(
     record: ReferenceRecord,
     field: str,
@@ -88,7 +349,6 @@ def get_runtime_value(
     if record.runtime_annotation is None:
         return None
     return record.runtime_annotation.get(field)
-
 
 def get_legacy_value(
     record: ReferenceRecord,
@@ -102,7 +362,6 @@ def get_legacy_value(
         if value is not None:
             return value
     return None
-
 
 def get_annotation_value(
     record: ReferenceRecord,
@@ -119,13 +378,9 @@ def get_annotation_value(
         return runtime_value
     return get_legacy_value(record, field)
 
-
 # =========================================================
 # Matching helpers
-
-
 # =========================================================
-
 
 def _canonical_match(
     observed: Any,
@@ -133,7 +388,6 @@ def _canonical_match(
 ) -> bool:
     """Canonical runtime values are categorical and match exactly."""
     return observed == target
-
 
 def _normalize(value: Any) -> str:
     """Convert legacy annotation text into a comparison-friendly form."""
@@ -145,10 +399,8 @@ def _normalize(value: Any) -> str:
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
-
 def _token_set(value: Any) -> set[str]:
     return set(_normalize(value).split())
-
 
 def _legacy_match_score(
     observed: Any,
@@ -185,19 +437,14 @@ def _legacy_match_score(
         return 0.0
     return overlap / union
 
-
 # =========================================================
 # Evidence extraction
-
-
 # =========================================================
-
 
 def _source_name(focus: ReferenceFocus) -> str:
     """Return the configured annotation-source value as a plain string."""
     source = focus.annotation_source
     return getattr(source, "value", str(source))
-
 
 def _records_for_source(
     records: list[ReferenceRecord],
@@ -230,7 +477,6 @@ def _records_for_source(
         f"Unsupported annotation_source: {source}"
     )
 
-
 def _extract_evidence(
     record: ReferenceRecord,
     focus: ReferenceFocus,
@@ -255,12 +501,10 @@ def _extract_evidence(
             evidence[field] = value
     return evidence
 
-
 # =========================================================
 # Precedent eligibility and ranking
-
-
 # =========================================================
+
 IDENTITY_FIELDS = (
     "representation_strategy",
     "recognition_structure",
@@ -271,7 +515,6 @@ CANONICAL_PRECEDENT_WEIGHTS = {
     "environment_strategy": 2.0,
 }
 
-
 def _target_matches(
     observed: Any,
     target: Any,
@@ -281,7 +524,6 @@ def _target_matches(
     if canonical:
         return _canonical_match(observed, target)
     return _legacy_match_score(observed, target) > 0.0
-
 
 def _precedent_eligible(
     evidence: dict[str, Any],
@@ -319,7 +561,6 @@ def _precedent_eligible(
             return True
     return False
 
-
 def _canonical_precedent_score(
     evidence: dict[str, Any],
     focus: ReferenceFocus,
@@ -342,7 +583,6 @@ def _canonical_precedent_score(
             score += 0.1
     return score
 
-
 def _legacy_precedent_score(
     evidence: dict[str, Any],
     focus: ReferenceFocus,
@@ -364,7 +604,6 @@ def _legacy_precedent_score(
             score += 0.1
     return score
 
-
 def _precedent_score(
     evidence: dict[str, Any],
     focus: ReferenceFocus,
@@ -379,13 +618,9 @@ def _precedent_score(
         focus,
     )
 
-
 # =========================================================
-# Exploratory and contrast ranking
-
-
+# Contrast ranking
 # =========================================================
-
 
 def _contrast_score(
     evidence: dict[str, Any],
@@ -419,128 +654,25 @@ def _contrast_score(
             score += 1.0
     return score
 
-
-def _exploratory_score(
-    evidence: dict[str, Any],
-    focus: ReferenceFocus,
-) -> float:
-    """Reward useful annotation coverage before a direction is chosen."""
-    return float(
-        sum(
-            field in evidence
-            for field in focus.focus_fields
-        )
-    )
-
-
-def _exploratory_diversity_gain(
-    evidence: dict[str, Any],
-    focus: ReferenceFocus,
-    seen_values: dict[str, set[str]],
-) -> int:
-    """
-    Count how many new values this reference would add across the
-    exploratory focus fields.
-    """
-    gain = 0
-    for field in focus.focus_fields:
-        if field not in evidence:
-            continue
-        value_key = _normalize(evidence[field])
-        if value_key not in seen_values[field]:
-            gain += 1
-    return gain
-
-
-def _select_exploratory(
-    scored: list[
-        tuple[float, ReferenceRecord, dict[str, Any]]
-    ],
-    focus: ReferenceFocus,
-) -> list[
-    tuple[float, ReferenceRecord, dict[str, Any]]
-]:
-    """
-    Select exploratory references for both annotation coverage and
-    diversity across the requested design dimensions.
-    """
-    if not scored:
-        return []
-    remaining = list(scored)
-    selected: list[
-        tuple[float, ReferenceRecord, dict[str, Any]]
-    ] = []
-    seen_values: dict[str, set[str]] = {
-        field: set()
-        for field in focus.focus_fields
-    }
-    while (
-        remaining
-        and len(selected) < focus.max_references
-    ):
-        if not selected:
-            # Start with the strongest overall annotation coverage.
-            remaining.sort(
-                key=lambda item: (
-                    -item[0],
-                    item[1].concept.lower(),
-                )
-            )
-        else:
-            # After the first reference, prefer examples that introduce
-            # new values on the dimensions being explored.
-            remaining.sort(
-                key=lambda item: (
-                    -_exploratory_diversity_gain(
-                        item[2],
-                        focus,
-                        seen_values,
-                    ),
-                    -item[0],
-                    item[1].concept.lower(),
-                )
-            )
-            best_gain = _exploratory_diversity_gain(
-                remaining[0][2],
-                focus,
-                seen_values,
-            )
-            # Two references are enough when no remaining example adds
-            # any new exploratory information.
-            if best_gain == 0 and len(selected) >= 2:
-                break
-        chosen = remaining.pop(0)
-        selected.append(chosen)
-        evidence = chosen[2]
-        for field in focus.focus_fields:
-            if field not in evidence:
-                continue
-            seen_values[field].add(
-                _normalize(evidence[field])
-            )
-    return selected
-
-
 # =========================================================
-# Public curator
-
-
+# Public Stage-B curator
 # =========================================================
-
 
 def curate_references(
     focus: ReferenceFocus,
     records: list[ReferenceRecord] | None = None,
 ) -> ReferencePacket:
     """
-    Select a small reference packet for one design question.
-    The focus determines:
-    - which annotation source is allowed;
-    - which dimensions are relevant;
-    - whether the query seeks exploration, precedent, or contrast.
-    The curator retrieves and ranks evidence. It does not invent design
-    decisions.
+    Stage B.
+    Retrieve annotation-based precedents or contrasts for an already
+    planned candidate. Stage-A semantic retrieval is handled separately
+    by curate_semantic_references().
     """
+    if focus.mode == ReferenceMode.exploratory:
+        raise ValueError(
+            "Exploratory Stage-A retrieval is semantic now. "
+            "Use curate_semantic_references(concept_brief) instead."
+        )
     if records is None:
         records = load_reference_registry()
     source_records = _records_for_source(
@@ -573,9 +705,8 @@ def curate_references(
                 focus,
             )
         else:
-            score = _exploratory_score(
-                evidence,
-                focus,
+            raise ValueError(
+                f"Unsupported Reference-B mode: {focus.mode}"
             )
         scored.append(
             (
@@ -584,19 +715,13 @@ def curate_references(
                 evidence,
             )
         )
-    if focus.mode == ReferenceMode.exploratory:
-        selected = _select_exploratory(
-            scored,
-            focus,
+    scored.sort(
+        key=lambda item: (
+            -item[0],
+            item[1].concept.lower(),
         )
-    else:
-        scored.sort(
-            key=lambda item: (
-                -item[0],
-                item[1].concept.lower(),
-            )
-        )
-        selected = scored[: focus.max_references]
+    )
+    selected = scored[: focus.max_references]
     matches = [
         ReferenceMatch(
             reference_id=record.reference_id,
@@ -611,29 +736,16 @@ def curate_references(
         )
         for score, record, evidence in selected
     ]
-    if focus.mode == ReferenceMode.exploratory:
-        teaching_notes = [
-            (
-                "Use these references as visual evidence, "
-                "not as scenes to copy."
-            ),
-            (
-                "Compare how the references handle the requested design "
-                "dimensions. Treat their differences as possibilities, "
-                "not recommendations."
-            ),
-        ]
-    else:
-        teaching_notes = [
-            (
-                "Use these references as visual precedent and evidence, "
-                "not as scenes to copy."
-            ),
-            (
-                "Inspect the requested design dimensions while preserving "
-                "the new candidate's independent semantic identity."
-            ),
-        ]
+    teaching_notes = [
+        (
+            "Use these references as visual precedent and evidence, "
+            "not as scenes to copy."
+        ),
+        (
+            "Inspect the requested design dimensions while preserving "
+            "the new candidate's independent semantic identity."
+        ),
+    ]
     return ReferencePacket(
         focus=focus,
         references=matches,

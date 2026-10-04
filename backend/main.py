@@ -8,8 +8,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from openai import OpenAI
 
+from planning.interpreter import interpret_concept
+from planning.creative_planner import plan_candidate_scenes
+from planning.schemas import ConceptRequest
+
+from references.curator import curate_semantic_references
+
 from visual_planner import (
-    ConceptRequest,
     ContentPlan,
     plan_concept_image,
 )
@@ -335,12 +340,31 @@ def health_check():
     }
 
 
+@app.post("/debug/interpret")
+def debug_interpret(
+    request: ConceptRequest,
+):
+    return interpret_concept(request)
+
+
 @app.post("/concept/plan")
 def plan_concept(request: ConceptRequest):
-    content_plan = plan_concept_image(request)
+    concept_brief = interpret_concept(request)
+
+    reference_packet = curate_semantic_references(
+        concept_brief
+    )
+
+    candidate_pool = plan_candidate_scenes(
+        request=request,
+        concept_brief=concept_brief,
+        reference_packet=reference_packet,
+    )
 
     return {
-        "content_plan": content_plan.model_dump()
+        "concept_brief": concept_brief.model_dump(),
+        "reference_packet": reference_packet.model_dump(),
+        "candidate_pool": candidate_pool.model_dump(),
     }
 
 

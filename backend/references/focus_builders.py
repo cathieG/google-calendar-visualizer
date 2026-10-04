@@ -2,45 +2,10 @@ from __future__ import annotations
 
 from planning.schemas import (
     CandidateScene,
-    ConceptBrief,
     ReferenceAnnotationSource,
     ReferenceFocus,
     ReferenceMode,
 )
-
-
-def build_exploratory_focus(
-    concept_brief: ConceptBrief,
-    max_references: int = 3,
-) -> ReferenceFocus:
-    """
-    Build the stage-A exploratory reference query before a visual
-    direction has been chosen.
-
-    The Concept Interpreter identifies design dimensions that remain
-    meaningfully open. This builder passes those questions to the
-    reference curator without choosing values for them.
-    """
-
-    focus_fields = [
-        dimension.value
-        for dimension in concept_brief.reference_dimensions
-    ]
-
-    return ReferenceFocus(
-        stage="creative_planning",
-        mode=ReferenceMode.exploratory,
-        annotation_source=(
-            ReferenceAnnotationSource.runtime_then_legacy
-        ),
-        focus_fields=focus_fields,
-        purpose=(
-            "Show contrasting visual precedents for design questions "
-            "that remain open before candidate generation."
-        ),
-        target_values={},
-        max_references=max_references,
-    )
 
 
 def build_art_direction_focus(
