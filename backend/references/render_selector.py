@@ -373,7 +373,7 @@ def _is_empty_evidence(
 def select_renderer_references(
     plan: FinalScenePlan,
     records: list[RenderReferenceRecord] | None = None,
-    max_references: int = 6,
+    max_references: int = 4,
 ) -> RendererReferencePacket:
     """
     Select a small renderer-reference packet after art direction is
@@ -609,7 +609,8 @@ ANNOTATION GROUNDING
 Every evidence claim must be supported on BOTH sides:
 
 1. by one or more exact fields in the FinalScenePlan;
-2. by one or more exact fields in that reference's supplied annotation.
+2. by one or more exact, non-null fields in that reference's supplied
+   annotation.
 
 For plan_fields:
 
@@ -637,16 +638,40 @@ Examples of valid annotation paths:
 whole_scene.viewpoint.vertical
 whole_scene.depth.category
 whole_scene.cropping.strength
+rendering.shape_language_source.environment
+rendering.color_source.functional_role
 humans.fine_inventory[0].hands_visible
 objects.image_verified_inventory[1].view
 relationships.image_verified_relations[0]
 
+The renderer annotations have been normalized so that legitimate
+dictionary fields use a consistent structure across references.
+
+A field may therefore exist in the annotation structure while having
+the value null for a particular reference.
+
+IMPORTANT:
+
+- A non-null value may be used as annotation evidence when it directly
+  supports the claim.
+- A null value means that this reference provides no evidence for that
+  property.
+- Do NOT cite a field whose value is null.
+- Do NOT cite a field whose value is empty or unrelated to the claim.
+
+Lists are NOT padded or normalized to a common length.
+
+Therefore, when citing a list element such as:
+
+humans.fine_inventory[1].body_visibility
+objects.image_verified_inventory[2].view
+relationships.image_verified_relations[3]
+
+the cited index must actually exist in that reference.
+
 A free-text FinalScenePlan field may support a match when its actual text
 contains the relevant decision. Do not infer a decision that the field
 does not state.
-
-Do not cite a field that is absent, null, empty, or unrelated to the
-claim.
 
 Do not infer a visual property merely from:
 
@@ -662,10 +687,10 @@ demonstrates.
 STRICT ANNOTATION PATH GRAMMAR
 ==================================================
 
-Every annotation_evidence field path MUST be copied from the supplied
-VERIFIED RENDERER REFERENCE BANK.
+Every annotation_evidence field path MUST correspond exactly to the
+supplied VERIFIED RENDERER REFERENCE BANK.
 
-The annotation root has exactly these top-level sections:
+For renderer evidence, use only these top-level annotation sections:
 
 - whole_scene
 - rendering
@@ -687,12 +712,14 @@ whole_scene.cropping.strength
 whole_scene.viewpoint.horizontal
 
 rendering.shape_language_source.overall
+rendering.shape_language_source.environment
 rendering.color_source.functional_role
 
 humans.fine_inventory[0].body_visibility
 humans.fine_inventory[0].hands_visible
 
 objects.image_verified_inventory[0].shape_treatment
+objects.image_verified_inventory[0].view
 
 relationships.image_verified_relations[0]
 
@@ -707,13 +734,39 @@ whole_scene.relationships.image_verified_relations[0]
 Do NOT place rendering, humans, objects, or relationships underneath
 whole_scene.
 
+Because the renderer annotations are normalized, some legitimate fields
+may be present with a null value.
+
+A path with a null value is structurally valid but is NOT valid evidence.
+
+For example:
+
+rendering.shape_language_source.environment = null
+
+means that the path is valid, but this reference does not provide
+environment shape-language evidence.
+
+Do not cite it.
+
+For list-valued sections, use only indices that actually exist in the
+supplied annotation. Do not invent or assume additional people, objects,
+or relationships merely because another reference contains more list
+items.
+
 Before returning the final selection, verify every annotation_evidence
-path against the supplied annotation structure.
+path against the supplied annotation:
 
-Do not infer, reconstruct, abbreviate, or invent a field path.
+1. the complete path is structurally valid;
+2. every required list index exists;
+3. the resolved value is not null;
+4. the resolved value is not empty;
+5. the resolved value directly supports the visual lesson.
 
-If you cannot identify an exact valid path supporting a claim, omit
-that annotation evidence rather than guessing a path.
+Do not infer, reconstruct, abbreviate, rename, or invent a field path.
+
+If no exact, non-null annotation field supports a claim, omit that
+annotation evidence rather than guessing.
+
 
 ==================================================
 STYLE-WIDE PROPERTIES VS. SCENE-SPECIFIC ARTISTIC MOVES
@@ -793,7 +846,7 @@ SELECTION SIZE AND REDUNDANCY
 Build a compact but sufficiently rich visual reference set
 covering the major execution demands of the FinalScenePlan.
 
-Return between four and the supplied maximum number of references.
+Return between two and the supplied maximum number of references.
 
 Do not pad the result merely because additional references are
 available.
@@ -950,10 +1003,11 @@ present in the FinalScenePlan.
             )
 
         if not choice.evidence:
-            raise ValueError(
-                f"Selected reference '{reference_id}' "
-                "contains no evidence claims."
+            print(
+                f"Stage-C skipping reference '{reference_id}' "
+                "because it contains no evidence claims."
             )
+            continue
 
         annotation_data = compact_by_id[
             reference_id
@@ -965,22 +1019,33 @@ present in the FinalScenePlan.
 
         for evidence in choice.evidence:
             if not evidence.demonstrates.strip():
-                raise ValueError(
-                    f"Reference '{reference_id}' contains "
-                    "an empty evidence description."
+                print(
+                    f"Stage-C skipping empty evidence claim "
+                    f"for reference '{reference_id}'."
                 )
+                continue
 
             if not evidence.plan_fields:
-                raise ValueError(
-                    f"Evidence '{evidence.demonstrates}' "
-                    "does not cite a FinalScenePlan field."
+                print(
+                    f"Stage-C skipping evidence claim with no "
+                    f"FinalScenePlan fields for reference "
+                    f"'{reference_id}': "
+                    f"{evidence.demonstrates}"
                 )
+                continue
 
             if not evidence.annotation_fields:
-                raise ValueError(
-                    f"Evidence '{evidence.demonstrates}' "
-                    "does not cite an annotation field."
+                print(
+                    f"Stage-C skipping evidence claim with no "
+                    f"annotation fields for reference "
+                    f"'{reference_id}': "
+                    f"{evidence.demonstrates}"
                 )
+                continue
+
+            # -------------------------------------------------
+            # Validate FinalScenePlan evidence.
+            # -------------------------------------------------
 
             plan_evidence: dict[
                 str,
@@ -988,20 +1053,43 @@ present in the FinalScenePlan.
             ] = {}
 
             for path in evidence.plan_fields:
-                value = _resolve_path(
-                    plan_data,
-                    path,
-                )
-
-                if _is_empty_evidence(value):
-                    raise ValueError(
-                        "Stage-C cited empty FinalScenePlan "
-                        f"field '{path}'."
+                try:
+                    value = _resolve_path(
+                        plan_data,
+                        path,
                     )
 
-                plan_evidence[
-                    path
-                ] = value
+                except (KeyError, ValueError) as exc:
+                    print(
+                        "Stage-C skipping invalid "
+                        "FinalScenePlan path "
+                        f"'{path}': {exc}"
+                    )
+                    continue
+
+                if _is_empty_evidence(value):
+                    print(
+                        "Stage-C skipping empty "
+                        "FinalScenePlan field "
+                        f"'{path}'."
+                    )
+                    continue
+
+                plan_evidence[path] = value
+
+            # An evidence claim must have at least one real
+            # FinalScenePlan field supporting it.
+            if not plan_evidence:
+                print(
+                    f"Stage-C skipping evidence claim because "
+                    f"no valid FinalScenePlan evidence remained: "
+                    f"{evidence.demonstrates}"
+                )
+                continue
+
+            # -------------------------------------------------
+            # Validate renderer-annotation evidence.
+            # -------------------------------------------------
 
             annotation_evidence: dict[
                 str,
@@ -1009,20 +1097,37 @@ present in the FinalScenePlan.
             ] = {}
 
             for path in evidence.annotation_fields:
-                value = _resolve_path(
-                    annotation_data,
-                    path,
-                )
-
-                if _is_empty_evidence(value):
-                    raise ValueError(
-                        "Stage-C cited empty annotation field "
-                        f"'{reference_id}:{path}'."
+                try:
+                    value = _resolve_path(
+                        annotation_data,
+                        path,
                     )
 
-                annotation_evidence[
-                    path
-                ] = value
+                except (KeyError, ValueError) as exc:
+                    print(
+                        "Stage-C skipping invalid annotation path "
+                        f"'{reference_id}:{path}': {exc}"
+                    )
+                    continue
+
+                if _is_empty_evidence(value):
+                    print(
+                        "Stage-C skipping empty annotation field "
+                        f"'{reference_id}:{path}'."
+                    )
+                    continue
+
+                annotation_evidence[path] = value
+
+            # A claim must have at least one actual annotation
+            # value. A normalized null field is not evidence.
+            if not annotation_evidence:
+                print(
+                    f"Stage-C skipping evidence claim because "
+                    f"no valid annotation evidence remained: "
+                    f"{evidence.demonstrates}"
+                )
+                continue
 
             validated_evidence.append(
                 ValidatedRenderEvidence(
@@ -1035,6 +1140,17 @@ present in the FinalScenePlan.
                     ),
                 )
             )
+
+        # If every proposed evidence claim for this reference
+        # failed validation, omit the reference rather than
+        # sending an unsupported reference downstream.
+        if not validated_evidence:
+            print(
+                f"Stage-C skipping reference '{reference_id}' "
+                "because no fully grounded evidence survived "
+                "validation."
+            )
+            continue
 
         record = record_by_id[
             reference_id

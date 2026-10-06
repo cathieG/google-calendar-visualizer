@@ -398,3 +398,136 @@ def debug_full_pipeline(
         ),
         "candidate_results": candidate_results,
     }
+
+
+@app.post("/concept/generate")
+def generate_concept(
+    request: ConceptRequest,
+):
+    """
+    Generate one production image for a concept.
+
+    The Creative Planner may produce multiple candidates,
+    but only the highest-priority candidate is rendered.
+    """
+
+    # -----------------------------------------------------
+    # 1. Concept Interpreter
+    # -----------------------------------------------------
+
+    concept_brief = interpret_concept(
+        request
+    )
+
+    # -----------------------------------------------------
+    # 2. Stage A
+    # -----------------------------------------------------
+
+    stage_a_packet = curate_semantic_references(
+        concept_brief
+    )
+
+    # -----------------------------------------------------
+    # 3. Creative Planner
+    # -----------------------------------------------------
+
+    candidate_pool = plan_candidate_scenes(
+        request=request,
+        concept_brief=concept_brief,
+        reference_packet=stage_a_packet,
+    )
+
+    # -----------------------------------------------------
+    # 4. Select highest-priority candidate
+    # -----------------------------------------------------
+
+    if not candidate_pool.generation_priority:
+        raise ValueError(
+            "Creative Planner returned no generation priority."
+        )
+
+    candidate_id = (
+        candidate_pool.generation_priority[0]
+    )
+
+    candidate = next(
+        (
+            candidate
+            for candidate in candidate_pool.candidates
+            if candidate.id == candidate_id
+        ),
+        None,
+    )
+
+    if candidate is None:
+        raise ValueError(
+            f"Generation-priority candidate "
+            f"'{candidate_id}' was not found."
+        )
+
+    # -----------------------------------------------------
+    # 5. Stage B
+    # -----------------------------------------------------
+
+    stage_b_focus = build_art_direction_focus(
+        candidate
+    )
+
+    stage_b_packet = curate_references(
+        stage_b_focus
+    )
+
+    # -----------------------------------------------------
+    # 6. Art Director
+    # -----------------------------------------------------
+
+    style_profile = get_style_profile(
+        "google_calendar"
+    )
+
+    final_scene_plan = art_direct_scene(
+        candidate=candidate,
+        style_profile=style_profile,
+        reference_packet=stage_b_packet,
+    )
+
+    # -----------------------------------------------------
+    # 7. Stage C
+    # -----------------------------------------------------
+
+    stage_c_packet = select_renderer_references(
+        plan=final_scene_plan,
+        max_references=6,
+    )
+
+    # -----------------------------------------------------
+    # 8. Prompt Compiler
+    # -----------------------------------------------------
+
+    render_prompt = compile_render_prompt(
+        plan=final_scene_plan,
+        style_profile=style_profile,
+        reference_packet=stage_c_packet,
+    )
+
+    # -----------------------------------------------------
+    # 9. Renderer
+    # -----------------------------------------------------
+
+    output_path = render_image(
+        render_prompt
+    )
+
+    # -----------------------------------------------------
+    # 10. Return response expected by options.js
+    # -----------------------------------------------------
+
+    return {
+        "message": "Image generated successfully",
+        "filename": output_path.name,
+        "file": str(output_path),
+        "image_url": (
+            f"http://127.0.0.1:8000/generated/"
+            f"{output_path.name}"
+        ),
+    }
