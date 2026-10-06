@@ -17,75 +17,86 @@ def _bullets(items: list[str]) -> str:
     )
 
 
+def _optional_text(
+    value: str | None,
+    fallback: str = "Not applicable.",
+) -> str:
+    if value is None:
+        return fallback
+
+    value = value.strip()
+
+    return value if value else fallback
+
+
 def _compile_style_contract(
+    plan: FinalScenePlan,
     style_profile: StyleProfile,
 ) -> str:
     """
-    Compile only the stable rendering-language invariants that the
-    image model must obey directly.
+    Compile stable visual-language rules that the renderer should obey.
 
-    Composition, scale, cropping, perspective, people, and scene
-    density have already been resolved into the FinalScenePlan and
-    are therefore not reopened here.
+    Scene-specific composition, framing, depth, scale, environment,
+    motion, and other art-direction decisions have already been made in
+    FinalScenePlan and must not be reopened here.
+
+    Only style principles that directly constrain realization are
+    included.
     """
-
-    principles = (
-        style_profile.rendering_principles
-        + style_profile.color_principles
-        + style_profile.shape_principles
-    )
-
-    return _bullets(principles)
-
-
-def _compile_layers(
-    plan: FinalScenePlan,
-) -> str:
-    treatments = {
-        treatment.layer_index: treatment
-        for treatment in plan.layer_treatments
-    }
 
     sections: list[str] = []
 
-    for layer in plan.scene_structure.layers:
-        treatment = treatments[layer.index]
-
-        contents = (
-            _bullets(layer.contents)
-            if layer.contents
-            else "- No additional contents specified."
-        )
+    def add_section(
+        title: str,
+        principles: list[str],
+    ) -> None:
+        if not principles:
+            return
 
         sections.append(
             f"""
-LAYER {layer.index}: {layer.role}
+{title}
 
-Contents:
-{contents}
-
-Semantic priority:
-{layer.semantic_priority}
-
-Detail priority:
-{treatment.detail_priority}
-
-Contrast priority:
-{treatment.contrast_priority}
-
-Color role:
-{treatment.color_role}
-
-Shape specificity:
-{treatment.shape_specificity}
-
-Layer guidance:
-{layer.notes or "No additional layer guidance."}
-
-Treatment guidance:
-{treatment.notes or "No additional treatment guidance."}
+{_bullets(principles)}
 """.strip()
         )
+
+    add_section(
+        "Rendering",
+        style_profile.rendering_principles,
+    )
+
+    add_section(
+        "Color",
+        style_profile.color_principles,
+    )
+
+    add_section(
+        "Shape",
+        style_profile.shape_principles,
+    )
+
+    add_section(
+        "Scene density",
+        style_profile.scene_density_principles,
+    )
+
+    if plan.human_staging is not None:
+        add_section(
+            "Human depiction",
+            style_profile.human_principles,
+        )
+
+    if plan.relationships_and_motion.motion_plan is not None:
+        add_section(
+            "Motion language",
+            style_profile.motion_principles,
+        )
+
+    add_section(
+        "Decorative and nonliteral treatment",
+        style_profile.decorative_principles,
+    )
 
     return "\n\n".join(sections)
 
@@ -96,7 +107,9 @@ def _compile_reference_guidance(
     """
     Translate Stage-C selections into renderer-facing instructions.
 
-    The selector has already decided which references are useful.
+    Stage C has already decided which references are useful and exactly
+    what each reference demonstrates.
+
     This function does not reinterpret or rank them.
     """
 
@@ -123,10 +136,10 @@ def _compile_reference_guidance(
             f"""
 REFERENCE {index}: {reference.concept}
 
-Study this reference only for:
+Study this image for:
 {evidence}
 
-Do not copy unrelated properties of this reference.
+Transfer the visual lesson, not the reference's specific design.
 """.strip()
         )
 
@@ -138,24 +151,48 @@ Do not copy unrelated properties of this reference.
 VISUAL REFERENCE GUIDANCE
 =========================
 
-The supplied reference images are evidence for specific visual
-properties of the completed scene plan.
+The supplied images are execution precedents for specific decisions
+that already exist in the FinalScenePlan.
 
-Use each reference only for the explicitly listed properties.
+Use each reference for the properties listed below.
 
-Do not inherit unrelated properties from a reference.
+Do not use a reference to redesign the scene.
 
-In particular, do not copy a reference's:
+Do not copy its components precisely such as:
 - subject matter,
 - object set,
-- narrative,
 - exact pose,
 - exact composition,
-- exact spatial layout,
+- exact crop boundary,
+- exact viewpoint,
+- exact spatial arrangement,
 - palette,
-- or other visual properties not explicitly identified below.
+- character appearance,
+- or narrative.
 
 {reference_sections}
+""".strip()
+
+
+def _compile_human_staging(
+    plan: FinalScenePlan,
+) -> str:
+    if plan.human_staging is None:
+        return "No people are present in the planned scene."
+
+    return f"""
+Body visibility:
+{plan.human_staging.body_visibility.value}
+
+Orientation and pose:
+{_optional_text(
+    plan.human_staging.orientation_and_pose
+)}
+
+Role in composition:
+{_optional_text(
+    plan.human_staging.role_in_composition
+)}
 """.strip()
 
 
@@ -165,52 +202,50 @@ def compile_render_prompt(
     reference_packet: RendererReferencePacket | None = None,
 ) -> RenderPrompt:
     """
-    Deterministically translate a FinalScenePlan, stable style
-    invariants, and optional Stage-C renderer references into a
-    renderer-ready prompt.
+    Deterministically translate a completed FinalScenePlan, StyleProfile,
+    and optional Stage-C renderer references into a renderer-ready prompt.
 
     This function makes no new creative decisions.
 
-    The FinalScenePlan defines what this particular illustration
-    depicts and how it is composed.
+    FinalScenePlan defines the finished scene and its art direction.
 
-    The StyleProfile contributes only stable rendering-language
-    constraints that should remain true across illustrations in the
-    same visual system.
+    StyleProfile supplies stable visual-language constraints.
 
-    Stage-C references provide visual evidence only for specific
-    already-decided properties.
+    Stage-C references provide execution precedents for decisions
+    already present in the plan, and they are also visual examples of the
+    style profile.
     """
 
-    selected_objects = (
-        _bullets(plan.selected_objects)
-        if plan.selected_objects
-        else "- No additional objects beyond the described scene."
+    visible_elements = (
+        _bullets(
+            plan.content_selection.visible_elements
+        )
+        if plan.content_selection.visible_elements
+        else "- No additional visible elements specified."
     )
 
-    must_preserve = (
-        _bullets(plan.must_preserve)
-        if plan.must_preserve
-        else "- Preserve the scene and recognition logic described above."
+    intentional_omissions = (
+        _bullets(
+            plan.content_selection.intentional_omissions
+        )
+        if plan.content_selection.intentional_omissions
+        else "- No additional intentional omissions."
     )
 
-    constraints = (
-        _bullets(plan.content_constraints)
-        if plan.content_constraints
-        else "- No additional content constraints."
-    )
-
-    accent = (
-        plan.accent_detail
-        if plan.accent_detail is not None
-        else "None."
+    key_relationships = (
+        _bullets(
+            plan.relationships_and_motion.key_relationships
+        )
+        if plan.relationships_and_motion.key_relationships
+        else "- No additional key relationships specified."
     )
 
     style_contract = _compile_style_contract(
-        style_profile
+        plan=plan,
+        style_profile=style_profile,
     )
 
-    layers = _compile_layers(
+    human_staging = _compile_human_staging(
         plan
     )
 
@@ -227,101 +262,136 @@ def compile_render_prompt(
     )
 
     prompt = f"""
-RENDERING LANGUAGE — NON-NEGOTIABLE
-===================================
+RENDERING LANGUAGE
+==================
 
-Render the illustration in the following visual language throughout
-the entire image.
+Render the entire illustration according to this stable visual language.
 
 {style_contract}
 
-These are global rendering constraints, not optional local suggestions.
-They apply to every visible form in the image.
+These principles govern HOW the completed design is rendered.
+
+They do not override or reopen any scene-specific decision below.
+
+If you are provided with reference images, the reference images are a subset of
+the sources from which style contract is derived. Therefore, your rendering
+should be in a style where people can effectively recognize them to be in
+the same general style.
 
 
-SCENE
-=====
+CORE VISUAL IDEA
+================
 
-Visual thesis:
-{plan.visual_thesis}
+Recognition plan:
+{plan.recognition_plan}
 
-Subject:
-{plan.subject}
+Presentation concept:
+{plan.presentation_concept}
 
-Setting:
-{plan.setting}
+Representation strategy:
+{plan.representation_strategy.value}
 
-Action:
-{plan.action}
-
-Visible objects:
-{selected_objects}
-
-Accent detail:
-{accent}
+Recognition structure:
+{plan.recognition_structure.value}
 
 
-VIEW AND COMPOSITION
-====================
+CONTENT
+=======
 
-View angle:
-{plan.view_angle}
+Visible elements:
+{visible_elements}
 
-Framing:
-{plan.framing_scale}
+Intentionally omitted:
+{intentional_omissions}
 
-Composition:
-{plan.composition_structure}
+Render the listed visible elements as required by the completed plan.
 
-Visual weight:
-{plan.visual_weight_distribution}
+Do not reintroduce intentionally omitted content merely because it would
+normally appear in a literal real-world version of the scene.
 
-Salience:
-{plan.salience_structure}
+
+COMPOSITION
+===========
+
+Structure:
+{plan.composition.structure}
+
+Hierarchy and balance:
+{plan.composition.hierarchy_and_balance}
 
 Negative space:
-{plan.negative_space_strategy}
+{plan.composition.negative_space}
 
 Directional flow:
-{plan.directional_flow}
+{plan.composition.directional_flow}
 
 
-SCALE AND FRAME
-===============
+FRAMING AND VIEW
+================
 
-Scale logic:
-{plan.scale_source}
+Viewpoint:
+{plan.framing_and_view.viewpoint}
 
-Cropping:
-{plan.cropping_strength}
+Framing:
+{plan.framing_and_view.framing}
+
+Cropping strength:
+{plan.framing_and_view.cropping_strength.value}
 
 Edge continuation:
-{plan.edge_continuation}
+{plan.framing_and_view.edge_continuation}
 
 
-SPATIAL STRUCTURE
-=================
+SPATIAL PLAN
+============
 
 Depth strategy:
-{plan.scene_structure.depth_strategy}
+{plan.spatial_plan.depth_strategy.value}
 
-Depth span:
-{plan.scene_structure.depth_span}
+Perspective strategy:
+{plan.spatial_plan.perspective_strategy.value}
 
-Perspective:
-{plan.scene_structure.perspective_strategy}
-
-Spatial coherence:
-{plan.scene_structure.spatial_coherence}
-
-{layers}
+Spatial relationships:
+{plan.spatial_plan.spatial_relationships}
 
 
-SCENE-SPECIFIC STYLE TREATMENT
-==============================
+SCALE
+=====
 
-People:
-{plan.human_direction}
+Scale strategy:
+{plan.scale_plan.strategy.value}
+
+Scale realization:
+{plan.scale_plan.description}
+
+
+ENVIRONMENT
+===========
+
+{plan.environment_plan}
+
+
+RELATIONSHIPS AND MOTION
+========================
+
+Key relationships:
+{key_relationships}
+
+Motion:
+{_optional_text(
+    plan.relationships_and_motion.motion_plan,
+    fallback="The scene is static; do not add artificial motion cues.",
+)}
+
+
+HUMAN STAGING
+=============
+
+{human_staging}
+
+
+SCENE-SPECIFIC STYLE REALIZATION
+================================
 
 Color:
 {plan.color_direction}
@@ -332,37 +402,46 @@ Shape:
 Detail:
 {plan.detail_direction}
 
-Nonliteral treatment:
-{plan.nonliteral_direction}
+Human rendering:
+{_optional_text(
+    plan.human_rendering_direction
+)}
+
+Decorative / nonliteral treatment:
+{plan.decorative_direction}
 {reference_section}
 
 
-MUST PRESERVE
-=============
+EXECUTION RULES
+===============
 
-{must_preserve}
+Render this completed visual plan directly.
 
+Do not redesign the scene.
 
-CONTENT CONSTRAINTS
-===================
+Do not:
+- change the presentation concept,
+- choose a different composition,
+- change the viewpoint,
+- change the framing or crop,
+- change the depth or perspective strategy,
+- change the scale logic,
+- introduce a different environment treatment,
+- add semantically important people or objects,
+- remove recognition-critical content,
+- invent a new relationship or storyline,
+- or replace the scene-specific art direction with a reference image's
+  solution.
 
-{constraints}
+Preserve the recognition_plan and presentation_concept as the organizing
+logic of the image.
 
+Preserve the specified relationships among important people, objects,
+and environmental elements.
 
-EXECUTION
-=========
-
-Render this completed plan directly.
-
-Do not redesign the scene, introduce a new storyline, add semantically
-important content, or reinterpret the visual concept.
-
-Preserve the specified composition, recognition cues, spatial
-relationships, and scene-specific treatment while obeying the global
-rendering language above.
-
-When reference images are supplied, use them only for the specific
-properties identified in VISUAL REFERENCE GUIDANCE.
+The goal is faithful execution of the completed FinalScenePlan, not a
+new interpretation of it, and such execution's visual realization belongs
+convincingly to thesame illustration family as the references.
 """.strip()
 
     reference_image_paths = (

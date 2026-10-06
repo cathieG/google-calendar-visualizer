@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class StyleProfile(BaseModel):
@@ -10,11 +10,19 @@ class StyleProfile(BaseModel):
     composition_principles: list[str]
     scale_principles: list[str]
     cropping_principles: list[str]
+
+    spatial_principles: list[str] = Field(default_factory=list)
     perspective_principles: list[str]
+    environment_principles: list[str] = Field(default_factory=list)
+
     human_principles: list[str]
+    motion_principles: list[str] = Field(default_factory=list)
+
     scene_density_principles: list[str]
     color_principles: list[str]
     shape_principles: list[str]
+    decorative_principles: list[str] = Field(default_factory=list)
+
     rendering_principles: list[str]
 
 

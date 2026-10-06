@@ -751,6 +751,4 @@ def curate_references(
         references=matches,
         teaching_notes=teaching_notes,
     )
-# Temporary compatibility re-export while existing callers migrate to
-# references.focus_builders.
-from references.focus_builders import build_art_direction_focus  # noqa: E402,F401
+

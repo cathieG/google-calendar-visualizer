@@ -10,10 +10,10 @@ from planning.schemas import (
 
 def build_art_direction_focus(
     candidate: CandidateScene,
-    max_references: int = 3,
+    max_references: int = 6,
 ) -> ReferenceFocus:
     """
-    Build the stage-B precedent query for an already-curated candidate.
+    Build the Stage-B precedent query for an already-curated candidate.
 
     Candidate identity supplies the precedent targets. Depth and
     cropping are requested as evidence only because the Art Director has

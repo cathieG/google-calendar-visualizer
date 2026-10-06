@@ -13,10 +13,18 @@ GENERIC_STYLE = StyleProfile(
     composition_principles=[],
     scale_principles=[],
     cropping_principles=[],
+
+    spatial_principles=[],
     perspective_principles=[],
+    environment_principles=[],
+
     human_principles=[],
+    motion_principles=[],
+
     scene_density_principles=[],
     color_principles=[],
     shape_principles=[],
+    decorative_principles=[],
+
     rendering_principles=[],
 )

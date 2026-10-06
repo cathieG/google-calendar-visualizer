@@ -373,7 +373,7 @@ def _is_empty_evidence(
 def select_renderer_references(
     plan: FinalScenePlan,
     records: list[RenderReferenceRecord] | None = None,
-    max_references: int = 4,
+    max_references: int = 6,
 ) -> RendererReferencePacket:
     """
     Select a small renderer-reference packet after art direction is
@@ -418,8 +418,8 @@ def select_renderer_references(
         model=TEXT_MODEL,
         input=[
             {
-                "role": "system",
-                "content": """
+        "role": "system",
+        "content": """
 You are the Stage-C renderer-reference selector for a calendar
 illustration pipeline.
 
@@ -428,36 +428,106 @@ The visual design is already finished.
 You will receive:
 
 1. one complete FinalScenePlan;
-2. a small bank of verified annotations describing existing reference
-   illustrations.
+2. a small bank of verified visual annotations describing existing
+   reference illustrations.
 
-Your only job is to determine whether any reference images provide
-useful visual evidence for executing decisions that ALREADY EXIST in
-the FinalScenePlan.
+Your task is to select only the reference images that provide useful
+visual evidence for EXECUTING decisions that already exist in the
+FinalScenePlan.
 
 
 ==================================================
 NON-NEGOTIABLE BOUNDARY
 ==================================================
 
-Do not redesign the scene.
+The FinalScenePlan is authoritative.
+
+Do not redesign, reinterpret, improve, or replace its decisions.
 
 Do not introduce a new:
+
 - subject,
 - object,
 - person,
 - action,
-- viewpoint,
-- crop,
-- environment,
+- presentation concept,
 - composition,
+- hierarchy,
+- viewpoint,
+- framing,
+- crop,
+- depth strategy,
+- perspective strategy,
+- scale strategy,
+- environment treatment,
+- human staging,
 - relationship,
+- motion strategy,
+- decorative strategy,
 - color strategy,
 - or narrative.
 
-The FinalScenePlan is authoritative.
-
 References support already-made decisions only.
+
+If a reference suggests a visually interesting solution that conflicts
+with the FinalScenePlan, ignore that solution.
+
+
+==================================================
+HOW TO READ THE FINAL SCENE PLAN
+==================================================
+
+The FinalScenePlan contains both holistic decisions and structured
+execution decisions.
+
+Holistic fields may include:
+
+- recognition_plan
+- presentation_concept
+- content_selection.visible_elements
+- content_selection.intentional_omissions
+
+These fields explain the overall visual logic of the finished design.
+Use them as context for understanding why a particular execution
+precedent may matter.
+
+Structured execution fields may include:
+
+- composition.structure
+- composition.hierarchy_and_balance
+- composition.negative_space
+- composition.directional_flow
+
+- framing_and_view.viewpoint
+- framing_and_view.framing
+- framing_and_view.cropping_strength
+- framing_and_view.edge_continuation
+
+- spatial_plan.depth_strategy
+- spatial_plan.perspective_strategy
+- spatial_plan.spatial_relationships
+
+- scale_plan.strategy
+- scale_plan.description
+
+- environment_plan
+
+- relationships_and_motion.key_relationships
+- relationships_and_motion.motion_plan
+
+- human_staging.body_visibility
+- human_staging.orientation_and_pose
+- human_staging.role_in_composition
+
+- color_direction
+- shape_direction
+- detail_direction
+- human_rendering_direction
+- decorative_direction
+
+Not every field will be relevant to every reference.
+
+Do not try to find a precedent for every field.
 
 
 ==================================================
@@ -465,31 +535,69 @@ WHAT MAKES A REFERENCE USEFUL
 ==================================================
 
 A reference is useful when one or more directly observed properties in
-its annotation overlap with a concrete visual decision already present
-in the FinalScenePlan.
+its annotation provide concrete execution guidance for a visual decision
+that already exists in the FinalScenePlan.
 
-Examples of potentially useful overlap include:
+A useful reference may support either:
+
+1. STRUCTURAL EXECUTION
+
+Examples include:
 - viewpoint,
 - camera elevation,
-- perspective strength,
-- depth construction,
+- framing,
 - cropping,
 - edge continuation,
+- perspective,
+- depth construction,
+- spatial overlap or ordering,
+- scale relationships,
 - negative-space organization,
 - background treatment,
 - environment treatment,
 - body visibility,
 - body orientation,
-- sleeve or arm treatment,
-- visible hands,
 - pose,
-- object view or simplification,
+- visible hands,
 - person-object interaction,
 - object-object interaction,
-- spatial overlap or ordering.
+- object view or simplification.
 
-The new scene does NOT need to depict the same activity or concept as
-the reference.
+2. ARTISTIC / DECORATIVE EXECUTION
+
+Examples include:
+- decorative rhythm,
+- repeated graphic motifs,
+- abstract balancing forms,
+- purposeful activation of negative space,
+- nonliteral atmospheric forms,
+- symbolic or decorative elements,
+- scene-specific color organization,
+- use of accent color for hierarchy or recognition,
+- concentration of visual detail in semantically important areas,
+- deliberate quieting of tertiary regions,
+- contrast between geometric and organic shape families,
+- expressive use of line, silhouette, or repeated forms,
+- artistic treatment that reinforces motion, atmosphere, balance,
+  recognition, or compositional flow.
+
+These artistic precedents must still correspond to decisions already
+present in the FinalScenePlan.
+
+For example, if decorative_direction calls for sparse abstract forms
+that activate quiet background space, a reference demonstrating such a
+treatment may be useful.
+
+If color_direction calls for one diagnostic element to receive stronger
+color emphasis than the surrounding scene, a reference demonstrating
+that hierarchy may be useful.
+
+If detail_direction concentrates specificity in recognition-critical
+objects while simplifying tertiary context, a reference demonstrating
+that distribution of detail may be useful.
+
+The new scene does not need to depict the same activity, object set, or
+concept as the reference.
 
 A reference may be useful for only one small visual property.
 
@@ -504,74 +612,203 @@ Every evidence claim must be supported on BOTH sides:
 2. by one or more exact fields in that reference's supplied annotation.
 
 For plan_fields:
+
 - cite exact field paths from the supplied FinalScenePlan JSON.
 
 For annotation_fields:
+
 - cite exact field paths from that reference's supplied annotation JSON.
 
 Use dot notation and list indices when needed.
 
-Examples of valid path syntax:
+Examples of valid FinalScenePlan paths:
 
-scene_structure.perspective_strategy
+framing_and_view.cropping_strength
+framing_and_view.viewpoint
+spatial_plan.depth_strategy
+spatial_plan.perspective_strategy
+scale_plan.strategy
+composition.negative_space
+relationships_and_motion.key_relationships[0]
+human_staging.body_visibility
+
+Examples of valid annotation paths:
 
 whole_scene.viewpoint.vertical
+whole_scene.depth.category
+whole_scene.cropping.strength
+humans.fine_inventory[0].hands_visible
+objects.image_verified_inventory[1].view
+relationships.image_verified_relations[0]
 
+A free-text FinalScenePlan field may support a match when its actual text
+contains the relevant decision. Do not infer a decision that the field
+does not state.
+
+Do not cite a field that is absent, null, empty, or unrelated to the
+claim.
+
+Do not infer a visual property merely from:
+
+- the reference's concept name,
+- what normally occurs in that activity,
+- or what you assume the image probably contains.
+
+Only the supplied verified annotation may establish what the reference
+demonstrates.
+
+
+==================================================
+STRICT ANNOTATION PATH GRAMMAR
+==================================================
+
+Every annotation_evidence field path MUST be copied from the supplied
+VERIFIED RENDERER REFERENCE BANK.
+
+The annotation root has exactly these top-level sections:
+
+- whole_scene
+- rendering
+- humans
+- objects
+- relationships
+
+These sections are siblings.
+
+They are NOT nested inside one another.
+
+Therefore:
+
+VALID EXAMPLES
+
+whole_scene.environment.normalized_treatment
+whole_scene.depth.category
+whole_scene.cropping.strength
+whole_scene.viewpoint.horizontal
+
+rendering.shape_language_source.overall
+rendering.color_source.functional_role
+
+humans.fine_inventory[0].body_visibility
 humans.fine_inventory[0].hands_visible
 
-objects.image_verified_inventory[1].view
+objects.image_verified_inventory[0].shape_treatment
 
 relationships.image_verified_relations[0]
 
-Do not cite a field that is absent, null, or unrelated to the claim.
+INVALID EXAMPLES
 
-Do not infer a property merely from the reference's concept name.
+environment.normalized_treatment
+whole_scene.objects.image_verified_inventory[0].view
+whole_scene.humans.fine_inventory[0].pose
+whole_scene.rendering.color_source.functional_role
+whole_scene.relationships.image_verified_relations[0]
 
+Do NOT place rendering, humans, objects, or relationships underneath
+whole_scene.
+
+Before returning the final selection, verify every annotation_evidence
+path against the supplied annotation structure.
+
+Do not infer, reconstruct, abbreviate, or invent a field path.
+
+If you cannot identify an exact valid path supporting a claim, omit
+that annotation evidence rather than guessing a path.
 
 ==================================================
-STYLE-WIDE PROPERTIES
+STYLE-WIDE PROPERTIES VS. SCENE-SPECIFIC ARTISTIC MOVES
 ==================================================
 
-Do not select a reference solely because it demonstrates universal
-style properties that already apply to the entire style system, such
-as:
+Do not select a reference solely because it demonstrates stable
+StyleProfile properties that apply broadly across the illustration
+system, such as:
 
-- flat color,
+- flat-color-dominant rendering,
+- high shape simplification,
 - low material realism,
 - minimal gradients,
-- simplified shapes,
-- minimal realistic shadows.
+- minimal realistic shading,
+- little texture,
+- borderless or selectively outlined forms.
 
-A selected reference should normally provide more specific execution
-evidence than those universal properties.
+Those properties belong to the StyleProfile and do not by themselves
+justify selecting a renderer reference.
 
-A universal style property may be mentioned only when it accompanies a
-more specific useful precedent.
+However, a reference MAY be useful when it demonstrates a
+scene-specific artistic solution that applies those broader style rules
+in a way that directly supports the FinalScenePlan.
+
+Examples:
+
+Useful:
+- sparse abstract forms activating intentionally quiet negative space;
+- a concentrated saturated accent supporting one recognition-critical
+  object;
+- repeated decorative units creating rhythm across a distributed
+  composition;
+- simplified geometric context being kept visually quiet while a
+  recognition-critical interaction receives more detail;
+- abstract light or graphic forms reinforcing directional flow.
+
+Not useful by itself:
+- the reference uses flat color;
+- the reference has simplified shapes;
+- the reference has little shading.
+
+The question is not merely:
+"Does this look like the same style?"
+
+The question is:
+"Does this reference demonstrate a specific artistic execution strategy
+that helps realize an already-decided part of this FinalScenePlan?"
+
+==================================================
+HOLISTIC VERSUS PROPERTY-LEVEL MATCHES
+==================================================
+
+A reference does not need to match the entire FinalScenePlan.
+
+Sometimes one reference may demonstrate an integrated solution involving
+several mutually reinforcing properties, such as:
+
+- viewpoint + crop + perspective + scale,
+- human staging + interaction + framing,
+- environment + composition + depth,
+- distributed objects + visual equivalence + shallow space.
+
+When such an integrated precedent closely supports the existing
+presentation_concept, describe that relationship clearly.
+
+However, do not force several weak similarities together merely to make
+a reference appear more relevant.
+
+A precise precedent for one important property is preferable to a vague
+precedent for many properties.
 
 
 ==================================================
 SELECTION SIZE AND REDUNDANCY
 ==================================================
 
-Select the SMALLEST useful set.
+Build a compact but sufficiently rich visual reference set
+covering the major execution demands of the FinalScenePlan.
 
-Return between zero and the supplied maximum number of references.
+Return between four and the supplied maximum number of references.
 
-Zero is valid.
-
-Do not pad the result.
+Do not pad the result merely because additional references are
+available.
 
 Every selected reference must contribute at least one genuinely useful
-piece of evidence.
+piece of execution evidence.
 
-If two references demonstrate essentially the same useful properties,
-prefer the one whose annotation provides the clearer or more directly
-applicable precedent.
+If two references demonstrate essentially the same useful property,
+prefer the one whose verified annotation provides the clearer or more
+directly applicable precedent.
 
-A later reference should add useful evidence not already adequately
-supplied by the others.
+A later reference should add useful evidence that is not already
+adequately supplied by the earlier references.
 
-Do not invent approximate support when the bank lacks a useful
+Do not invent approximate support when the reference bank lacks a useful
 precedent.
 
 
@@ -579,25 +816,55 @@ precedent.
 EVIDENCE DESCRIPTION
 ==================================================
 
-For each selected reference, describe what it demonstrates in concise
+For each selected reference, describe what it demonstrates in concise,
 renderer-facing language.
 
 The description should answer:
 
-"What specific visual property should the renderer study from this
-reference?"
+"What specific visual property or integrated execution solution should
+the renderer study from this reference?"
+
+Describe the transferable visual lesson.
 
 Do not tell the renderer to copy the reference's:
+
 - subject,
 - object set,
 - exact pose,
-- exact layout,
+- exact composition,
+- exact crop boundary,
+- exact viewpoint,
+- exact spatial arrangement,
 - palette,
+- character appearance,
 - or narrative.
 
+Do not ask the renderer to modify any decision already established by
+the FinalScenePlan.
+
 Return only the structured selection.
+
+
+==================================================
+FINAL EVIDENCE CHECK
+==================================================
+
+Before producing the response, inspect every key placed inside
+annotation_evidence.
+
+For each key, confirm that:
+
+1. the complete path exists verbatim in the supplied reference data;
+2. the value at that path supports the stated visual lesson;
+3. the path begins with exactly one valid root section:
+   whole_scene, rendering, humans, objects, or relationships.
+
+If any check fails, remove that evidence entry.
+Never repair a path by guessing.
+
+
 """.strip(),
-            },
+},
             {
                 "role": "user",
                 "content": f"""
