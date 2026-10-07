@@ -179,6 +179,11 @@ decorative_atmosphere_scene
 - Atmosphere, decorations, or cultural/festive cues carry most of the
   concept.
 
+
+Note: As as illustration, the scene should be clean and aesthetic. If a people
+scene can be expressed not by literal depiction of people but other novel representation
+strategies, you may try prioritizing those candidates.
+
 --------------------------------------------------
 5. WRITE A VISUAL THESIS FOR EACH CANDIDATE
 --------------------------------------------------

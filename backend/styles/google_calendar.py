@@ -218,8 +218,10 @@ GOOGLE_CALENDAR_STYLE = StyleProfile(
             "anatomically or materially realistic."
         ),
         (
-            "Faces may use minimal features when facial information is not "
-            "important to recognition or action."
+            "Faces should remain highly simplified, but visible facial features"
+            "should not be omitted indiscriminately. When aface is shown from the front"
+            "or the side where the eyes and mouth would naturally be visible, include such"
+            "features as small, simple graphic marks."
         ),
         (
             "Full-body depiction is not required. People may appear as complete "
@@ -307,6 +309,9 @@ GOOGLE_CALENDAR_STYLE = StyleProfile(
             "Density should remain deliberate rather than becoming either "
             "accidentally empty or uniformly cluttered."
         ),
+        (
+            "Overall, the scene must not be too full or visually complex."
+        )
     ],
 
     # ---------------------------------------------------------
@@ -317,6 +322,8 @@ GOOGLE_CALENDAR_STYLE = StyleProfile(
         (
             "Favor clean areas of solid color over gradients, realistic material "
             "variation, or continuous tonal modeling."
+            "Avoid excessive tonal variation within a single form when a simpler "
+            "flat treatment communicates its structure clearly."
         ),
         (
             "Use color primarily to separate major forms, establish grouping, "
@@ -337,9 +344,13 @@ GOOGLE_CALENDAR_STYLE = StyleProfile(
             "and help unify a distributed composition."
         ),
         (
-            "Avoid excessive tonal variation within a single form when a simpler "
-            "flat treatment communicates its structure clearly."
+            "Use a coherent color palette with a small number of dominant color "
+            "families. Additional colors may appear for natural variation and detail."
         ),
+        (
+            "Be explorative with the color palettes, and explore different atmospheric"
+            "background color."
+        )
     ],
 
     # ---------------------------------------------------------
@@ -429,6 +440,9 @@ GOOGLE_CALENDAR_STYLE = StyleProfile(
         (
             "Treat the illustration as a designed graphic scene rather than a "
             "miniature realistic photograph."
+        ),
+        (
+            "Overall, the scene may not be dense or too complex."
         ),
     ],
 )

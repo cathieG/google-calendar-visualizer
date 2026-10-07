@@ -17,6 +17,20 @@ window.CalendarAdapter = {
     return dialog?.querySelector(".Tnsqdc") || null;
   },
 
+  hasGoogleIllustration(dialog) {
+    const header = this.getHeader(dialog);
+    if (!header) return false;
+
+    const image = header.querySelector(".YrCd2b img");
+
+    if (!image) {
+      return false;
+    }
+
+    return image.dataset.calendarVisualizer !== "true";
+  },
+
+
   applyIllustration(dialog, imageUrl) {
     const header = this.getHeader(dialog);
 
@@ -28,9 +42,10 @@ window.CalendarAdapter = {
 
     // Google already has an illustration area
     if (existingImage) {
-      if (existingImage.src === imageUrl) {
-        return "unchanged";
-      }
+      existingImage.dataset.calendarVisualizer = "true";
+      existingImage.style.transform = "scaleX(-1)";
+
+      if (existingImage.src === imageUrl) return "unchanged";
 
       existingImage.src = imageUrl;
       return "replaced";
@@ -45,6 +60,8 @@ window.CalendarAdapter = {
     const popupImage = document.createElement("img");
     popupImage.className = "AuSgpc";
     popupImage.src = imageUrl;
+    popupImage.dataset.calendarVisualizer = "true";
+    popupImage.style.transform = "scaleX(-1)";
 
     artWrapper.appendChild(popupImage);
     header.prepend(artWrapper);

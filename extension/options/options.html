@@ -15,6 +15,10 @@
 
     <p>Manage your personal visual concepts here.</p>
 
+    <!-- =====================================================
+         Add / Edit Concept
+         ===================================================== -->
+
     <section id="add-concept">
       <h2>Add Concept</h2>
 
@@ -30,9 +34,8 @@
         <label for="concept-type">Type</label>
         <select id="concept-type" required>
           <option value="person">Person</option>
-          <option value="place">Place</option>
           <option value="activity">Activity</option>
-          <option value="other">Other</option>
+          <option value="place">Place</option>
         </select>
 
         <label for="concept-aliases">Aliases</label>
@@ -41,6 +44,7 @@
           type="text"
           placeholder="e.g. pottery, ceramics, pottery class"
         />
+
         <label for="concept-description">Description</label>
         <textarea
           id="concept-description"
@@ -54,19 +58,143 @@
 
         <p id="generation-status"></p>
 
-        <img
-          id="concept-image-preview"
-          alt="Generated concept preview"
+        <!-- =================================================
+             Image comparison
+             ================================================= -->
+
+        <div id="image-comparison">
+
+          <div
+            id="current-image-panel"
+            class="comparison-panel"
+            hidden
+          >
+            <h3>Current Image</h3>
+
+            <img
+              id="current-concept-image"
+              alt="Current concept image"
+            />
+          </div>
+
+          <div
+            id="new-image-panel"
+            class="comparison-panel"
+          >
+            <h3>New Generation</h3>
+
+            <img
+              id="concept-image-preview"
+              alt="Generated concept preview"
+              hidden
+            />
+          </div>
+
+        </div>
+
+        <button
+          id="keep-current-image-button"
+          type="button"
           hidden
-          style="max-width: 300px; display: block; margin-top: 12px;"
-        />
-      
-        <button id="save-concept-button" type="submit">Save Concept</button>
+        >
+          Keep Current Image
+        </button>
+
+        <button id="save-concept-button" type="submit">
+          Save Concept
+        </button>
       </form>
     </section>
 
+    <!-- =====================================================
+         Concept Library
+         ===================================================== -->
+
     <section id="concept-list">
       <h2>Concept Library</h2>
+
+      <div id="concept-type-tabs">
+        <button
+          class="concept-type-tab active"
+          data-type="person"
+          type="button"
+        >
+          Person
+        </button>
+
+        <button
+          class="concept-type-tab"
+          data-type="activity"
+          type="button"
+        >
+          Activity
+        </button>
+
+        <button
+          class="concept-type-tab"
+          data-type="place"
+          type="button"
+        >
+          Place
+        </button>
+      </div>
+
+      <div id="concept-grid"></div>
+    </section>
+
+    <!-- =====================================================
+         Single Concept Detail View
+         ===================================================== -->
+
+    <section id="concept-detail" hidden>
+      <button id="back-to-library-button" type="button">
+        ← Back to Concept Library
+      </button>
+
+      <div class="concept-detail-header">
+        <div>
+          <h2 id="detail-name"></h2>
+          <p id="detail-type"></p>
+        </div>
+
+        <button id="detail-edit-button" type="button">
+          Edit Concept
+        </button>
+      </div>
+
+      <div class="detail-section">
+        <h3>Aliases</h3>
+        <p id="detail-aliases"></p>
+      </div>
+
+      <div class="detail-section">
+        <h3>Description</h3>
+        <p id="detail-description"></p>
+      </div>
+
+      <div class="detail-section">
+        <h3>Current Image</h3>
+
+        <img
+          id="detail-current-image"
+          alt="Current concept image"
+          hidden
+        />
+
+        <p id="detail-no-current-image" hidden>
+          No current image.
+        </p>
+      </div>
+
+      <div class="detail-section">
+        <h3>Generation History</h3>
+
+        <div id="image-history-grid"></div>
+
+        <p id="no-image-history" hidden>
+          No generation history yet.
+        </p>
+      </div>
     </section>
   </main>
 

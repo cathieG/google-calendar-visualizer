@@ -46,10 +46,9 @@ const defaultConcepts = [
   {
     name: "Canaan",
     type: "person",
-    aliases: ["Canaan","friend"],
+    aliases: ["Canaan", "friend"],
     image: null
   }
-
 ];
 
 const fallbackImages = {
@@ -58,9 +57,14 @@ const fallbackImages = {
   place: "assets/fallback-place.png"
 };
 
+const GENERATION_ENDPOINT =
+  "http://127.0.0.1:8000/concept/generate";
 
 let concepts = [];
+let conceptsLoaded = false;
 let lastLoggedMatchKey = null;
+
+const generationInFlight = new Set();
 
 function normalizeText(text) {
   return (text || "")
@@ -143,13 +147,124 @@ function getImageForMatchedConcepts(matchedConcepts) {
     return conceptWithImage.image;
   }
 
-  const firstMatchedConcept = matchedConcepts[0];
+  return null;
+}
 
-  return fallbackImages[firstMatchedConcept.type] || null;
+async function saveGeneratedConcept(title, imageUrl) {
+  const normalizedTitle = normalizeText(title);
+
+  const existingIndex = concepts.findIndex(
+    (concept) => normalizeText(concept.name) === normalizedTitle
+  );
+
+  if (existingIndex !== -1) {
+    concepts[existingIndex] = {
+      ...concepts[existingIndex],
+      image: imageUrl
+    };
+  } else {
+    concepts.push({
+      name: title,
+      type: "activity",
+      aliases: [title],
+      image: imageUrl
+    });
+  }
+
+  await ConceptStorage.saveConcepts(concepts);
+}
+
+async function generateIllustrationForTitle(title) {
+  const generationKey = normalizeText(title);
+
+  if (!generationKey) return;
+
+  if (generationInFlight.has(generationKey)) {
+    return;
+  }
+
+  generationInFlight.add(generationKey);
+
+  console.log("Generating illustration for:", title);
+
+  try {
+    const response = await fetch(GENERATION_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: title,
+        type: "activity",
+        description: null
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Generation request failed with status ${response.status}`
+      );
+    }
+
+    const data = await response.json();
+
+    if (!data.image_url) {
+      throw new Error(
+        "Generation response did not include image_url"
+      );
+    }
+
+    await saveGeneratedConcept(title, data.image_url);
+
+    console.log(
+      "Generated and saved illustration:",
+      title,
+      data.image_url
+    );
+
+    const currentDialog = CalendarAdapter.getOpenDialog();
+
+    if (!currentDialog) {
+      return;
+    }
+
+    const currentTitle =
+      CalendarAdapter.getEventTitle(currentDialog);
+
+    if (
+      normalizeText(currentTitle) !== normalizeText(title)
+    ) {
+      return;
+    }
+
+    const result = CalendarAdapter.applyIllustration(
+      currentDialog,
+      data.image_url
+    );
+
+    if (
+      result === "created" ||
+      result === "replaced"
+    ) {
+      console.log(
+        `Applied generated illustration (${result}):`,
+        title
+      );
+    }
+  } catch (error) {
+    console.error(
+      "Failed to generate illustration:",
+      title,
+      error
+    );
+  } finally {
+    generationInFlight.delete(generationKey);
+  }
 }
 
 function applyCustomIllustration() {
   if (!isExtensionContextValid()) return;
+  if (!conceptsLoaded) return;
 
   const dialog = CalendarAdapter.getOpenDialog();
   if (!dialog) return;
@@ -157,45 +272,61 @@ function applyCustomIllustration() {
   const title = CalendarAdapter.getEventTitle(dialog);
   if (!title) return;
 
-  const matchedConcepts = findMatchingConcepts(title);
-  if (matchedConcepts.length === 0) return;
-
-  const matchKey = `${title}|${matchedConcepts
-    .map((concept) => concept.name)
-    .join(",")}`;
-
-  if (lastLoggedMatchKey !== matchKey) {
-    console.log(
-      "Matched concepts:",
-      matchedConcepts.map((concept) => ({
-        name: concept.name,
-        type: concept.type
-      }))
-    );
-
-    lastLoggedMatchKey = matchKey;
-  }
-
-  const imagePath = getImageForMatchedConcepts(matchedConcepts);
-  console.log("Selected image path:", imagePath);
-
-  if (!imagePath) {
+  if (CalendarAdapter.hasGoogleIllustration(dialog)) {
     return;
   }
 
-  const imageUrl = resolveImageUrl(imagePath);
+  const matchedConcepts = findMatchingConcepts(title);
 
-  const result = CalendarAdapter.applyIllustration(
-    dialog,
-    imageUrl
-  );
+  if (matchedConcepts.length > 0) {
+    const matchKey = `${title}|${matchedConcepts
+      .map((concept) => concept.name)
+      .join(",")}`;
 
-  if (result === "created" || result === "replaced") {
-    console.log(
-      `Applied custom illustration (${result}):`,
-      title
-    );
+    if (lastLoggedMatchKey !== matchKey) {
+      console.log(
+        "Matched concepts:",
+        matchedConcepts.map((concept) => ({
+          name: concept.name,
+          type: concept.type
+        }))
+      );
+
+      lastLoggedMatchKey = matchKey;
+    }
+
+    const imagePath =
+      getImageForMatchedConcepts(matchedConcepts);
+
+    if (imagePath) {
+      console.log(
+        "Selected image path:",
+        imagePath
+      );
+
+      const imageUrl = resolveImageUrl(imagePath);
+
+      const result =
+        CalendarAdapter.applyIllustration(
+          dialog,
+          imageUrl
+        );
+
+      if (
+        result === "created" ||
+        result === "replaced"
+      ) {
+        console.log(
+          `Applied custom illustration (${result}):`,
+          title
+        );
+      }
+
+      return;
+    }
   }
+
+  generateIllustrationForTitle(title);
 }
 
 const observer = new MutationObserver(() => {
@@ -213,24 +344,33 @@ observer.observe(document.body, {
 });
 
 async function initialize() {
-  concepts = await ConceptStorage.initializeConcepts(defaultConcepts);
+  concepts =
+    await ConceptStorage.initializeConcepts(
+      defaultConcepts
+    );
+
+  conceptsLoaded = true;
 
   console.log("Loaded concepts:", concepts);
 
   applyCustomIllustration();
 }
 
-chrome.storage.onChanged.addListener((changes, areaName) => {
-  if (areaName !== "local") return;
+chrome.storage.onChanged.addListener(
+  (changes, areaName) => {
+    if (areaName !== "local") return;
 
-  if (changes.concepts) {
-    concepts = changes.concepts.newValue || [];
+    if (changes.concepts) {
+      concepts =
+        changes.concepts.newValue || [];
 
-    console.log("Concepts updated from storage");
+      console.log(
+        "Concepts updated from storage"
+      );
 
-    applyCustomIllustration();
+      applyCustomIllustration();
+    }
   }
-});
-
+);
 
 initialize();
